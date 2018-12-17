@@ -1,0 +1,26 @@
+{
+  "projectName": "DailyCodeBase",
+  "projectOwner": "MadhavBahlMD",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "CONTRIBUTORS.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "MadhavBahlMD",
+      "name": "MADHAV BAHL",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/26179770?v=4",
+      "profile": "http://madhavbahl.tech/",
+      "contributions": [
+        "code",
+        "blog",
+        "doc",
+        "design",
+        "tutorial"
+      ]
+    }
+  ]
+}
