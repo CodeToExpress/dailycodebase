@@ -7,16 +7,17 @@
   Code Daily, add your solutions to the given problem, submit a PR (and don't forget to add your name in the contributors list)
 </p>
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
-[![HitCount](http://hits.dwyl.io/TheLeanProgrammer/DailyCodes.svg)](http://hits.dwyl.io/MadhavBahlMD/TheLeanProgrammer/DailyCodes) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/TheLeanProgrammer/DailyCodes/commit-activity) [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://theleanprogrammer.tech/DailyCodes) [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](http://madhavbahl.tech/contact/) [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org) [![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](http://ansicolortags.readthedocs.io/?badge=latest) ![GitHub license](https://img.shields.io/github/license/TheLeanProgrammer/DailyCodes.svg)
+[![HitCount](http://hits.dwyl.io/CodeToExpress/dailycodebase.svg)](http://hits.dwyl.io/CodeToExpress/dailycodebase) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/CodeToExpress/dailycodebase/commit-activity) [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://codetoexpress.tech/dailycodebase) [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](http://madhavbahl.tech/contact/) [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org) [![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](http://ansicolortags.readthedocs.io/?badge=latest) ![GitHub license](https://img.shields.io/github/license/CodeToExpress/dailycodebase.svg)
 
 ![DailyCodes](./cover-img.png)
 
+## Want To Be a Contributor?
+
+Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
+
 ## Code Today!
 
-1. [Day 1 - Fizz Buzz](./code1/)
-2. [Day 2 - String Reversal](./code2/)
-3. [Day 3 - Factorial](./code3/)
+1. [Coming soon](#)
 
 ## Timeline
 

@@ -1,0 +1,22 @@
+{
+  "name": "dailycodes",
+  "version": "1.0.0",
+  "description": "Coding is fun, Do it daily :)",
+  "main": "index.js",
+  "scripts": {
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeToExpress/dailycodebase.git"
+  },
+  "author": "TheLeanProgrammer",
+  "bugs": {
+    "url": "https://github.com/CodeToExpress/dailycodebase/issues"
+  },
+  "homepage": "https://github.com/CodeToExpress/dailycodebase#readme",
+  "devDependencies": {
+    "all-contributors-cli": "^5.4.1"
+  }
+}
