@@ -17,7 +17,7 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 
 ## Code Today!
 
-1. [Coming soon](#)
+1. [Day 1 -- The Fizz Buzz Problem](./Day1/) -- [http://codetoexpress.tech/dc/day1](http://codetoexpress.tech/dc/day1)
 
 ## Timeline
 
