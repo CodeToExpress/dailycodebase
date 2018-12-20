@@ -51,7 +51,7 @@ fizzbuzz (17);
  */
 
 // Step 1: Run a loop from 1 to n, for reach iteration (i) perform the next steps
-// Step 2: Declare a temporary empty string (inside loop, say output) 
+// Step 2: Declare a temporary empty string (inside loop, say output)
 // Step 3: If i is divisible by 3, append Fizz to the output.
 // Step 4: If i is divisible by 5, append Buzz to the output.
 // Step 5: If output is still an empty string, set it equal to i
@@ -65,7 +65,7 @@ function fizzbuzz (num) {
         if (i%5 === 0)  opStr += 'Buzz';
 
         if (opStr === '')  opStr = i;
-        
+
         console.log (opStr);
     }
 }
@@ -82,7 +82,7 @@ fizzbuzz (17);
  * @author: MadhavBahlMD
  * @date: 20/12/2018
  */
- 
+
 import java.util.Scanner;
 
 public class Fizzbuzz {
@@ -113,7 +113,7 @@ public class Fizzbuzz {
 
 ```c
 /**
- * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com> 
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
  * @github: https://github.com/razdeep
  * @date: 20/12/2018
 **/
@@ -154,7 +154,7 @@ int main()
 
 ```c
 '''
- * @author: Hrishi Patel <hrishipatel99@gmail.com> 
+ * @author: Hrishi Patel <hrishipatel99@gmail.com>
  * @github: https://github.com/hrishi1999
  * @date: 20/12/2018
 '''
@@ -178,7 +178,7 @@ for i in range(1, n):
 
 ```c
 '''
- * @author: Deepak Sharma 
+ * @author: Deepak Sharma
  * @github: https://github.com/dsdsharma
  * @date: 20/12/2018
 '''
@@ -202,9 +202,45 @@ int main()
        }else{
            cout << i << " ";
        }
-       
+
    }
-   
+
    return 0;
 }
+```
+
+### [C# Solution](./C#/FizzBuzz.cs)
+
+```cs
+/**
+ * @author imkaka
+ * @date 20/12/2018
+ */
+
+
+using System;
+
+public class FizzBuzz{
+
+    public static void Main(string[] args){
+
+        Console.WriteLine("/*====== Fizz Buzz ======*/");
+
+        Console.WriteLine("Enter a Number : ");
+        int input = Convert.ToInt32(Console.ReadLine());
+
+        for(int i=1; i <= input; ++i){
+
+            string res = "";
+
+            if(i % 3 == 0) res += "Fizz";
+            if(i % 5 == 0) res += "Buzz";
+
+            if(res == "") res = i.ToString();
+
+            Console.WriteLine(res);
+        }
+    }
+}
+
 ```
