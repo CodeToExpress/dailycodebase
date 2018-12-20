@@ -2,3 +2,6 @@ node_modules/
 playground/
 youtube/
 Instagram/
+a.out
+.vscode/
+*.o
