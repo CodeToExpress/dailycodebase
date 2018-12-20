@@ -61,8 +61,6 @@ Okay, here I suppose that you have tried out the problem yourself and now you ar
 **Step 4:** if above condition fails, and `i` is divisible by 5, print “Buzz”
 **Step 5:** if all conditions fails, print `i` itself.
 
-<iframe width="700" height="250" src="/media/adb30c7bdc19082ac9b6798a870b62e2?postId=24f21289a9a4" data-media-id="adb30c7bdc19082ac9b6798a870b62e2" data-thumbnail="https://i.embed.ly/1/image?url=https%3A%2F%2Favatars1.githubusercontent.com%2Fu%2F26179770%3Fs%3D400%26v%3D4&amp;key=a19fcc184b9711e1b4764040d3dc5c07" allowfullscreen="" frameborder="0"></iframe>
-
 #### Method 2
 
 Now if we look carefully, in the above mentioned method, we have too many conditions. This can be reduced in a clever way.
@@ -75,8 +73,6 @@ Now if we look carefully, in the above mentioned method, we have too many condit
 **Step 6:** Print `output`.
 
 You might have figured what am I trying to do here, if the number is divisible by only 3, `output` variable will contain only “Fizz”, if it is divisible by only 5, `output` variable will contain only “Buzz”. In case the number is divisible by 3 and 5, both “Fizz” and “Buzz” will get appended to the `output` variable, and in case none of the above conditions match, the `output` variable is set equal to `i` in which case it will print out the current number exactly according to the question.
-
-<iframe width="700" height="250" src="/media/24ff0231d656b92ed582e074e3020821?postId=24f21289a9a4" data-media-id="24ff0231d656b92ed582e074e3020821" data-thumbnail="https://i.embed.ly/1/image?url=https%3A%2F%2Favatars1.githubusercontent.com%2Fu%2F26179770%3Fs%3D400%26v%3D4&amp;key=a19fcc184b9711e1b4764040d3dc5c07" allowfullscreen="" frameborder="0"></iframe>
 
 #### Have Another solution?
 
@@ -107,8 +103,6 @@ That’s it! I hope you liked the Day 1 of DailyCodes initiative. Join our slack
 
 ### Don’t Like Reading? Here’s the YouTube Video for you :)
 
-<iframe data-width="854" data-height="480" width="700" height="393" src="/media/bfbf87cc8d6ffb17952b7d50a23bf96a?postId=24f21289a9a4" data-media-id="bfbf87cc8d6ffb17952b7d50a23bf96a" data-thumbnail="https://i.embed.ly/1/image?url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FjdMrFP2cWig%2Fhqdefault.jpg&amp;key=a19fcc184b9711e1b4764040d3dc5c07" allowfullscreen="" frameborder="0"></iframe>
-
 ### Let’s End With a Motivational Quote!
 
 ![](https://cdn-images-1.medium.com/max/1600/1*tODUVPU-K_8ZktxxALU3xw.png)
@@ -123,8 +117,6 @@ Also, join our slack workspace and help us make a helpful community of coders: [
 I have created a discussion group for CodeToExpress (Daily Codes) and learning resource sharing. In case you wish to be a part, fill out this [google form](https://goo.gl/forms/H8NgZ08K6fwjIf1l1) (I can’t share the invite link directly to prevent the community from annoying spammers, so I’ll add new members personally).
 
 Join the Whatsapp group for Daily Codes — [https://goo.gl/forms/H8NgZ08K6fwjIf1l1](https://goo.gl/forms/H8NgZ08K6fwjIf1l1)
-
-<iframe data-width="760" data-height="500" width="700" height="461" src="/media/6ddba13d2bceac8bf061a0fd182843af?postId=24f21289a9a4" data-media-id="6ddba13d2bceac8bf061a0fd182843af" data-thumbnail="https://i.embed.ly/1/image?url=https%3A%2F%2Flh4.googleusercontent.com%2FejkQMsQl8H-6_n0fhyPd67cyx4It9MmllmDcKuaiKq5_PkhgaLA2P9glTO0ZKyP6PvE%3Dw1200-h630-p&amp;key=a19fcc184b9711e1b4764040d3dc5c07" allowfullscreen="" frameborder="0"></iframe>
 
 In case you think Whatsapp isn’t the correct platform for Tech discussion, join our Slack community :)
 
