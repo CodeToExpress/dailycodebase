@@ -1,6 +1,6 @@
 {
-  "projectName": "dailycodebase",
-  "projectOwner": "Madhav Bahl",
+  "projectName": "DailyCodeBase",
+  "projectOwner": "MadhavBahlMD",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
@@ -9,6 +9,30 @@
   "imageSize": 100,
   "commit": true,
   "contributors": [
+    {
+      "login": "MadhavBahlMD",
+      "name": "MADHAV BAHL",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/26179770?v=4",
+      "profile": "http://madhavbahl.tech/",
+      "contributions": [
+        "code",
+        "blog",
+        "doc",
+        "design",
+        "tutorial"
+      ]
+    },
+    {
+      "login": "Razdeep",
+      "name": "Rajdeep Roy Chowdhury",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/32531173?v=4",
+      "profile": "http://www.linkedin.com/in/razdeeproychowdhury",
+      "contributions": [
+        "code",
+        "doc",
+        "tutorial"
+      ]
+    },
     {
       "login": "Hrishi1999",
       "name": "Hrishi",

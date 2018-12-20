@@ -1,13 +1,7 @@
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 ## Contributors
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-| [<img src="https://avatars1.githubusercontent.com/u/16208722?v=4" width="100px;"/><br /><sub><b>Hrishi</b></sub>](https://hrishi1999.github.io)<br />[📖](https://github.com/Madhav Bahl/dailycodebase/commits?author=Hrishi1999 "Documentation") [💻](https://github.com/Madhav Bahl/dailycodebase/commits?author=Hrishi1999 "Code") |
-| :---: |
-<!-- ALL-CONTRIBUTORS-LIST:END -->
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
