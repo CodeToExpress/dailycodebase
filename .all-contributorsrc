@@ -64,6 +64,26 @@
       ]
     },
     {
+      "login": "Ramanpreet6262",
+      "name": "Ramanpreet Singh",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/28749866?v=4",
+      "profile": "https://github.com/Ramanpreet6262",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    }
+    {
+      "login": "imkaka",
+      "name": "Anil Khatri",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/27620628?v=4",
+      "profile": "https://imkaka.github.io/",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
       "login": "ashwek",
       "name": "Ashwek Swamy",
       "avatar_url": "https://avatars0.githubusercontent.com/u/39827514?v=4",
@@ -72,6 +92,6 @@
         "doc",
         "code"
       ]
-    }
+    }    
   ]
 }
