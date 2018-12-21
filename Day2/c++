@@ -4,9 +4,6 @@
  * string reversal
  */
 
-
-
-
 #include<iostream>
 using namespace std;
 int main()
