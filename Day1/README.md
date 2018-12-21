@@ -208,17 +208,10 @@ int main()
    return 0;
 }
 ```
-<<<<<<< HEAD
-## Python implementation
-ShashankFizz.py (./python/ShashankFizz.py)
-
-=======
-
 ## Python Implementation
 
 ## ShashankFizz.py (./python/ShashankFizz.py)
 ``` python
->>>>>>> b27aee62c4beed5d7846f612d7371c150fc7ee40
 """
         * @author: Shashankjain12
         * @date: 21/12/18
