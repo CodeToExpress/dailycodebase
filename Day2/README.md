@@ -219,6 +219,22 @@ public class Reverse {
 
 ```
 
+## Python Implementation
+
+### [Solution 1](./Python/Reverse.py)
+
+```python
+'''
+ * @author: ashwek
+ * @date: 21/12/2018
+'''
+
+Str = input("Enter a string : ")
+
+print("Reverse of", Str, "=", Str[::-1])
+```
+
+
 <hr />
 
 ## Part B -- Palindrome Check
@@ -382,4 +398,24 @@ public class Palindrome2 {
         }
     }
 }
+```
+
+## Python Implementation
+
+### [Solution 1](./Python/Palindrome.py)
+
+```python
+'''
+ * @author: ashwek
+ * @date: 21/12/2018
+'''
+
+Str = input("Enter a string : ")
+
+print(Str, "is", end=" ")
+
+if( Str != Str[::-1] ):
+    print("Not", end=" ")
+
+print("Palindrome")
 ```
