@@ -18,6 +18,7 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 ## Code Today!
 
 1. [Day 1 -- The Fizz Buzz Problem](./Day1/) -- [http://codetoexpress.tech/dc/day1](http://codetoexpress.tech/dc/day1)
+1. [Day 2 -- String Reversal + Palindrome](./Day2/) -- [http://codetoexpress.tech/dc/day2](http://codetoexpress.tech/dc/day2)
 
 ## Timeline
 
