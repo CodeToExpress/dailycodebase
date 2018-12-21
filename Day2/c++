@@ -1,0 +1,26 @@
+/**
+ * @author: shivank86
+ * @date: 21/12/2018
+ * string reversal
+ */
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	string s;
+	cin>>s;
+	int l=s.length();
+	string p;
+	for(int i=l;i>=0;i--)
+	{
+		p[l-i]=s[i-1];
+		
+	}
+	for(int i=0;i<=l;i++)
+	{
+		cout<<p[i];
+	}
+
+	return 0;
+}
