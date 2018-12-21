@@ -207,12 +207,16 @@ int main()
    
    return 0;
 }
-## Python Implementation`
+```
+
+## Python Implementation
+
 ## ShashankFizz.py (./python/ShashankFizz.py)
-'''
+``` python
+"""
         * @author: Shashankjain12
         * @date: 21/12/18
-'''
+"""
 print("Fizz Buzz")
 n=int(input("Enter the number?"));
 for i in range(1,n+1):
@@ -223,4 +227,5 @@ for i in range(1,n+1):
     elif ((i%5)==0):
         print("buzz ")
     else:
-print(i)``
+        print(i)
+'''
