@@ -332,6 +332,50 @@ void main(){
 }
 ```
 
+## Ruby Implementation
+
+### [reverse.rb](./Ruby/reverse.rb)
+
+```ruby
+=begin
+ @author: aaditkamat
+ @date: 22/12/2018
+=end
+
+def short_solution(str)
+  if str.class != String or str === nil
+    return false
+  end
+  str.reverse
+end
+
+def long_solution_iterative(str)
+  if str.class != String or str === nil
+    return false
+  end
+  reverse = ''
+  i = 0
+  until i >= str.length do
+    reverse.insert(0, str[i])
+    i += 1
+  end
+  reverse
+end
+
+def long_solution_recursive(str)
+  if str.class != String or str === nil
+    return false
+  end
+  if str === ''
+    return ''
+  end
+  temp = str[0]
+  str[0] = str[-1]
+  str[-1] = temp
+  return long_solution(str[1..-2])
+end
+```
+
 <hr />
 
 ## Part B -- Palindrome Check
@@ -613,7 +657,7 @@ if d==e:
 else:
     print("Not a pallindrome")
 ```
-##Ruby implementation
+## Ruby implementation
 
 ### [reverse.rb](./Ruby/reverse.rb)
 
@@ -622,35 +666,10 @@ else:
  @author: aaditkamat
  @date: 22/12/2018
 =end
+require('./reverse')
 
-def short_solution(str)
-  if str.class != String or str === nil
-    return false
-  end
-  str === str.reverse
-end
-
-def long_solution_iterative(str)
-  if str.class != String or str === nil
-    return false
-  end
-  reverse = ''
-  i = 0
-  until i >= str.length do
-    reverse.insert(0, str[i])
-    i += 1
-  end
-  reverse === str
-end
-
-def long_solution_recursive(str)
-  if str.class != String or str === nil
-    return false
-  end
-  if str === ''
-    return true
-  end
-  return (str[0] === str[-1] and long_solution(str[1..-2]))
+def palindrome(str)
+  str != nil and str === short_solution(str)
 end
 ```
 
