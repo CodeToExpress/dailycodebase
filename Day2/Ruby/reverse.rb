@@ -4,10 +4,16 @@
 =end
 
 def short_solution(str)
+  if str.class != String or str === nil
+    return false
+  end
   str === str.reverse
 end
 
-def long_solution(str)
+def long_solution_iterative(str)
+  if str.class != String or str === nil
+    return false
+  end
   reverse = ''
   i = 0
   until i >= str.length do
@@ -16,3 +22,14 @@ def long_solution(str)
   end
   reverse === str
 end
+
+def long_solution_recursive(str)
+  if str.class != String or str === nil
+    return false
+  end
+  if str === ''
+    return true
+  end
+  return (str[0] === str[-1] and long_solution(str[1..-2]))
+end
+
