@@ -267,7 +267,42 @@ int main()
     return 0;
 }
 ```
+## C Implementation
 
+### [Solution 1](./C/Reverse.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 21/12/2018
+  */
+
+#include<stdio.h>
+#include<string.h>
+
+void reverse(char Str[]){
+    char temp;
+    int i;
+
+    for(i=0; i<(strlen(Str)/2); i++){
+        temp = Str[i];
+        Str[i] = Str[strlen(Str)-i-1];
+        Str[strlen(Str)-i-1] = temp;
+    }
+}
+
+void main(){
+
+    char Str[50], Rev[50];
+    printf("Enter a string = ");
+    scanf("%s", Str);
+
+    strcpy(Rev, Str);
+    reverse(Rev);
+    
+    printf("Reverse = %s", Rev);
+}
+```
 
 <hr />
 
@@ -453,3 +488,63 @@ if( Str != Str[::-1] ):
 
 print("Palindrome")
 ```
+
+## C Implementation
+
+### [Solution 1](./C/Palindrome.py)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 21/12/2018
+  */
+
+#include<stdio.h>
+#include<string.h>
+
+void reverse(char Str[]){
+    char temp;
+    int i;
+
+    for(i=0; i<(strlen(Str)/2); i++){
+        temp = Str[i];
+        Str[i] = Str[strlen(Str)-i-1];
+        Str[strlen(Str)-i-1] = temp;
+    }
+}
+
+void main(){
+
+    char Str[50], Rev[50];
+    printf("Enter a string = ");
+    scanf("%s", Str);
+
+    strcpy(Rev, Str);
+    reverse(Rev);
+
+    printf("%s is ", Str);
+    if( strcmp(Str, Rev) != 0)
+        printf("not ");
+    printf("palindrome\n");
+}
+
+```
+##Python implementation
+##String reversing and pallindrome checking(./python3/String_and_pallindrome.py)
+``` Python
+"""
+ * @author Shashank
+ * @date 21/12/2018
+"""
+
+a=input("Enter the input string:")
+d=a.replace(" ","")
+c=list(d)
+c.reverse()
+e="".join(c)
+if d==e:
+    print("String is pallindrome")
+else:
+    print("Not a pallindrome")
+```
+
