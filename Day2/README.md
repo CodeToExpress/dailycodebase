@@ -558,17 +558,17 @@ else:
 =end
 
 def short_solution(str)
-  str.reverse!
+  str === str.reverse
 end
 
 def long_solution(str)
-  result = ''
+  reverse = ''
   i = 0
   until i >= str.length do
-    result.insert(0, str[i])
+    reverse.insert(0, str[i])
     i += 1
   end
-  result
+  reverse === str
 end
 ```
 
