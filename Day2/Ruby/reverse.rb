@@ -5,14 +5,14 @@
 
 def short_solution(str)
   if str.class != String or str === nil
-    return false
+    return nil
   end
-  str === str.reverse
+  str.reverse
 end
 
 def long_solution_iterative(str)
   if str.class != String or str === nil
-    return false
+    return nil
   end
   reverse = ''
   i = 0
@@ -20,16 +20,17 @@ def long_solution_iterative(str)
     reverse.insert(0, str[i])
     i += 1
   end
-  reverse === str
+  reverse
 end
 
 def long_solution_recursive(str)
   if str.class != String or str === nil
-    return false
+    return nil
   end
   if str === ''
-    return true
+    return ''
   end
-  return (str[0] === str[-1] and long_solution(str[1..-2]))
+  return long_solution_recursive(str[1..-1]) + str[0]
 end
+
 
