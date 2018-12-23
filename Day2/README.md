@@ -659,14 +659,14 @@ else:
 ```
 ## Ruby implementation
 
-### [reverse.rb](./Ruby/reverse.rb)
+### [palindrome.rb](./Ruby/palindrome.rb)
 
 ```ruby
 =begin
  @author: aaditkamat
  @date: 22/12/2018
 =end
-require('./reverse')
+require './reverse'
 
 def palindrome(str)
   str != nil and str === short_solution(str)

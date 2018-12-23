@@ -2,8 +2,8 @@
  @author: aaditkamat
  @date: 22/12/2018
 =end
-require('./reverse')
+require './reverse'
 
-def palindrome(str)
+def solution(str)
   str != nil and str === short_solution(str)
 end
