@@ -1,5 +1,5 @@
 /**
- * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com> 
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
  * @github: https://github.com/razdeep
  * @date: 21/12/2018
  */
