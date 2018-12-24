@@ -175,6 +175,76 @@ int main()
     return 0;
 }
 ```
+
+### [Solution](./C/HammingDistance.c)
+
+```c
+#include<stdio.h>
+#include<string.h>
+
+int HammingDistance(char Str1[], char Str2[]){
+
+    int i, count = 0;
+
+    if( strlen(Str1) != strlen(Str2) )
+        return -1;
+
+    for(i=0; i<strlen(Str1); i++){
+        if( Str1[i] != Str2[i])
+            count++;
+    }
+
+    return count;
+}
+
+void main(){
+
+    char Str1[50], Str2[50];
+    int HD;
+
+    printf("Enter string 1 = ");
+    scanf("%s", Str1);
+    printf("Enter string 2 = ");
+    scanf("%s", Str2);
+
+    HD = HammingDistance(Str1, Str2);
+
+    if( HD == -1 )
+        printf("Strings are of different length");
+    else
+        printf("Hamming Distance = %d", HD);
+}
+```
+
+## Python Implementation
+
+### [Solution](./Python/HammingDistance.py)
+
+```python
+def HammingDistance(Str1, Str2):
+
+    count = 0
+
+    if( len(Str1) != len(Str2) ):
+        return None
+
+    for i in range(len(Str1)):
+        if( Str1[i] != Str2[i]):
+            count += 1
+
+    return count
+
+Str1 = input("Enter string 1 = ")
+Str2 = input("Enter string 2 = ")
+
+HD = HammingDistance(Str1, Str2)
+
+if( HD is None ):
+    print("Strings are of different length")
+else:
+    print("Hamming Distance = ", HD)
+```
+
 ## Why Hamming Distance?
 
 The #1 reason for not being successful is inconsistency, and it is a common trend that people start something and on give up on the third day itself, and one of the major reasons behind that is that they find it difficult to continue. 
