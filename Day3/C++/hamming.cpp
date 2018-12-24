@@ -4,6 +4,9 @@ using namespace std;
 
 int hammingDistance(string first_word, string second_word) {
     int count = 0;
+    if (first_word.size() != second_word.size()) {
+        return -1;
+    }
     for (int i = 0; i < first_word.size(); i++) {
         if (first_word[i] != second_word[i]) {
             count++;
