@@ -4,4 +4,5 @@ youtube/
 Instagram/
 a.out
 .vscode/
+test/
 *.o
