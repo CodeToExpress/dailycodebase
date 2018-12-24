@@ -657,8 +657,7 @@ if d==e:
 else:
     print("Not a pallindrome")
 ```
-<<<<<<< HEAD
-=======
+
 ## Ruby implementation
 
 ### [palindrome.rb](./Ruby/palindrome.rb)
@@ -674,5 +673,5 @@ def palindrome(str)
   str != nil and str === short_solution(str)
 end
 ```
->>>>>>> upstream/master
+
 
