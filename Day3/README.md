@@ -132,6 +132,36 @@ public class HammingDistance {
      return 0;
  }
 ```
+
+## Python Implementation
+
+### [Solution](./Python/HammingDistance.py)
+
+```python
+def HammingDistance(Str1, Str2):
+
+    count = 0
+
+    if( len(Str1) != len(Str2) ):
+        return None
+
+    for i in range(len(Str1)):
+        if( Str1[i] != Str2[i]):
+            count += 1
+
+    return count
+
+Str1 = input("Enter string 1 = ")
+Str2 = input("Enter string 2 = ")
+
+HD = HammingDistance(Str1, Str2)
+
+if( HD is None ):
+    print("Strings are of different length")
+else:
+    print("Hamming Distance = ", HD)
+```
+
 ## Why Hamming Distance?
 
 The #1 reason for not being successful is inconsistency, and it is a common trend that people start something and on give up on the third day itself, and one of the major reasons behind that is that they find it difficult to continue. 
