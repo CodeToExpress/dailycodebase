@@ -219,7 +219,7 @@ public class Reverse {
 
 ## C++ Implementation
 
-### [Cpp Solution](./C++/reverseString.cpp)
+### [C++ Solution](./C++/reverseString.cpp)
 
 ```cpp
 /*
@@ -246,6 +246,9 @@ int main(){
     }
 
     cout << str << endl;
+return 0;
+}
+```
 
 ## Python Implementation
 
@@ -268,7 +271,7 @@ print("Reverse of", Str, "=", Str[::-1])
 
 ```cpp
 /**
- * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com> 
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
  * @github: https://github.com/razdeep
  * @date: 21/12/2018
  */
@@ -327,7 +330,7 @@ void main(){
 
     strcpy(Rev, Str);
     reverse(Rev);
-    
+
     printf("Reverse = %s", Rev);
 }
 ```
@@ -577,7 +580,7 @@ int main(){
 
     return 0;
 }
-
+```
 
 ## Python Implementation
 
@@ -639,9 +642,11 @@ void main(){
 }
 
 ```
-##Python implementation
-##String reversing and pallindrome checking(./python3/String_and_pallindrome.py)
-``` Python
+## Python implementation
+
+### String reversing and pallindrome checking(./python3/String_and_pallindrome.py)
+
+```python
 """
  * @author Shashank
  * @date 21/12/2018
