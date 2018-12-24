@@ -1,3 +1,8 @@
+/**
+  * @author : ashwek
+  * @date : 24/12/2018
+  */
+
 #include<stdio.h>
 #include<string.h>
 
