@@ -65,10 +65,10 @@ function strRev (str) {
     var i, j,
       len = str.length,
       tempArr = [];
-    
+
     // Read string in reverse order and store each letter in the array
     for (j=len-1; j>=0; j--) {
-        tempArr.push(str[j]); 
+        tempArr.push(str[j]);
     }
 
     // Join the tempArr to convert it into a string
@@ -93,7 +93,7 @@ function strRev (str) {
     var i, j,
       len = str.length,
       tempArr = [];
-    
+
     // Read string in reverse order and store each letter in the array
     for (i=0, j=len-1; i<len; i++, j--) {
         tempArr[i] = str[j]; // You can use push() instead of assigning by index
@@ -217,6 +217,163 @@ public class Reverse {
     }
 }
 
+## C++ Implementation
+
+### [Cpp Solution](./C++/reverseString.cpp)
+
+```cpp
+/*
+* @author: imkaka
+* @date :  21/12/2018
+*/
+
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main(){
+
+    string str;
+    cin >> str ;
+
+    int size = str.size();
+    for(int i = 0; i< size/2; i++)
+    {
+        char temp = str[i];
+        str[i] = str[size-i-1];
+        str[size-1-i] = temp;
+    }
+
+    cout << str << endl;
+
+## Python Implementation
+
+### [Solution 1](./Python/Reverse.py)
+
+```python
+'''
+ * @author: ashwek
+ * @date: 21/12/2018
+'''
+
+Str = input("Enter a string : ")
+
+print("Reverse of", Str, "=", Str[::-1])
+```
+
+## C++ Implementation
+
+### [reverse.cpp](./C++/reverse.cpp)
+
+```cpp
+/**
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com> 
+ * @github: https://github.com/razdeep
+ * @date: 21/12/2018
+ */
+#include<iostream>
+
+using namespace std;
+
+string strRev(const string& s)
+{
+    static string temp=s;
+    int k=0;
+    for(int i=s.size()-1;i>=0;i--)
+    {
+        temp[k++]=s[i];
+    }
+    return temp;
+}
+
+int main()
+{
+    string s="Hello";
+    string rev=strRev(s);
+    cout<<rev<<endl;
+    return 0;
+}
+```
+## C Implementation
+
+### [Solution 1](./C/Reverse.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 21/12/2018
+  */
+
+#include<stdio.h>
+#include<string.h>
+
+void reverse(char Str[]){
+    char temp;
+    int i;
+
+    for(i=0; i<(strlen(Str)/2); i++){
+        temp = Str[i];
+        Str[i] = Str[strlen(Str)-i-1];
+        Str[strlen(Str)-i-1] = temp;
+    }
+}
+
+void main(){
+
+    char Str[50], Rev[50];
+    printf("Enter a string = ");
+    scanf("%s", Str);
+
+    strcpy(Rev, Str);
+    reverse(Rev);
+    
+    printf("Reverse = %s", Rev);
+}
+```
+
+## Ruby Implementation
+
+### [reverse.rb](./Ruby/reverse.rb)
+
+```ruby
+=begin
+ @author: aaditkamat
+ @date: 22/12/2018
+=end
+
+def short_solution(str)
+  if str.class != String or str === nil
+    return false
+  end
+  str.reverse
+end
+
+def long_solution_iterative(str)
+  if str.class != String or str === nil
+    return false
+  end
+  reverse = ''
+  i = 0
+  until i >= str.length do
+    reverse.insert(0, str[i])
+    i += 1
+  end
+  reverse
+end
+
+def long_solution_recursive(str)
+  if str.class != String or str === nil
+    return false
+  end
+  if str === ''
+    return ''
+  end
+  temp = str[0]
+  str[0] = str[-1]
+  str[-1] = temp
+  return long_solution(str[1..-2])
+end
 ```
 
 <hr />
@@ -315,7 +472,7 @@ isPalindrome('level');
  * @author MadhavBahlMD
  * @date 21/12/2018
  */
- 
+
 import java.util.Scanner;
 
 public class Palindrome {
@@ -354,7 +511,7 @@ public class Palindrome {
  * @author MadhavBahlMD
  * @date 21/12/2018
  */
- 
+
 import java.util.Scanner;
 // Method 2: Check whether reversed string is equal to the original string
 
@@ -373,7 +530,7 @@ public class Palindrome2 {
         for (int i=0; i<str.length(); i++) {
             reversed = str.charAt(i) + reversed;
         }
-        
+
         // Check if the reversed string is same as the original string
         if (str.equals(reversed)) {
             System.out.println ("The given string \"" + str + "\" is a Palindrome");
@@ -383,3 +540,136 @@ public class Palindrome2 {
     }
 }
 ```
+
+### [C++ Implementation](./C++/checkPalindrome.cpp)
+
+```cpp
+/*
+* @author: imkaka
+* @date :  21/12/2018
+*/
+
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main(){
+
+    string str;
+    cin >> str ;
+
+    int size = str.size();
+    bool flag = false;
+    for(int i = 0; i< size/2; i++)
+    {
+        if(str[i] != str[size-i-1])
+        {
+           flag = true;
+           break;
+        }
+    }
+
+    if(!flag)
+        cout << str <<" is a Palindrome!!"  << endl;
+    else
+        cout << str << " is NOT a Palindrome!" << endl;
+
+    return 0;
+}
+
+
+## Python Implementation
+
+### [Solution 1](./Python/Palindrome.py)
+
+```python
+'''
+ * @author: ashwek
+ * @date: 21/12/2018
+'''
+
+Str = input("Enter a string : ")
+
+print(Str, "is", end=" ")
+
+if( Str != Str[::-1] ):
+    print("Not", end=" ")
+
+print("Palindrome")
+```
+
+## C Implementation
+
+### [Solution 1](./C/Palindrome.py)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 21/12/2018
+  */
+
+#include<stdio.h>
+#include<string.h>
+
+void reverse(char Str[]){
+    char temp;
+    int i;
+
+    for(i=0; i<(strlen(Str)/2); i++){
+        temp = Str[i];
+        Str[i] = Str[strlen(Str)-i-1];
+        Str[strlen(Str)-i-1] = temp;
+    }
+}
+
+void main(){
+
+    char Str[50], Rev[50];
+    printf("Enter a string = ");
+    scanf("%s", Str);
+
+    strcpy(Rev, Str);
+    reverse(Rev);
+
+    printf("%s is ", Str);
+    if( strcmp(Str, Rev) != 0)
+        printf("not ");
+    printf("palindrome\n");
+}
+
+```
+##Python implementation
+##String reversing and pallindrome checking(./python3/String_and_pallindrome.py)
+``` Python
+"""
+ * @author Shashank
+ * @date 21/12/2018
+"""
+
+a=input("Enter the input string:")
+d=a.replace(" ","")
+c=list(d)
+c.reverse()
+e="".join(c)
+if d==e:
+    print("String is pallindrome")
+else:
+    print("Not a pallindrome")
+```
+## Ruby implementation
+
+### [palindrome.rb](./Ruby/palindrome.rb)
+
+```ruby
+=begin
+ @author: aaditkamat
+ @date: 22/12/2018
+=end
+require './reverse'
+
+def palindrome(str)
+  str != nil and str === short_solution(str)
+end
+```
+
