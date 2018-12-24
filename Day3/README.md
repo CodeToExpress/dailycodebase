@@ -215,7 +215,6 @@ void main(){
         printf("Hamming Distance = %d", HD);
 }
 ```
-
 ## Python Implementation
 
 ### [Solution](./Python/HammingDistance.py)
@@ -244,7 +243,24 @@ if( HD is None ):
 else:
     print("Hamming Distance = ", HD)
 ```
+##Python Implementation
 
+### [Solution](./Python/Shashankham.py)
+``` Python
+"""
+ * @author: Shashank Jain
+ * @date: 24/12/2018
+"""
+
+a=input("Enter the first string?")
+b=input("Enter the second string?")
+c=list(a.replace(" ",""))
+d=list(b.replace(" ",""))
+k=[i for i,j in zip(c,d) if i!=j]
+print("list of unmatched characters are:",k)
+print("number of characters not matching are:",len(k))
+
+```
 ## Why Hamming Distance?
 
 The #1 reason for not being successful is inconsistency, and it is a common trend that people start something and on give up on the third day itself, and one of the major reasons behind that is that they find it difficult to continue. 
