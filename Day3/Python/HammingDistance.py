@@ -1,3 +1,7 @@
+"""
+  @author : ashwek
+  @date : 24/12/2018
+"""
 def HammingDistance(Str1, Str2):
 
     count = 0
