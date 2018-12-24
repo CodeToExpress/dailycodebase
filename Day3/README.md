@@ -95,7 +95,41 @@ public class HammingDistance {
 }
 ```
 
-### Why HAmming Distance?
+## C++ Implementation
+
+### [hamming.cpp](./C++/hamming.cpp)
+
+```cpp
+/*
+ * @author: aaditkamat
+ * @date: 24/12/2018
+ */
+ #include<iostream>
+ #include<string>
+ 
+ using namespace std;
+ 
+ int hammingDistance(string first_word, string second_word) {
+     int count = 0;
+     for (int i = 0; i < first_word.size(); i++) {
+         if (first_word[i] != second_word[i]) {
+             count++;
+         }
+     }
+     return count;
+ }
+ 
+ int main() {
+     string first_word, second_word;
+     cout << "Enter the first word: ";
+     cin >> first_word;
+     cout << "Enter the second word: ";
+     cin >> second_word;
+     cout << "The hamming distance between " << first_word << " and " << second_word << " is: " << hammingDistance(first_word, second_word) << endl;
+     return 0;
+ }
+```
+## Why Hamming Distance?
 
 The #1 reason for not being successful is inconsistency, and it is a common trend that people start something and on give up on the third day itself, and one of the major reasons behind that is that they find it difficult to continue. 
 So, to keep everyone (who is following the DailyCodes challenge) consistent, I have decided to keep today's question very simple and straightforward.
