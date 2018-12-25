@@ -215,6 +215,53 @@ public class NumVowels2 {
     }
 }
 ```
+
+## C++ Implementation
+
+### [NumVowelsPartA.cpp](./C++/NumVowelsPartA.cpp)
+
+```cpp
+/**
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
+ * @github: https://github.com/razdeep
+ * @date: 25/12/2018
+**/
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main()
+{
+    // set count = 0
+    int count = 0;
+    string str;
+    cout << "/* ===== Number of Vowels ===== */" << endl;
+    cout << "\nEnter the string: ";
+    cin >> str;
+
+    // Convert input string to lower case
+    // using transform() function and ::tolower in STL
+    transform(str.begin(), str.end(), str.begin(), ::tolower);
+
+    // Run a loop from 0 to string length
+    for (int i = 0; i < str.length(); i++)
+    {
+        if (
+            str[i] == 'a' ||
+            str[i] == 'e' ||
+            str[i] == 'i' ||
+            str[i] == 'o' ||
+            str[i] == 'u')
+        {
+            count++;
+        }
+    }
+    // Print the result
+    cout<<"Number of vowels in \""<<str<<"\" = "<<count<<endl;
+    return 0;
+}
+```
+
 ## Python Implementation
 
 ### [Solution](./Python/partA_sol.py)
@@ -240,9 +287,26 @@ for char in string:
 print("Number of vowels in the string are : ",count)
 
 ```
+##Python Implementation
 
-<hr/>
+##[Solution](./Python/Shashankvowels.py)
+""" 
+ * @author: Shashank Jain
+ * @date: 25/12/2018
+"""
+```Python
+a=input("Enter the string to count no. of vowels?")
+b=list(a.replace(" ","").lower())
+c=['a','e','i','o','u']
+count=0
+for i in b:
+    for j in c:
+        if (j==i):
+            count=count+1
+print(count)
+```
 
+</hr>
 ## Part B -- Max Chars Problem
 
 **Question** - Given a string, write a program to return the character that appears most frequently in that string
@@ -316,6 +380,56 @@ function maxChars (sentence) {
 
 maxChars('helllllo worlld');
 ```
+
+## C++ Implementation
+
+### [NumVowelsPartB.cpp](./C++/NumVowelsPartB.cpp)
+
+```cpp
+/**
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
+ * @github: https://github.com/razdeep
+ * @date: 25/12/2018
+ * 
+ * Max Char Problem Solution
+ * 
+**/
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <climits>
+using namespace std;
+int main()
+{
+    int count = 0;
+
+    // Input the string
+    string str;
+    cout << "/* ===== Number of Vowels ===== */" << endl;
+    cout << "\nEnter the string: ";
+    cin >> str;
+
+    // Convert input string to lower case
+    // using transform() function and ::tolower in STL
+    transform(str.begin(), str.end(), str.begin(), ::tolower);
+
+    int max_count = INT_MIN;
+    char max_label;
+    for (int i = 0; i < str.size(); i++)
+    {
+        int this_count = std::count(str.begin(), str.end(), str[i]);
+        if (this_count > max_count)
+        {
+            max_count = this_count;
+            max_label = str[i];
+        }
+    }
+    cout << "'" << (char)max_label << "' has " << max_count << " occurences." << endl;
+    return 0;
+}
+```
+
 ## Python Implementation
 
 ### [Solution](./Python/partB_sol.py)
@@ -342,5 +456,23 @@ print("The most occouring character in the string is : ", max(characters,key=cha
 
 ```
 
+##Python Implementation
+###[Solution] (./Python/Shashankchar.py)
+"""
+* @author: Shashank Jain
+* @date: 25/12/2018
+"""
+``` Python
+a=input("Enter the string to count frequent occuring characters?")
+b=list(a.replace(" ","").lower())
+c=[]
+for i in b:
+    d=(i,b.count(i))
+    c.append(d)
 
+e=dict(list(set(c)))
+f=max(e)
+g=max(e.values())
+print("maximum occurence is of {0}:{1}".format(f,g))
+```
 
