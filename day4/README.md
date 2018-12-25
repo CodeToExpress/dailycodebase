@@ -241,6 +241,43 @@ print("Number of vowels in the string are : ",count)
 
 ```
 
+## C Implementation
+
+### [Solution](./C/vowels.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 25/12/2018
+  */
+
+#include<stdio.h>
+#include<ctype.h>
+
+void main(){
+
+    char Str[50];
+    int i, count=0;
+
+    printf("Enter a string = ");
+    scanf("%s", Str);
+
+    for(i=0; Str[i]!='\0'; i++){
+        switch(tolower(Str[i])){
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                count++;
+        }
+    }
+
+    printf("number of vowels = %d", count);
+
+}
+```
+
 <hr/>
 
 ## Part B -- Max Chars Problem
@@ -342,5 +379,33 @@ print("The most occouring character in the string is : ", max(characters,key=cha
 
 ```
 
+## C Implementation
 
+### [Solution](./C/max_chars.c)
 
+```c
+/**
+  * @author : ashwek
+  * @date : 25/12/2018
+  */
+
+#include<stdio.h>
+
+void main(){
+
+    char Str[50];
+    int i, Max = 0;
+    int possibleChar[94] = {0};  //ASCII 32-126
+
+    printf("Enter a string = ");
+    scanf("%[a-zA-Z-0-9 ]s", Str);  //Modify control string to accept blank spaces in input
+
+    for(i=0; Str[i]!='\0'; i++){
+        possibleChar[ (int)Str[i] - 32]++;
+        if( possibleChar[Max] < possibleChar[ (int)Str[i] - 32] )
+            Max = (int)Str[i] - 32;
+    }
+
+    printf("Most frequent character = \'%c\'\n", (Max+32));
+}
+```
