@@ -106,9 +106,14 @@ public class HammingDistance {
  */
  #include<iostream>
  #include<string>
+<<<<<<< HEAD
  
  using namespace std;
  
+=======
+
+ using namespace std;
+
  int hammingDistance(string first_word, string second_word) {
      int count = 0;
      if (first_word.size() != second_word.size()) {
@@ -121,7 +126,7 @@ public class HammingDistance {
      }
      return count;
  }
- 
+
  int main() {
      string first_word, second_word;
      cout << "Enter the first word: ";
@@ -132,6 +137,174 @@ public class HammingDistance {
      return 0;
  }
 ```
+
+### [hamingDistance](./C++/hamingDistance.cpp)
+
+```cpp
+
+/*
+* @author : imkaka
+* @date : 24/12/2018
+*/
+
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main(){
+
+    string str1, str2;
+
+    cin >> str1 >> str2;
+
+    int dis = 0;
+    if(str1.size() != str2.size())
+        cout << "Not Valid Strings for Hamming Distance Problem!!" << endl;
+    else{
+
+        for(int i=0; i < str1.size(); ++i){
+
+            if(str1[i] != str2[i]) dis++;
+
+        }
+
+        cout << "Hamming Distance b/w " << str1 << " and " << str2 << " is " << dis << "." << endl;
+    }
+
+    return 0;
+}
+```
+
+## C Implementation
+
+### [hamming.c](./C/hamming.c)
+
+```c
+/**
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
+ * @github: https://github.com/razdeep
+ * @date: 24/12/2018
+ */
+
+#include <stdio.h>
+#include <string.h>
+
+int hammingDistance(const char *first_word, const char *second_word)
+{
+    int count = 0;
+    if (strlen(first_word) != strlen(second_word))
+    {
+        return -1;
+    }
+    for (int i = 0; i < strlen(first_word); i++)
+    {
+        if (first_word[i] != second_word[i])
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
+int main()
+{
+    char first_word[100], second_word[100];
+    printf("Enter the first word: ");
+    scanf("%s", first_word);
+    printf("Enter the second word: ");
+    scanf("%s", second_word);
+    printf("The hamming distance between %s and %s is: %d\n", first_word, second_word, hammingDistance(first_word, second_word));
+    return 0;
+}
+```
+
+### [Solution](./C/HammingDistance.c)
+
+```c
+#include<stdio.h>
+#include<string.h>
+
+int HammingDistance(char Str1[], char Str2[]){
+
+    int i, count = 0;
+
+    if( strlen(Str1) != strlen(Str2) )
+        return -1;
+
+    for(i=0; i<strlen(Str1); i++){
+        if( Str1[i] != Str2[i])
+            count++;
+    }
+
+    return count;
+}
+
+void main(){
+
+    char Str1[50], Str2[50];
+    int HD;
+
+    printf("Enter string 1 = ");
+    scanf("%s", Str1);
+    printf("Enter string 2 = ");
+    scanf("%s", Str2);
+
+    HD = HammingDistance(Str1, Str2);
+
+    if( HD == -1 )
+        printf("Strings are of different length");
+    else
+        printf("Hamming Distance = %d", HD);
+}
+```
+## Python Implementation
+
+### [Solution](./Python/HammingDistance.py)
+
+```python
+def HammingDistance(Str1, Str2):
+
+    count = 0
+
+    if( len(Str1) != len(Str2) ):
+        return None
+
+    for i in range(len(Str1)):
+        if( Str1[i] != Str2[i]):
+            count += 1
+
+    return count
+
+Str1 = input("Enter string 1 = ")
+Str2 = input("Enter string 2 = ")
+
+HD = HammingDistance(Str1, Str2)
+
+if( HD is None ):
+    print("Strings are of different length")
+else:
+    print("Hamming Distance = ", HD)
+```
+##Python Implementation
+
+### [Solution](./Python/Shashankham.py)
+``` Python
+"""
+ * @author: Shashank Jain
+ * @date: 24/12/2018
+"""
+
+a=input("Enter the first string?")
+b=input("Enter the second string?")
+c=list(a.replace(" ",""))
+d=list(b.replace(" ",""))
+k=[i for i,j in zip(c,d) if i!=j]
+print("list of unmatched characters are:",k)
+print("number of characters not matching are:",len(k))
+
+```
+
 ## Why Hamming Distance?
 
 The #1 reason for not being successful is inconsistency, and it is a common trend that people start something and on give up on the third day itself, and one of the major reasons behind that is that they find it difficult to continue. 
