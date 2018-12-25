@@ -287,6 +287,30 @@ for char in string:
 print("Number of vowels in the string are : ",count)
 
 ```
+
+## Ruby Implementation
+
+### [Solution](./Ruby.partA_sol.rb)
+
+```ruby
+def count_vowels(str)
+    if str === nil or not str.class === String
+        -1
+    end
+    ctr = 0
+    str.downcase!
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    vowels.each do |vowel|
+         ctr += str.count(vowel)
+    end
+    ctr
+end
+
+print "Enter a string: "
+str = gets
+str.chomp!
+puts "The number of vowels in #{str} is : #{count_vowels(str)}"
+```
 <hr/>
 
 ## Part B -- Max Chars Problem
@@ -438,4 +462,30 @@ print("The most occouring character in the string is : ", max(characters,key=cha
 
 ```
 
+## Ruby Implementation
+
+### [Solution](./Ruby.partB_sol.rb)
+
+```ruby
+def most_frequent_character(str)
+    if str === nil or not str.class === String
+        nil
+    end
+    counts = {}
+    str.downcase!
+    str.each_char do |ch|
+        if not counts.key?(ch)
+            counts[ch] = 1
+        else
+            counts[ch] = counts[ch] + 1
+        end
+    end
+    counts.key(counts.values.max)
+end
+
+print "Enter a string: "
+str = gets
+str.chomp!
+puts "The most frequent character in #{str} is : #{most_frequent_character(str)}"
+```
 
