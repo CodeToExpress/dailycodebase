@@ -493,7 +493,7 @@ print("The most occouring character in the string is : ", max(characters,key=cha
 
 ```
 
-### [Solution] (./Python/Shashankchar.py)
+### [Solution](./Python/Shashankchar.py)
 
 ```python
 """
