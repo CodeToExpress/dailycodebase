@@ -287,14 +287,13 @@ for char in string:
 print("Number of vowels in the string are : ",count)
 
 ```
-##Python Implementation
 
-##[Solution](./Python/Shashankvowels.py)
+## [Solution](./Python/Shashankvowels.py)
+```Python
 """ 
  * @author: Shashank Jain
  * @date: 25/12/2018
 """
-```Python
 a=input("Enter the string to count no. of vowels?")
 b=list(a.replace(" ","").lower())
 c=['a','e','i','o','u']
@@ -306,7 +305,45 @@ for i in b:
 print(count)
 ```
 
+## C Implementation
+
+### [Solution](./C/vowels.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 25/12/2018
+  */
+
+#include<stdio.h>
+#include<ctype.h>
+
+void main(){
+
+    char Str[50];
+    int i, count=0;
+
+    printf("Enter a string = ");
+    scanf("%s", Str);
+
+    for(i=0; Str[i]!='\0'; i++){
+        switch(tolower(Str[i])){
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                count++;
+        }
+    }
+
+    printf("number of vowels = %d", count);
+
+}
+```
+
 </hr>
+
 ## Part B -- Max Chars Problem
 
 **Question** - Given a string, write a program to return the character that appears most frequently in that string
@@ -456,13 +493,14 @@ print("The most occouring character in the string is : ", max(characters,key=cha
 
 ```
 
-##Python Implementation
-###[Solution] (./Python/Shashankchar.py)
+### [Solution] (./Python/Shashankchar.py)
+
+```python
 """
 * @author: Shashank Jain
 * @date: 25/12/2018
 """
-``` Python
+
 a=input("Enter the string to count frequent occuring characters?")
 b=list(a.replace(" ","").lower())
 c=[]
@@ -476,3 +514,33 @@ g=max(e.values())
 print("maximum occurence is of {0}:{1}".format(f,g))
 ```
 
+## C Implementation
+
+### [Solution](./C/max_chars.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 25/12/2018
+  */
+
+#include<stdio.h>
+
+void main(){
+
+    char Str[50];
+    int i, Max = 0;
+    int possibleChar[94] = {0};  //ASCII 32-126
+
+    printf("Enter a string = ");
+    scanf("%[a-zA-Z-0-9 ]s", Str);  //Modify control string to accept blank spaces in input
+
+    for(i=0; Str[i]!='\0'; i++){
+        possibleChar[ (int)Str[i] - 32]++;
+        if( possibleChar[Max] < possibleChar[ (int)Str[i] - 32] )
+            Max = (int)Str[i] - 32;
+    }
+
+    printf("Most frequent character = \'%c\'\n", (Max+32));
+}
+```
