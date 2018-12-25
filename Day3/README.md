@@ -106,11 +106,6 @@ public class HammingDistance {
  */
  #include<iostream>
  #include<string>
-<<<<<<< HEAD
- 
- using namespace std;
- 
-=======
 
  using namespace std;
 
