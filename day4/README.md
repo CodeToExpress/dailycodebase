@@ -137,7 +137,7 @@ numVowels ('hello');
 numVowels ('Greetings');
 ```
 
-## Java Implementatio
+## Java Implementation
 
 ### [Solution 1](./Java/NumVowels.java)
 
@@ -233,7 +233,93 @@ print(len(re.findall(r'[a,e,i,o,u,A,E,I,O,U]', input())))
 
 ```
 
+### [Solution 2](./Python/partA_sol.py)
+
+```python
+# Input the String.
+string=input("Enter the String : ")
+
+# Create a list of vowels in lowercase.
+vowels=['a','e','i','o','u']
+
+# Initialize the count variable to zero.
+count=0
+
+# Now iterate every character in the string.
+for char in string:
+    # And if the current character we are iterating is
+    # present in the vowels list then increment count.
+    if char.lower() in vowels:
+        count+=1
+
+# Print the result
+print("Number of vowels in the string are : ",count)
+
+```
+
+##[Solution 3](./Python/Shashankvowels.py)
+
+```Python
+a=input("Enter the string to count no. of vowels?")
+b=list(a.replace(" ","").lower())
+c=['a','e','i','o','u']
+count=0
+for i in b:
+    for j in c:
+        if (j==i):
+            count=count+1
+print(count)
+```
+
 <hr/>
+
+## C++ Implementation
+
+### [NumVowelsPartA.cpp](./C++/NumVowelsPartA.cpp)
+
+```cpp
+/**
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
+ * @github: https://github.com/razdeep
+ * @date: 25/12/2018
+**/
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main()
+{
+    // set count = 0
+    int count = 0;
+    string str;
+    cout << "/* ===== Number of Vowels ===== */" << endl;
+    cout << "\nEnter the string: ";
+    cin >> str;
+
+    // Convert input string to lower case
+    // using transform() function and ::tolower in STL
+    transform(str.begin(), str.end(), str.begin(), ::tolower);
+
+    // Run a loop from 0 to string length
+    for (int i = 0; i < str.length(); i++)
+    {
+        if (
+            str[i] == 'a' ||
+            str[i] == 'e' ||
+            str[i] == 'i' ||
+            str[i] == 'o' ||
+            str[i] == 'u')
+        {
+            count++;
+        }
+    }
+    // Print the result
+    cout<<"Number of vowels in \""<<str<<"\" = "<<count<<endl;
+    return 0;
+}
+```
+
+</hr>
 
 ## Part B -- Max Chars Problem
 
@@ -337,4 +423,92 @@ for char in input_str:
 
 print(maxChar)
 
+```
+### [Solution 2](./Python/partB_sol.py)
+
+```python
+# Input the string
+string=input("Enter the string : ")
+
+# Create an empty dictionary to store the frequency of characters
+characters={}
+
+#  Iterate every character in the string
+for char in string:
+    # And if the character already exists in the dictionary then
+    # increment its frequency by 1.
+    if char.lower() in characters:
+        characters[char.lower()]+=1
+    # Else initialize its frequency by 1
+    else:
+        characters[char.lower()]=1
+        
+# Print the character which has the maximum frequency
+print("The most occouring character in the string is : ", max(characters,key=characters.get))
+
+```
+
+###[Solution 3] (./Python/Shashankchar.py)
+
+``` Python
+a=input("Enter the string to count frequent occuring characters?")
+b=list(a.replace(" ","").lower())
+c=[]
+for i in b:
+    d=(i,b.count(i))
+    c.append(d)
+
+e=dict(list(set(c)))
+f=max(e)
+g=max(e.values())
+print("maximum occurence is of {0}:{1}".format(f,g))
+```
+
+## C++ Implementation
+
+### [NumVowelsPartB.cpp](./C++/NumVowelsPartB.cpp)
+
+```cpp
+/**
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
+ * @github: https://github.com/razdeep
+ * @date: 25/12/2018
+ * 
+ * Max Char Problem Solution
+ * 
+**/
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <climits>
+using namespace std;
+int main()
+{
+    int count = 0;
+
+    // Input the string
+    string str;
+    cout << "/* ===== Number of Vowels ===== */" << endl;
+    cout << "\nEnter the string: ";
+    cin >> str;
+
+    // Convert input string to lower case
+    // using transform() function and ::tolower in STL
+    transform(str.begin(), str.end(), str.begin(), ::tolower);
+
+    int max_count = INT_MIN;
+    char max_label;
+    for (int i = 0; i < str.size(); i++)
+    {
+        int this_count = std::count(str.begin(), str.end(), str[i]);
+        if (this_count > max_count)
+        {
+            max_count = this_count;
+            max_label = str[i];
+        }
+    }
+    cout << "'" << (char)max_label << "' has " << max_count << " occurences." << endl;
+    return 0;
+}
 ```
