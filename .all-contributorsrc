@@ -1,6 +1,6 @@
 {
-  "projectName": "DailyCodeBase",
-  "projectOwner": "MadhavBahlMD",
+  "projectName": "dailycodebase",
+  "projectOwner": "CodeToExpress",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
@@ -141,6 +141,15 @@
       "profile": "http://prateeksurana.me",
       "contributions": [
         "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "shivank86",
+      "name": "shivank86",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/43927436?v=4",
+      "profile": "https://github.com/shivank86",
+      "contributions": [
         "code"
       ]
     }
