@@ -288,6 +288,23 @@ print("Number of vowels in the string are : ",count)
 
 ```
 
+### [Solution 2](./Python/Shashankvowels.py)
+""" 
+ * @author: Shashank Jain
+ * @date: 25/12/2018
+"""
+```Python
+a=input("Enter the string to count no. of vowels?")
+b=list(a.replace(" ","").lower())
+c=['a','e','i','o','u']
+count=0
+for i in b:
+    for j in c:
+        if (j==i):
+            count=count+1
+print(count)
+```
+
 ## Ruby Implementation
 
 ### [Solution](./Ruby.partA_sol.rb)
@@ -462,9 +479,29 @@ print("The most occouring character in the string is : ", max(characters,key=cha
 
 ```
 
+###[Solution 2](./Python/Shashankchar.py)
+"""
+* @author: Shashank Jain
+* @date: 25/12/2018
+"""
+``` Python
+a=input("Enter the string to count frequent occuring characters?")
+b=list(a.replace(" ","").lower())
+c=[]
+for i in b:
+    d=(i,b.count(i))
+    c.append(d)
+
+e=dict(list(set(c)))
+f=max(e)
+g=max(e.values())
+print("maximum occurence is of {0}:{1}".format(f,g))
+>>>>>>> a73d2083d5bc5324bdcb4076f7c2560dd079a2b2
+```
+
 ## Ruby Implementation
 
-### [Solution](./Ruby.partB_sol.rb)
+### [Solution](./Ruby/partB_sol.rb)
 
 ```ruby
 def most_frequent_character(str)
