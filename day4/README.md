@@ -216,6 +216,23 @@ public class NumVowels2 {
 }
 ```
 
+## Python Implementation
+
+### [Solution 1](./Python/NumOfVowels.py)
+
+```python
+import re
+
+"""
+    This solution makes use of python's re module i.e regular expressions
+    Here findall method takes two parameters 1st - regualr expression, 2nd - input string
+    The regular expression simply checks for all vowels present in the input string 
+    and returns them as a list. 
+"""
+print(len(re.findall(r'[a,e,i,o,u,A,E,I,O,U]', input())))
+
+```
+
 <hr/>
 
 ## Part B -- Max Chars Problem
@@ -290,4 +307,34 @@ function maxChars (sentence) {
 }
 
 maxChars('helllllo worlld');
+```
+
+## Python Implementation
+
+### [Solution 1](./Python/MaxChars.py)
+
+```python
+input_str = input()
+dictnry = {}
+maxCount, maxChar = 0, ''
+for char in input_str:
+    """
+        In this solution we are simply maintaining a dictionary of characters 
+        in the input string as key and their count as value 
+    """
+    if char in dictnry.keys():
+        dictnry[char] += 1
+    else:
+        dictnry[char] = 1
+    """ 
+        We check for maxCount of each character in a single loop 
+        by comparing it with present maxCount, hence not iterating over the dictionary again 
+        to find character with maximum count. 
+    """
+    if dictnry[char] > maxCount:
+        maxCount = dictnry[char]
+        maxChar = char
+
+print(maxChar)
+
 ```
