@@ -289,9 +289,6 @@ else:
  * @author: Shashank Jain
  * @date: 24/12/2018
 """
-
-=======
-
 ### [Solution](./Python/Shashankham.py)
 ``` Python
 """
