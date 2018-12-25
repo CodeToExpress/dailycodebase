@@ -31,6 +31,6 @@ int main()
     std::cout<<"Enter the Second String\n";
     std::cin>>str2;
 
-    std::cout<<"Humming Distance of Given Strings is: "<<hamming(str1,str2)<<'\n';
+    std::cout<<"Hamming Distance of Given Strings is: "<<hamming(str1,str2)<<'\n';
     return 0;
 }
