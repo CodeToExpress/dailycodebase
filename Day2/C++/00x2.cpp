@@ -15,7 +15,7 @@ string reverseFunc(string str)
 }
 
 //palindrome check : Part B
-int checkPallindrome(string str)
+int checkPalindrome(string str)
 {
     if(str == reverseFunc(str)) return 1;
     else return 0;
@@ -26,7 +26,7 @@ void menu()
 {
     std::cout<<"\n Enter the Number \n";
     std::cout<<"\n 1. Reverse A String \n";
-    std::cout<<"\n 2. Check String is Pallindrome or not \n";
+    std::cout<<"\n 2. Check String is Palindrome or not \n";
 }
 
 //driver function
@@ -51,8 +51,8 @@ int main()
         {
             case 1: std::cout<<reverseFunc(str);
                     break;
-            case 2: if(checkPallindrome(str)) std::cout<<"String is Pallindrome";
-		    else std::cout<<"String is not Pallindrome";
+            case 2: if(checkPalindrome(str)) std::cout<<"String is Palindrome";
+		    else std::cout<<"String is not Palindrome";
                     break;
             default: std::cout<<"Enter the correct number";
         }
