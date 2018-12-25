@@ -295,8 +295,6 @@ else:
  * @author: Shashank Jain
  * @date: 24/12/2018
 """
-
->>>>>>> 59b8bd388e0854765c3122d6e802a85978004667
 a=input("Enter the first string?")
 b=input("Enter the second string?")
 c=list(a.replace(" ",""))
