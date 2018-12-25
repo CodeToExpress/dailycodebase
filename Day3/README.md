@@ -282,7 +282,6 @@ else:
     print("Hamming Distance = ", HD)
 ```
 ##Python Implementation
-<<<<<<< HEAD
 
 ### [Solution](./Python/Shashankham.py)
 ``` Python
