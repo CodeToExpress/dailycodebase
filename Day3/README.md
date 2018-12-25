@@ -289,7 +289,12 @@ else:
  * @author: Shashank Jain
  * @date: 24/12/2018
 """
-
+### [Solution](./Python/Shashankham.py)
+``` Python
+"""
+ * @author: Shashank Jain
+ * @date: 24/12/2018
+"""
 a=input("Enter the first string?")
 b=input("Enter the second string?")
 c=list(a.replace(" ",""))

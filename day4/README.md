@@ -288,6 +288,23 @@ print("Number of vowels in the string are : ",count)
 
 ```
 
+## [Solution](./Python/Shashankvowels.py)
+```Python
+""" 
+ * @author: Shashank Jain
+ * @date: 25/12/2018
+"""
+a=input("Enter the string to count no. of vowels?")
+b=list(a.replace(" ","").lower())
+c=['a','e','i','o','u']
+count=0
+for i in b:
+    for j in c:
+        if (j==i):
+            count=count+1
+print(count)
+```
+
 ## C Implementation
 
 ### [Solution](./C/vowels.c)
@@ -325,7 +342,7 @@ void main(){
 }
 ```
 
-<hr/>
+</hr>
 
 ## Part B -- Max Chars Problem
 
@@ -474,6 +491,27 @@ for char in string:
 # Print the character which has the maximum frequency
 print("The most occouring character in the string is : ", max(characters,key=characters.get))
 
+```
+
+### [Solution] (./Python/Shashankchar.py)
+
+```python
+"""
+* @author: Shashank Jain
+* @date: 25/12/2018
+"""
+
+a=input("Enter the string to count frequent occuring characters?")
+b=list(a.replace(" ","").lower())
+c=[]
+for i in b:
+    d=(i,b.count(i))
+    c.append(d)
+
+e=dict(list(set(c)))
+f=max(e)
+g=max(e.values())
+print("maximum occurence is of {0}:{1}".format(f,g))
 ```
 
 ## C Implementation
