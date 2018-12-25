@@ -7,8 +7,8 @@
 //for STL library
 using namespace std;
 
-//humming distance of two strings
-int humming(string str1, string str2)
+//hamming distance of two strings
+int hamming(string str1, string str2)
 {
     int count = 0;
     for(int i = 0; i< str1.length(); i++)
@@ -31,6 +31,6 @@ int main()
     std::cout<<"Enter the Second String\n";
     std::cin>>str2;
 
-    std::cout<<"Humming Distance of Given Strings is: "<<humming(str1,str2)<<'\n';
+    std::cout<<"Humming Distance of Given Strings is: "<<hamming(str1,str2)<<'\n';
     return 0;
 }

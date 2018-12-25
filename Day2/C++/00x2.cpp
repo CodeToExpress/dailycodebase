@@ -14,7 +14,7 @@ string reverseFunc(string str)
     return str;
 }
 
-//pallindrome check : Part B
+//palindrome check : Part B
 int checkPallindrome(string str)
 {
     if(str == reverseFunc(str)) return 1;
