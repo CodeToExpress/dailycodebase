@@ -310,6 +310,10 @@ print(count)
 ### [Solution](./Ruby.partA_sol.rb)
 
 ```ruby
+=begin
+@author: aaditkamat
+@date: 25/12/2018
+=end
 def count_vowels(str)
     if str === nil or not str.class === String
         -1
@@ -504,6 +508,10 @@ print("maximum occurence is of {0}:{1}".format(f,g))
 ### [Solution](./Ruby/partB_sol.rb)
 
 ```ruby
+=begin
+@author: aaditkamat
+@date: 25/12/2018
+=end
 def most_frequent_character(str)
     if str === nil or not str.class === String
         nil

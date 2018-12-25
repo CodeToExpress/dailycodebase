@@ -1,3 +1,7 @@
+=begin
+@author: aaditkamat
+@date: 25/12/2018
+=end
 def count_vowels(str)
 	if str === nil or not str.class === String
 		-1
