@@ -1,6 +1,6 @@
 {
-  "projectName": "DailyCodeBase",
-  "projectOwner": "MadhavBahlMD",
+  "projectName": "dailycodebase",
+  "projectOwner": "CodeToExpress",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
@@ -119,6 +119,37 @@
       "profile": "http://www.myshashank.tech",
       "contributions": [
         "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "moulikcipherX",
+      "name": "Moulik Aggarwal",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/22260031?v=4",
+      "profile": "https://github.com/moulikcipherX",
+      "contributions": [
+        "question",
+        "blog",
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "prateek3255",
+      "name": "Prateek Surana",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/21277179?v=4",
+      "profile": "http://prateeksurana.me",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "shivank86",
+      "name": "shivank86",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/43927436?v=4",
+      "profile": "https://github.com/shivank86",
+      "contributions": [
         "code"
       ]
     }
