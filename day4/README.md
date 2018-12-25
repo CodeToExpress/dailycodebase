@@ -137,7 +137,7 @@ numVowels ('hello');
 numVowels ('Greetings');
 ```
 
-## Java Implementatio
+## Java Implementation
 
 ### [Solution 1](./Java/NumVowels.java)
 
@@ -215,6 +215,31 @@ public class NumVowels2 {
     }
 }
 ```
+## Python Implementation
+
+### [Solution](./Python/partA_sol.py)
+
+```python
+# Input the String.
+string=input("Enter the String : ")
+
+# Create a list of vowels in lowercase.
+vowels=['a','e','i','o','u']
+
+# Initialize the count variable to zero.
+count=0
+
+# Now iterate every character in the string.
+for char in string:
+    # And if the current character we are iterating is
+    # present in the vowels list then increment count.
+    if char.lower() in vowels:
+        count+=1
+
+# Print the result
+print("Number of vowels in the string are : ",count)
+
+```
 
 <hr/>
 
@@ -291,3 +316,31 @@ function maxChars (sentence) {
 
 maxChars('helllllo worlld');
 ```
+## Python Implementation
+
+### [Solution](./Python/partB_sol.py)
+
+```python
+# Input the string
+string=input("Enter the string : ")
+
+# Create an empty dictionary to store the frequency of characters
+characters={}
+
+#  Iterate every character in the string
+for char in string:
+    # And if the character already exists in the dictionary then
+    # increment its frequency by 1.
+    if char.lower() in characters:
+        characters[char.lower()]+=1
+    # Else initialize its frequency by 1
+    else:
+        characters[char.lower()]=1
+        
+# Print the character which has the maximum frequency
+print("The most occouring character in the string is : ", max(characters,key=characters.get))
+
+```
+
+
+
