@@ -662,16 +662,6 @@ if d==e:
 else:
     print("Not a pallindrome")
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 59b8bd388e0854765c3122d6e802a85978004667
-=======
-
->>>>>>> 6aef1378d44840c82d996e7d0ad58664d70abeae
 ## Ruby implementation
 
 ### [palindrome.rb](./Ruby/palindrome.rb)
