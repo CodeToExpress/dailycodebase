@@ -266,7 +266,7 @@ int main()
 
 ### [Solution](./Python/partA_sol.py)
 
-```python
+```py
 # Input the String.
 string=input("Enter the String : ")
 
