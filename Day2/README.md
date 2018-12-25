@@ -216,6 +216,7 @@ public class Reverse {
         System.out.println("Reversed String: " + reversed);
     }
 }
+```
 
 ## C++ Implementation
 
