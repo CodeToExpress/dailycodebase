@@ -1,4 +1,4 @@
-# Day 2 -- Patterns
+# Day 5 -- Patterns
 
 Pattern programs like printing a pyramid, inverted pyramid etc. are some very famous problems and a good way to test your logic and knowledge of nested loops. Hence, on the day 5 of Daily Codes, let’s do some pattern based programs 😀
 
