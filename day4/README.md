@@ -137,7 +137,7 @@ numVowels ('hello');
 numVowels ('Greetings');
 ```
 
-## Java Implementatio
+## Java Implementation
 
 ### [Solution 1](./Java/NumVowels.java)
 
@@ -216,24 +216,135 @@ public class NumVowels2 {
 }
 ```
 
+<hr/>
+
+## C++ Implementation
+
+### [NumVowelsPartA.cpp](./C++/NumVowelsPartA.cpp)
+
+```cpp
+/**
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
+ * @github: https://github.com/razdeep
+ * @date: 25/12/2018
+**/
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main()
+{
+    // set count = 0
+    int count = 0;
+    string str;
+    cout << "/* ===== Number of Vowels ===== */" << endl;
+    cout << "\nEnter the string: ";
+    cin >> str;
+
+    // Convert input string to lower case
+    // using transform() function and ::tolower in STL
+    transform(str.begin(), str.end(), str.begin(), ::tolower);
+
+    // Run a loop from 0 to string length
+    for (int i = 0; i < str.length(); i++)
+    {
+        if (
+            str[i] == 'a' ||
+            str[i] == 'e' ||
+            str[i] == 'i' ||
+            str[i] == 'o' ||
+            str[i] == 'u')
+        {
+            count++;
+        }
+    }
+    // Print the result
+    cout<<"Number of vowels in \""<<str<<"\" = "<<count<<endl;
+    return 0;
+}
+```
+
 ## Python Implementation
 
-### [Solution 1](./Python/NumOfVowels.py)
+### [Solution](./Python/partA_sol.py)
 
-```python
-import re
+```py
+# Input the String.
+string=input("Enter the String : ")
 
-"""
-    This solution makes use of python's re module i.e regular expressions
-    Here findall method takes two parameters 1st - regualr expression, 2nd - input string
-    The regular expression simply checks for all vowels present in the input string 
-    and returns them as a list. 
-"""
-print(len(re.findall(r'[a,e,i,o,u,A,E,I,O,U]', input())))
+# Create a list of vowels in lowercase.
+vowels=['a','e','i','o','u']
+
+# Initialize the count variable to zero.
+count=0
+
+# Now iterate every character in the string.
+for char in string:
+    # And if the current character we are iterating is
+    # present in the vowels list then increment count.
+    if char.lower() in vowels:
+        count+=1
+
+# Print the result
+print("Number of vowels in the string are : ",count)
 
 ```
 
-<hr/>
+## [Solution](./Python/Shashankvowels.py)
+```Python
+""" 
+ * @author: Shashank Jain
+ * @date: 25/12/2018
+"""
+a=input("Enter the string to count no. of vowels?")
+b=list(a.replace(" ","").lower())
+c=['a','e','i','o','u']
+count=0
+for i in b:
+    for j in c:
+        if (j==i):
+            count=count+1
+print(count)
+```
+
+## C Implementation
+
+### [Solution](./C/vowels.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 25/12/2018
+  */
+
+#include<stdio.h>
+#include<ctype.h>
+
+void main(){
+
+    char Str[50];
+    int i, count=0;
+
+    printf("Enter a string = ");
+    scanf("%s", Str);
+
+    for(i=0; Str[i]!='\0'; i++){
+        switch(tolower(Str[i])){
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                count++;
+        }
+    }
+
+    printf("number of vowels = %d", count);
+
+}
+```
+
+</hr>
 
 ## Part B -- Max Chars Problem
 
@@ -309,32 +420,128 @@ function maxChars (sentence) {
 maxChars('helllllo worlld');
 ```
 
+## C++ Implementation
+
+### [NumVowelsPartB.cpp](./C++/NumVowelsPartB.cpp)
+
+```cpp
+/**
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
+ * @github: https://github.com/razdeep
+ * @date: 25/12/2018
+ * 
+ * Max Char Problem Solution
+ * 
+**/
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <climits>
+using namespace std;
+int main()
+{
+    int count = 0;
+
+    // Input the string
+    string str;
+    cout << "/* ===== Number of Vowels ===== */" << endl;
+    cout << "\nEnter the string: ";
+    cin >> str;
+
+    // Convert input string to lower case
+    // using transform() function and ::tolower in STL
+    transform(str.begin(), str.end(), str.begin(), ::tolower);
+
+    int max_count = INT_MIN;
+    char max_label;
+    for (int i = 0; i < str.size(); i++)
+    {
+        int this_count = std::count(str.begin(), str.end(), str[i]);
+        if (this_count > max_count)
+        {
+            max_count = this_count;
+            max_label = str[i];
+        }
+    }
+    cout << "'" << (char)max_label << "' has " << max_count << " occurences." << endl;
+    return 0;
+}
+```
+
 ## Python Implementation
 
-### [Solution 1](./Python/MaxChars.py)
+### [Solution](./Python/partB_sol.py)
 
 ```python
-input_str = input()
-dictnry = {}
-maxCount, maxChar = 0, ''
-for char in input_str:
-    """
-        In this solution we are simply maintaining a dictionary of characters 
-        in the input string as key and their count as value 
-    """
-    if char in dictnry.keys():
-        dictnry[char] += 1
+# Input the string
+string=input("Enter the string : ")
+
+# Create an empty dictionary to store the frequency of characters
+characters={}
+
+#  Iterate every character in the string
+for char in string:
+    # And if the character already exists in the dictionary then
+    # increment its frequency by 1.
+    if char.lower() in characters:
+        characters[char.lower()]+=1
+    # Else initialize its frequency by 1
     else:
-        dictnry[char] = 1
-    """ 
-        We check for maxCount of each character in a single loop 
-        by comparing it with present maxCount, hence not iterating over the dictionary again 
-        to find character with maximum count. 
-    """
-    if dictnry[char] > maxCount:
-        maxCount = dictnry[char]
-        maxChar = char
+        characters[char.lower()]=1
+        
+# Print the character which has the maximum frequency
+print("The most occouring character in the string is : ", max(characters,key=characters.get))
 
-print(maxChar)
+```
 
+### [Solution](./Python/Shashankchar.py)
+
+```python
+"""
+* @author: Shashank Jain
+* @date: 25/12/2018
+"""
+
+a=input("Enter the string to count frequent occuring characters?")
+b=list(a.replace(" ","").lower())
+c=[]
+for i in b:
+    d=(i,b.count(i))
+    c.append(d)
+e=dict(list(set(c)))
+f=max(e)
+g=max(e.values())
+print("maximum occurence is of {0}:{1}".format(f,g))
+```
+
+## C Implementation
+
+### [Solution](./C/max_chars.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 25/12/2018
+  */
+
+#include<stdio.h>
+
+void main(){
+
+    char Str[50];
+    int i, Max = 0;
+    int possibleChar[94] = {0};  //ASCII 32-126
+
+    printf("Enter a string = ");
+    scanf("%[a-zA-Z-0-9 ]s", Str);  //Modify control string to accept blank spaces in input
+
+    for(i=0; Str[i]!='\0'; i++){
+        possibleChar[ (int)Str[i] - 32]++;
+        if( possibleChar[Max] < possibleChar[ (int)Str[i] - 32] )
+            Max = (int)Str[i] - 32;
+    }
+
+    printf("Most frequent character = \'%c\'\n", (Max+32));
+}
 ```
