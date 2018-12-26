@@ -184,6 +184,27 @@ public class Pattern1 {
 }
 ```
 
+## Python Implementation
+
+### [Pattern1.py](./Python/pattern1.py)
+
+```python
+'''
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
+ * @github: https://github.com/razdeep
+ * @date: 26/12/2018
+'''
+
+def pattern1(num):
+    for i in range(1,num+1):
+        currentLine = ''
+        for j in range(1,i+1):
+            currentLine = currentLine + str(j) + ' '
+        print(currentLine)
+
+pattern1(5)
+```
+
 ## Pattern 2 (Floyd's Triangle)
 
 ```js
@@ -252,6 +273,29 @@ public class Pattern3 {
         }
     }
 }
+```
+
+## Python Implementation
+
+### [Pattern2.py](./Python/pattern2.py)
+
+```python
+'''
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
+ * @github: https://github.com/razdeep
+ * @date: 26/12/2018
+'''
+
+def pattern2(num):
+    count = 0
+    for i in range(1,num+1):
+        currentLine = ''
+        for j in range(1,i+1):
+            count=count+1
+            currentLine = currentLine + str(count) + ' '
+        print(currentLine)
+
+pattern2(4)
 ```
 
 ## Pattern 3
@@ -327,6 +371,34 @@ public class Pattern3 {
         }
     }
 }
+```
+
+## Python Implementation
+
+### [Pattern3.py](./Python/pattern3.py)
+
+```python
+'''
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
+ * @github: https://github.com/razdeep
+ * @date: 26/12/2018
+'''
+
+def pattern3(num):
+    for i in range(1,num+1):
+        currentLine = ''
+        for j in range(1,i+1):
+            currentLine = currentLine + str(j) + ' '
+        print(currentLine)
+
+    for i in range(num-1,0,-1):
+        currentLine = ''
+        for j in range(1,i+1):
+            currentLine= currentLine + str(j) + ' '
+        print(currentLine)
+
+        
+pattern3(4)
 ```
 
 ## Pattern 4
