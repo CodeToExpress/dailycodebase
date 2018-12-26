@@ -289,7 +289,7 @@ print("Number of vowels in the string are : ",count)
 ```
 
 ## [Solution](./Python/Shashankvowels.py)
-```Python
+```py
 """ 
  * @author: Shashank Jain
  * @date: 25/12/2018
