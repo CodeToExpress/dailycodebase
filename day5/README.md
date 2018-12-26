@@ -35,13 +35,13 @@ input = 4
 input = 5
 
 1
-1 2 
-1 2 3 
-1 2 3 4 
+1 2
+1 2 3
+1 2 3 4
 1 2 3 4 5
 1 2 3 4
-1 2 3 
-1 2 
+1 2 3
+1 2
 1
 ```
 
@@ -64,7 +64,7 @@ input = 5
 
 * * * * * * * * *
   * * * * * * *
-    * * * * * 
+    * * * * *
       * * *
         *
 ```
@@ -80,8 +80,8 @@ input = 5
    * * * * * * *
  * * * * * * * * *
    * * * * * * *
-     * * * * * 
-       * * * 
+     * * * * *
+       * * *
          *
 ```
 
@@ -92,7 +92,7 @@ input = 4
 
 * * * *  * * * *
 * * *      * * *
-* *          * * 
+* *          * *
 *              *
 *              *
 * *          * *
@@ -135,14 +135,14 @@ input n=5
 ```js
 /**
  * @author MadhavBahlMD
- * @date 26/12/2018 
+ * @date 26/12/2018
  */
 
 function pattern1 (num) {
     console.log ("/* ===== Pattern #1 ===== */");
-    
+
     for (let i=1; i<=num; i++) {
-        // we will store the output for each line in a string 
+        // we will store the output for each line in a string
         // since console.log would print and take the pointer to next line
         let currentLine = '';
         for(let j=1; j<=i; j++) {
@@ -162,7 +162,7 @@ pattern1(5);
 ```java
 /**
  * @author MadhavBahlMD
- * @date 26/12/2018 
+ * @date 26/12/2018
  */
 
 import java.util.Scanner;
@@ -281,7 +281,7 @@ input = 4
 ```js
 /**
  * @author MadhavBahlMD
- * @date 26/12/2018 
+ * @date 26/12/2018
  */
 
 function pattern2 (num) {
@@ -420,13 +420,13 @@ int main(){
 ```js
 input = 5
 1
-1 2 
-1 2 3 
-1 2 3 4 
+1 2
+1 2 3
+1 2 3 4
 1 2 3 4 5
 1 2 3 4
-1 2 3 
-1 2 
+1 2 3
+1 2
 1
 ```
 
@@ -514,7 +514,7 @@ def pattern3(num):
             currentLine= currentLine + str(j) + ' '
         print(currentLine)
 
-        
+
 pattern3(4)
 ```
 
@@ -607,7 +607,7 @@ input = 5
 ```js
 /**
  * @author MadhavBahlMD
- * @date 26/12/2018 
+ * @date 26/12/2018
  */
 
 function pattern4 (num) {
@@ -644,7 +644,7 @@ pattern4 (5);
 ```java
 /**
  * @author MadhavBahlMD
- * @date 26/12/2018 
+ * @date 26/12/2018
  */
 
 import java.util.Scanner;
@@ -675,6 +675,26 @@ public class Pattern4 {
 
     }
 }
+```
+
+## Python Implementation
+
+### [Pattern4.py](./Python/pattern4.py)
+
+```python
+'''
+ * @author: ashwek
+ * @date: 26/12/2018
+'''
+
+def pattern4(num):
+    for i in range(1, num+1):
+        print("  "*(num-i) + #Space
+                " ".join(map(str, list(range(i, i+i)))) +  #Number-Sequence
+                " " + " ".join(map(str, list(range(i+i-2, i-1, -1))))  #Reverse-Number-Sequence
+            )
+
+pattern4(5)
 ```
 
 ## C Implementation
@@ -750,7 +770,7 @@ int main(){
 input = 5
 * * * * * * * * *
   * * * * * * *
-    * * * * * 
+    * * * * *
       * * *
         *
 ```
@@ -762,7 +782,7 @@ input = 5
 ```js
 /**
  * @author MadhavBahlMD
- * @date 26/12/2018 
+ * @date 26/12/2018
  */
 
 function pattern5 (num) {
@@ -796,7 +816,7 @@ pattern5 (5);
 ```java
 /**
  * @author MadhavBahlMD
- * @date 26/12/2018 
+ * @date 26/12/2018
  */
 
 import java.util.Scanner;
@@ -822,6 +842,23 @@ public class Pattern5 {
         }
     }
 }
+```
+
+## Python Implementation
+
+### [Pattern5.py](./Python/pattern5.py)
+
+```python
+'''
+ * @author: ashwek
+ * @date: 26/12/2018
+'''
+
+def pattern5(num):
+    for i in range(num):
+        print("  "*i + "* "*((num-i)*2-1))
+
+pattern5(5)
 ```
 
 ## C Implementation
@@ -895,8 +932,8 @@ input = 5
    * * * * * * *
  * * * * * * * * *
    * * * * * * *
-     * * * * * 
-       * * * 
+     * * * * *
+       * * *
          *
 ```
 
@@ -907,7 +944,7 @@ input = 5
 ```js
 /**
  * @author MadhavBahlMD
- * @date 26/12/2018 
+ * @date 26/12/2018
  */
 
 function pattern6 (n) {
@@ -958,7 +995,7 @@ pattern6 (5);
 ```java
 /**
  * @author MadhavBahlMD
- * @date 26/12/2018 
+ * @date 26/12/2018
  */
 
 function pattern6 (n) {
@@ -1000,6 +1037,29 @@ function pattern6 (n) {
 }
 
 pattern6 (5);
+```
+
+## Python Implementation
+
+### [Pattern6.py](./Python/pattern6.py)
+
+```python
+'''
+ * @author: ashwek
+ * @date: 26/12/2018
+'''
+
+def pattern6(num):
+    for i in range(1, num+1):
+        print("  "*(num-i) + #Space
+                "* " * (2*i-1)  #Triangle
+            )
+    for i in range(2, num+1):
+        print("  "*(i-1) + #Space
+                "* " * (2*(num-i)+1)  #Triangle
+            )
+
+pattern6(5)
 ```
 
 ## C Implementation
@@ -1087,7 +1147,7 @@ int main(){
 input = 4
 * * * *  * * * *
 * * *      * * *
-* *          * * 
+* *          * *
 *              *
 *              *
 * *          * *
@@ -1102,7 +1162,7 @@ input = 4
 ```js
 /**
  * @author MadhavBahlMD
- * @date 26/12/2018 
+ * @date 26/12/2018
  */
 
 function pattern7 (num) {
@@ -1116,15 +1176,15 @@ function pattern7 (num) {
             if (j<=num) {
                 if ((i+j) > num+1)
                     currentLine += '  ';
-                else 
+                else
                     currentLine += '* ';
             } else {
-                if (i>j-num) 
+                if (i>j-num)
                     currentLine += '  ';
-                else 
+                else
                     currentLine += '* ';
             }
-            
+
         }
         console.log(currentLine);
     }
@@ -1135,7 +1195,7 @@ function pattern7 (num) {
         for(j=1; j<=2*num; j++) {
 
             if (j<=num) {
-                if (j>i) 
+                if (j>i)
                     currentLine += '  ';
                 else    
                     currentLine += '* ';
@@ -1162,7 +1222,7 @@ pattern7 (5);
 ```java
 /**
  * @author MadhavBahlMD
- * @date 26/12/2018 
+ * @date 26/12/2018
  */
 
 import java.util.Scanner;
@@ -1212,6 +1272,32 @@ public class Pattern7 {
         }
     }
 }
+```
+
+## Python Implementation
+
+### [Pattern7.py](./Python/pattern7.py)
+
+```python
+'''
+ * @author: ashwek
+ * @date: 26/12/2018
+'''
+
+def pattern7(num):
+    Upper = []
+    for i in range(1, num+1):
+        Upper.append("* " * (num-i+1) +  #Left Triangle
+                    "    "*(i-1) + #Space
+                    "* " * (num-i+1)  #Right Triangle
+                    )
+
+    for i in Upper:  # Upper Half
+        print(i)
+    for i in Upper[::-1]:  # Lower Half (Reverse of Upper Half)
+        print(i)
+
+pattern7(4)
 ```
 
 ## C Implementation
@@ -1324,7 +1410,7 @@ input = 5
 ```js
 /**
  * @author MadhavBahlMD
- * @date 26/12/2018 
+ * @date 26/12/2018
  */
 
  function pattern8 (n) {
@@ -1371,7 +1457,7 @@ pattern8 (5);
 ```java
 /**
  * @author MadhavBahlMD
- * @date 26/12/2018 
+ * @date 26/12/2018
  */
 
 import java.util.Scanner;
@@ -1411,6 +1497,32 @@ public class Pattern8 {
         }
     }
 }
+```
+
+## Python Implementation
+
+### [Pattern8.py](./Python/pattern8.py)
+
+```python
+'''
+ * @author: ashwek
+ * @date: 26/12/2018
+'''
+
+def pattern8(num):
+    Upper = []
+    for i in range(1, num+1):
+        Upper.append("* "*i +  #Left Triangle
+                    "    "*(num-i) + #Space
+                    "* "*i  #Right Triangle
+                    )
+
+    for i in Upper:  # Upper Half
+        print(i)
+    for i in Upper[::-1]:  # Lower Half (Reverse of Upper Half)
+        print(i)
+
+pattern8(5)
 ```
 
 ## C Implementation
