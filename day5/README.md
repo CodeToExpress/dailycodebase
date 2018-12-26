@@ -205,6 +205,65 @@ def pattern1(num):
 pattern1(5)
 ```
 
+## C Implementation
+
+### [Solution](./C/Pattern_1.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 26/12/2018
+  */
+
+#include<stdio.h>
+
+void main(){
+
+    int n, i, j;
+
+    printf("Enter n = ");
+    scanf("%d", &n);
+
+    for(i=1; i <= n; i++){
+        for(j=1; j<=i; j++){
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+}
+```
+
+
+## C++ Implementation
+
+### [Solution](./C++/Pattern_1.cpp)
+
+```cpp
+/**
+  * @author : ashwek
+  * @date : 26/12/2018
+  */
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int n;
+
+    cout<<"Enter n = ";
+    cin>>n;
+
+    for(int i=1; i <= n; i++){
+        for(int j=1; j<=i; j++)
+            cout<<j <<" ";
+        cout<<endl;
+    }
+    return 0;
+}
+```
+
 ## Pattern 2 (Floyd's Triangle)
 
 ```js
@@ -296,6 +355,64 @@ def pattern2(num):
         print(currentLine)
 
 pattern2(4)
+```
+
+## C Implementation
+
+### [Solution](./C/Pattern_2.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 26/12/2018
+  */
+
+#include<stdio.h>
+
+void main(){
+
+    int n, i, j, k=1;
+
+    printf("Enter n = ");
+    scanf("%d", &n);
+
+    for(i=1; i <= n; i++){
+        for(j=1; j<=i; j++){
+            printf("%d ", k++);
+        }
+        printf("\n");
+    }
+}
+```
+
+## C++ Implementation
+
+### [Solution](./C++/Pattern_2.cpp)
+
+```cpp
+/**
+  * @author : ashwek
+  * @date : 26/12/2018
+  */
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int n, k=1;
+
+    cout<<"Enter n = ";
+    cin>>n;
+
+    for(int i=1; i <= n; i++){
+        for(int j=1; j<=i; j++)
+            cout<<k++ <<" ";
+        cout<<endl;
+    }
+    return 0;
+}
 ```
 
 ## Pattern 3
@@ -401,6 +518,77 @@ def pattern3(num):
 pattern3(4)
 ```
 
+## C Implementation
+
+### [Solution](./C/Pattern_3.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 26/12/2018
+  */
+
+#include<stdio.h>
+
+void main(){
+
+    int n, i, j;
+
+    printf("Enter n = ");
+    scanf("%d", &n);
+
+    //Upper-Half
+    for(i=1; i <=n; i++){
+        for(j=1; j<=i; j++)
+            printf("%d ", j);
+        printf("\n");
+    }
+    //Lower-Half
+    for(i=n-1; i>=1; i--){
+        for(j=1;  j<=i; j++)
+            printf("%d ", j);
+        printf("\n");
+    }
+}
+```
+
+## C++ Implementation
+
+### [Solution](./C++/Pattern_3.cpp)
+
+```cpp
+/**
+  * @author : ashwek
+  * @date : 26/12/2018
+  */
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int n;
+
+    cout<<"Enter n = ";
+    cin>>n;
+
+    //Upper-Half
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++)
+            cout<<j <<" ";
+        cout<<endl;
+    }
+    //Lower-Half
+    for(int i=n-1; i>=1; i--){
+        for(int j=1;  j<=i; j++)
+            cout<<j <<" ";
+        cout<<endl;
+    }
+    return 0;
+}
+```
+
 ## Pattern 4
 
 ```js
@@ -489,6 +677,73 @@ public class Pattern4 {
 }
 ```
 
+## C Implementation
+
+### [Solution](./C/Pattern_4.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 26/12/2018
+  */
+
+#include<stdio.h>
+
+void main(){
+
+    int n, i, j, s;
+
+    printf("Enter n = ");
+    scanf("%d", &n);
+
+    for(i=1; i <=n; i++){
+        for(s=i; s<n; s++)  //Space
+            printf("  ");
+
+        for(j=0; j<i; j++)  //Number-Sequence
+            printf("%d ", (j+i));
+        for(j=i-2; j>=0; j--)  //Reverse-Number-Sequence
+            printf("%d ", (j+i));
+        printf("\n");
+    }
+}
+```
+
+## C++ Implementation
+
+### [Solution](./C++/Pattern_4.cpp)
+
+```cpp
+/**
+  * @author : ashwek
+  * @date : 26/12/2018
+  */
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int n;
+
+    cout<<"Enter n = ";
+    cin>>n;
+
+    for(int i=1; i <=n; i++){
+        for(int s=i; s<n; s++)  //Space
+            cout<<"  ";
+
+        for(int j=0; j<i; j++)  //Number-Sequence
+            cout<<(j+i) <<" ";
+        for(int j=i-2; j>=0; j--)  //Reverse-Number-Sequence
+            cout<<(j+i) <<" ";
+        cout<<endl;
+    }
+    return 0;
+}
+```
+
 ## Pattern 5
 
 ```js
@@ -566,6 +821,67 @@ public class Pattern5 {
             System.out.println("");
         }
     }
+}
+```
+
+## C Implementation
+
+### [Solution](./C/Pattern_5.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 26/12/2018
+  */
+
+#include<stdio.h>
+
+void main(){
+
+    int n, i, j, s;
+
+    printf("Enter n = ");
+    scanf("%d", &n);
+
+    for(i=1; i <=n; i++){
+        for(s=1; s<i; s++)  //Space
+            printf("  ");
+        for(j=1; j<(n-i+1)*2; j++)  //Triangle
+            printf("* ");
+        printf("\n");
+    }
+}
+```
+
+## C++ Implementation
+
+### [Solution](./C++/Pattern_5.cpp)
+
+```cpp
+/**
+  * @author : ashwek
+  * @date : 26/12/2018
+  */
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int n;
+
+    cout<<"Enter n = ";
+    cin>>n;
+
+    for(int i=1; i <=n; i++){
+        for(int s=1; s<i; s++)  //Space
+            cout<<"  ";
+        for(int j=1; j<(n-i+1)*2; j++)  //Triangle
+            cout<<"* ";
+        cout<<endl;
+    }
+    return 0;
 }
 ```
 
@@ -684,6 +1000,85 @@ function pattern6 (n) {
 }
 
 pattern6 (5);
+```
+
+## C Implementation
+
+### [Solution](./C/Pattern_6.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 26/12/2018
+  */
+
+#include<stdio.h>
+
+void main(){
+
+    int n, i, j, s;
+
+    printf("Enter n = ");
+    scanf("%d", &n);
+
+    //Upper-Half
+    for(i=1; i <=n; i++){
+        for(s=i; s<n; s++)  //Space
+            printf("  ");
+        for(j=1; j<i*2; j++)  //Triangle
+            printf("* ");
+        printf("\n");
+    }
+    //Lower-Half
+    for(i=2; i <=n; i++){
+        for(s=1; s<i; s++)  //Sapce
+            printf("  ");
+        for(j=1; j<(n-i+1)*2; j++)  //Triangle
+            printf("* ");
+        printf("\n");
+    }
+}
+```
+
+## C++ Implementation
+
+### [Solution](./C++/Pattern_6.cpp)
+
+```cpp
+/**
+  * @author : ashwek
+  * @date : 26/12/2018
+  */
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int n;
+
+    cout<<"Enter n = ";
+    cin>>n;
+
+    //Upper-Half
+    for(int i=1; i <=n; i++){
+        for(int s=i; s<n; s++)  //Space
+            cout<<"  ";
+        for(int j=1; j<i*2; j++)  //Triangle
+            cout<<"* ";
+        cout<<endl;
+    }
+    //Lower-Half
+    for(int i=2; i <=n; i++){
+        for(int s=1; s<i; s++)  //Sapce
+            cout<<"  ";
+        for(int j=1; j<(n-i+1)*2; j++)  //Triangle
+            cout<<"* ";
+        cout<<endl;
+    }
+    return 0;
+}
 ```
 
 ## Pattern 7
@@ -819,6 +1214,92 @@ public class Pattern7 {
 }
 ```
 
+## C Implementation
+
+### [Solution](./C/Pattern_7.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 26/12/2018
+  */
+
+#include<stdio.h>
+
+void main(){
+
+    int n, i, j, s;
+
+    printf("Enter n = ");
+    scanf("%d", &n);
+
+    //Upper-Half
+    for(i=1; i <=n; i++){
+        for(j=i; j<=n; j++)  //Left Triangle
+            printf("* ");
+        for(s=1; s<i; s++)  //Space
+            printf("    ");
+        for(j=i; j<=n; j++)  //Right Triangle
+            printf("* ");
+        printf("\n");
+    }
+    //Lower-Half
+    for(i=1; i <=n; i++){
+        for(j=1; j<=i; j++)  //Left Triangle
+            printf("* ");
+        for(s=1; s<=(n-i); s++)  //Space
+            printf("    ");
+        for(j=1; j<=i; j++)  //Right Triangle
+            printf("* ");
+        printf("\n");
+    }
+}
+```
+
+## C++ Implementation
+
+### [Solution](./C++/Pattern_7.cpp)
+
+```cpp
+/**
+  * @author : ashwek
+  * @date : 26/12/2018
+  */
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int n;
+
+    cout<<"Enter n = ";
+    cin>>n;
+
+    //Upper-Half
+    for(int i=1; i <=n; i++){
+        for(int j=i; j<=n; j++)  //Left Triangle
+            cout<<"* ";
+        for(int s=1; s<i; s++)  //Space
+            cout<<"    ";
+        for(int j=i; j<=n; j++)  //Right Triangle
+            cout<<"* ";
+        cout<<endl;
+    }
+    //Lower-Half
+    for(int i=1; i <=n; i++){
+        for(int j=1; j<=i; j++)  //Left Triangle
+            cout<<"* ";
+        for(int s=1; s<=(n-i); s++)  //Space
+            cout<<"    ";
+        for(int j=1; j<=i; j++)  //Right Triangle
+            cout<<"* ";
+        cout<<endl;
+    }
+    return 0;
+}
+```
 
 ## Pattern 8
 
@@ -929,5 +1410,92 @@ public class Pattern8 {
             System.out.println("");
         }
     }
+}
+```
+
+## C Implementation
+
+### [Solution](./C/Pattern_8.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 26/12/2018
+  */
+
+#include<stdio.h>
+
+void main(){
+
+    int n, i, j, s;
+
+    printf("Enter n = ");
+    scanf("%d", &n);
+
+    //Upper-Half
+    for(i=1; i <=n; i++){
+        for(j=1; j<=i; j++)  //Left Triangle
+            printf("* ");
+        for(s=1; s<=(n-i); s++)  //Space
+            printf("    ");
+        for(j=1; j<=i; j++)  //Right Triangle
+            printf("* ");
+        printf("\n");
+    }
+    //Lower-Half
+    for(i=1; i <=n; i++){
+        for(j=i; j<=n; j++)  //Left Triangle
+            printf("* ");
+        for(s=1; s<i; s++)  //Space
+            printf("    ");
+        for(j=i; j<=n; j++)  //Right Triangle
+            printf("* ");
+        printf("\n");
+    }
+}
+```
+
+## C++ Implementation
+
+### [Solution](./C++/Pattern_8.cpp)
+
+```cpp
+/**
+  * @author : ashwek
+  * @date : 26/12/2018
+  */
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int n;
+
+    cout<<"Enter n = ";
+    cin>>n;
+
+    //Upper-Half
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++)  //Left Triangle
+            cout<<"* ";
+        for(int s=1; s<=(n-i); s++)  //Space
+            cout<<"    ";
+        for(int j=1; j<=i; j++)  //Right Triangle
+            cout<<"* ";
+        cout<<endl;
+    }
+    //Lower-Half
+    for(int i=1; i<=n; i++){
+        for(int j=i; j<=n; j++)  //Left Triangle
+            cout<<"* ";
+        for(int s=1; s<i; s++)  //Space
+            cout<<"    ";
+        for(int j=i; j<=n; j++)  //Right Triangle
+            cout<<"* ";
+        cout<<endl;
+    }
+    return 0;
 }
 ```
