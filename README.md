@@ -21,6 +21,7 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 2. [Day 2 -- String Reversal + Palindrome](./Day2/) -- [http://codetoexpress.tech/dc/day2/](http://codetoexpress.tech/dc/day2)
 3. [Day 3 -- The Hamming Distance Problem](./Day3/) -- [http://codetoexpress.tech/dc/day3/](http://codetoexpress.tech/dc/day3/)
 4. [Day 4 -- Num Vowels + Max Chars](./day4/) -- [http://codetoexpress.tech/dc/day4/](http://codetoexpress.tech/dc/day4/)
+5. [Day 4 -- Pattern Printing Problems](./day5/) -- [http://codetoexpress.tech/dc/day5/](http://codetoexpress.tech/dc/day5/)
 
 ## Timeline
 
