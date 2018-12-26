@@ -76,7 +76,7 @@ function numVowels (str) {
     // Define an array of vowels
     let vowels = ['a', 'e', 'i', 'o', 'u'];
 
-    // Check each character of string 
+    // Check each character of string
     for (let char of str) {
         for (let vowel of vowels) {
             if (char.toLowerCase() === vowel)  count++;
@@ -122,12 +122,12 @@ function numVowels (str) {
             }
         }
     }
-    
+
     // Print the result
     console.log('Vowel Count: ');
     for (let vowel in vowels) {
         console.log(`Vowel: ${vowel} appears ${vowels[vowel]} number of times in the string "${str}"`);
-    }    
+    }
 
     console.log("Total number of vowels: " + count);
     return count;
@@ -319,11 +319,52 @@ int main()
 }
 ```
 
+### [countVovels.cpp](./C++/countVovels.cpp)
+
+```cpp
+
+/*
+ * @author: imkaka
+ * @date: 25/12/2018
+*/
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main()
+{
+    int count = 0;
+    string str;
+    cout << "/* ===== Number of Vowels ===== */" << endl;
+    cout << "\nEnter the string: ";
+    cin >> str;
+
+    // transform(str.begin(), str.end(), str.begin(), ::tolower);
+
+    for (int i = 0; i < str.size(); i++)
+    {
+        if (
+            tolower(str[i]) == 'a' ||
+            tolower(str[i]) == 'e' ||
+            tolower(str[i]) == 'i' ||
+            tolower(str[i]) == 'o' ||
+            tolower(str[i]) == 'u')
+        {
+            count++;
+        }
+    }
+
+    cout<<"Number of vowels in \""<<str<<"\" = "<<count<<endl;
+    return 0;
+}
+
+```
+
 ## Python Implementation
 
 ### [Solution](./Python/partA_sol.py)
 
-```py
+```python
 # Input the String.
 string=input("Enter the String : ")
 
@@ -345,8 +386,9 @@ print("Number of vowels in the string are : ",count)
 
 ```
 
-## [Solution](./Python/Shashankvowels.py)
-```Python
+### [Solution by shashank](./Python/Shashankvowels.py)
+
+```py
 """ 
  * @author: Shashank Jain
  * @date: 25/12/2018
@@ -397,6 +439,33 @@ void main(){
     printf("number of vowels = %d", count);
 
 }
+```
+## Ruby Implementation
+
+### [Solution](./Ruby.partA_sol.rb)
+
+```ruby
+=begin
+@author: aaditkamat
+@date: 25/12/2018
+=end
+def count_vowels(str)
+    if str === nil or not str.class === String
+        -1
+    end
+    ctr = 0
+    str.downcase!
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    vowels.each do |vowel|
+         ctr += str.count(vowel)
+    end
+    ctr
+end
+
+print "Enter a string: "
+str = gets
+str.chomp!
+puts "The number of vowels in #{str} is : #{count_vowels(str)}"
 ```
 
 </hr>
@@ -553,9 +622,9 @@ print("maximum occurence is of {0}:{1}".format(f,g))
  * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
  * @github: https://github.com/razdeep
  * @date: 25/12/2018
- * 
+ *
  * Max Char Problem Solution
- * 
+ *
 **/
 
 #include <iostream>
@@ -593,6 +662,47 @@ int main()
 }
 ```
 
+### [mostFrequent.cpp](./C++/mostFrequent.cpp)
+
+```cpp
+
+/*
+* @author : imkaka
+* @date : 25/12.2018
+*/
+
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+int main()
+{
+    string str;
+    cout << "Enter the string: ";
+    cin >> str;
+
+    int max_count = -1;
+    char label;
+    for (int i = 0; i < str.size(); ++i)
+    {
+        int current_count = count(str.begin(), str.end(), str[i]);
+        if (current_count > max_count)
+        {
+            max_count = current_count;
+            label = str[i];
+        }
+    }
+    cout << "'" << (char)label << "' has MAX " << max_count << " occurences in " << str << endl;
+    return 0;
+}
+
+// Time Compllexity = O(size(str) ^2)
+// We can Improve that by using hashing to which will increse space complexity to O(n)
+// Its called time-space trade off, which we generally do most times.
+```
+
 ## Python Implementation
 
 ### [Solution](./Python/partB_sol.py)
@@ -613,13 +723,13 @@ for char in string:
     # Else initialize its frequency by 1
     else:
         characters[char.lower()]=1
-        
+
 # Print the character which has the maximum frequency
 print("The most occouring character in the string is : ", max(characters,key=characters.get))
 
 ```
 
-### [Solution](./Python/Shashankchar.py)
+### [Solution 2] (./Python/Shashankchar.py)
 
 ```python
 """
@@ -670,3 +780,33 @@ void main(){
 }
 ```
 
+## Ruby Implementation
+
+### [Solution](./Ruby/partB_sol.rb)
+
+```ruby
+=begin
+@author: aaditkamat
+@date: 25/12/2018
+=end
+def most_frequent_character(str)
+    if str === nil or not str.class === String
+        nil
+    end
+    counts = {}
+    str.downcase!
+    str.each_char do |ch|
+        if not counts.key?(ch)
+            counts[ch] = 1
+        else
+            counts[ch] = counts[ch] + 1
+        end
+    end
+    counts.key(counts.values.max)
+end
+
+print "Enter a string: "
+str = gets
+str.chomp!
+puts "The most frequent character in #{str} is : #{most_frequent_character(str)}"
+```
