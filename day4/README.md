@@ -271,8 +271,6 @@ for i in b:
 print(count)
 ```
 
-<hr/>
-
 ## C++ Implementation
 
 ### [NumVowelsPartA.cpp](./C++/NumVowelsPartA.cpp)
