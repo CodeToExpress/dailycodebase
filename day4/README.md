@@ -307,7 +307,7 @@ int main()
 
 ### [Solution](./Python/partA_sol.py)
 
-```py
+```python
 # Input the String.
 string=input("Enter the String : ")
 
@@ -329,9 +329,11 @@ print("Number of vowels in the string are : ",count)
 
 ```
 
-## [Solution](./Python/Shashankvowels.py)
-```Python
-"""
+
+### [Solution by shashank](./Python/Shashankvowels.py)
+
+```python
+""" 
  * @author: Shashank Jain
  * @date: 25/12/2018
 """
@@ -381,6 +383,33 @@ void main(){
     printf("number of vowels = %d", count);
 
 }
+```
+## Ruby Implementation
+
+### [Solution](./Ruby.partA_sol.rb)
+
+```ruby
+=begin
+@author: aaditkamat
+@date: 25/12/2018
+=end
+def count_vowels(str)
+    if str === nil or not str.class === String
+        -1
+    end
+    ctr = 0
+    str.downcase!
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    vowels.each do |vowel|
+         ctr += str.count(vowel)
+    end
+    ctr
+end
+
+print "Enter a string: "
+str = gets
+str.chomp!
+puts "The number of vowels in #{str} is : #{count_vowels(str)}"
 ```
 
 </hr>
@@ -507,6 +536,7 @@ int main()
     return 0;
 }
 ```
+
 ### [mostFrequent.cpp](./C++/mostFrequent.cpp)
 
 ```cpp
@@ -547,6 +577,7 @@ int main()
 // We can Improve that by using hashing to which will increse space complexity to O(n)
 // Its called time-space trade off, which we generally do most times.
 ```
+
 ## Python Implementation
 
 ### [Solution](./Python/partB_sol.py)
@@ -573,7 +604,7 @@ print("The most occouring character in the string is : ", max(characters,key=cha
 
 ```
 
-### [Solution](./Python/Shashankchar.py)
+### [Solution 2] (./Python/Shashankchar.py)
 
 ```python
 """
@@ -623,4 +654,35 @@ void main(){
 
     printf("Most frequent character = \'%c\'\n", (Max+32));
 }
+```
+
+## Ruby Implementation
+
+### [Solution](./Ruby/partB_sol.rb)
+
+```ruby
+=begin
+@author: aaditkamat
+@date: 25/12/2018
+=end
+def most_frequent_character(str)
+    if str === nil or not str.class === String
+        nil
+    end
+    counts = {}
+    str.downcase!
+    str.each_char do |ch|
+        if not counts.key?(ch)
+            counts[ch] = 1
+        else
+            counts[ch] = counts[ch] + 1
+        end
+    end
+    counts.key(counts.values.max)
+end
+
+print "Enter a string: "
+str = gets
+str.chomp!
+puts "The most frequent character in #{str} is : #{most_frequent_character(str)}"
 ```
