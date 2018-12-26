@@ -2,11 +2,6 @@
 
 ## Contributors
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-| [<img src="https://avatars2.githubusercontent.com/u/25405726?v=4" width="100px;"/><br /><sub><b>Vishal Shirke</b></sub>](https://github.com/vishalshirke7)<br />[📖](https://github.com/CodeToExpress/dailycodebase/commits?author=vishalshirke7 "Documentation") [💻](https://github.com/CodeToExpress/dailycodebase/commits?author=vishalshirke7 "Code") [✅](#tutorial-vishalshirke7 "Tutorials") [📝](#blog-vishalshirke7 "Blogposts") |
-| :---: |
-<!-- ALL-CONTRIBUTORS-LIST:END -->
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
