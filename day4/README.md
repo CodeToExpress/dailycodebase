@@ -216,6 +216,61 @@ public class NumVowels2 {
 }
 ```
 
+## Python Implementation
+
+### [Solution 1](./Python/NumOfVowels.py)
+
+```python
+import re
+
+"""
+    This solution makes use of python's re module i.e regular expressions
+    Here findall method takes two parameters 1st - regualr expression, 2nd - input string
+    The regular expression simply checks for all vowels present in the input string 
+    and returns them as a list. 
+"""
+print(len(re.findall(r'[a,e,i,o,u,A,E,I,O,U]', input())))
+
+```
+
+### [Solution 2](./Python/partA_sol.py)
+
+```python
+# Input the String.
+string=input("Enter the String : ")
+
+# Create a list of vowels in lowercase.
+vowels=['a','e','i','o','u']
+
+# Initialize the count variable to zero.
+count=0
+
+# Now iterate every character in the string.
+for char in string:
+    # And if the current character we are iterating is
+    # present in the vowels list then increment count.
+    if char.lower() in vowels:
+        count+=1
+
+# Print the result
+print("Number of vowels in the string are : ",count)
+
+```
+
+##[Solution 3](./Python/Shashankvowels.py)
+
+```Python
+a=input("Enter the string to count no. of vowels?")
+b=list(a.replace(" ","").lower())
+c=['a','e','i','o','u']
+count=0
+for i in b:
+    for j in c:
+        if (j==i):
+            count=count+1
+print(count)
+```
+
 ## C++ Implementation
 
 ### [NumVowelsPartA.cpp](./C++/NumVowelsPartA.cpp)
@@ -487,6 +542,75 @@ function maxChars (sentence) {
 maxChars('helllllo worlld');
 ```
 
+## Python Implementation
+
+### [Solution 1](./Python/MaxChars.py)
+
+```python
+input_str = input()
+dictnry = {}
+maxCount, maxChar = 0, ''
+for char in input_str:
+    """
+        In this solution we are simply maintaining a dictionary of characters 
+        in the input string as key and their count as value 
+    """
+    if char in dictnry.keys():
+        dictnry[char] += 1
+    else:
+        dictnry[char] = 1
+    """ 
+        We check for maxCount of each character in a single loop 
+        by comparing it with present maxCount, hence not iterating over the dictionary again 
+        to find character with maximum count. 
+    """
+    if dictnry[char] > maxCount:
+        maxCount = dictnry[char]
+        maxChar = char
+
+print(maxChar)
+
+```
+### [Solution 2](./Python/partB_sol.py)
+
+```python
+# Input the string
+string=input("Enter the string : ")
+
+# Create an empty dictionary to store the frequency of characters
+characters={}
+
+#  Iterate every character in the string
+for char in string:
+    # And if the character already exists in the dictionary then
+    # increment its frequency by 1.
+    if char.lower() in characters:
+        characters[char.lower()]+=1
+    # Else initialize its frequency by 1
+    else:
+        characters[char.lower()]=1
+        
+# Print the character which has the maximum frequency
+print("The most occouring character in the string is : ", max(characters,key=characters.get))
+
+```
+
+###[Solution 3] (./Python/Shashankchar.py)
+
+``` Python
+a=input("Enter the string to count frequent occuring characters?")
+b=list(a.replace(" ","").lower())
+c=[]
+for i in b:
+    d=(i,b.count(i))
+    c.append(d)
+
+e=dict(list(set(c)))
+f=max(e)
+g=max(e.values())
+print("maximum occurence is of {0}:{1}".format(f,g))
+```
+
 ## C++ Implementation
 
 ### [NumVowelsPartB.cpp](./C++/NumVowelsPartB.cpp)
@@ -617,7 +741,6 @@ c=[]
 for i in b:
     d=(i,b.count(i))
     c.append(d)
-
 e=dict(list(set(c)))
 f=max(e)
 g=max(e.values())
