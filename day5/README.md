@@ -1,0 +1,861 @@
+# Day 2 -- Patterns
+
+Pattern programs like printing a pyramid, inverted pyramid etc. are some very famous problems and a good way to test your logic and knowledge of nested loops. Hence, on the day 5 of Daily Codes, let’s do some pattern based programs 😀
+
+![Patterns](./cover.png)
+
+Here's the questions for today 😁
+
+### Pattern 1
+
+```
+input n=5
+
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+```
+
+### Pattern 2
+
+```
+input = 4
+
+1
+2 3
+4 5 6
+7 8 9 10
+```
+
+### Pattern 3
+
+```
+input = 5
+
+1
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5
+1 2 3 4
+1 2 3 
+1 2 
+1
+```
+
+### Pattern 4
+
+```
+input = 5
+
+          1
+        2 3 2
+      3 4 5 4 2
+    4 5 6 7 6 5 4
+  5 6 7 8 9 8 7 6 5
+```
+
+### Pattern 5
+
+```
+input = 5
+
+* * * * * * * * *
+  * * * * * * *
+    * * * * * 
+      * * *
+        *
+```
+
+### Pattern 6
+
+```
+input = 5
+
+         *
+       * * *
+     * * * * *
+   * * * * * * *
+ * * * * * * * * *
+   * * * * * * *
+     * * * * * 
+       * * * 
+         *
+```
+
+### Pattern 7
+
+```
+input = 4
+
+* * * *  * * * *
+* * *      * * *
+* *          * * 
+*              *
+*              *
+* *          * *
+* * *      * * *
+* * * *  * * * *
+```
+
+### Pattern 8
+
+```
+input = 5
+
+ *                 *
+ * *             * *
+ * * *         * * *
+ * * * *     * * * *
+ * * * * * * * * * *
+ * * * * * * * * * *
+ * * * *     * * * *
+ * * *         * * *
+ * *             * *
+ *                 *
+```
+
+## Pattern 1
+
+```
+input n=5
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+```
+
+## JavaScript Implementation
+
+### [Solution](./JavaScript/pattern1.js)
+
+```js
+/**
+ * @author MadhavBahlMD
+ * @date 26/12/2018 
+ */
+
+function pattern1 (num) {
+    console.log ("/* ===== Pattern #1 ===== */");
+    
+    for (let i=1; i<=num; i++) {
+        // we will store the output for each line in a string 
+        // since console.log would print and take the pointer to next line
+        let currentLine = '';
+        for(let j=1; j<=i; j++) {
+            currentLine += j + ' ';
+        }
+        console.log (currentLine);
+    }
+}
+
+pattern1(5);
+```
+
+## Java Implementation
+
+### [Solution](./Java/Pattern1.java)
+
+```java
+/**
+ * @author MadhavBahlMD
+ * @date 26/12/2018 
+ */
+
+import java.util.Scanner;
+
+public class Pattern1 {
+    public static void main (String[] args) {
+        System.out.println("/* ===== Pattern #1 ===== */");
+        Scanner input = new Scanner (System.in);
+        int n = input.nextInt(), i, j;
+
+        // Print the pattern
+        for (i=1; i<=n; i++) {
+            for (j=1; j<=i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println("");
+        }
+    }
+}
+```
+
+## Pattern 2 (Floyd's Triangle)
+
+```js
+input = 4
+1
+2 3
+4 5 6
+7 8 9 10
+```
+
+## JavaScript Implementation
+
+### [Solution](./JavaScript/pattern2.js)
+
+```js
+/**
+ * @author MadhavBahlMD
+ * @date 26/12/2018 
+ */
+
+function pattern2 (num) {
+    // Set count = 0
+    let  count = 0;
+
+    // Print the pattern
+    for (let i=1; i<=num; i++) {
+        let currentLine = '';
+        for (let j=1; j<=i; j++) {
+            count++;
+            currentLine += count + ' ';
+        }
+        console.log(currentLine);
+    }  
+}
+
+pattern2 (4);
+```
+
+## Java Implementation
+
+### [Solution](./Java/Pattern2.java)
+
+```java
+import java.util.Scanner;
+
+public class Pattern3 {
+    public static void main (String[] args) {
+        System.out.println("/* ===== Pattern #3 ===== */");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt(), i, j;
+
+        // Print the upper half
+        for (i=1; i<=n; i++) {
+            for (j=1; j<=i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println("");
+        }
+
+        // Print the lower half
+        for (i=n-1; i>=1; i--) {
+            for  (j=1; j<=i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println("");
+        }
+    }
+}
+```
+
+## Pattern 3
+
+```js
+input = 5
+1
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5
+1 2 3 4
+1 2 3 
+1 2 
+1
+```
+
+## JavaScript Implementation
+
+### [Solution](./JavaScript/pattern3.js)
+
+```js
+function pattern3 (num) {
+    let currentLine = '';
+
+    // Print the upper triangle
+    for (let i=1; i<=num; i++) {
+        currentLine = '';
+        for (let j=1; j<=i; j++) {
+            currentLine += j + " ";
+        }
+        console.log(currentLine);
+    }
+
+    // Print the lower half
+    for (let i=num-1; i>=1; i--) {
+        currentLine = '';
+        for (let j=1; j<=i; j++) {
+            currentLine += j + " ";
+        }
+        console.log(currentLine);
+    }
+}
+```
+
+## Java Implementation
+
+### [Solution](./Java/Pattern3.java)
+
+```java
+import java.util.Scanner;
+
+public class Pattern3 {
+    public static void main (String[] args) {
+        System.out.println("/* ===== Pattern #3 ===== */");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt(), i, j;
+
+        // Print the upper half
+        for (i=1; i<=n; i++) {
+            for (j=1; j<=i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println("");
+        }
+
+        // Print the lower half
+        for (i=n-1; i>=1; i--) {
+            for  (j=1; j<=i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println("");
+        }
+    }
+}
+```
+
+## Pattern 4
+
+```js
+input = 5
+          1
+        2 3 2
+      3 4 5 4 2
+    4 5 6 7 6 5 4
+  5 6 7 8 9 8 7 6 5
+```
+
+## JavaScript Implementation
+
+### [Solution](./JavaScript/pattern4.js)
+
+```js
+/**
+ * @author MadhavBahlMD
+ * @date 26/12/2018 
+ */
+
+function pattern4 (num) {
+    let currentLine = '';
+
+    for (let i=1; i<=num; i++) {
+        currentLine = '';
+
+        // Print left white spaces
+        for (let j=num; j>i; j--) {
+            currentLine += "  ";
+        }
+
+        // Print numbers
+        for (let j=i; j<=(2*i-1); j++) {
+            currentLine += j + " ";
+        }
+        for (let j=(2*i-1)-1; j>=i; j--) {
+            currentLine += j + " ";
+        }
+
+        // Print the line
+        console.log(currentLine);
+    }
+}
+
+pattern4 (5);
+```
+
+## Java Implementation
+
+### [Solution](./Java/Pattern4.java)
+
+```java
+/**
+ * @author MadhavBahlMD
+ * @date 26/12/2018 
+ */
+
+import java.util.Scanner;
+
+public class Pattern4 {
+    public static void main (String[] args) {
+        System.out.println("/* ===== Pattern #4 ===== */");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt(), i, j;
+
+        for (i=1; i<=n; i++) {
+            // Print left white spaces
+            for (j=n; j>i; j--) {
+                System.out.print("  ");
+            }
+
+            // Print the numbers
+            for (j=i; j<=(2*i-1); j++) {
+                System.out.print(j + " ");
+            }
+
+            for (j=(2*i-1) - 1; j>=i; j--) {
+                System.out.print(j + " ");
+            }
+
+            System.out.println("");
+        }
+
+    }
+}
+```
+
+## Pattern 5
+
+```js
+input = 5
+* * * * * * * * *
+  * * * * * * *
+    * * * * * 
+      * * *
+        *
+```
+
+## JavaScript Implementation
+
+### [Solution](./JavaScript/pattern5.js)
+
+```js
+/**
+ * @author MadhavBahlMD
+ * @date 26/12/2018 
+ */
+
+function pattern5 (num) {
+    let currentLine = '';
+
+    // Print the pattern
+    for (let i=1; i<=num; i++) {
+        currentLine = '';
+
+        // Print the white spaces
+        for (let j=1; j<i; j++) {
+            currentLine += '  ';
+        }
+
+        // Print asterisk
+        for (let j=1; j<=(2*num - (2*i - 1)); j++) {
+            currentLine += '* ';
+        }
+
+        console.log(currentLine);
+    }
+}
+
+pattern5 (5);
+```
+
+## Java Implementation
+
+### [Solution](./Java/Pattern5.java)
+
+```java
+/**
+ * @author MadhavBahlMD
+ * @date 26/12/2018 
+ */
+
+import java.util.Scanner;
+
+public class Pattern5 {
+    public static void main (String[] args) {
+        System.out.println("/* ===== Pattern #5 ===== */");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt(), i, j;
+
+        // Print the pattern
+        for (i=1; i<=n; i++) {
+            // Print whitet spaces
+            for (j = 1; j < i; j++) {
+                System.out.print("  ");
+            }
+
+            // Print asterisk
+            for (j = 1; j <= (2 * n - (2 * i - 1)); j++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+}
+```
+
+## Pattern 6
+
+```js
+input = 5
+         *
+       * * *
+     * * * * *
+   * * * * * * *
+ * * * * * * * * *
+   * * * * * * *
+     * * * * * 
+       * * * 
+         *
+```
+
+## JavaScript Implementation
+
+### [Solution](./JavaScript/pattern6.js)
+
+```js
+/**
+ * @author MadhavBahlMD
+ * @date 26/12/2018 
+ */
+
+function pattern6 (n) {
+    let currentLine = '';
+
+    // Print upper triangle
+    for(let i=1; i<=n; i++) {
+        currentLine = '';
+
+        // Print white spaces
+        for (let j=1; j<=n-i; j++) {
+            currentLine += '  ';
+        }
+
+        // Print asterisks
+        for (let j=1; j<=(2*i-1); j++) {
+            currentLine += '* ';
+        }
+
+        console.log(currentLine);
+    }
+
+    // Print lower triangle
+    for (let i=(n-1); i>=1; i--) {
+        currentLine = '';
+
+        // Print white spaces
+        for (let j=1; j<=n-i; j++) {
+            currentLine += '  ';
+        }
+
+        // Print asterisks
+        for (let j=1; j<=(2*i-1); j++) {
+            currentLine += '* ';
+        }
+
+        console.log(currentLine);
+    }
+}
+
+pattern6 (5);
+```
+
+## Java Implementation
+
+### [Solution](./Java/Pattern6.java)
+
+```java
+/**
+ * @author MadhavBahlMD
+ * @date 26/12/2018 
+ */
+
+function pattern6 (n) {
+    let currentLine = '';
+
+    // Print upper triangle
+    for(let i=1; i<=n; i++) {
+        currentLine = '';
+
+        // Print white spaces
+        for (let j=1; j<=n-i; j++) {
+            currentLine += '  ';
+        }
+
+        // Print asterisks
+        for (let j=1; j<=(2*i-1); j++) {
+            currentLine += '* ';
+        }
+
+        console.log(currentLine);
+    }
+
+    // Print lower triangle
+    for (let i=(n-1); i>=1; i--) {
+        currentLine = '';
+
+        // Print white spaces
+        for (let j=1; j<=n-i; j++) {
+            currentLine += '  ';
+        }
+
+        // Print asterisks
+        for (let j=1; j<=(2*i-1); j++) {
+            currentLine += '* ';
+        }
+
+        console.log(currentLine);
+    }
+}
+
+pattern6 (5);
+```
+
+## Pattern 7
+
+```js
+input = 4
+* * * *  * * * *
+* * *      * * *
+* *          * * 
+*              *
+*              *
+* *          * *
+* * *      * * *
+* * * *  * * * *
+```
+
+## JavaScript Implementation
+
+### [Solution](./JavaScript/pattern7.js)
+
+```js
+/**
+ * @author MadhavBahlMD
+ * @date 26/12/2018 
+ */
+
+function pattern7 (num) {
+    let currentLine;
+
+    // Print the upper half
+    for(i=1; i<=num; i++) {
+        currentLine = '';
+        for (j=1; j<=2*num; j++) {
+
+            if (j<=num) {
+                if ((i+j) > num+1)
+                    currentLine += '  ';
+                else 
+                    currentLine += '* ';
+            } else {
+                if (i>j-num) 
+                    currentLine += '  ';
+                else 
+                    currentLine += '* ';
+            }
+            
+        }
+        console.log(currentLine);
+    }
+
+    // Print the lower half
+    for (i=2; i<=num; i++) {
+        currentLine = '';
+        for(j=1; j<=2*num; j++) {
+
+            if (j<=num) {
+                if (j>i) 
+                    currentLine += '  ';
+                else    
+                    currentLine += '* ';
+            } else {
+                if (i+(j-num) < num+1)
+                    currentLine += '  ';
+                else
+                    currentLine += '* ';
+            }
+
+        }
+        console.log(currentLine);
+    }
+
+}
+
+pattern7 (5);
+```
+
+## Java Implementation
+
+### [Solution](./Java/Pattern7.java)
+
+```java
+/**
+ * @author MadhavBahlMD
+ * @date 26/12/2018 
+ */
+
+import java.util.Scanner;
+
+public class Pattern7 {
+    public static void main (String[] args) {
+        System.out.println("/* ===== Pattern #7 ===== */");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt(), i, j;
+
+        // Print upper half
+        for (i=1; i<=n; i++) {
+            for (j=1; j<=2*n; j++) {
+
+                // Print upperleft pattern
+                if (i+j <= n+1)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+
+                // Print upperright pattern
+                if (i>j-n)
+                    System.out.print(" ");
+                else
+                    System.out.print("*");
+            }
+            System.out.println("");
+        }
+
+        // Print lower half
+        for (i=1; i<=n; i++) {
+            for (j=1; j<=2*n; j++) {
+
+                // Print lower left pattern
+                if (j>i)
+                    System.out.print(" ");
+                else
+                    System.out.print("*");
+
+                // Print lower right pattern
+                if (i+j < 2*n+1)
+                    System.out.print(" ");
+                else
+                    System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+}
+```
+
+
+## Pattern 8
+
+```js
+input = 5
+ *                 *
+ * *             * *
+ * * *         * * *
+ * * * *     * * * *
+ * * * * * * * * * *
+ * * * * * * * * * *
+ * * * *     * * * *
+ * * *         * * *
+ * *             * *
+ *                 *
+```
+
+## JavaScript Implementation
+
+### [Solution](./JavaScript/pattern8.js)
+
+```js
+/**
+ * @author MadhavBahlMD
+ * @date 26/12/2018 
+ */
+
+ function pattern8 (n) {
+    let currentLine;
+
+    // Print upper pattern
+    for (let i=1; i<=n; i++) {
+        currentLine = '';
+        for (let j=1; j<=2*n; j++) {
+            if (j<=n) {
+                if (i<j)  currentLine += '  ';
+                else  currentLine += '* ';
+            } else {
+                if (i+j < 2*n + 1)  currentLine += '  ';
+                else  currentLine += '* ';
+            }
+        }
+        console.log(currentLine);
+    }
+
+    // Print lower pattern
+    for (let i=1; i<=n; i++) {
+        currentLine = '';
+        for (let j=1; j<=2*n; j++) {
+            if (j<=n) {
+                if (i+j>n+1)  currentLine += '  ';
+                else  currentLine += '* ';
+            } else {
+                if (i > j-n)  currentLine += '  ';
+                else  currentLine += '* ';
+            }
+        }
+        console.log(currentLine);
+    }
+}
+
+pattern8 (5);
+```
+
+## Java Implementation
+
+### [Solution](./Java/Pattern8.java)
+
+```java
+/**
+ * @author MadhavBahlMD
+ * @date 26/12/2018 
+ */
+
+import java.util.Scanner;
+
+public class Pattern8 {
+    public static void main(String[] args) {
+        System.out.println("/* ===== Pattern #8 ===== */");
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt(), i, j;
+
+        // Print upper pattern
+        for (i=1; i<=n; i++) {
+            for (j=1; j<=2*n; j++) {
+                if (j<=n) {
+                    if (i<j)  System.out.print("  ");
+                    else  System.out.print("* ");
+                } else {
+                    if (i+j < 2*n + 1)  System.out.print("  ");
+                    else  System.out.print("* ");
+                }
+            }
+            System.out.println("");
+        }
+
+        // Print lower pattern
+        for (i=1; i<=n; i++) {
+            for (j=1; j<=2*n; j++) {
+                if (j<=n) {
+                    if (i+j>n+1)  System.out.print("  ");
+                    else  System.out.print("* ");
+                } else {
+                    if (i > j-n)  System.out.print("  ");
+                    else  System.out.print("* ");
+                }
+            }
+            System.out.println("");
+        }
+    }
+}
+```
