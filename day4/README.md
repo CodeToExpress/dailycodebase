@@ -1,10 +1,12 @@
-# Day 4 -- Number of Vowels and Max Chars
-
 ![cover](./cover.png)
+
+# Day 4 -- Number of Vowels and Max Chars
 
 ## Part A -- Number of Vowels
 
 **Question** - Given a string, Write a program that prints the number of vowels in it.
+
+![ques](./ques.png)
 
 ## JavaScript Implementation
 
