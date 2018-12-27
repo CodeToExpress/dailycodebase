@@ -1,4 +1,4 @@
-![cover](./cover.png)
+﻿![cover](./cover.png)
 
 # Day 6
 
@@ -226,6 +226,34 @@ string = input()
 print("String \'", string, "\' with first letter of each word capitalized (short version): ", capitalize_sentence_short(string))
 print("String \'", string, "\' with first letter of each word capitalized (slightly long version): ", capitalize_sentence_long(string))
 ```
+## C++ Implementation
+
+### [Solution](./cpp/Capialise.cpp)
+
+```C++
+/**
+ * @author Bhanu0202
+ * @date 27/12/2018
+ */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	string sa;
+	getline(cin, sa);
+	int l = sa.length();
+	if(sa[0]>=97 && sa[0]<=122)
+	sa[0] -= 32;
+	for(int i = 0; i < l; i++){
+	    if(sa[i] == 32 && sa[i + 1]>=97 && sa[i + 1]<=122){
+	        sa[i + 1] -= 32;  
+	    }
+	}
+	cout << sa;
+	return 0;
+}
+```
 
 ## Part B -- Word Reversal
 
@@ -423,7 +451,43 @@ print("Enter a string: ", end= '')
 string = input()
 print("Reverse of string: ", reverse_words(string)})
 ```
+## C++ Implementation
 
+### [Solution](./cpp/wrdReversal.cpp)
+
+```C++
+/**
+ * @author Bhanu0202
+ * @date 27/12/2018
+ */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	string sa, sb;
+	getline(cin, sa);
+	int l = sa.length();
+	vector<string> s;
+	s.push_back("");
+	int c = 0;
+	for(int i = 0; i < l; i++){
+    if(sa[i] == ' '){
+        c++;
+        s.push_back("");
+    }
+    else
+        s[c] += sa[i];
+    }
+    for(int i = 0; i <= c; i++){
+        reverse(s[i].begin(), s[i].end());
+        sb += s[i]  + " ";
+    }
+    cout << sb;
+	return 0;
+}
+```
 ## Part C -- Anagram Check
 
 **Question** - Write a program to check whether the two provided strings are anagrams of each other.
@@ -614,4 +678,41 @@ print("Enter two strings: ")
 first_str = input()
 second_str = input()
 print("Are ", first_str, "and ", second_str, "anagrams? ", check_anagram(first_str, second_str))
+```
+## C++ Implementation
+
+### [Solution](./cpp/anagrams.cpp)
+
+```C++
+/**
+ * @author Bhanu0202
+ * @date 27/12/2018
+ */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	string sa, sb;
+	cin >> sa >>sb;
+	int la = sa.length();
+	int lb = sb.length();
+	int count[26] = {0};
+	if(la != lb){
+	    cout << "Invalid Input";
+	}
+	else{
+	    int flag = 0;
+	    sort(sa.begin(), sa.end()); 
+	    sort(sb.begin(), sb.end());
+	    if(sa != sb){
+	        flag = 1;
+	    }
+	    if(flag == 0)
+	    cout << "Anagrams";
+	    else
+	    cout << "Not anagrams";
+	}
+	return 0;
+}
 ```

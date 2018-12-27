@@ -16,18 +16,11 @@ int main() {
 	    cout << "Invalid Input";
 	}
 	else{
-	    int flag = 0, i;
-	    transform(sa.begin(), sa.end(), sa.begin(), ::tolower);
-	    transform(sb.begin(), sb.end(), sb.begin(), ::tolower);
-	    for(i = 0; sa[i] && sb[i]; i++){
-	        count[sa[i] - 97]++;
-	        count[sb[i] - 97]--;
-	    }
-	    for(int i = 0; i < 26; i++){
-	        if(count[i]){
-	            flag = 1;
-	            break;
-	        }
+	    int flag = 0;
+	    sort(sa.begin(), sa.end()); 
+	    sort(sb.begin(), sb.end());
+	    if(sa != sb){
+	        flag = 1;
 	    }
 	    if(flag == 0)
 	    cout << "Anagrams";
@@ -36,3 +29,4 @@ int main() {
 	}
 	return 0;
 }
+
