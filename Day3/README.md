@@ -10,7 +10,7 @@ Read more about Hamming Distance [here…](https://en.wikipedia.org/wiki/Hamming
 
 **Question**- Given 2 strings, we will find the number of positions at which the corresponding characters are different.
 
-![ques for Day 3](./ques.png)
+![ques for Day 3](./questionDay3.png)
 
 **Example**
 

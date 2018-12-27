@@ -6,7 +6,7 @@
 
 **Question** - Given a string, write a program to return a new string with reversed order of characters.
 
-![ques for Day 2](./ques.png)
+![ques for Day 2](./questionDay2.png)
 
 ## JavaScript Implementation
 
