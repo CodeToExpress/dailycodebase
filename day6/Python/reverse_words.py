@@ -11,4 +11,4 @@ def reverse_words(string):
 
 print("Enter a string: ", end= '')
 string = input()
-print(reverse_words(string))
+print("Reverse of string: ", reverse_words(string))

@@ -24,4 +24,4 @@ def check_anagram(first_str, second_str):
 print("Enter two strings: ")
 first_str = input()
 second_str = input()
-print(check_anagram(first_str, second_str))
+print("Are ", first_str, "and ", second_str, "anagrams? ", check_anagram(first_str, second_str))
