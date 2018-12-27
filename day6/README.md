@@ -385,6 +385,145 @@ print("Words Reversed =", wordRev(Str))
 
 **Question** - Write a program to check whether the two provided strings are anagrams of each other.
 
+## JavaScript Implementation
+
+### [Solution 1](./JavaScript/anagram1.js)
+
+```js
+/**
+ * @author MadhavBahlMD
+ * @date 27/12/2018
+ * METHOD -- Check the lengths of both strings, sort them and then check whether they are same
+ */
+
+function anagram (str1, str2) {
+    let len1 = str1.length,
+        len2 = str2.length;
+    
+    // Compare lengths
+    if (len1 !== len2) {
+        console.log ('Invalid Input');
+        return -1;
+    }
+
+    // sort the strings
+    let sortedStr1 = str1.split('').sort().join(''),
+        sortedStr2 = str2.split('').sort().join('');
+
+    // Compare both strings
+    if (sortedStr1 === sortedStr2) {
+        console.log(`"${str1}" and "${str2}" are Anagrams`);
+        return 1;
+    } else {
+        console.log(`"${str1}" and "${str2}" are not Anagrams`);
+        return 0;
+    }
+}
+
+anagram ('LISTEN', 'SILENT');
+```
+
+### [Solution 2](./JavaScript/anagram2.js)
+
+```js
+/**
+ * @author MadhavBahlMD
+ * @date 27/12/2018
+ * METHOD -- Prepare 2 objects which stores frequency of every character in both strings, compare those 2 objects  (dictionaries in python)
+ */
+
+function anagram (str1, str2) {
+    let len1 = str1.length,
+        len2 = str2.length;
+    
+    // Compare lengths
+    if (len1 !== len2) {
+        console.log ('Invalid Input');
+        return -1;
+    }
+
+    // Make  frequency objects
+    let countObj1 = {},
+        countObj2 = {};
+
+    for (let i=0; i<len1; i++) {
+        countObj1[str1[i]] = countObj1[str1[i]] + 1 || 1;
+    }
+
+    for (let i=0; i<len2; i++) {
+        countObj2[str2[i]] = countObj2[str2[i]] + 1 || 1;
+    }
+
+    // compare frequency objects
+    // Please note that there is no direct way of comparing 2 objects.
+    // We can either use some librries like Lowdash, or we can check the equality of each key value pair in objects, which is indeed a tedious task, but still, lets do it :)
+    for (let key in countObj1) {
+        if (countObj1[key] !== countObj2[key]) {
+            console.log(`"${str1}" and "${str2}" are not Anagrams`);
+            return 0;
+        }
+    }
+
+    console.log(`"${str1}" and "${str2}" are Anagrams`);
+}   
+
+anagram ('LISTEN', 'MILENT');
+```
+
+### [Solution 3](./JavaScript/anagram3.js)
+
+```js
+/**
+ * @author MadhavBahlMD
+ * @date 27/12/2018
+ * A simple method which first compares the lengths of strings and then iterates through the characters of any string and check whether it exists in the other one as well and does same for the other string
+ * Please note that this is not at all an efficient method. Do not use this.
+ */
+
+function anagram (str1, str2) {
+    let len1 = str1.length,
+        len2 = str2.length;
+
+    // Lengths of both strings must be same
+    if (len1 !== len2) {
+        console.log ('Invalid Input');
+        return -1;
+    }
+
+    // check characters of string 1 are there in string 2
+    let flag = 1;
+    for (let char of str1) {
+        if (str2.indexOf(char) < 0) {
+            flag = 0;
+            break;
+        }
+    }
+
+    if (flag !== 1) {
+        console.log (`${str1} and ${str2} are not Anagrams`);
+        return 0;
+    }
+
+    for (let char of str2) {
+        if (str1.indexOf(char) < 0) {
+            flag = 0;
+            break;
+        }
+    }
+
+    if (flag !== 1) {
+        console.log (`${str1} and ${str2} are not Anagrams`);
+        return 0;
+    } 
+    else {
+        console.log (`${str1} and ${str2} are Anagrams`);
+        return 1;
+    }
+}
+
+anagram ('LISTEN', 'SILENT');
+```
+
 ## Python Implementation
 
 ### [Solution](./Python/anagram.py)
