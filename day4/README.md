@@ -271,11 +271,8 @@ for i in b:
 print(count)
 ```
 
-<<<<<<< HEAD
 <hr/>
 
-=======
->>>>>>> upstream/master
 ## C++ Implementation
 
 ### [NumVowelsPartA.cpp](./C++/NumVowelsPartA.cpp)
