@@ -223,8 +223,32 @@ def capitalize_sentence_long(string):
 
 print("Enter a string: ", end= ' ')
 string = input()
-print("String \'", string, "\' with first letter of each word capitalized (short version): ", capitalize_sentence_short(string))
-print("String \'", string, "\' with first letter of each word capitalized (slightly long version): ", capitalize_sentence_long(string))
+print("String \'", string, "\' with first letter of each word capitalized (short version): ", capitalize_sentence_short(string), sep='')
+print("String \'", string, "\' with first letter of each word capitalized (slightly long version): ", capitalize_sentence_long(string), sep='')
+```
+
+## Ruby Implementation
+
+### [sentence_capitalization.rb](./Ruby/sentence_capitalization.rb)
+
+```ruby
+
+=begin
+@author: aaditkamat
+@date: 27/12/2018
+=end
+
+def capitalize_sentence(string)
+    new_string = ''
+    string.split(' ').each do |word|
+        new_string += word.capitalize + ' '
+    end
+    new_string
+end
+
+print"Enter a string: "
+string = gets().chomp
+puts "String \" #{string} \" with first letter of each word capitalized: #{capitalize_sentence(string)}"
 ```
 
 ## Part B -- Word Reversal
@@ -421,9 +445,32 @@ def reverse_words(string):
 
 print("Enter a string: ", end= '')
 string = input()
-print("Reverse of string: ", reverse_words(string)})
+print("Reverse of string \'", string, "\': ", reverse_words(string), sep='')
 ```
 
+## Ruby Implementation
+
+### [reverse_words.rb](./Ruby/reverse_words.rb)
+
+```ruby
+
+=begin
+@author: aaditkamat
+@date: 27/12/2018
+=end
+
+def reverse_words(string)
+    new_string = ''
+    string.split(' ').each do |word|
+        new_string += word.reverse + ' '
+    end
+    new_string
+end
+
+print"Enter a string: "
+string = gets().chomp
+print"Reverse of string #{string}:  #{reverse_words(string)}"
+```
 ## Part C -- Anagram Check
 
 **Question** - Write a program to check whether the two provided strings are anagrams of each other.
@@ -585,7 +632,7 @@ if( sorted(Str1) != sorted(Str2) ): print("not", end=" ")
 print("anagrams")
 ```
 
-### [reverse_words.py](./Python/reverse_words.py)
+### [anagram_check.py](./Python/anagram_check.py)
 ```python
 '''
 @author: aaditkamat
@@ -615,3 +662,43 @@ first_str = input()
 second_str = input()
 print("Are ", first_str, "and ", second_str, "anagrams? ", check_anagram(first_str, second_str))
 ```
+
+## Ruby Implementation
+
+### [anagram_check.rb](./Ruby/anagram_check.rb)
+
+```ruby
+
+=begin
+@author: aaditkamat
+@date: 27/12/2018
+=end
+
+def check_anagram(first_str, second_str)
+    first_word_dict = {}
+    second_word_dict = {}
+    first_str.gsub!(" ", "").downcase!
+    second_str.gsub!(" ", "").downcase!
+    first_str.each_char do |ch|
+        if first_word_dict.has_key?(ch)
+            first_word_dict[ch] += 1
+        else
+            first_word_dict[ch] = 1
+        end
+    end
+    second_str.each_char do |ch|
+        if second_word_dict.has_key?(ch)
+            second_word_dict[ch] += 1
+        else
+            second_word_dict[ch] = 1
+        end
+    end
+    first_word_dict == second_word_dict
+end
+
+puts "Enter two strings: "
+first_str = gets().chomp
+second_str = gets().chomp
+puts "\nAre #{first_str} and #{second_str} anagrams? #{check_anagram(String.new(first_str), String.new(second_str))}"
+```
+
