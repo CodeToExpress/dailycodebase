@@ -206,7 +206,6 @@ def pattern1(num):
 
 pattern1(5)
 ```
-
 ## C Implementation
 
 ### [Solution](./C/Pattern_1.c)
@@ -266,9 +265,38 @@ int main(){
 }
 ```
 
+### [first_pattern.cpp](./C++/first_pattern.cpp)
+
+```cpp
+/*
+ * @author: aaditkamat
+ * @date: 26/12/2018
+ */
+ 
+#include <iostream>
+
+using namespace std;
+
+void first_pattern(int num) {
+   for (int i = 1; i <= num; i++) {
+       for (int j = 1; j <= i; j++) {
+          cout << j << " ";
+       }
+       cout << endl;
+   }
+}
+
+int main() {
+ int num;
+ cout << "Enter a number: ";
+ cin >> num;
+ first_pattern(num);
+ return 0;
+```
+
 ## Pattern 2 (Floyd's Triangle)
 
-```js
+```
 input = 4
 1
 2 3
@@ -417,9 +445,40 @@ int main(){
 }
 ```
 
+### [second_pattern.cpp](./C++/second_pattern.cpp)
+
+```cpp
+/*
+ * @author: aaditkamat
+ * @date: 26/12/2018
+ */
+
+#include <iostream>
+
+using namespace std;
+
+void second_pattern(int num) {
+   int ctr = 1;
+   for (int i = 1; i <= num; i++) {
+      for (int j = 1; j <= i; j++) {
+         cout << ctr++ << " ";
+      }
+      cout << endl;
+   }
+}
+
+int main() {
+ int num;
+ cout << "Enter a number: ";
+ cin >> num;
+ second_pattern(num);
+ return 0;
+}
+```
+
 ## Pattern 3
 
-```js
+```
 input = 5
 1
 1 2
@@ -591,9 +650,44 @@ int main(){
 }
 ```
 
+### [third_pattern.cpp](./C++/third_pattern.cpp)
+
+```cpp
+/*
+ * @author: aaditkamat
+ * @date: 26/12/2018
+ */
+ 
+#include <iostream>
+
+using namespace std;
+
+void third_pattern(int num) {
+   int ctr = 1, bound = 2 * num - 1;
+   for (int i = 1; i <= bound; i++) {
+     for (int j = 1; j <= ctr; j++) {
+       cout << j << " ";
+     }
+     if (i < num) {
+        ctr++;
+     } else {
+        ctr--;
+     }
+     cout << endl;
+   }
+}
+
+int main() {
+ int num;
+ cout << "Enter a number: ";
+ cin >> num;
+ third_pattern(num);
+ return 0;
+```
+
 ## Pattern 4
 
-```js
+```
 input = 5
           1
         2 3 2
@@ -766,9 +860,49 @@ int main(){
 }
 ```
 
+### [fourth_pattern.cpp](./C++/fourth_pattern.cpp)
+
+```cpp
+/*
+ * @author: aaditkamat
+ * @date: 26/12/2018
+ */
+ 
+#include <iostream>
+
+using namespace std;
+
+void fourth_pattern(int num) {
+    int bound = 2 * num - 1, ctr;
+    for (int i = 1; i <= num; i++) {
+        ctr = i;
+        for (int j = 1; j <= bound; j++) {
+            if (j <= num - i || j >= num + i) {
+                cout << "  ";
+            } else {
+                cout << ctr << " ";
+                if (j < num) {
+                    ctr++;
+                } else {
+                    ctr--;
+                }
+            }
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+ int num;
+ cout << "Enter a number: ";
+ cin >> num;
+ fourth_pattern(num);
+ return 0;
+```
+
 ## Pattern 5
 
-```js
+```
 input = 5
 * * * * * * * * *
   * * * * * * *
@@ -924,9 +1058,44 @@ int main(){
 }
 ```
 
+### [fifth_pattern.cpp](./C++/fifth_pattern.cpp)
+
+```cpp
+/*
+ * @author: aaditkamat
+ * @date: 26/12/2018
+ */
+ 
+#include <iostream>
+
+using namespace std;
+
+void fifth_pattern(int num) {
+    string result = "";
+    int bound = 2  * num - 1;
+    for (int i = num; i >= 1; i--) {
+        for (int j = 1; j <= bound; j++) {
+            if (j <= num - i || j >= num + i) {
+                cout << "  ";
+            } else {
+                cout << "* ";
+            }
+        }
+        cout << "\n";
+    }
+}
+
+int main() {
+ int num;
+ cout << "Enter a number: ";
+ cin >> num;
+ fifth_pattern(num);
+ return 0;
+```
+
 ## Pattern 6
 
-```js
+```
 input = 5
          *
        * * *
@@ -1143,9 +1312,51 @@ int main(){
 }
 ```
 
+## C++ Implementation
+
+### [sixth_pattern.cpp](./C++/sixth_pattern.cpp)
+
+```cpp
+/*
+ * @author: aaditkamat
+ * @date: 26/12/2018
+ */
+#include <iostream>
+
+using namespace std;
+
+string sixth_pattern(int num) {
+    string result = "";
+    int bound = 2 * num - 1, ctr = 0;
+    for (int i = 1; i <= bound; i++) {
+        for (int j = 1; j <= bound; j++) {
+            if (j < num - ctr || j > num + ctr) {
+                cout << "  ";
+            } else {
+                cout << "* ";
+            }
+        }
+        if (i < num) {
+            ctr++;
+        } else {
+            ctr--;
+        }
+        cout << endl;
+    }
+    return result;
+}
+
+int main() {
+ int num;
+ cout << "Enter a number: ";
+ cin >> num;
+ sixth_pattern(num);
+ return 0;
+```
+
 ## Pattern 7
 
-```js
+```
 input = 4
 * * * *  * * * *
 * * *      * * *
@@ -1389,9 +1600,50 @@ int main(){
 }
 ```
 
+### [seventh_pattern.cpp](./C++/seventh_pattern.cpp)
+
+```cpp
+/*
+ * @author: aaditkamat
+ * @date: 26/12/2018
+ */
+#include <iostream>
+
+using namespace std;
+
+void seventh_pattern(int num) {
+    string result = "";
+    int ctr = num, bound = 2 * num + 1;
+    for (int i = 1; i <= bound - 1; i++) {
+        for (int j = 1; j <= bound; j++) {
+            if (j <= ctr || j > bound - ctr) {
+                cout << "* ";
+            } else {
+                cout << "  ";
+            }
+        }
+        if (i < num) {
+            ctr--;
+        }
+        if (i > num) {
+            ctr++;
+        }
+        cout << "\n";
+    }
+}
+
+int main() {
+ int num;
+ cout << "Enter a number: ";
+ cin >> num;
+ seventh_pattern(num);
+ return 0;
+ }
+``` 
+
 ## Pattern 8
 
-```js
+```
 input = 5
  *                 *
  * *             * *
@@ -1611,5 +1863,47 @@ int main(){
         cout<<endl;
     }
     return 0;
+}
+```
+
+## [eighth_solution.cpp](./C++/eighth_solution.cpp)
+
+```cpp
+/*
+ * @author: aaditkamat
+ * @date: 26/12/2018
+ */
+ 
+#include <iostream>
+
+using namespace std;
+
+void eighth_pattern(int num) {
+    string result = "";
+    int bound = 2 * num, ctr = 1;
+    for (int i = 1; i <= bound; i++) {
+        for (int j = 1; j <= bound; j++) {
+            if (j <= ctr || j > bound - ctr) {
+                cout << "* ";
+            } else {
+                cout << "  ";
+            }
+        }
+        if (i < num) {
+            ctr++;
+        }
+        if (i > num) {
+            ctr--;
+        }
+        cout << "\n";
+    }
+}
+
+int main() {
+ int num;
+ cout << "Enter a number: ";
+ cin >> num;
+ eighth_pattern(num);
+ return 0;
 }
 ```
