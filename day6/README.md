@@ -176,6 +176,33 @@ public class SentenceCap2 {
     }
 }
 ```
+## Python Implementation
+
+### [sentence_capitalization.py](./Python/sentence_capitalization.py)
+
+```python
+'''
+@author: aaditkamat
+@date: 27/12/2018
+'''
+
+#short version
+from string import capwords
+def capitalize_sentence_short(string):
+    return capwords(string)
+
+#slightly long version
+def capitalize_sentence_long(string):
+    new_string = ''
+    for word in string.split(' '):
+        new_string += word.capitalize() + ' '
+    return new_string
+
+print("Enter a string: ", end= ' ')
+string = input()
+print("String \'", string, "\' with first letter of each word capitalized (short version): ", capitalize_sentence_short(string))
+print("String \'", string, "\' with first letter of each word capitalized (slightly long version): ", capitalize_sentence_long(string))
+```
 
 ## Part B -- Word Reversal
 
@@ -318,6 +345,58 @@ public class WordRev {
 }
 ```
 
+## Python Implementation
+
+### [reverse_words.py](./Python/reverse_words.py)
+```python
+'''
+@author: aaditkamat
+@date: 27/12/2018
+'''
+
+def reverse_words(string):
+    new_string = ''
+    for word in string.split(' '):
+        new_string += word[::-1] + ' '
+    return new_string
+
+print("Enter a string: ", end= '')
+string = input()
+print("Reverse of string: ", reverse_words(string)})
+```
 ## Part C -- Anagram Check
 
 **Question** - Write a program to check whether the two provided strings are anagrams of each other.
+
+## Python Implementation
+
+### [reverse_words.py](./Python/reverse_words.py)
+```python
+'''
+@author: aaditkamat
+@date: 27/12/2018
+'''
+
+def check_anagram(first_str, second_str):
+    first_word_dict = {}
+    second_word_dict = {}
+    first_str = first_str.replace(' ', '').lower()
+    second_str = first_str.replace(' ', '').lower()
+    for ch in first_str:
+        if ch not in first_word_dict:
+            first_word_dict[ch] = 1
+        else:
+            first_word_dict[ch] += 1
+    
+    for ch in second_str:
+        if ch not in second_word_dict:
+            second_word_dict[ch] = 1
+        else:
+            second_word_dict[ch] += 1
+    return first_word_dict == second_word_dict
+
+print("Enter two strings: ")
+first_str = input()
+second_str = input()
+print("Are ", first_str, "and ", second_str, "anagrams? ", check_anagram(first_str, second_str))
+```
