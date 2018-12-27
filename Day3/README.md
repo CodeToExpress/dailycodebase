@@ -1,3 +1,5 @@
+![Hamming](./cover.png)
+
 # Day 3 -- The Hamming Distance Problem
 
 The Hamming distance between two strings of equal length is the number of positions at which the corresponding symbols are different.
@@ -8,7 +10,7 @@ Read more about Hamming Distance [here…](https://en.wikipedia.org/wiki/Hamming
 
 **Question**- Given 2 strings, we will find the number of positions at which the corresponding characters are different.
 
-![Hamming](./cover.png)
+![ques for Day 3](./questionDay3.png)
 
 **Example**
 
