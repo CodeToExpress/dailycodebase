@@ -1,12 +1,12 @@
 ![cover](./cover.png)
 
-# Day 6 
+# Day 6
 
 ## Questions for today
 
-Welcome back to the Day 3 of Daily Codes, as you might have noticed we are slowly stepping up our game in Strings. So today let's do 3 cool questions that seems pretty straightforward while reading the question but can be a little challenging when you actually try to solve them
+Welcome back to the Day 6 of Daily Codes, as you might have noticed we are slowly stepping up our game in Strings. So today let's do 3 cool questions that seems pretty straightforward while reading the question but can be a little challenging when you actually try to solve them
 
-#### Part A - Sentence Capitalization 
+#### Part A - Sentence Capitalization
 
 **Question** - Write a program to capitalize the first letter of each word in the string.
 
@@ -37,7 +37,7 @@ Welcome back to the Day 3 of Daily Codes, as you might have noticed we are slowl
 function capitalize (str) {
     // spit the string to array
     let wordArr = str.split(' ');
-    
+
     // loop through each element of array and capitalize the first letter
 
     for (let i=0; i<wordArr.length; i++) {
@@ -50,7 +50,7 @@ function capitalize (str) {
         // Append the first letter (capitalized)
         let currentWord = '';
         currentWord += wordArr[i][0].toUpperCase();
-        
+
         // Append the rest of the word (can be easily done by String slice)
         for (let j=1; j<wordArr[i].length; j++) {
             currentWord += wordArr[i][j];
@@ -103,7 +103,7 @@ function capitalize (str) {
     for (let i=1; i<str.length; i++) {
         if (str[i-1] === ' ') {
             result += str[i].toUpperCase();
-        } else { 
+        } else {
             result += str[i];
         }
     }
@@ -150,7 +150,7 @@ public class SentenceCap1 {
  * @author MadhavBahlMD
  * @date 27/12/2018
  */
- 
+
 import java.util.Scanner;
 
 public class SentenceCap2 {
@@ -177,6 +177,29 @@ public class SentenceCap2 {
 }
 ```
 ## Python Implementation
+
+### [Solution](./Python/sentenceCap.py)
+
+```python
+"""
+  * @author : ashwek
+  * @date : 27/12/2018
+"""
+
+def Cap(String):
+    String = list(String)
+    String[0] = String[0].upper()
+
+    for i in range(1, len(String)):
+        if(String[i] == ' ' and i < len(String)-1 ):
+            String[i+1] = String[i+1].upper()
+
+    return "".join(String)
+
+Str = input("Enter a string = ")
+
+print("Capitalize words = ", Cap(Str))
+```
 
 ### [sentence_capitalization.py](./Python/sentence_capitalization.py)
 
@@ -347,6 +370,42 @@ public class WordRev {
 
 ## Python Implementation
 
+### [Solution](./Python/wordRev.py)
+
+```python
+"""
+  * @author : ashwek
+  * @date : 27/12/2018
+"""
+
+def rev(Str, start, end):
+
+    for i in range(0, (end-start)//2):
+        Str[i+start], Str[end-i-1] = Str[end-i-1], Str[i+start]
+
+def wordRev(Str):
+
+    Str = list(Str)
+    start = 0
+
+    while( True ):
+
+        try: end = Str.index(' ', start)
+        except ValueError: break
+
+        rev(Str, start, end)
+        start = end+1
+
+    rev(Str, start, len(Str))
+
+    return ''.join(Str)
+
+
+Str = input("Enter a string = ")
+
+print("Words Reversed =", wordRev(Str))
+```
+
 ### [reverse_words.py](./Python/reverse_words.py)
 ```python
 '''
@@ -364,6 +423,7 @@ print("Enter a string: ", end= '')
 string = input()
 print("Reverse of string: ", reverse_words(string)})
 ```
+
 ## Part C -- Anagram Check
 
 **Question** - Write a program to check whether the two provided strings are anagrams of each other.
@@ -508,6 +568,22 @@ anagram ('LISTEN', 'SILENT');
 ```
 
 ## Python Implementation
+
+### [Solution](./Python/anagram.py)
+
+```python
+"""
+  * @author : ashwek
+  * @date : 27/12/2018
+"""
+
+Str1 = input("Enter string 1 = ")
+Str2 = input("Enter string 2 = ")
+
+print(Str1, "&", Str2, "are", end=" ")
+if( sorted(Str1) != sorted(Str2) ): print("not", end=" ")
+print("anagrams")
+```
 
 ### [reverse_words.py](./Python/reverse_words.py)
 ```python
