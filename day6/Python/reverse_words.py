@@ -11,4 +11,4 @@ def reverse_words(string):
 
 print("Enter a string: ", end= '')
 string = input()
-print("Reverse of string: ", reverse_words(string))
+print("Reverse of string \'", string, "\': ", reverse_words(string), sep='')
