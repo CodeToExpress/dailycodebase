@@ -228,8 +228,8 @@ import re
 """
     This solution makes use of python's re module i.e regular expressions
     Here findall method takes two parameters 1st - regualr expression, 2nd - input string
-    The regular expression simply checks for all vowels present in the input string 
-    and returns them as a list. 
+    The regular expression simply checks for all vowels present in the input string
+    and returns them as a list.
 """
 print(len(re.findall(r'[a,e,i,o,u,A,E,I,O,U]', input())))
 
@@ -389,7 +389,7 @@ print("Number of vowels in the string are : ",count)
 ### [Solution by shashank](./Python/Shashankvowels.py)
 
 ```py
-""" 
+"""
  * @author: Shashank Jain
  * @date: 25/12/2018
 """
@@ -554,17 +554,17 @@ dictnry = {}
 maxCount, maxChar = 0, ''
 for char in input_str:
     """
-        In this solution we are simply maintaining a dictionary of characters 
-        in the input string as key and their count as value 
+        In this solution we are simply maintaining a dictionary of characters
+        in the input string as key and their count as value
     """
     if char in dictnry.keys():
         dictnry[char] += 1
     else:
         dictnry[char] = 1
-    """ 
-        We check for maxCount of each character in a single loop 
-        by comparing it with present maxCount, hence not iterating over the dictionary again 
-        to find character with maximum count. 
+    """
+        We check for maxCount of each character in a single loop
+        by comparing it with present maxCount, hence not iterating over the dictionary again
+        to find character with maximum count.
     """
     if dictnry[char] > maxCount:
         maxCount = dictnry[char]
@@ -591,7 +591,7 @@ for char in string:
     # Else initialize its frequency by 1
     else:
         characters[char.lower()]=1
-        
+
 # Print the character which has the maximum frequency
 print("The most occouring character in the string is : ", max(characters,key=characters.get))
 
@@ -661,7 +661,6 @@ int main()
     return 0;
 }
 ```
-
 ### [mostFrequent.cpp](./C++/mostFrequent.cpp)
 
 ```cpp
