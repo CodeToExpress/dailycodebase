@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors)
 
 
+=======
+[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors)
+
+>>>>>>> c2c91da4e2a3c0494ab9f4bc7fef696c54e6a58f
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
