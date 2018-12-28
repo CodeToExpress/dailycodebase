@@ -229,7 +229,40 @@ print("String \'", string, "\' with first letter of each word capitalized (sligh
 
 ## C++ Implementation
 
-### [Sentance Capatalization](./C++/sentenceCapatilization.cpp)
+### [Solution](./C++/day6_1.cpp)
+
+```cpp
+/*
+* @author : dhruv-gupta14
+* @date : 27/12/2018
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string s;
+    getline(cin,s);
+    
+    string ans;
+    ans = toupper(s[0]);
+    for(int i=1; i < s.size(); i++)
+    {
+        if(s[i-1] == ' ')
+        {
+            ans += toupper(s[i]);
+        } else{
+            ans += s[i];
+        }
+    }
+    
+    cout << ans;
+    return 0;
+}
+```
+
+### [Sentance Capatalization by @imkaka](./C++/sentenceCapatilization.cpp)
 
 ```cpp
 
@@ -259,7 +292,6 @@ int main(){
 }
 
 ```
-
 
 ## Part B -- Word Reversal
 
@@ -460,10 +492,37 @@ print("Reverse of string: ", reverse_words(string)})
 
 ## C++ Implementation
 
-### [Word Reverse](./C++/wordReverse.cpp)
+### [Solution](./C++/day6_2.cpp)
 
 ```cpp
+/*
+* @author : dhruv-gupta14
+* @date : 27/12/2018
+*/
 
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string str;
+    getline(cin,str);
+    
+    string ans;
+    stringstream s(str);
+    
+    while(s >> ans)
+    {
+        reverse(ans.begin(),ans.end());
+        cout << ans << " ";
+    }
+    return 0;
+}
+```
+
+### [Word Reverse by @imkaka](./C++/wordReverse.cpp)
+
+```cpp
 /*
 * @author : imkaka
 * @date   : 27/12/2018
@@ -497,9 +556,7 @@ int main(){
     cout << "Reversed Word Sentance => { " << res << " }" << endl;
     return 0;
 }
-
 ```
-
 
 ## Part C -- Anagram Check
 
@@ -693,11 +750,57 @@ second_str = input()
 print("Are ", first_str, "and ", second_str, "anagrams? ", check_anagram(first_str, second_str))
 ```
 
-
-
 ## C++ Implementation
 
-### [Anagram Check](./C++/checkAnagram.cpp)
+### [Solution](./C++/day6_3.cpp)
+
+```cpp
+/*
+* @author : dhruv-gupta14
+* @date : 27/12/2018
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int flag=0;
+    string str1;
+    getline(cin,str1);
+    
+    string str2;
+    getline(cin,str2);
+    
+    int n = str1.length();
+    int m = str2.length();
+    
+    if(n!=m)
+    {
+        cout << "Not Anagrams";
+    } else{
+        sort(str1.begin(), str1.end());
+        sort(str2.begin(), str2.end());
+    
+        for(int i=0; i<n; i++)
+        {
+            if(str1[i] != str2[i])
+            {
+                cout << "Not Anagrams";
+                flag = 1;
+                break;
+            }
+        }
+        if(flag == 0)
+        {
+            cout << "Anagrams";
+        }
+    }
+    return 0;
+}
+```
+
+### [Anagram Check by @imkaka](./C++/checkAnagram.cpp)
 
 ```cpp
 /*
@@ -733,5 +836,4 @@ int main(){
 
     return 0;
 }
-
 ```
