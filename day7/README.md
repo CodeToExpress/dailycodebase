@@ -15,7 +15,7 @@ Also note that two same strings are also one edit away since we can say that any
 **Example**
 
 ```
-Input: 
+Input:
   str1 = 'abc', str2 = 'abc'
 Output: yes
 ```
@@ -54,8 +54,8 @@ Output: no
 /**
  * @author MadhavBahlMD
  * @date 28/12/2018
- * METHOD - Consider the 3 cases separately, 
- *   1) If difference in lengths is more than 1 then print no and exit 
+ * METHOD - Consider the 3 cases separately,
+ *   1) If difference in lengths is more than 1 then print no and exit
  *   2) If the length is same and the hamming distance is 1, print yes
  *   3) If difference in length equals 1, then loop through the bigger string and check for the corresponding elements of smaller string
  */
@@ -63,7 +63,7 @@ Output: no
 function oneEditAway (str1, str2) {
     let len1 = str1.length,
         len2 = str2.length;
-    
+
         if (Math.abs(len1-len2) > 1) {
             // If difference in lengths is greater than 1
             console.log (`Strings "${str1}" and "${str2}" are not one edit away`);
@@ -100,7 +100,7 @@ function checkOneEdit (str1, str2) {
             j++;
         }
     }
-    
+
     if (edit >= 2) {
         console.log (`Strings "${str1}" and "${str2}" are not one edit away`);
         return 0;
@@ -131,14 +131,14 @@ oneEditAway ('abc', 'abced'); // false
 """
   @author : vishalshirke7
   @date : 28/12/2018
-  
+
   Method - There are 3 test cases
       1) Difference of length between 2 characters is more than one, then answer is False
       2) If length of both strings is equal then we'll have to check for 2 cases
           2.1) if count of different characters at each position is > 1 then answer is False
           2.2) if count of different characters at each position is < 2 then answer is True
-      3) if difference in length of both strings in 1 then we check for intersection of 
-         both strings and if it is equal to min(length1, length2) then answer is true 
+      3) if difference in length of both strings in 1 then we check for intersection of
+         both strings and if it is equal to min(length1, length2) then answer is true
          as we can add a character to minimum length string or remove one from bigger length string
 """
 
@@ -157,7 +157,7 @@ def check_one_edit_away(str1, str2):
         else:
             return True
     else:
-        if len(set(str1) & set(str2)) == min(l1, l2): 
+        if len(set(str1) & set(str2)) == min(l1, l2):
             # check for intersection of two strings
             return True
         else:
@@ -165,6 +165,59 @@ def check_one_edit_away(str1, str2):
 
 
 check_one_edit_away(*(input().split())) # here list unpacking is used
+```
+
+### [One Edit Distance by imkaka](./Python/one_edit_distance.py)
+
+```py
+"""
+  @author : imkaka
+  @date : 28/12/2018
+"""
+# Merges the Insert/Remove and Replace Operation in One.
+# Insert and Remove are Identical Operation logically.
+
+import sys
+import math
+
+
+def oneEditDistance(str1, str2):
+    if(abs(len(str1) - len(str2)) > 1):
+        return False
+    short = str1 if len(str1) < len(str2) else str2
+    longg = str1 if len(str1) > len(str2) else str2
+
+    id1 = 0
+    id2 = 0
+    flag = False
+
+    while(id2 < len(longg) and id1 < len(short)):
+        if(short[id1] != longg[id2]):
+            if(flag):
+                return False
+            flag = True
+            if(len(short) == len(longg)):
+                id1 += 1
+        else:
+            id1 += 1
+        id2 += 1
+    return True
+
+
+def main():
+    strings = input().split(' ')
+    str1 = strings[0]
+    str2 = strings[1]
+
+    print(f"{str1} , {str2} : {oneEditDistance(str1, str2)}.")
+
+    print(f" {'abcd'} , {'acd'} : {oneEditDistance('abcd', 'acd')}.")
+    print(f"{'cake'} , {'bake'} : {oneEditDistance('cake', 'bake')}.")
+    print(f"{'sue'} , {'chikuu'}: {oneEditDistance('sue', 'chikuu')}.")
+
+
+if __name__ == '__main__':
+    main()
 ```
 
 
@@ -186,13 +239,13 @@ int main()
     int flag=0,x=0;
     string str1;
     getline(cin,str1);
-    
+
     string str2;
     getline(cin,str2);
-    
+
     int n = str1.length();
     int m = str2.length();
-    
+
     if(str1 == str2)
         cout << "Yes";
     else if(n==m && str1 !=str2){
@@ -235,7 +288,70 @@ int main()
         else
             cout << "No";
     }
-    
+
+    return 0;
+}
+```
+
+### [OneEditDistance by @imkaka](./C++/oneEditDistance.cpp)
+
+
+```cpp
+/*
+* @author : imkaka
+* @date   : 28/12/2018
+*/
+
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+string isOneEditDistanceAway(string str1, string str2){
+
+    int mi = str1.size() <= str2.size() ? str1.size() : str2.size();
+    int ma = str1.size() > str2.size() ? str1.size() : str2.size();
+    if( (ma - mi) > 1){
+        return " No! ";
+    }
+
+    string sho = str1.size() < str2.size() ? str1 : str2;
+    string lon = str1.size() > str2.size() ? str1 : str2;
+
+    bool diff = false;
+    int id1 = 0;
+    int id2 = 0;
+
+    while(id2 < lon.size() && id1 < sho.size()){
+
+        if(sho[id1] != lon[id2]) {
+
+            if(diff) return "No!";
+            diff = true;
+
+            if(sho.size() == lon.size()){
+                id1++;
+            }
+        }else{
+            id1++;
+        }
+        id2++;
+    }
+    return "Yes!";
+}
+
+int main(){
+
+    string str1 , str2;
+
+    cout << "Enter two strings with space in between: ";
+    cin >> str1 >> str2;
+
+    cout << str1 << " " << str2 << " => " <<isOneEditDistanceAway(str1, str2) << endl;
+    cout << "======= Hard Coded Strings ======= " << endl;
+    cout << "pale" << " pal" << " " << " => " <<isOneEditDistanceAway("pale", "pal") << endl;
+    cout << "bake" << " cake" << " " << " => " <<isOneEditDistanceAway("bake", "cake") << endl;
+
     return 0;
 }
 ```
