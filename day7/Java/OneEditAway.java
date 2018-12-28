@@ -19,11 +19,35 @@ class OneEditAway {
 	}
 
 	static boolean isASubstring(String str1, String str2) {
-		if (str1.length() == 0) {
+		if (str1.isEmpty()) {
 			return true;
 		}
-		int start = str2.indexOf(str1.charAt(0));
-		return str2.substring(start).equals(str1);
+
+		if (str1.charAt(0) != str2.charAt(1) && str1.charAt(0) != str2.charAt(0)) {
+			return false;
+		}
+
+		int found = str2.indexOf(str1.charAt(0));
+		
+		if (found == 1) {
+			return str2.substring(1).equals(str1);
+		}
+
+		int j = 0, ctr = 0;
+		for (int i = 0; i < str1.length(); j++) {
+			if (j >= str2.length()) {
+				return false;
+			}
+			if (str1.charAt(i) != str2.charAt(j) && ctr == 0) {
+				ctr++;
+				continue;
+			}
+			if (str1.charAt(i) != str2.charAt(j)) {
+				return false;
+			}
+			i++;
+		}
+		return true;		
 	}
 
 	static boolean canAddACharacter(String str1, String str2) {
