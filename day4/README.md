@@ -1,10 +1,12 @@
-# Day 4 -- Number of Vowels and Max Chars
-
 ![cover](./cover.png)
+
+# Day 4 -- Number of Vowels and Max Chars
 
 ## Part A -- Number of Vowels
 
 **Question** - Given a string, Write a program that prints the number of vowels in it.
+
+![ques](./ques.png)
 
 ## JavaScript Implementation
 
@@ -76,7 +78,7 @@ function numVowels (str) {
     // Define an array of vowels
     let vowels = ['a', 'e', 'i', 'o', 'u'];
 
-    // Check each character of string 
+    // Check each character of string
     for (let char of str) {
         for (let vowel of vowels) {
             if (char.toLowerCase() === vowel)  count++;
@@ -122,12 +124,12 @@ function numVowels (str) {
             }
         }
     }
-    
+
     // Print the result
     console.log('Vowel Count: ');
     for (let vowel in vowels) {
         console.log(`Vowel: ${vowel} appears ${vowels[vowel]} number of times in the string "${str}"`);
-    }    
+    }
 
     console.log("Total number of vowels: " + count);
     return count;
@@ -216,6 +218,63 @@ public class NumVowels2 {
 }
 ```
 
+## Python Implementation
+
+### [Solution 1](./Python/NumOfVowels.py)
+
+```python
+import re
+
+"""
+    This solution makes use of python's re module i.e regular expressions
+    Here findall method takes two parameters 1st - regualr expression, 2nd - input string
+    The regular expression simply checks for all vowels present in the input string
+    and returns them as a list.
+"""
+print(len(re.findall(r'[a,e,i,o,u,A,E,I,O,U]', input())))
+
+```
+
+### [Solution 2](./Python/partA_sol.py)
+
+```python
+# Input the String.
+string=input("Enter the String : ")
+
+# Create a list of vowels in lowercase.
+vowels=['a','e','i','o','u']
+
+# Initialize the count variable to zero.
+count=0
+
+# Now iterate every character in the string.
+for char in string:
+    # And if the current character we are iterating is
+    # present in the vowels list then increment count.
+    if char.lower() in vowels:
+        count+=1
+
+# Print the result
+print("Number of vowels in the string are : ",count)
+
+```
+
+##[Solution 3](./Python/Shashankvowels.py)
+
+```Python
+a=input("Enter the string to count no. of vowels?")
+b=list(a.replace(" ","").lower())
+c=['a','e','i','o','u']
+count=0
+for i in b:
+    for j in c:
+        if (j==i):
+            count=count+1
+print(count)
+```
+
+<hr/>
+
 ## C++ Implementation
 
 ### [NumVowelsPartA.cpp](./C++/NumVowelsPartA.cpp)
@@ -262,6 +321,47 @@ int main()
 }
 ```
 
+### [countVovels.cpp](./C++/countVovels.cpp)
+
+```cpp
+
+/*
+ * @author: imkaka
+ * @date: 25/12/2018
+*/
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main()
+{
+    int count = 0;
+    string str;
+    cout << "/* ===== Number of Vowels ===== */" << endl;
+    cout << "\nEnter the string: ";
+    cin >> str;
+
+    // transform(str.begin(), str.end(), str.begin(), ::tolower);
+
+    for (int i = 0; i < str.size(); i++)
+    {
+        if (
+            tolower(str[i]) == 'a' ||
+            tolower(str[i]) == 'e' ||
+            tolower(str[i]) == 'i' ||
+            tolower(str[i]) == 'o' ||
+            tolower(str[i]) == 'u')
+        {
+            count++;
+        }
+    }
+
+    cout<<"Number of vowels in \""<<str<<"\" = "<<count<<endl;
+    return 0;
+}
+
+```
+
 ## Python Implementation
 
 ### [Solution](./Python/partA_sol.py)
@@ -287,14 +387,14 @@ for char in string:
 print("Number of vowels in the string are : ",count)
 
 ```
-##Python Implementation
 
-##[Solution](./Python/Shashankvowels.py)
-""" 
+### [Solution by shashank](./Python/Shashankvowels.py)
+
+```py
+"""
  * @author: Shashank Jain
  * @date: 25/12/2018
 """
-```Python
 a=input("Enter the string to count no. of vowels?")
 b=list(a.replace(" ","").lower())
 c=['a','e','i','o','u']
@@ -306,7 +406,72 @@ for i in b:
 print(count)
 ```
 
+## C Implementation
+
+### [Solution](./C/vowels.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 25/12/2018
+  */
+
+#include<stdio.h>
+#include<ctype.h>
+
+void main(){
+
+    char Str[50];
+    int i, count=0;
+
+    printf("Enter a string = ");
+    scanf("%s", Str);
+
+    for(i=0; Str[i]!='\0'; i++){
+        switch(tolower(Str[i])){
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                count++;
+        }
+    }
+
+    printf("number of vowels = %d", count);
+
+}
+```
+## Ruby Implementation
+
+### [Solution](./Ruby.partA_sol.rb)
+
+```ruby
+=begin
+@author: aaditkamat
+@date: 25/12/2018
+=end
+def count_vowels(str)
+    if str === nil or not str.class === String
+        -1
+    end
+    ctr = 0
+    str.downcase!
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    vowels.each do |vowel|
+         ctr += str.count(vowel)
+    end
+    ctr
+end
+
+print "Enter a string: "
+str = gets
+str.chomp!
+puts "The number of vowels in #{str} is : #{count_vowels(str)}"
+```
+
 </hr>
+
 ## Part B -- Max Chars Problem
 
 **Question** - Given a string, write a program to return the character that appears most frequently in that string
@@ -381,6 +546,75 @@ function maxChars (sentence) {
 maxChars('helllllo worlld');
 ```
 
+## Python Implementation
+
+### [Solution 1](./Python/MaxChars.py)
+
+```python
+input_str = input()
+dictnry = {}
+maxCount, maxChar = 0, ''
+for char in input_str:
+    """
+        In this solution we are simply maintaining a dictionary of characters
+        in the input string as key and their count as value
+    """
+    if char in dictnry.keys():
+        dictnry[char] += 1
+    else:
+        dictnry[char] = 1
+    """
+        We check for maxCount of each character in a single loop
+        by comparing it with present maxCount, hence not iterating over the dictionary again
+        to find character with maximum count.
+    """
+    if dictnry[char] > maxCount:
+        maxCount = dictnry[char]
+        maxChar = char
+
+print(maxChar)
+
+```
+### [Solution 2](./Python/partB_sol.py)
+
+```python
+# Input the string
+string=input("Enter the string : ")
+
+# Create an empty dictionary to store the frequency of characters
+characters={}
+
+#  Iterate every character in the string
+for char in string:
+    # And if the character already exists in the dictionary then
+    # increment its frequency by 1.
+    if char.lower() in characters:
+        characters[char.lower()]+=1
+    # Else initialize its frequency by 1
+    else:
+        characters[char.lower()]=1
+
+# Print the character which has the maximum frequency
+print("The most occouring character in the string is : ", max(characters,key=characters.get))
+
+```
+
+###[Solution 3] (./Python/Shashankchar.py)
+
+``` Python
+a=input("Enter the string to count frequent occuring characters?")
+b=list(a.replace(" ","").lower())
+c=[]
+for i in b:
+    d=(i,b.count(i))
+    c.append(d)
+
+e=dict(list(set(c)))
+f=max(e)
+g=max(e.values())
+print("maximum occurence is of {0}:{1}".format(f,g))
+```
+
 ## C++ Implementation
 
 ### [NumVowelsPartB.cpp](./C++/NumVowelsPartB.cpp)
@@ -390,9 +624,9 @@ maxChars('helllllo worlld');
  * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
  * @github: https://github.com/razdeep
  * @date: 25/12/2018
- * 
+ *
  * Max Char Problem Solution
- * 
+ *
 **/
 
 #include <iostream>
@@ -429,6 +663,46 @@ int main()
     return 0;
 }
 ```
+### [mostFrequent.cpp](./C++/mostFrequent.cpp)
+
+```cpp
+
+/*
+* @author : imkaka
+* @date : 25/12.2018
+*/
+
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+int main()
+{
+    string str;
+    cout << "Enter the string: ";
+    cin >> str;
+
+    int max_count = -1;
+    char label;
+    for (int i = 0; i < str.size(); ++i)
+    {
+        int current_count = count(str.begin(), str.end(), str[i]);
+        if (current_count > max_count)
+        {
+            max_count = current_count;
+            label = str[i];
+        }
+    }
+    cout << "'" << (char)label << "' has MAX " << max_count << " occurences in " << str << endl;
+    return 0;
+}
+
+// Time Compllexity = O(size(str) ^2)
+// We can Improve that by using hashing to which will increse space complexity to O(n)
+// Its called time-space trade off, which we generally do most times.
+```
 
 ## Python Implementation
 
@@ -450,29 +724,90 @@ for char in string:
     # Else initialize its frequency by 1
     else:
         characters[char.lower()]=1
-        
+
 # Print the character which has the maximum frequency
 print("The most occouring character in the string is : ", max(characters,key=characters.get))
 
 ```
 
-##Python Implementation
-###[Solution] (./Python/Shashankchar.py)
+### [Solution 2] (./Python/Shashankchar.py)
+
+```python
 """
 * @author: Shashank Jain
 * @date: 25/12/2018
 """
-``` Python
+
 a=input("Enter the string to count frequent occuring characters?")
 b=list(a.replace(" ","").lower())
 c=[]
 for i in b:
     d=(i,b.count(i))
     c.append(d)
-
 e=dict(list(set(c)))
 f=max(e)
 g=max(e.values())
 print("maximum occurence is of {0}:{1}".format(f,g))
 ```
 
+## C Implementation
+
+### [Solution](./C/max_chars.c)
+
+```c
+/**
+  * @author : ashwek
+  * @date : 25/12/2018
+  */
+
+#include<stdio.h>
+
+void main(){
+
+    char Str[50];
+    int i, Max = 0;
+    int possibleChar[94] = {0};  //ASCII 32-126
+
+    printf("Enter a string = ");
+    scanf("%[a-zA-Z-0-9 ]s", Str);  //Modify control string to accept blank spaces in input
+
+    for(i=0; Str[i]!='\0'; i++){
+        possibleChar[ (int)Str[i] - 32]++;
+        if( possibleChar[Max] < possibleChar[ (int)Str[i] - 32] )
+            Max = (int)Str[i] - 32;
+    }
+
+    printf("Most frequent character = \'%c\'\n", (Max+32));
+}
+```
+
+## Ruby Implementation
+
+### [Solution](./Ruby/partB_sol.rb)
+
+```ruby
+=begin
+@author: aaditkamat
+@date: 25/12/2018
+=end
+def most_frequent_character(str)
+    if str === nil or not str.class === String
+        nil
+    end
+    counts = {}
+    str.downcase!
+    str.each_char do |ch|
+        if not counts.key?(ch)
+            counts[ch] = 1
+        else
+            counts[ch] = counts[ch] + 1
+        end
+    end
+    counts.key(counts.values.max)
+end
+
+print "Enter a string: "
+str = gets
+str.chomp!
+puts "The most frequent character in #{str} is : #{most_frequent_character(str)}"
+```

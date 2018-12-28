@@ -1,8 +1,12 @@
+![cover](./cover.png)
+
 # Day 2 -- String Reversal and Palindrome
 
 ## Part A -- String Reversal
 
 **Question** - Given a string, write a program to return a new string with reversed order of characters.
+
+![ques for Day 2](./questionDay2.png)
 
 ## JavaScript Implementation
 
@@ -216,6 +220,7 @@ public class Reverse {
         System.out.println("Reversed String: " + reversed);
     }
 }
+```
 
 ## C++ Implementation
 
