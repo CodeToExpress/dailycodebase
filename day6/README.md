@@ -255,72 +255,6 @@ int main() {
 }
 ```
 
-## C++ Implementation
-
-### [Solution](./C++/day6_1.cpp)
-
-```cpp
-/*
-* @author : dhruv-gupta14
-* @date : 27/12/2018
-*/
-
-#include<bits/stdc++.h>
-using namespace std;
-
-int main()
-{
-    string s;
-    getline(cin,s);
-    
-    string ans;
-    ans = toupper(s[0]);
-    for(int i=1; i < s.size(); i++)
-    {
-        if(s[i-1] == ' ')
-        {
-            ans += toupper(s[i]);
-        } else{
-            ans += s[i];
-        }
-    }
-    
-    cout << ans;
-    return 0;
-}
-```
-
-### [Sentance Capatalization by @imkaka](./C++/sentenceCapatilization.cpp)
-
-```cpp
-
-/*
-* @author : imkaka
-* @date   : 27/12/2018
-*/
-
-#include<iostream>
-#include<string>
-
-using namespace std;
-
-int main(){
-    string str;
-    getline(cin, str);
-
-    str[0] = toupper(str[0]);
-    for(int i = 1; i < str.size(); ++i){
-        if(str[i-1] == ' '){
-            str[i] = toupper(str[i]);
-        }
-    }
-
-    cout << "Result: " << str;
-    return 0;
-}
-
-```
-
 ## Ruby Implementation
 
 ### [sentence_capitalization.rb](./Ruby/sentence_capitalization.rb)
@@ -539,8 +473,9 @@ def reverse_words(string):
 
 print("Enter a string: ", end= '')
 string = input()
-print("Reverse of string: ", reverse_words(string)})
+print("Reverse of string \'", string, "\': ", reverse_words(string), sep='')
 ```
+
 ## C++ Implementation
 
 ### [Solution](./cpp/wrdReversal.cpp)
@@ -607,44 +542,6 @@ int main()
 }
 ```
 
-### [Word Reverse by @imkaka](./C++/wordReverse.cpp)
-
-```cpp
-/*
-* @author : imkaka
-* @date   : 27/12/2018
-*/
-
-#include<iostream>
-#include<string>
-#include<sstream>
-#include<algorithm>
-
-using namespace std;
-
-int main(){
-    string str;
-    getline(cin, str);
-
-    stringstream ss(str);
-    string res = "";
-    do {
-        // Read a word
-        string word;
-        ss >> word;
-
-        reverse(word.begin(), word.end());
-        res += word;
-        res+=" ";
-
-        // While there is more to read
-    } while (ss);
-
-    cout << "Reversed Word Sentance => { " << res << " }" << endl;
-    return 0;
-}
-```
-
 ## Ruby Implementation
 
 ### [reverse_words.rb](./Ruby/reverse_words.rb)
@@ -687,7 +584,7 @@ print"Reverse of string #{string}:  #{reverse_words(string)}"
 function anagram (str1, str2) {
     let len1 = str1.length,
         len2 = str2.length;
-
+    
     // Compare lengths
     if (len1 !== len2) {
         console.log ('Invalid Input');
@@ -723,7 +620,7 @@ anagram ('LISTEN', 'SILENT');
 function anagram (str1, str2) {
     let len1 = str1.length,
         len2 = str2.length;
-
+    
     // Compare lengths
     if (len1 !== len2) {
         console.log ('Invalid Input');
@@ -753,7 +650,7 @@ function anagram (str1, str2) {
     }
 
     console.log(`"${str1}" and "${str2}" are Anagrams`);
-}
+}   
 
 anagram ('LISTEN', 'MILENT');
 ```
@@ -802,7 +699,7 @@ function anagram (str1, str2) {
     if (flag !== 1) {
         console.log (`${str1} and ${str2} are not Anagrams`);
         return 0;
-    }
+    } 
     else {
         console.log (`${str1} and ${str2} are Anagrams`);
         return 1;
@@ -830,7 +727,7 @@ if( sorted(Str1) != sorted(Str2) ): print("not", end=" ")
 print("anagrams")
 ```
 
-### [reverse_words.py](./Python/reverse_words.py)
+### [anagram_check.py](./Python/anagram_check.py)
 ```python
 '''
 @author: aaditkamat
@@ -842,12 +739,6 @@ def check_anagram(first_str, second_str):
     second_word_dict = {}
     first_str = first_str.replace(' ', '').lower()
     second_str = first_str.replace(' ', '').lower()
-    for ch in first_str:
-        if ch not in first_word_dict:
-            first_word_dict[ch] = 1
-        else:
-            first_word_dict[ch] += 1
-
     for ch in second_str:
         if ch not in second_word_dict:
             second_word_dict[ch] = 1
