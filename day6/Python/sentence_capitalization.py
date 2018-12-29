@@ -17,5 +17,5 @@ def capitalize_sentence_long(string):
 
 print("Enter a string: ", end= ' ')
 string = input()
-print("String \'", string, "\' with first letter of each word capitalized (short version): ", capitalize_sentence_short(string))
-print("String \'", string, "\' with first letter of each word capitalized (slightly long version): ", capitalize_sentence_long(string))
+print("String \'", string, "\' with first letter of each word capitalized (short version): ", capitalize_sentence_short(string), sep='')
+print("String \'", string, "\' with first letter of each word capitalized (slightly long version): ", capitalize_sentence_long(string), sep='')
