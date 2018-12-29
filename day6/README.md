@@ -226,6 +226,7 @@ string = input()
 print("String \'", string, "\' with first letter of each word capitalized (short version): ", capitalize_sentence_short(string))
 print("String \'", string, "\' with first letter of each word capitalized (slightly long version): ", capitalize_sentence_long(string))
 ```
+
 ## C++ Implementation
 
 ### [Solution](./cpp/Capialise.cpp)
@@ -252,6 +253,36 @@ int main() {
 	}
 	cout << sa;
 	return 0;
+}
+```
+
+### [Sentance Capatalization by @imkaka](./C++/sentenceCapatilization.cpp)
+
+```cpp
+
+/*
+* @author : imkaka
+* @date   : 27/12/2018
+*/
+
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main(){
+    string str;
+    getline(cin, str);
+
+    str[0] = toupper(str[0]);
+    for(int i = 1; i < str.size(); ++i){
+        if(str[i-1] == ' '){
+            str[i] = toupper(str[i]);
+        }
+    }
+
+    cout << "Result: " << str;
+    return 0;
 }
 ```
 
@@ -538,6 +569,44 @@ int main()
         reverse(ans.begin(),ans.end());
         cout << ans << " ";
     }
+    return 0;
+}
+```
+
+### [Word Reverse by @imkaka](./C++/wordReverse.cpp)
+
+```cpp
+/*
+* @author : imkaka
+* @date   : 27/12/2018
+*/
+
+#include<iostream>
+#include<string>
+#include<sstream>
+#include<algorithm>
+
+using namespace std;
+
+int main(){
+    string str;
+    getline(cin, str);
+
+    stringstream ss(str);
+    string res = "";
+    do {
+        // Read a word
+        string word;
+        ss >> word;
+
+        reverse(word.begin(), word.end());
+        res += word;
+        res+=" ";
+
+        // While there is more to read
+    } while (ss);
+
+    cout << "Reversed Word Sentance => { " << res << " }" << endl;
     return 0;
 }
 ```
