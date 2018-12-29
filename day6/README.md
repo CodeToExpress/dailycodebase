@@ -1,4 +1,4 @@
-![cover](./cover.png)
+﻿![cover](./cover.png)
 
 # Day 6
 
@@ -226,6 +226,34 @@ string = input()
 print("String \'", string, "\' with first letter of each word capitalized (short version): ", capitalize_sentence_short(string), sep='')
 print("String \'", string, "\' with first letter of each word capitalized (slightly long version): ", capitalize_sentence_long(string), sep='')
 ```
+## C++ Implementation
+
+### [Solution](./cpp/Capialise.cpp)
+
+```C++
+/**
+ * @author Bhanu0202
+ * @date 27/12/2018
+ */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	string sa;
+	getline(cin, sa);
+	int l = sa.length();
+	if(sa[0]>=97 && sa[0]<=122)
+	sa[0] -= 32;
+	for(int i = 0; i < l; i++){
+	    if(sa[i] == 32 && sa[i + 1]>=97 && sa[i + 1]<=122){
+	        sa[i + 1] -= 32;  
+	    }
+	}
+	cout << sa;
+	return 0;
+}
+```
 
 ## Ruby Implementation
 
@@ -448,6 +476,72 @@ string = input()
 print("Reverse of string \'", string, "\': ", reverse_words(string), sep='')
 ```
 
+## C++ Implementation
+
+### [Solution](./cpp/wrdReversal.cpp)
+
+```C++
+/**
+ * @author Bhanu0202
+ * @date 27/12/2018
+ */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	string sa, sb;
+	getline(cin, sa);
+	int l = sa.length();
+	vector<string> s;
+	s.push_back("");
+	int c = 0;
+	for(int i = 0; i < l; i++){
+    if(sa[i] == ' '){
+        c++;
+        s.push_back("");
+    }
+    else
+        s[c] += sa[i];
+    }
+    for(int i = 0; i <= c; i++){
+        reverse(s[i].begin(), s[i].end());
+        sb += s[i]  + " ";
+    }
+    cout << sb;
+	return 0;
+}
+```
+
+### [Solution by @dhruv-gupta14](./C++/day6_2.cpp)
+
+```cpp
+/*
+* @author : dhruv-gupta14
+* @date : 27/12/2018
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string str;
+    getline(cin,str);
+    
+    string ans;
+    stringstream s(str);
+    
+    while(s >> ans)
+    {
+        reverse(ans.begin(),ans.end());
+        cout << ans << " ";
+    }
+    return 0;
+}
+```
+
 ## Ruby Implementation
 
 ### [reverse_words.rb](./Ruby/reverse_words.rb)
@@ -666,7 +760,6 @@ print("Are ", first_str, "and ", second_str, "anagrams? ", check_anagram(first_s
 ## Ruby Implementation
 
 ### [anagram_check.rb](./Ruby/anagram_check.rb)
-
 ```ruby
 
 =begin
