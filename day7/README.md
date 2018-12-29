@@ -356,6 +356,90 @@ int main(){
 }
 ```
 
+### [Solution 3](./C++/one_edit_away.cpp)
+
+```cpp
+/*
+ * @author: aaditkamat
+ * @date: 28/12/2018
+ */
+
+#include <iostream>
+
+using namespace std;
+
+bool can_replace_a_character(string str1, string str2) {
+    if (str1.size() != str2.size()) {
+        return false;
+    }
+
+    int change = 0;
+    
+    for (int i = 0; i < str1.size(); i++) {
+        if (str1[i] != str2[i]) {
+            change++;
+        }
+    }
+    
+    return change == 1;
+}
+
+bool is_a_modified_substring(string str1, string str2) {
+    if (str1.empty()) {
+        return true;
+    }
+
+    if (str1[0] != str2[1] && str1[0] != str2[0]) {
+        return false;
+    }
+
+    int found = str2.find(str1[0]);
+    
+    if (found == 1) {
+        return str2.find(str1) != string::npos;
+    }
+
+    int j = 0, ctr = 0;
+    for (int i = 0; i < str1.size(); j++) {
+        if (j >= str2.size()) {
+                return false;
+        }
+        if (str1[i] != str2[j] && ctr == 0) {
+            ctr++;
+            continue;
+        }
+        if (str1[i] != str2[j]) {
+            return false;
+        }
+        i++;
+    }
+    return true;
+}
+
+bool can_add_a_character(string str1, string str2) {
+    return str2.size() - str1.size() == 1 && is_a_modified_substring(str1, str2);  
+}
+
+bool can_delete_a_character(string str1, string str2) {
+    return str1.size() - str2.size() == 1 && is_a_modified_substring(str2, str1);
+}
+
+bool are_one_edit_away(string str1, string str2) {
+    if (str1 == str2) {
+        return true;
+    }
+    return can_replace_a_character(str1, str2) || can_add_a_character(str1, str2) || can_delete_a_character(str1, str2);
+}
+
+int main() {
+    string str1, str2;
+    cout << "Enter two strings: " << endl;
+    getline(cin, str1);
+    getline(cin, str2);
+    cout << "Are \"" << str1 << "\" and \"" << str2 << "\" one edit away? " << are_one_edit_away(str1, str2) << endl;
+}
+```
+
 ## C Implementation
 
 ### [Solution 1](./C/One_edit_away.c)
@@ -515,4 +599,171 @@ void main(){
         printf("NOT ");
     printf("one edit away\n");
 }
+```
+
+## Java Implementation
+
+### [Solution](./Java/OneEditAway.java)
+
+```java
+/**
+ * @author: aaditkamat
+ * @date: 28/12/2018
+ */
+import java.util.Scanner;
+
+class OneEditAway {
+    static boolean canReplaceACharacter(String str1, String str2) {
+        if (str1.length() != str2.length()) {
+            return false;
+        }
+        int change = 0;
+        for (int i = 0; i < str1.length(); i++) {
+            if (str1.charAt(i) != str2.charAt(i)) {
+                change++;
+            }
+        }
+        return change == 1;
+    }
+
+    static boolean isASubstring(String str1, String str2) {
+        if (str1.isEmpty()) {
+            return true;
+        }
+
+        if (str1.charAt(0) != str2.charAt(1) && str1.charAt(0) != str2.charAt(0)) {
+            return false;
+        }
+
+        int found = str2.indexOf(str1.charAt(0));
+        
+        if (found == 1) {
+            return str2.substring(1).equals(str1);
+        }
+
+        int j = 0, ctr = 0;
+        for (int i = 0; i < str1.length(); j++) {
+            if (j >= str2.length()) {
+                return false;
+            }
+            if (str1.charAt(i) != str2.charAt(j) && ctr == 0) {
+                ctr++;
+                continue;
+            }
+            if (str1.charAt(i) != str2.charAt(j)) {
+                return false;
+            }
+            i++;
+        }
+        return true;        
+    }
+
+    static boolean canAddACharacter(String str1, String str2) {
+        return str2.length() - str1.length() == 1 && isASubstring(str1, str2);  
+    }
+
+    static boolean canDeleteACharacter(String str1, String str2) {
+        return str1.length() - str2.length() == 1 && isASubstring(str2, str1);
+    }
+
+    static boolean areOneEditAway(String str1, String str2) {
+        if (str1.equals(str2)) {
+            return true;
+        }
+        return canReplaceACharacter(str1, str2) || canAddACharacter(str1, str2) || canDeleteACharacter(str1, str2);
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String str1, str2;
+        System.out.println("Enter two strings: ");
+        str1 = input.next();
+        str2 = input.next();
+        System.out.printf("Are \"%s\" and \"%s\" one edit away? %b\n", str1, str2, areOneEditAway(str1, str2)); 
+    }
+}
+```
+
+## Ruby Implementation
+
+### [Solution](./Ruby/one_edit_away.rb)
+
+```ruby
+=begin
+@author: aaditkamat
+@date: 28/12/2018
+=end
+
+def can_replace_a_character(str1, str2) 
+    if (str1.size() != str2.size()) 
+        return false
+    end
+    change = 0
+    (str1.size()).times do |i|
+        if (not str1[i] === str2[i]) 
+            change += 1
+        end
+    end 
+    return change === 1
+end
+
+def is_a_substring(str1, str2) 
+    if (str1.empty?)
+        return true
+    end
+
+    if (not str1[0] === str2[1] and not str1[0] === str2[0]) 
+        return false
+    end
+
+    found = str2.index(str1[0])
+        
+    if (found == 1) 
+        return str2[1..str2.length][str1] === str1
+    end
+
+    i = 0
+    j = 0
+    ctr = 0
+    until i >= str1.length do 
+        if j >= str2.length
+            return false
+        end
+        if (not str1[i] === str2[j] and ctr === 0) 
+            ctr += 1
+            j += 1
+            next
+        end
+        if (not str1[i] === str2[j]) 
+            return false
+        end
+        i += 1
+        j += 1
+    end
+    true
+end
+
+def can_add_a_character(str1, str2) 
+    str2.size() - str1.size() === 1 and is_a_substring(str1, str2)  
+end
+
+def can_delete_a_character(str1, str2) 
+    str1.size() - str2.size() === 1 and is_a_substring(str2, str1)
+end
+
+def are_one_edit_away(str1, str2) 
+    if (str1 === str2) 
+        return true
+    end
+    can_replace_a_character(str1, str2) or can_add_a_character(str1, str2) or can_delete_a_character(str1, str2)
+end 
+
+def main
+    puts "Enter two strings: "
+    str1 = gets().chomp!
+    str2 = gets().chomp!
+    puts "Are \"#{str1}\" and \"#{str2}\" one edit away? #{are_one_edit_away(str1, str2)}"
+end
+
+main
 ```
