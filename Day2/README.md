@@ -611,6 +611,7 @@ int main(){
 
 ### [C++ Implementation](./C++/palindromeday2.cpp)
 
+```cpp
 /**
  * @author:divyakhetan
  * @date: 30/12/2018
