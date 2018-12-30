@@ -1,6 +1,6 @@
 '''
-  @author: profgrammer 
-  @date: 30-12-2018
+  *@author: profgrammer 
+  *@date: 30-12-2018
 '''
 
 n = int(input())
