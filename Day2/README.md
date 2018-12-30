@@ -1,4 +1,4 @@
-![cover](./cover.png)
+﻿![cover](./cover.png)
 
 # Day 2 -- String Reversal and Palindrome
 
@@ -252,6 +252,28 @@ int main(){
 
     cout << str << endl;
 return 0;
+}
+```
+
+### [C++ Solution](./C++/reverseday2.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 30/12/2018
+ */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+	string s;
+	cin >> s;
+	reverse(s.begin(), s.end());
+	cout <<s;
+	return 0;
 }
 ```
 
@@ -584,6 +606,28 @@ int main(){
         cout << str << " is NOT a Palindrome!" << endl;
 
     return 0;
+}
+```
+
+### [C++ Implementation](./C++/palindromeday2.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 30/12/2018
+ */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+	string s;
+	cin >> s;
+	reverse(s.begin(), s.end());
+	cout <<s;
+	return 0;
 }
 ```
 
