@@ -1,3 +1,7 @@
+=begin
+@author: aaditkamat
+@date: 31/12/2018
+=end
 def ind (m, n)
     m == n ? 0 : 1
 end

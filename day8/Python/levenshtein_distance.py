@@ -1,3 +1,8 @@
+'''
+@author: aaditkamat
+@date: 31/12/2018
+'''
+
 def ind (m, n):
     return 0 if m == n else 1
 
