@@ -203,7 +203,7 @@ int main() {
 }
 ```
 
->>>>>>> bfc5eccbfad9b1f0a7834623321452aed5c55537
+
 ### [hamingDistance](./C++/hammingDistanceday3.cpp)
 
 ```cpp
@@ -230,10 +230,9 @@ int main(){
 	}
 	return 0;
 }
-<<<<<<< HEAD
+
 ```
-=======
->>>>>>> bfc5eccbfad9b1f0a7834623321452aed5c55537
+
 
 ## C Implementation
 
