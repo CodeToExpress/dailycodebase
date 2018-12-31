@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int ind(char m, char n) {
+int ind(int m, int n) {
     return m == n;
 }
 
