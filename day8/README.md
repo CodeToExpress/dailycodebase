@@ -116,7 +116,7 @@ console.log(minEditDist('kitten', 'sitting'));
 using namespace std;
 
 int ind(char m, char n) {
-    return m == n;
+    return m == n ? 0 : 1;
 }
 
 int dist(string first, string second) {

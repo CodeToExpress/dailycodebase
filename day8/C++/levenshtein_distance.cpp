@@ -10,7 +10,7 @@
 using namespace std;
 
 int ind(char m, char n) {
-    return m == n;
+    return m == n ? 0 : 1;
 }
 
 int dist(string first, string second) {
@@ -24,7 +24,7 @@ int dist(string first, string second) {
     }
     for (int i = 1; i <= firstLength; i++) {
         for (int j = 1; j <= secondLength; j++) {
-            int values[] = { m[i - 1][j] + 1, m[i][j - 1] + 1, m[i - 1][j - 1] + ind(first[i], second[j]) };
+            int values[] = { m[i - 1][j] + 1, m[i][j - 1] + 1, m[i - 1][j - 1] + ind(first[i - 1], second[j - 1])};
             m[i][j] = *min_element(begin(values), end(values));
         }
     }
