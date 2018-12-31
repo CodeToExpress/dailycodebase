@@ -17,7 +17,7 @@ three edits:
 2. sitt**e**n → sitt**i**n (substitution of "i" for "e")
 3. sittin → sittin**g** (insertion of "g" at the end).
 
-## Levenshtein distance (source: [Wikipedia](https://en.wikipedia.org/wiki/Levenshtein_distance))
+## Levenshtein distance
 
 Levenshtein distance between two words is the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other. It is named after the Soviet mathematician Vladimir Levenshtein, who considered this distance in 1965.
 
@@ -37,6 +37,10 @@ is the distance between the first `i` characters of `a` and the first
 `j` characters of `b`.
 
 Therefore, the minimum edit distance between `a` and `b` is the last element in the edit distance matrix
+
+Read more at [Wikipedia](https://en.wikipedia.org/wiki/Levenshtein_distance)
+
+![ques](./ques.png)
 
 ## JavaScript Implementation
 
