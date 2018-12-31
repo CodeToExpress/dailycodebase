@@ -1,4 +1,4 @@
-![Hamming](./cover.png)
+﻿![Hamming](./cover.png)
 
 # Day 3 -- The Hamming Distance Problem
 
@@ -173,7 +173,7 @@ int main(){
 }
 ```
 
-###[C++ Solution](./C++/profgrammer_hammingdistance.cpp)
+###[Solution by @profgrammer](./C++/profgrammer_hammingdistance.cpp)
 ```c
 /*
   *@author: profgrammer
@@ -198,9 +198,35 @@ int main() {
     }
     cout<<hammingDistance<<endl;
   }
-
 }
 ```
+
+### [hamingDistance](./C++/hammingDistanceday3.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 30/12/2018
+ */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+	string s1, s2;
+	cin >> s1 >> s2;
+	if(s1.length() != s2.length()) cout << "Enter strings of equal length";
+	else{
+		int count = 0; 
+		for(int i = 0; i < s1.length(); i++){
+			if(s1[i] != s2[i]) count++;
+		}
+		cout << "The Hamming Distance is: " << count;
+	}
+	return 0;
+}
 
 ## C Implementation
 

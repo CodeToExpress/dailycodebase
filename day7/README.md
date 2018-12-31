@@ -440,6 +440,54 @@ int main() {
 }
 ```
 
+### [Solution](./C++/EditDistanceday7.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 30/12/2018
+ */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int min(int x, int y, int z) 
+{ 
+    return min(min(x, y), z); 
+} 
+
+int main(){
+	string s1, s2;
+	cin >> s1 >> s2;
+	
+	int m = s1.length();
+	int n = s2.length();
+	int edit[m + 1][n + 1]; 
+	
+	for(int i = 0; i <= n; i++){
+		edit[0][i] = i;
+	}
+	
+	
+	for(int i = 0; i <= m; i++){
+		edit[i][0] = i;
+	}
+	
+	for(int i =  1; i <= m; i++){
+		for(int j = 1; j <= n; j++){
+			if(s1[i - 1] == s2[j - 1]) edit[i][j] = edit[i -1 ][j - 1];
+			else edit[i][j] = 1 + min(edit[ i -1][j], edit[i - 1][j - 1], edit[i][j - 1]);  
+		}
+	}
+	
+	if(edit[m][n] <= 1) cout << "At edit distance 1";
+	else cout << "Not at edit distance 1";
+	return 0;
+}
+```
+
+
 ## C Implementation
 
 ### [Solution 1](./C/One_edit_away.c)
@@ -680,6 +728,47 @@ class OneEditAway {
         str1 = input.next();
         str2 = input.next();
         System.out.printf("Are \"%s\" and \"%s\" one edit away? %b\n", str1, str2, areOneEditAway(str1, str2)); 
+    }
+}
+```
+
+## Java Implementation
+
+### [Solution](./Java/Edit.java)
+
+```java
+/**
+ * @date 28/12/18
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class Edit {
+    public static void main(String []args)
+    {
+        Scanner sc=new Scanner(System.in);
+        String s1,s2;int l,c=0;char b;int i;
+        System.out.println("Enter two strings ");
+        s1=sc.next();
+        s2=sc.next();
+        
+        if(Math.abs(s1.length()-s2.length())<=1)
+        {
+            if(s1.length()<s2.length())
+                l=s1.length();
+            else
+                l=s2.length();
+            for(i=0;i<l;i++)
+            {
+                if(s1.charAt(i)==s2.charAt(i))
+                    c++;
+            }
+            if((c==l)||((c+1)==l && (s1.length()==s2.length())))
+                System.out.println(s1+" and "+s2+" are one edit away");
+            else
+                System.out.println(s1+" and "+s2+" are not one edit away ");
+        }
+        else
+                System.out.println(s1+" and "+s2+" are not one edit away ");
     }
 }
 ```

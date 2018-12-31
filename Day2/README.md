@@ -1,4 +1,4 @@
-![cover](./cover.png)
+﻿![cover](./cover.png)
 
 # Day 2 -- String Reversal and Palindrome
 
@@ -224,7 +224,7 @@ public class Reverse {
 
 ## C++ Implementation
 
-### [C++ Solution](./C++/reverseString.cpp)
+### [Solution by @imkaka](./C++/reverseString.cpp)
 
 ```cpp
 /*
@@ -255,7 +255,7 @@ return 0;
 }
 ```
 
-###[C++ Solution](./C++/profgrammer_reversepalindrome.cpp)
+###[Solution by @profgrammer](./C++/profgrammer_reversepalindrome.cpp)
 ```c
 /*
   *@author: profgrammer
@@ -293,7 +293,28 @@ int main() {
 
   if(s.compare(s1) == 0) cout<<"The string is a palindrome"<<endl;
   else cout<<"The string is not a palindrome\n";
+}
+```
 
+### [Solution by @divyakhetan](./C++/reverseday2.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 30/12/2018
+ */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+	string s;
+	cin >> s;
+	reverse(s.begin(), s.end());
+	cout <<s;
+	return 0;
 }
 ```
 
@@ -591,7 +612,9 @@ public class Palindrome2 {
 }
 ```
 
-### [C++ Implementation](./C++/checkPalindrome.cpp)
+## C++ Implementation
+
+### [Solution by @imkaka](./C++/checkPalindrome.cpp)
 
 ```cpp
 /*
@@ -626,6 +649,30 @@ int main(){
         cout << str << " is NOT a Palindrome!" << endl;
 
     return 0;
+}
+```
+
+### [Solution by @divyakhetan](./C++/palindromeday2.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 30/12/2018
+ */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+	string s;
+	cin >> s;
+	string t = s;
+	reverse(s.begin(), s.end());
+	if(s.compare(t) == 0) cout << "Palindrome!";
+	else cout << "Not a palindrome";
+	return 0;
 }
 ```
 
