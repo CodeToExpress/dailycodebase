@@ -1,4 +1,4 @@
-![cover](./cover.png)
+﻿![cover](./cover.png)
 
 # Day 2 -- String Reversal and Palindrome
 
@@ -224,7 +224,7 @@ public class Reverse {
 
 ## C++ Implementation
 
-### [C++ Solution](./C++/reverseString.cpp)
+### [Solution by @imkaka](./C++/reverseString.cpp)
 
 ```cpp
 /*
@@ -252,6 +252,69 @@ int main(){
 
     cout << str << endl;
 return 0;
+}
+```
+
+###[Solution by @profgrammer](./C++/profgrammer_reversepalindrome.cpp)
+```c
+/*
+  *@author: profgrammer
+  *@date: 30-12-2018
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+  string s;
+  cin>>s;
+
+  // method 1: print the string in reverse order
+  cout<<"The reversed string is: ";
+  for(int i = s.size()-1;i >= 0;i--) cout<<s[i];
+  cout<<endl;
+
+  // method 2: swap characters at either end
+  string s1 = s;
+  for(int i = 0, j = s1.size()-1;i <= j;i++, j--){
+    char temp = s1[i];
+    s1[i] = s1[j];
+    s1[j] = temp;
+  }
+  cout<<"The reversed string is: "<<s1<<endl;
+
+  // method 3: library functions
+  s1 = s;
+  reverse(s1.begin(), s1.end());
+  cout<<"The reversed string is: "<<s1<<endl;
+
+  // to check if the string is a palindrome, we need to check if it is equal to its reverse. 
+
+  if(s.compare(s1) == 0) cout<<"The string is a palindrome"<<endl;
+  else cout<<"The string is not a palindrome\n";
+}
+```
+
+### [Solution by @divyakhetan](./C++/reverseday2.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 30/12/2018
+ */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+	string s;
+	cin >> s;
+	reverse(s.begin(), s.end());
+	cout <<s;
+	return 0;
 }
 ```
 
@@ -549,7 +612,9 @@ public class Palindrome2 {
 }
 ```
 
-### [C++ Implementation](./C++/checkPalindrome.cpp)
+## C++ Implementation
+
+### [Solution by @imkaka](./C++/checkPalindrome.cpp)
 
 ```cpp
 /*
@@ -584,6 +649,30 @@ int main(){
         cout << str << " is NOT a Palindrome!" << endl;
 
     return 0;
+}
+```
+
+### [Solution by @divyakhetan](./C++/palindromeday2.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 30/12/2018
+ */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+	string s;
+	cin >> s;
+	string t = s;
+	reverse(s.begin(), s.end());
+	if(s.compare(t) == 0) cout << "Palindrome!";
+	else cout << "Not a palindrome";
+	return 0;
 }
 ```
 
