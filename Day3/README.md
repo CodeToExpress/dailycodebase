@@ -173,10 +173,8 @@ int main(){
 }
 ```
 
-<<<<<<< HEAD
-=======
-###[Solution by @profgrammer](./C++/profgrammer_hammingdistance.cpp)
-```c
+### [Solution by @profgrammer](./C++/profgrammer_hammingdistance.cpp)
+```cpp
 /*
   *@author: profgrammer
   *@date: 30-12-2018
