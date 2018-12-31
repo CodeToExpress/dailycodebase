@@ -17,7 +17,7 @@ three edits:
 2. sitt**e**n → sitt**i**n (substitution of "i" for "e")
 3. sittin → sittin**g** (insertion of "g" at the end).
 
-## Levenshtein distance (source: [Wikipedia](https://en.wikipedia.org/wiki/Levenshtein_distance))
+## Levenshtein distance
 
 Levenshtein distance between two words is the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other. It is named after the Soviet mathematician Vladimir Levenshtein, who considered this distance in 1965.
 
@@ -37,6 +37,10 @@ is the distance between the first `i` characters of `a` and the first
 `j` characters of `b`.
 
 Therefore, the minimum edit distance between `a` and `b` is the last element in the edit distance matrix
+
+Read more at [Wikipedia](https://en.wikipedia.org/wiki/Levenshtein_distance)
+
+![ques](./ques.png)
 
 ## JavaScript Implementation
 
@@ -94,3 +98,122 @@ function minEditDist (str1, str2) {
 console.log(minEditDist ('abcdefgs', 'agced'));
 console.log(minEditDist('kitten', 'sitting'));
 ```
+
+
+### Cpp Implementation
+
+### [Solution 1](./Cpp/day8.cpp)
+
+```cpp
+/*
+* @author : dhruv-gupta14
+* @date : 31/12/2018
+*/
+
+#include<bits/stdc++.h> 
+using namespace std; 
+  
+int min(int x, int y, int z) 
+{ 
+    return min(min(x, y), z); 
+} 
+  
+int levenshtein_distance(string str1, string str2, int m, int n) 
+{ 
+    int ld[m+1][n+1]; 
+  
+    for (int i=0; i<=m; i++) 
+    { 
+        for (int j=0; j<=n; j++) 
+        { 
+            if (i==0) 
+                ld[i][j] = j;
+  
+            else if (j==0) 
+                ld[i][j] = i;
+  
+ 
+            else if (str1[i-1] == str2[j-1]) 
+                ld[i][j] = ld[i-1][j-1]; 
+  
+            else
+                ld[i][j] = 1 + min(ld[i][j-1], ld[i-1][j], ld[i-1][j-1]);  
+        } 
+    } 
+  
+    return ld[m][n]; 
+} 
+  
+int main() 
+{ 
+    string str1,str2;
+    cin >> str1 >> str2;
+  
+    cout << levenshtein_distance(str1, str2, str1.length(), str2.length()); 
+  
+    return 0; 
+}
+``` 
+
+### C Implementation
+
+### [Solution 1](./C/levenshtein_distance.c)
+
+```c
+/**
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
+ * @github: https://github.com/razdeep
+ * @date: 31/12/2018
+ */
+#include <stdio.h>
+#include <string.h>
+
+int min(int x, int y, int z)
+{
+    if (x <= y && x <= z)
+        return x;
+    else if (y <= x && y <= z)
+        return y;
+    else
+        return z;
+}
+
+int levenshtein_distance(const char *str1, const char *str2)
+{
+    int m = strlen(str1);
+    int n = strlen(str2);
+    int ld[m + 1][n + 1];
+
+    for (int i = 0; i <= m; i++)
+    {
+        for (int j = 0; j <= n; j++)
+        {
+            if (i == 0)
+                ld[i][j] = j;
+
+            else if (j == 0)
+                ld[i][j] = i;
+
+            else if (str1[i - 1] == str2[j - 1])
+                ld[i][j] = ld[i - 1][j - 1];
+
+            else
+                ld[i][j] = 1 + min(ld[i][j - 1], ld[i - 1][j], ld[i - 1][j - 1]);
+        }
+    }
+
+    return ld[m][n];
+}
+
+int main()
+{
+    const int STRING_LENGTH=100;
+    char str1[STRING_LENGTH], str2[STRING_LENGTH];
+    scanf("%s%s",str1,str2);
+
+    printf("%d\n",levenshtein_distance(str1, str2));
+
+    return 0;
+}
+
+``` 
