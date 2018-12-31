@@ -224,7 +224,7 @@ public class Reverse {
 
 ## C++ Implementation
 
-### [C++ Solution](./C++/reverseString.cpp)
+### [Solution by @imkaka](./C++/reverseString.cpp)
 
 ```cpp
 /*
@@ -255,7 +255,7 @@ return 0;
 }
 ```
 
-### [C++ Solution](./C++/reverseday2.cpp)
+### [Solution by @divyakhetan](./C++/reverseday2.cpp)
 
 ```cpp
 /**
@@ -571,7 +571,9 @@ public class Palindrome2 {
 }
 ```
 
-### [C++ Implementation](./C++/checkPalindrome.cpp)
+## C++ Implementation
+
+### [Solution by @imkaka](./C++/checkPalindrome.cpp)
 
 ```cpp
 /*
@@ -609,7 +611,7 @@ int main(){
 }
 ```
 
-### [C++ Implementation](./C++/palindromeday2.cpp)
+### [Solution by @divyakhetan](./C++/palindromeday2.cpp)
 
 ```cpp
 /**
