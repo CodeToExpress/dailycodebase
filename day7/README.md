@@ -135,9 +135,12 @@ oneEditAway ('abc', 'abced'); // false
   Method - There are 2 test cases
       1) Difference of length between 2 characters is more than one, then answer is False
       2) Traverse both the strings simultaneously
-          2.1) if character at 1st position in both strings doesn't match then increment and count and 
-               if it is greater than one return False
-          2.2) increment the pointer of max length string
+          2.1) if characters at 1st position in both strings doesn't match then increment count and if 
+               it is greater than one return False
+              2.1.1) increment the pointer of max length string else if equal increment both pointers
+          2.2) If characters match then increment both pointers
+      3) Lastly increment count if any extra remaining character is present in any string
+      4) Return True if count is either 0 or 1 else return False
             
 """
 
@@ -169,7 +172,7 @@ def check_one_edit_away(str1, str2):
     if i < l1 or j < l2: 
         count += 1
 
-    return count == 1 or count == 0
+    return count <= 1
 
 
 check_one_edit_away(*(input().split())) # here list unpacking is used

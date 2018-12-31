@@ -31,7 +31,7 @@ def check_one_edit_away(str1, str2):
     if i < l1 or j < l2:
         count += 1
 
-    return count == 1 or count == 0
+    return count <= 1
 
 
 check_one_edit_away(*(input().split()))
