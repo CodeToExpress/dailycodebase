@@ -162,6 +162,36 @@
         "doc",
         "code"
       ]
+    },
+    {
+      "login": "profgrammer",
+      "name": "profgrammer",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/25369498?v=4",
+      "profile": "https://github.com/profgrammer",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "divyakhetan",
+      "name": "divyakhetan",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/26656036?v=4",
+      "profile": "https://github.com/divyakhetan",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "Spreeha",
+      "name": "Spreeha Dutta",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/36483814?v=4",
+      "profile": "https://github.com/Spreeha",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ]
 }
