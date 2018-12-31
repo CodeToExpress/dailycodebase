@@ -132,36 +132,47 @@ oneEditAway ('abc', 'abced'); // false
   @author : vishalshirke7
   @date : 28/12/2018
 
-  Method - There are 3 test cases
+  Method - There are 2 test cases
       1) Difference of length between 2 characters is more than one, then answer is False
-      2) If length of both strings is equal then we'll have to check for 2 cases
-          2.1) if count of different characters at each position is > 1 then answer is False
-          2.2) if count of different characters at each position is < 2 then answer is True
-      3) if difference in length of both strings in 1 then we check for intersection of
-         both strings and if it is equal to min(length1, length2) then answer is true
-         as we can add a character to minimum length string or remove one from bigger length string
+      2) Traverse both the strings simultaneously
+          2.1) if characters at 1st position in both strings doesn't match then increment count and if 
+               it is greater than one return False
+              2.1.1) increment the pointer of max length string else if equal increment both pointers
+          2.2) If characters match then increment both pointers
+      3) Lastly increment count if any extra remaining character is present in any string
+      4) Return True if count is either 0 or 1 else return False
+            
 """
-
 
 def check_one_edit_away(str1, str2):
     l1, l2 = len(str1), len(str2)
     if abs(l1 - l2) > 1:
         return False
-    if l1 == l2:
-        count = 0
-        for i in range(l1):
-            if str1[i] != str2[i]:
-                count += 1
-        if count > 1:
-            return False
+    count = 0
+    i, j = 0, 0
+    while i < l1 and j < l2:
+        if str1[i] != str2[j]:
+            if count == 1:
+                return False
+
+            if l1 > l2:
+                i += 1
+            elif l2 > l1:
+                j += 1
+            else:
+                i += 1
+                j += 1
+
+            count += 1
         else:
-            return True
-    else:
-        if len(set(str1) & set(str2)) == min(l1, l2):
-            # check for intersection of two strings
-            return True
-        else:
-            return False
+            i += 1
+            j += 1
+    
+    # check for last remaining character in any string, if length are not equal
+    if i < l1 or j < l2: 
+        count += 1
+
+    return count <= 1
 
 
 check_one_edit_away(*(input().split())) # here list unpacking is used
