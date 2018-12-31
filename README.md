@@ -24,6 +24,7 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 5. [Day 5 -- Pattern Printing Problems](./day5/) -- [http://codetoexpress.tech/dc/day5/](http://codetoexpress.tech/dc/day5/)
 6. [Day 6 -- Sentence Cap + Word Reversal + Anagram](./day6/) -- [http://codetoexpress.tech/dc/day6/](http://codetoexpress.tech/dc/day6/)
 7. [Day 7 -- One Edit Away](./day7/) -- [http://codetoexpress.tech/dc/day7/](http://codetoexpress.tech/dc/day7/)
+8. [Day 8 -- Minimum Edit Distance](./day8/) -- [http://codetoexpress.tech/dc/day8/](http://codetoexpress.tech/dc/day8/)
 
 ## Timeline
 
