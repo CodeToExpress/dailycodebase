@@ -1,4 +1,4 @@
-![cover](./cover.png)
+﻿![cover](./cover.png)
 
 # Day 6
 
@@ -229,6 +229,33 @@ print("String \'", string, "\' with first letter of each word capitalized (sligh
 
 ## C++ Implementation
 
+### [Solution](./cpp/Capialise.cpp)
+
+```C++
+/**
+ * @author Bhanu0202
+ * @date 27/12/2018
+ */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	string sa;
+	getline(cin, sa);
+	int l = sa.length();
+	if(sa[0]>=97 && sa[0]<=122)
+	sa[0] -= 32;
+	for(int i = 0; i < l; i++){
+	    if(sa[i] == 32 && sa[i + 1]>=97 && sa[i + 1]<=122){
+	        sa[i + 1] -= 32;  
+	    }
+	}
+	cout << sa;
+	return 0;
+}
+```
+
 ### [Solution](./C++/day6_1.cpp)
 
 ```cpp
@@ -236,10 +263,8 @@ print("String \'", string, "\' with first letter of each word capitalized (sligh
 * @author : dhruv-gupta14
 * @date : 27/12/2018
 */
-
 #include<bits/stdc++.h>
 using namespace std;
-
 int main()
 {
     string s;
@@ -290,7 +315,58 @@ int main(){
     cout << "Result: " << str;
     return 0;
 }
+```
 
+### [Sentence Capatalization by @divyakhetan](./C++/capitaliseFirstday6.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 30/12/2018
+ */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+	string s;
+	getline(cin, s);
+	s[0] = toupper(s[0]);
+	for(int i = 1; i < s.length(); i++){
+		if(s[i - 1] == ' '){
+			if(s[i] >= 'a' && s[i] <= 'z') s[i] =  toupper(s[i]);
+		}
+	}
+	
+	cout << s << endl;
+	return 0;
+}
+```
+
+## Ruby Implementation
+
+### [sentence_capitalization.rb](./Ruby/sentence_capitalization.rb)
+
+```ruby
+
+=begin
+@author: aaditkamat
+@date: 27/12/2018
+=end
+
+def capitalize_sentence(string)
+    new_string = ''
+    string.split(' ').each do |word|
+        new_string += word.capitalize + ' '
+    end
+    new_string
+end
+
+print"Enter a string: "
+string = gets().chomp
+puts "String \" #{string} \" with first letter of each word capitalized: #{capitalize_sentence(string)}"
 ```
 
 ## Part B -- Word Reversal
@@ -487,12 +563,48 @@ def reverse_words(string):
 
 print("Enter a string: ", end= '')
 string = input()
-print("Reverse of string: ", reverse_words(string)})
+print("Reverse of string \'", string, "\': ", reverse_words(string), sep='')
 ```
 
 ## C++ Implementation
 
-### [Solution](./C++/day6_2.cpp)
+### [Solution](./cpp/wrdReversal.cpp)
+
+```C++
+/**
+ * @author Bhanu0202
+ * @date 27/12/2018
+ */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	string sa, sb;
+	getline(cin, sa);
+	int l = sa.length();
+	vector<string> s;
+	s.push_back("");
+	int c = 0;
+	for(int i = 0; i < l; i++){
+    if(sa[i] == ' '){
+        c++;
+        s.push_back("");
+    }
+    else
+        s[c] += sa[i];
+    }
+    for(int i = 0; i <= c; i++){
+        reverse(s[i].begin(), s[i].end());
+        sb += s[i]  + " ";
+    }
+    cout << sb;
+	return 0;
+}
+```
+
+### [Solution by @dhruv-gupta14](./C++/day6_2.cpp)
 
 ```cpp
 /*
@@ -558,6 +670,58 @@ int main(){
 }
 ```
 
+
+### [Word Reverse by @divyakhetan](./C++/reverseWordday6.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 30/12/2018
+ */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+	string s;
+	getline(cin, s);
+	s[0] = toupper(s[0]);
+	for(int i = 1; i < s.length(); i++){
+		if(s[i - 1] == ' '){
+			if(s[i] >= 'a' && s[i] <= 'z') s[i] =  toupper(s[i]);
+		}
+	}
+	
+	cout << s << endl;
+	return 0;
+}
+```
+## Ruby Implementation
+
+### [reverse_words.rb](./Ruby/reverse_words.rb)
+
+```ruby
+
+=begin
+@author: aaditkamat
+@date: 27/12/2018
+=end
+
+def reverse_words(string)
+    new_string = ''
+    string.split(' ').each do |word|
+        new_string += word.reverse + ' '
+    end
+    new_string
+end
+
+print"Enter a string: "
+string = gets().chomp
+print"Reverse of string #{string}:  #{reverse_words(string)}"
+```
+
 ## Part C -- Anagram Check
 
 **Question** - Write a program to check whether the two provided strings are anagrams of each other.
@@ -576,7 +740,7 @@ int main(){
 function anagram (str1, str2) {
     let len1 = str1.length,
         len2 = str2.length;
-
+    
     // Compare lengths
     if (len1 !== len2) {
         console.log ('Invalid Input');
@@ -612,7 +776,7 @@ anagram ('LISTEN', 'SILENT');
 function anagram (str1, str2) {
     let len1 = str1.length,
         len2 = str2.length;
-
+    
     // Compare lengths
     if (len1 !== len2) {
         console.log ('Invalid Input');
@@ -642,7 +806,7 @@ function anagram (str1, str2) {
     }
 
     console.log(`"${str1}" and "${str2}" are Anagrams`);
-}
+}   
 
 anagram ('LISTEN', 'MILENT');
 ```
@@ -691,7 +855,7 @@ function anagram (str1, str2) {
     if (flag !== 1) {
         console.log (`${str1} and ${str2} are not Anagrams`);
         return 0;
-    }
+    } 
     else {
         console.log (`${str1} and ${str2} are Anagrams`);
         return 1;
@@ -719,7 +883,7 @@ if( sorted(Str1) != sorted(Str2) ): print("not", end=" ")
 print("anagrams")
 ```
 
-### [reverse_words.py](./Python/reverse_words.py)
+### [anagram_check.py](./Python/anagram_check.py)
 ```python
 '''
 @author: aaditkamat
@@ -731,12 +895,6 @@ def check_anagram(first_str, second_str):
     second_word_dict = {}
     first_str = first_str.replace(' ', '').lower()
     second_str = first_str.replace(' ', '').lower()
-    for ch in first_str:
-        if ch not in first_word_dict:
-            first_word_dict[ch] = 1
-        else:
-            first_word_dict[ch] += 1
-
     for ch in second_str:
         if ch not in second_word_dict:
             second_word_dict[ch] = 1
@@ -752,7 +910,43 @@ print("Are ", first_str, "and ", second_str, "anagrams? ", check_anagram(first_s
 
 ## C++ Implementation
 
-### [Solution](./C++/day6_3.cpp)
+### [Solution](./cpp/anagrams.cpp)
+
+```C++
+/**
+ * @author Bhanu0202
+ * @date 27/12/2018
+ */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	string sa, sb;
+	cin >> sa >>sb;
+	int la = sa.length();
+	int lb = sb.length();
+	int count[26] = {0};
+	if(la != lb){
+	    cout << "Invalid Input";
+	}
+	else{
+	    int flag = 0;
+	    sort(sa.begin(), sa.end()); 
+	    sort(sb.begin(), sb.end());
+	    if(sa != sb){
+	        flag = 1;
+	    }
+	    if(flag == 0)
+	    cout << "Anagrams";
+	    else
+	    cout << "Not anagrams";
+	}
+	return 0;
+}
+```
+
+### [Solution by @dhruv-gupta14](./C++/day6_3.cpp)
 
 ```cpp
 /*
@@ -836,4 +1030,70 @@ int main(){
 
     return 0;
 }
+```
+
+
+### [Anagram Check by @divyakhetan](./C++/Anagramday6.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 30/12/2018
+ */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+	string s1, s2;
+	cin >> s1 >> s2;
+	if(s1.length() != s2.length()) cout << "Not of same length";
+	else{
+		sort(s1.begin(), s1.end());
+		sort(s2.begin(), s2.end());
+		if(s1.compare(s2) == 0) cout << "Anagrams!";
+		else cout << "Not anagrams";
+	} 
+	return 0;
+}
+```
+
+## Ruby Implementation
+
+### [anagram_check.rb](./Ruby/anagram_check.rb)
+```ruby
+
+=begin
+@author: aaditkamat
+@date: 27/12/2018
+=end
+
+def check_anagram(first_str, second_str)
+    first_word_dict = {}
+    second_word_dict = {}
+    first_str.gsub!(" ", "").downcase!
+    second_str.gsub!(" ", "").downcase!
+    first_str.each_char do |ch|
+        if first_word_dict.has_key?(ch)
+            first_word_dict[ch] += 1
+        else
+            first_word_dict[ch] = 1
+        end
+    end
+    second_str.each_char do |ch|
+        if second_word_dict.has_key?(ch)
+            second_word_dict[ch] += 1
+        else
+            second_word_dict[ch] = 1
+        end
+    end
+    first_word_dict == second_word_dict
+end
+
+puts "Enter two strings: "
+first_str = gets().chomp
+second_str = gets().chomp
+puts "\nAre #{first_str} and #{second_str} anagrams? #{check_anagram(String.new(first_str), String.new(second_str))}"
 ```
