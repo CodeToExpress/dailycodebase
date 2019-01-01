@@ -18,7 +18,7 @@ output:
 321
 ```
 
-![ques](./ques)
+![ques](./ques.png)
 
 ## JavaScript Implementation
 
