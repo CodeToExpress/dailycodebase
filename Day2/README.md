@@ -682,6 +682,3 @@ def palindrome(str)
   str != nil and str === short_solution(str)
 end
 ```
-
-
-
