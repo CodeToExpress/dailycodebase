@@ -366,3 +366,9 @@ print("number of characters not matching are:",len(k))
 
 The #1 reason for not being successful is inconsistency, and it is a common trend that people start something and on give up on the third day itself, and one of the major reasons behind that is that they find it difficult to continue. 
 So, to keep everyone (who is following the DailyCodes challenge) consistent, I have decided to keep today's question very simple and straightforward.
+
+### Have Another solution?
+
+The beauty of programming lies in the fact that there is never a single solution to any problem.
+
+In case you have an alternative way to solve this problem, do contribute to this repository (https://github.com/CodeToExpress/dailycodebase) :)
