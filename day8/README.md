@@ -1,4 +1,4 @@
-![cover](./cover.png)
+﻿![cover](./cover.png)
 
 # Day 8 - Maximum Edit Distance (Levenshtein Distance)
 
@@ -99,8 +99,7 @@ console.log(minEditDist ('abcdefgs', 'agced'));
 console.log(minEditDist('kitten', 'sitting'));
 ```
 
-
-### Cpp Implementation
+## C++ Implementation
 
 ### [Solution 1](./Cpp/day8.cpp)
 
@@ -154,6 +153,96 @@ int main()
     return 0; 
 }
 ``` 
+
+### [Solution 2 by @divyakhetan](./Cpp/EditDistanceday8.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 31/12/2018
+ */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int min(int x, int y, int z) 
+{ 
+    return min(min(x, y), z); 
+} 
+
+int main(){
+	string s1, s2;
+	cin >> s1 >> s2;
+	
+	int m = s1.length();
+	int n = s2.length();
+	int edit[m + 1][n + 1]; 
+	
+	for(int i = 0; i <= n; i++){
+		edit[0][i] = i;
+	}
+	
+	
+	for(int i = 0; i <= m; i++){
+		edit[i][0] = i;
+	}
+	
+	for(int i =  1; i <= m; i++){
+		for(int j = 1; j <= n; j++){
+			if(s1[i - 1] == s2[j - 1]) edit[i][j] = edit[i -1 ][j - 1];
+			else edit[i][j] = 1 + min(edit[ i -1][j], edit[i - 1][j - 1], edit[i][j - 1]);  
+		}
+	}
+	
+	cout << "min edit distance is " << edit[m][n];
+	return 0;
+}
+``` 
+
+### [Solution 3 by @aaditkamat] (./C++/levenshtein_distance.cpp)
+
+```cpp
+/**
+ * @author: aaditkamat
+ * @date: 31/12/2018
+ */
+ 
+#include <string>
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int ind(char m, char n) {
+    return m == n ? 0 : 1;
+}
+
+int dist(string first, string second) {
+    int firstLength = first.length(), secondLength = second.length();
+    int m[firstLength + 1][secondLength + 1];
+    for (int i = 1; i <= firstLength; i++) {
+        m[i][0] = i;
+    }
+    for (int i = 0; i <= secondLength; i++) {
+        m[0][i] = i;
+    }
+    for (int i = 1; i <= firstLength; i++) {
+        for (int j = 1; j <= secondLength; j++) {
+            int values[] = { m[i - 1][j] + 1, m[i][j - 1] + 1, m[i - 1][j - 1] + ind(first[i], second[j]) };
+            m[i][j] = *min_element(begin(values), end(values));
+        }
+    }
+    return m[firstLength][secondLength];
+}
+int main() {
+    string first, second;
+    cout << "Enter two strings: " << endl;
+    getline(cin, first);
+    getline(cin, second);
+    cout << "The Levenshtein distance between \"" << first << "\" and \"" << second << "\" is: " << dist(first, second) << endl;
+}
+```
 
 ### C Implementation
 
@@ -281,3 +370,146 @@ public class Levenshtein {
     }
 }
 ```
+
+### [Solution 2] (./Java/LevenshteinDistance.java)
+
+```java
+/**
+ * @author: aaditkamat
+ * @date: 31/12/2018
+ */
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+class LevenshteinDistance {
+    public static int ind(char m, char n) {
+        return m == n ? 0 : 1;
+    }
+
+    public static int dist(String first, String second) {
+        int firstLength = first.length(), secondLength = second.length();
+        int[][] m = new int[firstLength + 1][secondLength + 1];
+        for (int i = 1; i <= firstLength; i++) {
+            m[i][0] = i;
+        }
+        for (int i = 0; i <= secondLength; i++) {
+            m[0][i] = i;
+        }
+        for (int i = 1; i <= firstLength; i++) {
+            for (int j = 1; j <= secondLength; j++) {
+                int[] values = { m[i - 1][j] + 1, m[i][j - 1] + 1, m[i - 1][j - 1] + ind(first.charAt(i - 1), second.charAt(j - 1)) };
+                Arrays.sort(values);
+                m[i][j] = values[0];
+            }
+        }
+        return m[firstLength][secondLength];
+    }
+    public static void main(String[] args) {
+        String first, second;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter two strings: ");
+        first = input.next();
+        second = input.next();
+        System.out.printf("The Levenshtein distance between \"%s\" and \"%s\" is: %d\n", first, second, dist(first, second));
+     }
+```
+
+## Python Implementation
+
+### [Solution](./Python/levenshtein_distance.py)
+
+```python
+'''
+@author: aaditkamat
+@date: 31/12/2018
+'''
+
+def ind (m, n):
+    return 0 if m == n else 1
+
+
+def dist(first, second):
+    first_length = len(first)
+    second_length = len(second)
+
+    m = []
+    for i in range(first_length + 1):
+        row = []
+        for j in range(second_length + 1):
+           row.append(0)
+        m.append(row)
+
+    for i in range(1, first_length + 1):
+        m[i][0] = i;
+
+    for i in range(second_length + 1):
+        m[0][i] = i;
+
+    for i in range(1, first_length + 1):
+        for j in range(1, second_length + 1):
+            values = [m[i - 1][j] + 1, m[i][j - 1] + 1, m[i - 1][j - 1] + ind(first[i - 1], second[j - 1])]
+            values.sort()
+            m[i][j] = values[0]
+
+
+    return m[first_length][second_length]
+
+def main():
+    print('Enter two strings: ')
+    first = input()
+    second = input()
+    print(f'The Levenshtein distance between \"{first}\" and \"{second}\" is: {dist(first, second)}')
+
+main()
+```
+
+## Ruby Implementation
+
+### [Solution](./Ruby/levenshtein_distance.rb)
+
+```ruby
+=begin
+@author: aaditkamat
+@date: 31/12/2018   
+=end
+def ind (m, n)
+    m == n ? 0 : 1
+end
+
+def dist(first, second)
+    first_length = first.length
+    second_length = second.length
+
+    m = Array.new(first_length + 1) { Array.new(second_length + 1) }
+    (first.length + 1).times do |i|
+        m[i][0] = i;
+    end
+    (second_length + 1).times do |i|
+        m[0][i] = i;
+    end
+    (1..first_length).each do |i|
+        (1..second_length).each do |j|
+            values = [m[i - 1][j] + 1, m[i][j - 1] + 1, m[i - 1][j - 1] + ind(first[i - 1], second[j - 1])];
+            values.sort!
+            m[i][j] = values[0]
+        end
+    end
+    m[first_length][second_length]
+end
+
+def main
+    puts "Enter two strings: "
+    first = gets.chomp!
+    second = gets.chomp!
+    puts "The Levenshtein distance between \"#{first}\" and \"#{second}\" is: #{dist(first, second)}"
+end
+
+main
+```
+
+### Have Another solution?
+
+The beauty of programming lies in the fact that there is never a single solution to any problem.
+
+In case you have an alternative way to solve this problem, do contribute to this repository (https://github.com/CodeToExpress/dailycodebase) :)
