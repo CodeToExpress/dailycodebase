@@ -25,6 +25,8 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 6. [Day 6 -- Sentence Cap + Word Reversal + Anagram](./day6/) -- [http://codetoexpress.tech/dc/day6/](http://codetoexpress.tech/dc/day6/)
 7. [Day 7 -- One Edit Away](./day7/) -- [http://codetoexpress.tech/dc/day7/](http://codetoexpress.tech/dc/day7/)
 8. [Day 8 -- Minimum Edit Distance](./day8/) -- [http://codetoexpress.tech/dc/day8/](http://codetoexpress.tech/dc/day8/)
+9. [Day 9 -- Smallest Substring Problem](./day9/) -- [http://codetoexpress.tech/dc/day9/](http://codetoexpress.tech/dc/day9/)
+10. [Day 10 -- String Permutation Problem](./day10/) -- [http://codetoexpress.tech/dc/day10/](http://codetoexpress.tech/dc/day10/)
 
 ## Timeline
 

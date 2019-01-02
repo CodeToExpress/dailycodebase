@@ -2158,3 +2158,9 @@ int main() {
  return 0;
 }
 ```
+
+### Have Another solution?
+
+The beauty of programming lies in the fact that there is never a single solution to any problem.
+
+In case you have an alternative way to solve this problem, do contribute to this repository (https://github.com/CodeToExpress/dailycodebase) :)
