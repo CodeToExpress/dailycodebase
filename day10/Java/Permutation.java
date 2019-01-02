@@ -1,38 +1,10 @@
-![cover](./cover.png)
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication3;
 
-# Day 10 -- Smallest Substring Problem
-
-**Question** Find all the permutations of the given string
-
-```
-Example:
-input: 
-123
-
-output:
-123
-132
-213
-231
-312
-321
-```
-
-![ques](./ques.png)
-
-## JavaScript Implementation
-
-### [Solution](./sol.js)
-
-```js
-// To Be Added
-```
-
-## Java Implementation
-
-### [Solution](./Java/Permutation.java)
-
-```java
 /**
  * @date 02/01/19
  * @author SPREEHA DUTTA
@@ -76,4 +48,3 @@ public class Permutation {
         permute(arr,arr.length,arr.length);
     }
 }
-```
