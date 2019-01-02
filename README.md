@@ -18,6 +18,15 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 ## Code Today!
 
 1. [Day 1 -- The Fizz Buzz Problem](./Day1/) -- [http://codetoexpress.tech/dc/day1](http://codetoexpress.tech/dc/day1)
+2. [Day 2 -- String Reversal + Palindrome](./Day2/) -- [http://codetoexpress.tech/dc/day2/](http://codetoexpress.tech/dc/day2)
+3. [Day 3 -- The Hamming Distance Problem](./Day3/) -- [http://codetoexpress.tech/dc/day3/](http://codetoexpress.tech/dc/day3/)
+4. [Day 4 -- Num Vowels + Max Chars](./day4/) -- [http://codetoexpress.tech/dc/day4/](http://codetoexpress.tech/dc/day4/)
+5. [Day 5 -- Pattern Printing Problems](./day5/) -- [http://codetoexpress.tech/dc/day5/](http://codetoexpress.tech/dc/day5/)
+6. [Day 6 -- Sentence Cap + Word Reversal + Anagram](./day6/) -- [http://codetoexpress.tech/dc/day6/](http://codetoexpress.tech/dc/day6/)
+7. [Day 7 -- One Edit Away](./day7/) -- [http://codetoexpress.tech/dc/day7/](http://codetoexpress.tech/dc/day7/)
+8. [Day 8 -- Minimum Edit Distance](./day8/) -- [http://codetoexpress.tech/dc/day8/](http://codetoexpress.tech/dc/day8/)
+9. [Day 9 -- Smallest Substring Problem](./day9/) -- [http://codetoexpress.tech/dc/day9/](http://codetoexpress.tech/dc/day9/)
+10. [Day 10 -- String Permutation Problem](./day10/) -- [http://codetoexpress.tech/dc/day10/](http://codetoexpress.tech/dc/day10/)
 
 ## Timeline
 
