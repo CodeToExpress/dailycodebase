@@ -1,4 +1,4 @@
-﻿![cover](./cover.png)
+![cover](./cover.png)
 
 # Day 8 - Maximum Edit Distance (Levenshtein Distance)
 

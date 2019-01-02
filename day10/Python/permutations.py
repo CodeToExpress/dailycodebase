@@ -1,38 +1,3 @@
-![cover](./cover.png)
-
-# Day 10 -- Smallest Substring Problem
-
-**Question** Find all the permutations of the given string
-
-```
-Example:
-input: 
-123
-
-output:
-123
-132
-213
-231
-312
-321
-```
-
-![ques](./ques.png)
-
-## JavaScript Implementation
-
-### [Solution](./sol.js)
-
-```js
-// To Be Added
-```
-
-## Python Implementation
-
-### [Solution](./Python/permutations.py)
-```python
-
 '''
 @author: aaditkamat
 @date: 02/01/2019
@@ -62,4 +27,3 @@ def main():
     printList(permutations(string))
 
 main()
-```
