@@ -92,6 +92,10 @@ main()
 
 ### [Solution2](./Python/st_permutations.py)
 ```python
+"""
+  * @author: ashwek
+  * @date 2/1/2019
+"""
 from itertools import permutations
 
 String = "123"
