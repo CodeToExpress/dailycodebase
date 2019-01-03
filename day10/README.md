@@ -1,6 +1,6 @@
 ![cover](./cover.png)
 
-# Day 10 -- Smallest Substring Problem
+# Day 10 -- String Permutation Problem
 
 **Question** Find all the permutations of the given string
 
@@ -152,6 +152,20 @@ def main():
     printList(permutations(string))
 
 main()
+```
+
+### [Solution2](./Python/st_permutations.py)
+```python
+"""
+  * @author: ashwek
+  * @date 2/1/2019
+"""
+from itertools import permutations
+
+String = "123"
+
+for each in permutations(String):
+	print(''.join(each))
 ```
 
 ## Java Implementation
