@@ -120,7 +120,7 @@ permut('123');
 
 ## Python Implementation
 
-### [Solution](./Python/permutations.py)
+### [Solution1](./Python/permutations.py)
 ```python
 
 '''
@@ -154,8 +154,28 @@ def main():
 main()
 ```
 
-### [Solution2](./Python/st_permutations.py)
+### [Solution 2 by @vishalshirke7](./Python/permutations1.py)
 ```python
+
+from itertools import permutations
+"""
+  @author : vishalshirke7
+  @date : 02/01/2019
+  
+  This solution makes use of python's in-build permutations function from itertools module
+  It takes two arguments 1st is the list on which permutation is to be performed and 
+  2nd is the length of the permutation
+"""
+
+ip_str = input()
+perm = permutations(list(ip_str), len(ip_str))
+for i in set(list(perm)):
+    print("".join(map(str, i)))
+```
+
+### [Solution 3 by @ashwek](./Python/st_permutations.py)
+
+```py
 """
   * @author: ashwek
   * @date 2/1/2019
