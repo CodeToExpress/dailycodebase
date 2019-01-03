@@ -148,7 +148,7 @@ def printList(string_list):
 def main():
     print('Enter a string: ')
     string = input()
-    print(f'The permutations of {string} are:')
+    print('The permutations of {string} are:')
     printList(permutations(string))
 
 main()
