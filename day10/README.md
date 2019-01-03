@@ -120,7 +120,7 @@ permut('123');
 
 ## Python Implementation
 
-### [Solution](./Python/permutations.py)
+### [Solution1](./Python/permutations.py)
 ```python
 
 '''
@@ -154,7 +154,7 @@ def main():
 main()
 ```
 
-### [Solution](./Python/permutations1.py)
+### [Solution2](./Python/permutations1.py)
 ```python
 
 from itertools import permutations
