@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int hammingDistance(string a, string b) {
+    if(a.length() != b.length()) {
+        cout << "Strings do not have equal lengths\n";
+        return -1;
+    } else {
+        int count = 0;
+        for(int i = 0; i < a.length(); i++) {
+            if(a[i] != b[i]) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
+
+int main(){
+	string s1, s2;
+    cout << "Enter string 1:\n";
+	cin >> s1;
+    cout << "Enter string 2:\n";
+	cin >> s2;
+    int ans = hammingDistance(s1, s2);
+    if(ans != 0) {
+        if(ans > 0) {
+            cout << "The hamming distance is : " << ans << "\n";
+        }
+    } else {
+        cout << "The hamming distance is : " << ans << "\n";
+    }
+	return 0;
+}
