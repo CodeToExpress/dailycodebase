@@ -27,6 +27,7 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 8. [Day 8 -- Minimum Edit Distance](./day8/) -- [http://codetoexpress.tech/dc/day8/](http://codetoexpress.tech/dc/day8/)
 9. [Day 9 -- Smallest Substring Problem](./day9/) -- [http://codetoexpress.tech/dc/day9/](http://codetoexpress.tech/dc/day9/)
 10. [Day 10 -- String Permutation Problem](./day10/) -- [http://codetoexpress.tech/dc/day10/](http://codetoexpress.tech/dc/day10/)
+11. [Day 11 -- Longest Common Substring](./day11/) -- [http://codetoexpress.tech/dc/day11/](http://codetoexpress.tech/dc/day11/)
 
 ## Timeline
 
