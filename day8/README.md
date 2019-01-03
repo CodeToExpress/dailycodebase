@@ -8,9 +8,9 @@ Given two strings, and operations like replace, delete and add, write a program 
 
 ## Example (source: [Wikipedia](https://en.wikipedia.org/wiki/Levenshtein_distance))
 
-For example, the (Minimum Edit) Levenshtein distance between `kitten` and 
-`sitting` is `3`, since the following three edits change one 
-into the other, and there is no way to do it with fewer than 
+For example, the (Minimum Edit) Levenshtein distance between `kitten` and
+`sitting` is `3`, since the following three edits change one
+into the other, and there is no way to do it with fewer than
 three edits:
 
 1. **k**itten → **s**itten (substitution of "s" for "k")
@@ -27,13 +27,13 @@ Mathematically, the Levenshtein distance between two strings `a` and `b` (of len
 
 ![def](https://wikimedia.org/api/rest_v1/media/math/render/svg/f0a48ecfc9852c042382fdc33c19e11a16948e85)
 
-where 
+where
 ![def](https://wikimedia.org/api/rest_v1/media/math/render/svg/52512ede08444b13838c570ba4a3fc71d54dbce9)
 is the indicator function equal to `0` when
 ![def](https://wikimedia.org/api/rest_v1/media/math/render/svg/231fda9ee578f0328c5ca28088d01928bb0aaaec)
 and equal to 1 otherwise, and
 ![def](https://wikimedia.org/api/rest_v1/media/math/render/svg/bdc0315678caad28648aafedb6ebafb16bd1655c)
-is the distance between the first `i` characters of `a` and the first 
+is the distance between the first `i` characters of `a` and the first
 `j` characters of `b`.
 
 Therefore, the minimum edit distance between `a` and `b` is the last element in the edit distance matrix
@@ -101,7 +101,7 @@ console.log(minEditDist('kitten', 'sitting'));
 
 ## C++ Implementation
 
-### [Solution 1](./Cpp/day8.cpp)
+### [Solution 1 by @dhruv-gupta14](./Cpp/day8.cpp)
 
 ```cpp
 /*
@@ -109,52 +109,144 @@ console.log(minEditDist('kitten', 'sitting'));
 * @date : 31/12/2018
 */
 
-#include<bits/stdc++.h> 
-using namespace std; 
-  
+#include<bits/stdc++.h>
+using namespace std;
+
+int min(int x, int y, int z)
+{
+    return min(min(x, y), z);
+}
+
+int levenshtein_distance(string str1, string str2, int m, int n)
+{
+    int ld[m+1][n+1];
+
+    for (int i=0; i<=m; i++)
+    {
+        for (int j=0; j<=n; j++)
+        {
+            if (i==0)
+                ld[i][j] = j;
+
+            else if (j==0)
+                ld[i][j] = i;
+
+
+            else if (str1[i-1] == str2[j-1])
+                ld[i][j] = ld[i-1][j-1];
+
+            else
+                ld[i][j] = 1 + min(ld[i][j-1], ld[i-1][j], ld[i-1][j-1]);
+        }
+    }
+
+    return ld[m][n];
+}
+
+int main()
+{
+    string str1,str2;
+    cin >> str1 >> str2;
+
+    cout << levenshtein_distance(str1, str2, str1.length(), str2.length());
+
+    return 0;
+}
+```
+
+### [Solution 2 by @profgrammer](./Cpp/profgrammer_editdistance.cpp)
+```cpp
+/*
+  *@author: profgrammer
+  *@date: 31-12-2018
+*/
+
+#include <bits/stdc++.h>
+#define inf 100000000
+using namespace std;
+
+string s1, s2;
+
+int dp[1500][1500];
+
+// function that returns minimum edits required to convert s1[0 .. i-1] into s2[0 .. j-1]
+int minEdit(int i, int j){
+  // base cases. if s1 finishes we need j insertions, if s2 finishes we need i insertions
+  if(i == 0) return j;
+  if(j == 0) return i;
+  // housekeeping for dp with memoisation
+  if(dp[i][j] != inf) return dp[i][j];
+  // if the last characters are the same, no need to change anything and move both pointers by 1 unit
+  if(s1[i-1] == s2[j-1]) {
+    return dp[i][j] = minEdit(i-1, j-1);
+  }
+  // replace s1[i] to be s2[j]. the strings to be checked are still s1[0 .. i-1] and s2[0 .. j-1] but the cost is +1
+  int minReplace = 1 + minEdit(i-1, j-1);
+  // delete s1[i], cost is +1 and the strings are now s1[0 .. i-1] and s2[0 .. j] because we need to compare the i-1th character with the jth character
+  int minDelete = 1 + minEdit(i-1, j); 
+  // insert a character into s1 at index i. cost is +1 and now the strings to be checked are s1[0 .. i] because the ith character isn't compared yet and s2[0 .. j-1]
+  int minInsert = 1 + minEdit(i, j-1);
+  // return min of these 3 values
+  return dp[i][j] = min(minReplace, min(minDelete, minInsert));
+}
+
+int main() {
+  for(int i = 0;i < 1500;i++){
+    for(int j = 0;j < 1500;j++) dp[i][j] = inf;
+  }
+  cin>>s1>>s2;
+  cout<<"The minimum edit distance is: ";
+  cout<<minEdit(s1.size(), s2.size())<<endl;
+}
+```
+
+### [Solution 3 by @divyakhetan](./Cpp/EditDistanceday8.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 31/12/2018
+ */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
 int min(int x, int y, int z) 
 { 
     return min(min(x, y), z); 
 } 
-  
-int levenshtein_distance(string str1, string str2, int m, int n) 
-{ 
-    int ld[m+1][n+1]; 
-  
-    for (int i=0; i<=m; i++) 
-    { 
-        for (int j=0; j<=n; j++) 
-        { 
-            if (i==0) 
-                ld[i][j] = j;
-  
-            else if (j==0) 
-                ld[i][j] = i;
-  
- 
-            else if (str1[i-1] == str2[j-1]) 
-                ld[i][j] = ld[i-1][j-1]; 
-  
-            else
-                ld[i][j] = 1 + min(ld[i][j-1], ld[i-1][j], ld[i-1][j-1]);  
-        } 
-    } 
-  
-    return ld[m][n]; 
-} 
-  
-int main() 
-{ 
-    string str1,str2;
-    cin >> str1 >> str2;
-  
-    cout << levenshtein_distance(str1, str2, str1.length(), str2.length()); 
-  
-    return 0; 
+
+int main(){
+	string s1, s2;
+	cin >> s1 >> s2;
+	
+	int m = s1.length();
+	int n = s2.length();
+	int edit[m + 1][n + 1]; 
+	
+	for(int i = 0; i <= n; i++){
+		edit[0][i] = i;
+	}
+	
+	
+	for(int i = 0; i <= m; i++){
+		edit[i][0] = i;
+	}
+	
+	for(int i =  1; i <= m; i++){
+		for(int j = 1; j <= n; j++){
+			if(s1[i - 1] == s2[j - 1]) edit[i][j] = edit[i -1 ][j - 1];
+			else edit[i][j] = 1 + min(edit[ i -1][j], edit[i - 1][j - 1], edit[i][j - 1]);  
+		}
+	}
+	
+	cout << "min edit distance is " << edit[m][n];
+	return 0;
 }
 ``` 
 
-### [Solution 2] (./C++/levenshtein_distance.cpp)
+### [Solution 4 by @aaditkamat] (./C++/levenshtein_distance.cpp)
 
 ```cpp
 /**
@@ -259,6 +351,62 @@ int main()
     return 0;
 }
 
+```
+
+## Python Implementation
+
+### [Solution](./Python/minimum_edit_distance.py)
+
+```py
+
+"""
+ @author : imkaka
+ @date   : 31/12/2018
+
+"""
+
+import sys
+
+
+def min_edit_distance(str1, str2):
+    len1 = len(str1)
+    len2 = len(str2)
+
+    # Matrix inilization
+    dp = [[0 for i in range(len2 + 1)]
+          for j in range(len1 + 1)]
+
+    for i in range(1, len1 + 1):
+        dp[i][0] = i
+
+    for j in range(1, len2 + 1):
+        dp[0][j] = j
+
+    # Fill the DP matrix.
+
+    for j in range(1, len2 + 1):
+        for i in range(1, len1 + 1):
+            if(str1[i - 1] == str2[j - 1]):
+                dp[i][j] = dp[i - 1][j - 1]
+            else:
+                dp[i][j] = 1 + min(dp[i - 1][j - 1],
+                                   dp[i][j - 1],
+                                   dp[i - 1][j])
+    return dp[len1][len2]
+
+
+def main():
+
+    print("==================Minimum Edit Distance====================")
+    print()
+
+    print(min_edit_distance("kitten", "sitting"))
+    print(min_edit_distance("abcdef", "abcdhgikll"))
+
+
+if __name__ == '__main__':
+    main()
+    
 ``` 
 
 ## Java Implementation
@@ -323,6 +471,7 @@ public class Levenshtein {
         System.out.println("Minimum no of operations are "+dist);
     }
 }
+
 ```
 
 ### [Solution 2] (./Java/LevenshteinDistance.java)

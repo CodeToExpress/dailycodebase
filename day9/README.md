@@ -92,6 +92,145 @@ console.log (smallestSubstr ("x", ['x']));
 console.log (smallestSubstr ("afekbtcodebancfeger", ["a","b","c"]));
 ```
 
+## Java Implementation
+
+### [Solution](./Java/minSubstring.java)
+
+```java
+/**
+ * @date 01/01/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class minSubstring {
+    
+    public static boolean check (String s,char []c)
+    {
+        String str=new String(c);int k=0;
+        for(int i=0;i<c.length;i++)
+        {
+            if(s.contains(str.substring(i,i+1)))
+              k++;  
+        }
+        if(k==c.length)
+            return true;
+        else
+            return false;
+    }
+    
+    public static void generate(String str,char c[]) {
+        String s;int min;
+        min=str.length();String s1="";
+        for(int i=0;i<=str.length()-1;i++)
+        {
+            for(int j=i+1;j<=str.length();j++)
+            {
+                s=str.substring(i,j);
+                if(check(s,c)==true)
+                {
+                    if(min>=s.length())
+                    {
+                        min=s.length();
+                        s1=s;
+                    }
+                }
+            }
+        }
+        System.out.println(s1);
+    }
+    
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s;int i,n;
+        System.out.println("Enter a string");
+        s=sc.next();
+        System.out.println("Enter size of character array");
+        n=sc.nextInt();
+        char a[]=new char[n];
+        for(i=0;i<n;i++)
+            a[i]=sc.next().charAt(0);
+        generate(s,a);
+    }
+}
+```
+
+## C++Implementation
+
+### [Solution](./C++/minStringWindowday9.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 2/1/2019
+ */
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  string s;
+  cin >> s;
+  int n; // no.of char
+  cin >> n;
+  char pattern[n];
+  for(int i = 0; i < n; i++) cin >> pattern[i];
+
+
+  int hash_str[256];
+  int hash_pattern[256];
+
+  memset(hash_str, 0, sizeof(hash_str));
+  memset(hash_pattern, 0, sizeof(hash_pattern));
+  
+  if(n > s.length()) cout << "Not possible";
+  else{
+
+    for(int i = 0; i < n; i++){
+      char x = pattern[i];
+      hash_pattern[x]++;
+    }
+
+    
+    int count = 0;
+    int start = 0;
+    int start_ind = -1;
+    int minlen = INT_MAX;
+    for(int i = 0; i < s.length(); i++){
+      char x = s[i];
+      hash_str[x]++;
+
+      //check if part of pattern also and we need to avoid overcounting for a particular char.
+
+      if(hash_pattern[x] != 0 && hash_str[x] <= hash_pattern[x]) count++;
+
+      // avoid useless char from the start 
+
+      if(count == n){
+        
+        while(hash_str[s[start]] > hash_pattern[s[start]] ){
+          cout << s[start] << " ";
+          hash_str[s[start]]--;
+          start++; // move start to right
+        }
+
+        int len = i - start + 1;
+        if(len < minlen){
+          minlen = len;
+          start_ind = start;
+        }
+      }
+     
+
+      
+    }
+    // if(start_ind == -1) cout << "No such substring";
+    // else
+    // cout << s.substr(start_ind, minlen);
+  }
+}
+```
+
 ### Have Another solution?
 
 The beauty of programming lies in the fact that there is never a single solution to any problem.
