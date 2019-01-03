@@ -89,6 +89,110 @@ console.log(longestSubstring ("abcdefg", "xyabcz"));
 console.log(longestSubstring ("XYXYXYZ", "XYZYX"));
 ```
 
+## C++ Implementation
+
+### [Solution using dynamic programming](./C++/longestCommonSubstringday11.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 3/1/2019
+ */
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  string s1,s2;
+  cin >> s1 >> s2;
+
+  int n = s1.length();
+  int m = s2.length();
+
+  int lcs[n + 1][m + 1];
+
+  int ma = 0;
+  int mi = 0; 
+  int mj = 0;
+  for(int i =0; i <=n; i++){
+    for(int j = 0; j <=m;j++){
+      if(i == 0 || j == 0) lcs[i][j] = 0;
+      else if(s1[i -1] == s2[j - 1]){
+        lcs[i][j] = 1 + lcs[i - 1][j - 1];
+        if(lcs[i][j] > ma){
+           mi = i;
+           mj = j;
+           ma = lcs[i][j];
+        }
+       
+      }
+      else{
+        lcs[i][j]= 0;
+      }
+    }
+  }
+  int i = 0;
+  int j = 0;
+  string ans= "";
+  for (i=mi, j=mj; i>=0; i--, j--) {
+        if (!(i<=0 || j<=0) && lcs[i][j] != 0) {
+            ans += s1[i-1];
+        } else {
+            break;
+        }
+    }
+    reverse(ans.begin(), ans.end());
+  cout << "len : " << ma << " is " << ans;   
+}
+```
+
+## Java Implementation
+
+### [Solution](./Java/longestCommonSubstring.java)
+
+```java
+/**
+ * @date 03/01/1998
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class longestCommonSubstring {
+   static int max=0;static String sm;
+    public static void generate(String s,String st)
+    {
+        String str;
+        for(int i=0;i<=s.length()-1;i++)
+        {
+            for(int j=i+1;j<=s.length();j++)
+            {
+                str=s.substring(i,j);
+                if(st.contains(str))
+                {
+                   if(max<str.length())
+                   {
+                       max=str.length();
+                       sm=str;
+                   }
+                }
+            }
+        }
+    }
+    public static void main(String []args)
+    {
+        Scanner sc=new Scanner(System.in);
+        String s1,s2;
+        System.out.println("Enter the two strings ");
+        s1=sc.next();
+        s2=sc.next();
+        generate(s1,s2);
+        generate(s2,s1);
+        System.out.println("Longest common substring is "+sm);
+    }
+}
+```
+
 ## Python Implementation
 
 ### [Solution using dynamic programming](./Python/lcs.py)
@@ -145,5 +249,4 @@ def lcs(str1, str2):
 
 
 lcs(*(input().split()))
-
 ```
