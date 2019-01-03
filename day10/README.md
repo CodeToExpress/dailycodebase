@@ -6,7 +6,7 @@
 
 ```
 Example:
-input: 
+input:
 123
 
 output:
@@ -154,6 +154,20 @@ def main():
 main()
 ```
 
+### [Solution2](./Python/st_permutations.py)
+```python
+"""
+  * @author: ashwek
+  * @date 2/1/2019
+"""
+from itertools import permutations
+
+String = "123"
+
+for each in permutations(String):
+	print(''.join(each))
+```
+
 ## Java Implementation
 
 ### [Solution](./Java/Permutation.java)
@@ -204,6 +218,66 @@ public class Permutation {
 }
 ```
 
+## Java Implementation
+
+### [Solution](./Java/StringPermutations.java)
+
+```java
+/**
+ * @date 03/01/19
+ * @author spattk ( Sitesh Pattanaik )
+ */
+import java.util.*;
+
+class StringPermutations {
+    
+    static void printArr(char[] arr){
+        for(char x : arr){
+            System.out.print(x);
+        }
+    }
+    
+    static void printAllPermutationsUtil(String str, boolean[] visited, char[] res, int index){
+        
+        if(index==str.length())
+        {
+            printArr(res);
+            System.out.println();
+            return;
+        } 
+        
+        for(int i=0;i<str.length();i++)
+        {
+            if(visited[i]){
+                continue;
+            }
+            res[index] = str.charAt(i);
+            visited[i] = true;
+            printAllPermutationsUtil(str, visited, res, index+1);
+            visited[i] = false;
+        }        
+    }
+    
+    static void printAllPermutations(String str){
+        int n = str.length();
+        boolean[] visited = new boolean[n];
+        Arrays.fill(visited, false);        
+        char[] res = new char[n];        
+        printAllPermutationsUtil(str, visited, res, 0);
+    }
+    
+	public static void main (String[] args) {
+		Scanner sc = new Scanner(System.in);
+	    String str = sc.next();
+	    char[] temp = str.toCharArray();
+	    Arrays.sort(temp);
+	    str = new String(temp);
+	    printAllPermutations(str);
+	    System.out.println(); 
+	}
+}
+```
+
 ## C++ Implementation
 
 ### [Solution](./C++/permutationday10.cpp)
@@ -231,8 +305,8 @@ int main() {
 ## Python Implementation
 
 ### [Solution](./Python/permutations.py)
-```python
 
+```py
 '''
 @author: aaditkamat
 @date: 02/01/2019
@@ -262,4 +336,50 @@ def main():
     printList(permutations(string))
 
 main()
+```
+
+### [Solution by @imkaka](./C++/allPermutation.cpp)
+
+```cpp
+
+/*
+* @author : imkaka
+* @date   : 2/1/2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// std::rotate, Rotation will help us to rearange the chars.
+
+void allPermutation(string str, string out)
+{
+
+    if (str.size() == 0)
+    {
+        cout << out << endl;
+        return;
+    }
+
+
+     for (int i = 0; i < str.size(); i++)
+    {
+        // Remove first character from str and
+        // add it to out
+        allPermutation(str.substr(1), out + str[0]);
+
+        // Rotate string in a way second character
+        // moves to the beginning.
+        rotate(str.begin(), str.begin() + 1, str.end());
+    }
+}
+
+int main(){
+
+    allPermutation("abcde", "");
+    allPermutation("1234", "");
+    allPermutation("beyounic", "");
+
+    return 0;
+}
 ```
