@@ -7,7 +7,7 @@
 **Example**
 
 ```
-input: 
+input:
     arr = [a, b, c]
     str = "abyuxabyteqaebczt"
 output: "aebc"
@@ -30,7 +30,7 @@ output: "aebc"
  * - Take another variable j, and iterate over the rest of the string till the last remaining element in the tempArr, and keep appending each character in some temporary strinig.
  * - Stop the iteration if either it is the end of the string, or tempArr is empty
  * - if the current (temporary) string contains all elements of the array, store push it to `strArr`
- * - After the iterations are complete 
+ * - After the iterations are complete
  */
 
 function smallestSubstr (str, arr) {
@@ -103,21 +103,21 @@ console.log (smallestSubstr ("afekbtcodebancfeger", ["a","b","c"]));
  */
 import java.util.*;
 public class minSubstring {
-    
+
     public static boolean check (String s,char []c)
     {
         String str=new String(c);int k=0;
         for(int i=0;i<c.length;i++)
         {
             if(s.contains(str.substring(i,i+1)))
-              k++;  
+              k++;
         }
         if(k==c.length)
             return true;
         else
             return false;
     }
-    
+
     public static void generate(String str,char c[]) {
         String s;int min;
         min=str.length();String s1="";
@@ -138,7 +138,7 @@ public class minSubstring {
         }
         System.out.println(s1);
     }
-    
+
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         String s;int i,n;
@@ -182,7 +182,7 @@ int main() {
 
   memset(hash_str, 0, sizeof(hash_str));
   memset(hash_pattern, 0, sizeof(hash_pattern));
-  
+
   if(n > s.length()) cout << "Not possible";
   else{
 
@@ -191,7 +191,7 @@ int main() {
       hash_pattern[x]++;
     }
 
-    
+
     int count = 0;
     int start = 0;
     int start_ind = -1;
@@ -204,10 +204,10 @@ int main() {
 
       if(hash_pattern[x] != 0 && hash_str[x] <= hash_pattern[x]) count++;
 
-      // avoid useless char from the start 
+      // avoid useless char from the start
 
       if(count == n){
-        
+
         while(hash_str[s[start]] > hash_pattern[s[start]] ){
           cout << s[start] << " ";
           hash_str[s[start]]--;
@@ -220,15 +220,99 @@ int main() {
           start_ind = start;
         }
       }
-     
 
-      
+
+
     }
     // if(start_ind == -1) cout << "No such substring";
     // else
     // cout << s.substr(start_ind, minlen);
   }
 }
+```
+
+### [Solution by @imkaka](./C++/minSubString.cpp)
+
+```cpp
+
+/*
+* @author : imkaka
+* @date   : 2/1/2019
+*/
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+string minSubString(string str, vector<char> arr){
+    // Corner case
+    int len  = str.size();
+    if(arr.size() > len)
+    {
+        // cout << "No Answer" << endl;
+        return "No Answer";
+    }
+
+    set<char> s;
+    for(char c : arr){
+        s.insert(c);
+    }
+    int lenMin = len+1;
+    string result = "";
+    for(int i = 0; i < len; ++i){
+        set<char>tempS = s;
+        int temp = 0;
+        string tempStr = "";
+        for(int j = i; j < len; ++j){
+
+           if(tempS.find(str[j]) != tempS.end()){
+                tempS.erase(str[j]);
+                temp++;
+                tempStr += str[j];
+            }
+            else{
+                temp++;
+                tempStr += str[j];
+            }
+
+            if(tempS.empty()){
+                if(lenMin > temp){
+                    lenMin = temp;
+                    result = tempStr;
+                }
+                break;
+            }
+
+        }
+    }
+
+    return result;
+}
+
+int main(){
+
+    string str = "abyuxabyteqaebczt";
+    vector<char> arr = {'a', 'b', 'c'};
+    if(minSubString(str, arr) != "")
+     cout << "Substring: " << minSubString(str, arr) <<  endl;
+    else cout << "No Sollution" << endl;
+
+    string str2 = "abx";
+    vector<char> arr2 = {'a', 'b', 'c'};
+    if(minSubString(str2, arr2) != "")
+     cout << "Substring: " << minSubString(str2, arr2) <<  endl;
+    else cout << "No Sollution" << endl;
+
+    string str3 = "x";
+    vector<char> arr3 = {'x'};
+    if(minSubString(str3, arr3) != "")
+     cout << "Substring: " << minSubString(str3, arr3) <<  endl;
+    else cout << "No Sollution" << endl;
+
+
+    return 0;
+}
+
 ```
 
 ### Have Another solution?
