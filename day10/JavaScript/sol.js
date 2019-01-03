@@ -24,4 +24,4 @@ function permut(string) {
     return permutations;
 }
 
-permut('123');
+console.log(permut('1234'));
