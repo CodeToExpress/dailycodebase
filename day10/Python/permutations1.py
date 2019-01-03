@@ -1,7 +1,7 @@
 from itertools import permutations
 """
   @author : vishalshirke7
-  @date : 28/12/2018
+  @date : 02/01/2019
 """
 
 ip_str = input()
