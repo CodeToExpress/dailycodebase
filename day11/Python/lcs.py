@@ -24,8 +24,6 @@ def lcs(str1, str2):
     lcs_str = [""] * (index + 1)
     lcs_str[index] = ""
 
-    # Start from the right-most-bottom-most corner and
-    # one by one store characters in lcs[]
     i = m
     j = n
     while i > 0 and j > 0:
