@@ -26,6 +26,8 @@ The longest common substring of the strings "ABABC", "BABCA" and "ABCBA" is stri
     ABCBA
 ```
 
+![ques](./ques.png)
+
 ## JavaScript Implementation
 
 ### [Solution using dynamic programming](./JavaScript/longest_substring_dynamic.js)
