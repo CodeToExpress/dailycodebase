@@ -1,6 +1,6 @@
 ![cover](./cover.png)
 
-# Day 10 -- Smallest Substring Problem
+# Day 10 -- String Permutation Problem
 
 **Question** Find all the permutations of the given string
 
