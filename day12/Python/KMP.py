@@ -1,3 +1,8 @@
+'''
+  @author prateek3255
+  @date 05/01/2018
+ '''
+ 
 def kmp(string,pattern):
     n=len(string)
     m=len(pattern)
