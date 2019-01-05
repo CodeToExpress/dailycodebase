@@ -75,6 +75,42 @@ substringSearch ("helloworld", "world");
 substringSearch ("abcrxyzgf", "xyz");
 ```
 
+### Using Inbuilt JavaScript Methods
+
+#### [Using String.indexOf()](./JavaScript/using_indexof.js)
+
+```js
+/**
+ * @author MadhavBahlMD
+ * @date 05/01/2018
+ * METHOD - Using String.indexOf() method
+ */
+
+function substringSearch (str, subStr) {
+    return str.indexOf(subStr);
+}
+
+console.log (substringSearch ("helloworld", "world"));
+console.log (substringSearch ("abcrxyzgf", "xyz"));
+```
+
+#### [Using String.search()](./JavaScript/using_search.js)
+
+```js
+/**
+ * @author MadhavBahlMD
+ * @date 05/01/2018
+ * METHOD - Using String.search() method
+ */
+
+function substringSearch (str, subStr) {
+    return str.search (subStr);
+}
+
+console.log (substringSearch ("helloworld", "world"));
+console.log (substringSearch ("abcrxyzgf", "xyz"));
+```
+
 ### Python Implementation
 
 #### [Solution](./Python/bruteForce.py)
@@ -94,6 +130,57 @@ def subStringSearch(string,pattern):
 print(subStringSearch("helloworld","hello"))
 print(subStringSearch("helloworld","hop"))
 print(subStringSearch("abcrxyzgf","xyz"))
+```
+
+### Java Implementation
+
+#### [Solution](./Java/Bruteforce.java)
+
+```java
+import java.util.Scanner;
+
+/**
+ * Daily Codes Day 12 -- Substring Search (Brute Force Search)
+ * @author MadhavBahlMD
+ * @date 05/01/2018
+ */
+
+public class Bruteforce {
+    public static void main(String[] args) {
+        // Take input
+        Scanner input = new Scanner (System.in);
+        System.out.print("Enter the string: ");
+        String str = input.next();
+        System.out.print("Enter the substrinig to search: ");
+        String subStr = input.next();
+
+        // Search the string
+        int i, j, flag,
+            strLen = str.length(),
+            subStrLen = subStr.length();
+
+        for (i=0; i<(strLen-subStrLen+1); i++) {
+            flag = 1;
+            if (str.charAt(i) == subStr.charAt(0)) {
+                for (j=1; j<subStrLen; j++) {
+                    if (str.charAt(i+j) != subStr.charAt(j)) {
+                        flag = 0;
+                        break;
+                    }
+                }
+
+                // If substring is found, print the index
+                if (flag == 1) {
+                    System.out.println("Substring \"" + subStr + "\" was found in string \"" + str + "\" at index " + i);
+                    System.exit(0);
+                }
+            }
+        }
+
+        System.out.println("Substring \"" + subStr + "\" was not found in string \"" + str);
+        System.exit(0);
+    }
+}
 ```
 
 ## B) Knuth-Morris-Pratt Algorithm
@@ -173,6 +260,44 @@ To Be Added
 To Be Added
 ```
 
+### Python Implementation
+
+#### [Solution](./Python/rabinKarp.py)
+
+```py
+'''
+  @author prateek3255
+  @date 05/01/2018
+ '''
+
+def rabinKarp(string,pattern,q=153):
+    n=len(string)
+    m=len(pattern)
+    d=256
+    h=d**(m-1)%q
+    p=0
+    t=0
+    
+    for i in range(0,m):
+        p=(d*p+ord(pattern[i]))%q
+        t=(d*t+ord(string[i]))%q
+    for i in range(n-m+1):
+        if p==t and string[i:i+m]==pattern:
+            return i
+        
+        if i<(n-m):
+            t= (d*(t-ord(string[i])*h)+ord(string[i+m]))%q
+            if t<0:
+                t+=q
+    return -1
+
+print(rabinKarp("helloworld","hello"))
+print(rabinKarp("helloworld","hop"))
+print(rabinKarp("ABABDABACDABABCABAB","ABABCABAB"))
+
+```
+
+
 ## E) Boyer Moore Algorithm
 
 ### JavaScript Implementation
@@ -181,6 +306,39 @@ To Be Added
 
 ```js
 To Be Added
+```
+### Python Implementation
+
+#### [Solution](./Python/rabinKarp.py)
+
+```py
+'''
+  @author prateek3255
+  @date 05/01/2018
+ '''
+def boyerMoore(string,pattern):
+    n=len(string)
+    m=len(pattern)
+    i=0
+    while i<=n-m:
+        k=m-1
+        j=m+i-1
+        while string[j]==pattern[k]:
+            k=k-1
+            j=j-1
+            if k==0:
+                return i
+        if pattern.rfind(string[j])==-1:
+            i=j+1
+        else:
+            i=max(1,j-pattern.rfind(string[j]))
+    return -1
+
+print(boyerMoore("helloworld","hello"))
+print(boyerMoore("helloworld","hop"))
+print(boyerMoore("abcrxyzgf","xyz"))
+print(boyerMoore("ABABDABACDABABCABAB","ABABCABAB"))
+
 ```
 
 ### Have Another solution?
