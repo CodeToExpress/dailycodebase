@@ -1,12 +1,12 @@
 ![cover](./cover.png)
 
-# Day 10 -- Smallest Substring Problem
+# Day 10 -- String Permutation Problem
 
 **Question** Find all the permutations of the given string
 
 ```
 Example:
-input: 
+input:
 123
 
 output:
@@ -22,7 +22,71 @@ output:
 
 ## JavaScript Implementation
 
-### [Solution](./sol.js)
+### [Solution using recursion](./JavaScript/stringPermute.js)
+
+```js
+function stringPermutations (str) {
+    let permutations = [];
+
+    if (str.length <= 1) {
+        permutations.push (str);
+        return permutations;
+    } else {
+        for (let i=0; i<str.length; i++) {
+            let start = str[i],
+                remainingString= str.slice(0, i) + str.slice(i+1),
+                permutationsforRemainingString = stringPermutations(remainingString);
+            
+            for (let j=0; j<permutationsforRemainingString.length; j++) {
+                permutations.push (start + permutationsforRemainingString[j]);
+            }
+        }
+    }
+
+    return permutations;
+}
+
+console.log (stringPermutations('123'));
+```
+
+### [Solution using backtracking](./JavaScript/stringPermute2.js)
+
+```js
+/**
+ * METHOD -- Backtracking
+ * Algorithm taken from GeeksForGeeks (https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/)
+ * Implemented in JS by @MadhavBahlMD
+ * @date 02/01/2019
+ */
+
+function swap (str, pos1, pos2) {
+    // console.log (`pos1 = ${pos1}, pos2 = ${pos2} old`, str);
+    str = str.split('');
+    let temp = str[pos1];
+    str[pos1] = str[pos2];
+    str[pos2] = temp;
+    str = str.join('');
+    // console.log ('new str', str);
+    return str;
+}
+
+function stringPermutations (str, start, end) {
+    if (start === end) {
+        console.log (str);
+    } else {
+        for (let i=start; i<end; i++) {
+            str = swap (str, start, i);
+            stringPermutations (str, start+1, end);
+            str = swap (str, i, start);
+        }
+    }
+}
+
+let inputStr = '123';
+stringPermutations (inputStr, 0, inputStr.length);
+```
+
+### [Solution by @Karthikeyan](./JavaScript/sol.js)
 
 ```js
 /*
@@ -56,9 +120,8 @@ permut('123');
 
 ## Python Implementation
 
-### [Solution](./Python/permutations.py)
+### [Solution1](./Python/permutations.py)
 ```python
-
 '''
 @author: aaditkamat
 @date: 02/01/2019
@@ -66,28 +129,62 @@ permut('123');
 
 def permutations(string):
     if (len(string) <= 1):
-        return [string]
-    lst = []
+        return {string}
+    permutation_set = set()
     for i in range(len(string)):
         substring = ''
         for j in range(len(string)):
             if j != i:
                 substring += string[j]
-        lst.extend(list(set(map(lambda x: string[i] + x, permutations(substring)))))
-    return lst
+        permutation_set |= set(map(lambda x: string[i] + x, permutations(substring)))
+    return permutation_set
 
 
-def printList(string_list):
-    for string in string_list:
+def printSet(string_set):
+    for string in string_set:
         print(string)
 
 def main():
     print('Enter a string: ')
     string = input()
     print(f'The permutations of {string} are:')
-    printList(permutations(string))
+    printSet(permutations(string))
 
 main()
+```
+
+### [Solution 2 by @vishalshirke7](./Python/permutations1.py)
+```python
+
+from itertools import permutations
+"""
+  @author : vishalshirke7
+  @date : 02/01/2019
+  
+  This solution makes use of python's in-build permutations function from itertools module
+  It takes two arguments 1st is the list on which permutation is to be performed and 
+  2nd is the length of the permutation
+"""
+
+ip_str = input()
+perm = permutations(list(ip_str), len(ip_str))
+for i in set(list(perm)):
+    print("".join(map(str, i)))
+```
+
+### [Solution 3 by @ashwek](./Python/st_permutations.py)
+
+```py
+"""
+  * @author: ashwek
+  * @date 2/1/2019
+"""
+from itertools import permutations
+
+String = "123"
+
+for each in permutations(String):
+	print(''.join(each))
 ```
 
 ## Java Implementation
@@ -221,5 +318,87 @@ int main() {
   do{
     cout << s << endl;
   }while(next_permutation(s.begin(), s.end()));
+}
+```
+
+## Python Implementation
+
+### [Solution](./Python/permutations.py)
+
+```py
+'''
+@author: aaditkamat
+@date: 02/01/2019
+'''
+
+def permutations(string):
+    if (len(string) <= 1):
+        return [string]
+    lst = []
+    for i in range(len(string)):
+        substring = ''
+        for j in range(len(string)):
+            if j != i:
+                substring += string[j]
+        lst.extend(list(set(map(lambda x: string[i] + x, permutations(substring)))))
+    return lst
+
+
+def printList(string_list):
+    for string in string_list:
+        print(string)
+
+def main():
+    print('Enter a string: ')
+    string = input()
+    print(f'The permutations of {string} are:')
+    printList(permutations(string))
+
+main()
+```
+
+### [Solution by @imkaka](./C++/allPermutation.cpp)
+
+```cpp
+
+/*
+* @author : imkaka
+* @date   : 2/1/2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// std::rotate, Rotation will help us to rearange the chars.
+
+void allPermutation(string str, string out)
+{
+
+    if (str.size() == 0)
+    {
+        cout << out << endl;
+        return;
+    }
+
+
+     for (int i = 0; i < str.size(); i++)
+    {
+        // Remove first character from str and
+        // add it to out
+        allPermutation(str.substr(1), out + str[0]);
+
+        // Rotate string in a way second character
+        // moves to the beginning.
+        rotate(str.begin(), str.begin() + 1, str.end());
+    }
+}
+
+int main(){
+
+    allPermutation("abcde", "");
+    allPermutation("1234", "");
+    allPermutation("beyounic", "");
+
+    return 0;
 }
 ```

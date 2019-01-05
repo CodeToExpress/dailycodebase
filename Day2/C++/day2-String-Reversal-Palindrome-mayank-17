@@ -1,0 +1,46 @@
+/**
+ * @author mayank-17
+ * @date 03/01/2018
+ */
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+string stringReverse(string s) {
+    reverse(s.begin(), s.end());
+	return s;
+}
+
+string palindromeCheck(string s) {
+    string p = stringReverse(s);
+    if(p.length() != s.length()) {
+        return "Not Palindrome";
+    } else {
+        int i;
+        for(i = 0; i < s.length(); i++) {
+            if(s[i] != p[i]) {
+                return "Not Palindrome";
+            }
+        }
+        if(i == s.length()) {
+            return "Palindrome";
+        }
+    }
+    
+}
+
+int main(){
+	string s;
+    cout << "Enter string:\n";
+	cin >> s;
+	cout << "Enter \n 1 : for string Reversal \n 2 : for Palindrome check \n";
+    int choice;
+    cin >> choice;
+    if(choice == 1) {
+        cout << stringReverse(s) << "\n";
+    } else {
+        cout << palindromeCheck(s) << "\n";
+    }
+	return 0;
+}
