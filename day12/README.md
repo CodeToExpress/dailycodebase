@@ -260,6 +260,44 @@ To Be Added
 To Be Added
 ```
 
+### Python Implementation
+
+#### [Solution](./Python/rabinKarp.py)
+
+```py
+'''
+  @author prateek3255
+  @date 05/01/2018
+ '''
+
+def rabinKarp(string,pattern,q=153):
+    n=len(string)
+    m=len(pattern)
+    d=256
+    h=d**(m-1)%q
+    p=0
+    t=0
+    
+    for i in range(0,m):
+        p=(d*p+ord(pattern[i]))%q
+        t=(d*t+ord(string[i]))%q
+    for i in range(n-m+1):
+        if p==t and string[i:i+m]==pattern:
+            return i
+        
+        if i<(n-m):
+            t= (d*(t-ord(string[i])*h)+ord(string[i+m]))%q
+            if t<0:
+                t+=q
+    return -1
+
+print(rabinKarp("helloworld","hello"))
+print(rabinKarp("helloworld","hop"))
+print(rabinKarp("ABABDABACDABABCABAB","ABABCABAB"))
+
+```
+
+
 ## E) Boyer Moore Algorithm
 
 ### JavaScript Implementation
@@ -268,6 +306,39 @@ To Be Added
 
 ```js
 To Be Added
+```
+### Python Implementation
+
+#### [Solution](./Python/boyerMoore.py)
+
+```py
+'''
+  @author prateek3255
+  @date 05/01/2018
+ '''
+def boyerMoore(string,pattern):
+    n=len(string)
+    m=len(pattern)
+    i=0
+    while i<=n-m:
+        k=m-1
+        j=m+i-1
+        while string[j]==pattern[k]:
+            k=k-1
+            j=j-1
+            if k==0:
+                return i
+        if pattern.rfind(string[j])==-1:
+            i=j+1
+        else:
+            i=max(1,j-pattern.rfind(string[j]))
+    return -1
+
+print(boyerMoore("helloworld","hello"))
+print(boyerMoore("helloworld","hop"))
+print(boyerMoore("abcrxyzgf","xyz"))
+print(boyerMoore("ABABDABACDABABCABAB","ABABCABAB"))
+
 ```
 
 ### Have Another solution?
