@@ -114,6 +114,25 @@ int main()
     return 0;
 }
 ```
+
+## Python Implementatiom
+
+### [Solution](./Python/factorial.py)
+
+```python
+'''
+@author spreeha
+@date 07/01/19
+'''
+n=int(input())
+def factorial(n):
+    if n==0:
+        return 1
+    else:
+        return n*factorial(n-1)
+f=factorial(n)
+print(f)
+```
 ***
 
 ***
@@ -230,4 +249,25 @@ int main()
     cout<<"The "<<n<<pos<<" number of the fibonacci series is "<<fibonacci(n)<<endl;
     return 0;
 }
+```
+
+## Python Implementatiom
+
+### [Solution](./Python/fibonacci.py)
+
+```python
+'''
+@author spreeha
+@date 07/01/98
+'''
+n=int(input())
+def fibonacci(n):
+    if n>=1 and n<=2:
+        return 1
+    else:
+        return fibonacci(n-1)+fibonacci(n-2)
+for i in range(1,n):
+    t=fibonacci(i)
+    print(t,end=", ")
+print(fibonacci(n))
 ```
