@@ -1,3 +1,8 @@
+=begin
+@author: aaditkamat
+@date: 07/01/2019
+=end
+
 def fibonacci_recursive_value(num, array, ctr)
   if num < 1
     return "Incorrect num #{num} for fibonacci sequence"
