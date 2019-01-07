@@ -24,27 +24,27 @@ def fibonacci_recursive_sequence(num, arr):
   if num < 1:
     return fibonacci_recursive_value(num, arr, 0)
   start = 1
-  str = 'The sequence is: '
+  string = 'The sequence is: '
   while start <= num:
     if start < num:
-      str += f'{fibonacci_recursive_value(start, arr[:], 0)}, '
+      string += f'{fibonacci_recursive_value(start, arr[:], 0)}, '
     else:
-      str += f'{fibonacci_recursive_value(start, arr[:], 0)}'
+      string += f'{fibonacci_recursive_value(start, arr[:], 0)}'
     start += 1
-  print(str)
+  print(string)
 
 def fibonacci_iterative_sequence(num):
   if num < 1:
     return f'Incorrect num {num} for fibonacci sequence'
   start = 1
-  str = 'The sequence is: '
+  string = 'The sequence is: '
   while start <= num:
     if start < num:
-      str += f'{fibonacci_iterative_value(start)}, '
+      string += f'{fibonacci_iterative_value(start)}, '
     else:
-      str += f'{fibonacci_iterative_value(start)}'
+      string += f'{fibonacci_iterative_value(start)}'
     start += 1
-  print(str)
+  print(string)
 
 def fibonacci_iterative_value(num):
   if num < 1:
