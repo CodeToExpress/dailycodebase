@@ -114,6 +114,29 @@ int main()
     return 0;
 }
 ```
+
+### Python Implementation
+
+#### [Solution by @vishalshirke7](./Python/factorial.py)
+```python
+"""
+  @author : vishalshirke7
+  @date : 07/01/2019
+"""
+
+
+def factorial(no):
+    if no <= 1:
+        return 1
+    else:
+        return no * factorial(no - 1)
+
+
+n = int(input())
+print("factorial of %d is %d" % (n, factorial(n)))
+
+```
+
 ***
 
 ***
@@ -230,4 +253,41 @@ int main()
     cout<<"The "<<n<<pos<<" number of the fibonacci series is "<<fibonacci(n)<<endl;
     return 0;
 }
+```
+
+### Python Implementation
+
+#### [Solution by @vishalshirke7](./Python/fibonacci.py)
+```python
+"""
+  @author : vishalshirke7
+  @date : 07/01/2019
+"""
+
+
+# Fibonacci Series using Dynamic Programming
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        if fib_series[n - 1] == 0:
+            fib_series[n - 1] = fibonacci(n - 1)
+
+        if fib_series[n - 2] == 0:
+            fib_series[n - 2] = fibonacci(n - 2)
+
+        fib_series[n] = fib_series[n - 2] + fib_series[n - 1]
+    return fib_series[n]
+
+
+n = int(input())
+fib_series = [0, 1]
+while len(fib_series) < n + 1:
+    fib_series.append(0)
+print(fibonacci(n))
+if n == 0:
+    print(0)
+else:
+    print(", ".join(map(str, fib_series)))
+
 ```

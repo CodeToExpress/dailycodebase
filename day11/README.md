@@ -270,7 +270,6 @@ public class longestCommonSubstring {
 ## Python Implementation
 
 ### [Solution using dynamic programming](./Python/lcs.py)
-
 ```python
 """
   @author : vishalshirke7
@@ -356,3 +355,5 @@ print_output("abcdefg", "xyabcz")
 print_output("XYXYXYZ", "XYZYX")
 print_output("abcd", "efgh")
 ```
+
+
