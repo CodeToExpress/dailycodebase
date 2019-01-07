@@ -184,7 +184,7 @@ String = "123"
 
 for each in permutations(String):
 	print(''.join(each))
->>>>>>> upstream/master
+
 ```
 
 ## Java Implementation
