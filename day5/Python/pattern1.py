@@ -1,0 +1,14 @@
+'''
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
+ * @github: https://github.com/razdeep
+ * @date: 26/12/2018
+'''
+
+def pattern1(num):
+    for i in range(1,num+1):
+        currentLine = ''
+        for j in range(1,i+1):
+            currentLine = currentLine + str(j) + ' '
+        print(currentLine)
+
+pattern1(5)
