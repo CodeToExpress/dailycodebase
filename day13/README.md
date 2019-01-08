@@ -168,6 +168,22 @@ print("factorial of %d is %d" % (n, factorial(n)))
 
 ```
 
+#### [Solution ](./Python/fact.py)
+```python
+'''
+@author spreeha
+@date 07/01/19
+'''
+n=int(input())
+def factorial(n):
+    if n==0:
+        return 1
+    else:
+        return n*factorial(n-1)
+f=factorial(n)
+print(f)
+```
+
 ***
 
 ***
@@ -352,4 +368,22 @@ if n == 0:
 else:
     print(", ".join(map(str, fib_series)))
 
+```
+
+#### [Solution](./Python/fibo.py)
+```python
+'''
+@author spreeha
+@date 07/01/98
+'''
+n=int(input())
+def fibonacci(n):
+    if n>=1 and n<=2:
+        return 1
+    else:
+        return fibonacci(n-1)+fibonacci(n-2)
+for i in range(1,n):
+    t=fibonacci(i)
+    print(t,end=", ")
+print(fibonacci(n))
 ```
