@@ -132,6 +132,45 @@ print(subStringSearch("helloworld","hop"))
 print(subStringSearch("abcrxyzgf","xyz"))
 ```
 
+## C++ Implementation
+
+### [Solution](./C++/BruteForce.cpp)
+
+```C++
+/**
+ * @date 04/01/18
+ * @author SPREEHA DUTTA
+ */
+#include <bits/stdc++.h>
+using namespace std;
+int search(string s,string w)
+{
+    int i,j;int k=-1;int c=0;
+    int m=w.length();
+    int n=s.length();
+    for(i=0;i<=n-m;i++)
+    {
+         for(j=0,c=i;j<m;j++,c++)
+            if(s[c]!=w[j])
+               break;
+        if(j==m)
+        {
+            k=i;
+            break;
+        }
+    }
+    return k;
+}
+int main()
+{
+    string s,w;
+    getline(cin,s);
+    getline(cin,w);
+    int t=search (w,s);
+    cout<<"\n"<<t<<endl;
+}
+```
+
 ### Java Implementation
 
 #### [Solution](./Java/Bruteforce.java)
@@ -182,6 +221,8 @@ public class Bruteforce {
     }
 }
 ```
+
+
 
 ## B) Knuth-Morris-Pratt Algorithm
 
@@ -239,6 +280,162 @@ print(kmp("helloworld","hop"))
 print(kmp("ABABDABACDABABCABAB","ABABCABAB"))
 ```
 
+### Java Implementation
+
+#### [Solution](./Java/KMPAlgo.java)
+
+```java
+
+/**
+ * @date 06/01/1998
+ * @author spattk (Sitesh Pattanaik)
+ */
+
+import java.util.*;
+class StringMatching
+{
+	static int KMPSearch(String text, String subs){
+
+		int n = subs.length();
+		int[] lps = new int[n];
+
+		generateLPSArray(lps,subs);
+		n = text.length();
+		int m = subs.length();
+
+		int i=0,j=0;
+		while(i<n){
+			if(text.charAt(i)==subs.charAt(j)){
+				i++;
+				j++;
+			}
+
+			if(j==m){
+				//Pattern Found
+				return (i-j);
+			}
+
+			else if(i<n && text.charAt(i)!=subs.charAt(j)){
+				if(j!=0){
+					j = lps[j-1];
+				}
+				else{
+					i++;
+				}
+			}
+		}
+
+		return -1;
+	}
+
+	static void generateLPSArray(int[] lps, String subs)
+	{
+		int j = 0;
+		int i = 1;
+		int n = subs.length();
+
+		while(i<n){
+			if(subs.charAt(i)==subs.charAt(j)){
+				j++;
+				lps[i] = j;
+				i++;
+			}
+			else{
+				if(j!=0){
+					j = lps[j-1];
+				}
+				else{
+					lps[i] = 0;
+					i++;
+				}
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String text = sc.next();
+		String subs = sc.next();
+
+		System.out.println(KMPSearch(text,subs));
+		
+	}
+}
+```
+
+## C++ Implementation
+
+### [Solution](./C++/KMP.cpp)
+
+```C++
+/**
+ * @date 04/01/18
+ * @author SPREEHA DUTTA
+ */
+
+#include <bits/stdc++.h>
+using namespace std;
+void calc(string w,int m,int p[])
+{
+    int l=0,i=1;p[0]=0;
+    while(i<m)
+    {
+        if(p[i]==p[l])
+        {
+            l++;
+            p[i]=l;
+            i++;
+        }
+        else
+        {
+            if(l!=0)
+                l=p[l-1];
+            else
+            {
+                p[i]=l;
+                i++;
+            }
+        }
+    }
+}
+int search(string s,string w)
+{
+    int i=0,j=0;int k=-1;
+    int m=w.length();
+    int n=s.length();
+    int arr[m];
+    calc(w,m,arr);
+    while(i<n)
+    {
+        if(w[j]==s[i])
+        {
+            j++;
+            i++;
+        }
+        if(j==m)
+        {
+            k=i-j;
+            break;
+        }
+        else if(i<n && w[j]!=s[i])
+        {
+            if(j!=0)
+                j=arr[j-1];
+            else
+                i++;
+        }
+    }
+    return k;
+}
+int main()
+{
+    string s,w;
+    getline(cin,s);
+    getline(cin,w);
+    int t=search (w,s);
+    cout<<"\n"<<t<<endl;
+}
+```
 
 ##  C) Z Algorithm
 
@@ -258,6 +455,64 @@ To Be Added
 
 ```js
 To Be Added
+```
+
+## C++ Implementation
+
+### [Solution](./C++/RabinKarp.cpp)
+
+```C++
+/**
+ * @date 04/01/18
+ * @author SPREEHA DUTTA
+ */
+#include <bits/stdc++.h>
+using namespace std;
+
+int search(string s,string w,int q)
+{
+    int i=0,j=0;int k=-1;
+    int m=w.length();
+    int n=s.length();
+    int sc=0,wc=0,h=1;
+    int d=256;
+    for(i=0;i<m-1;i++)
+        h=(h*d)%q;
+    for(i=0;i<m;i++)
+    {
+        wc=(d*wc+w[i])%q;
+        sc=(d*sc+s[i])%q;
+    }
+    for(i=0;i<n-m;i++)
+    {
+        if(sc==wc)
+        {
+            for(j=0;j<m;j++)
+                if(s[i+j]!=w[j])
+                    break;
+            if(j==m)
+            {
+                k=i;
+                break;
+            }
+        }
+        if(i<n-m)
+        {
+            sc=(d*(sc-s[i]*h)+s[i+m])%q;
+            if(sc<0)
+                sc+=q;
+        }
+    }
+    return k;
+}
+int main()
+{
+    string s,w;
+    getline(cin,s);
+    getline(cin,w);
+    int t=search (w,s,101);
+    cout<<"\n"<<t<<endl;
+}
 ```
 
 ## E) Boyer Moore Algorithm
