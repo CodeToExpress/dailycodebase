@@ -155,7 +155,6 @@ main()
 
 ### [Solution 2 by @vishalshirke7](./Python/permutations1.py)
 ```python
-
 from itertools import permutations
 """
   @author : vishalshirke7
@@ -185,6 +184,7 @@ String = "123"
 
 for each in permutations(String):
 	print(''.join(each))
+
 ```
 
 ## Java Implementation

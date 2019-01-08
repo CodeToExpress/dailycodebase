@@ -28,7 +28,9 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 9. [Day 9 -- Smallest Substring Problem](./day9/) -- [http://codetoexpress.tech/dc/day9/](http://codetoexpress.tech/dc/day9/)
 10. [Day 10 -- String Permutation Problem](./day10/) -- [http://codetoexpress.tech/dc/day10/](http://codetoexpress.tech/dc/day10/)
 11. [Day 11 -- Longest Common Substring](./day11/) -- [http://codetoexpress.tech/dc/day11/](http://codetoexpress.tech/dc/day11/)
-11. [Day 12 -- Substring Search Algorithms](./day12/) -- [http://codetoexpress.tech/dc/day12/](http://codetoexpress.tech/dc/day12/)
+12. [Day 12 -- Substring Search Algorithms](./day12/) -- [http://codetoexpress.tech/dc/day12/](http://codetoexpress.tech/dc/day12/)
+13. [Day 13 -- Factorial and Fibonacci](./day13/) -- [http://codetoexpress.tech/dc/day13/](http://codetoexpress.tech/dc/day13/)
+14. [Day 14 -- Sum of digits and product of numbers](./day14) -- [http://codetoexpress.tech/dc/day14/](http://codetoexpress.tech/dc/day14/)
 
 ## Timeline
 
