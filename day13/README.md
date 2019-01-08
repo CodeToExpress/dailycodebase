@@ -86,6 +86,88 @@ public class Factorial {
 }
 ```
 
+## C++ Implementation
+
+#### [Solution](./C++/factorial.cpp)
+
+```cpp
+/**
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
+ * @github: https://github.com/razdeep
+ * @date: 07/01/2019
+ */
+#include <bits/stdc++.h>
+using namespace std;
+
+long long factorial(long long n)
+{
+    if (n <= 1)
+        return 1;
+    return n*factorial(n-1);
+}
+int main()
+{
+    long long n;
+    cout<<"Enter a number ";
+    cin>>n;
+    cout<<"The factorial of "<<n<<" is "<<factorial(n)<<endl;
+    return 0;
+}
+```
+
+## C Implementation
+
+#### [Solution](./C/factorial.c)
+
+```c
+/*
+ * @author: ashwek
+ * @date: 7/1/2019
+ */
+
+#include <stdio.h>
+
+long int fact(long int num){
+    if( num <= 1 ){
+        return 1;
+    }
+    return num * fact(num-1);
+}
+
+void main(){
+
+    int num;
+
+    printf("Enter a number = ");
+    scanf("%d", &num);
+
+    printf("Factorial of %d = %ld\n", num, fact(num));
+
+}
+```
+
+### Python Implementation
+
+#### [Solution by @vishalshirke7](./Python/factorial.py)
+```python
+"""
+  @author : vishalshirke7
+  @date : 07/01/2019
+"""
+
+
+def factorial(no):
+    if no <= 1:
+        return 1
+    else:
+        return no * factorial(no - 1)
+
+
+n = int(input())
+print("factorial of %d is %d" % (n, factorial(n)))
+
+```
+
 ***
 
 ***
@@ -166,4 +248,108 @@ public class Fibonacci {
         }
     }
 }
+```
+## C++ Implementation
+
+#### [Solution](./C++/fibonacci.cpp)
+
+```cpp
+/**
+ * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com>
+ * @github: https://github.com/razdeep
+ * @date: 07/01/2019
+ */
+#include <bits/stdc++.h>
+using namespace std;
+
+long long fibonacci(long long n)
+{
+    if (n <= 2)
+        return 1;
+    return fibonacci(n-1)+fibonacci(n-2);
+}
+int main()
+{
+    long long n;
+    cout<<"Enter a number ";
+    cin>>n;
+    string pos;
+    if(n%10 == 1)
+        pos="-st";
+    else if(n%10 == 2)
+        pos="-nd";
+    else
+        pos="-th";
+
+    cout<<"The "<<n<<pos<<" number of the fibonacci series is "<<fibonacci(n)<<endl;
+    return 0;
+}
+```
+
+## C Implementation
+
+#### [Solution](./C/fibonacci.c)
+
+```c
+/*
+ * @author: ashwek
+ * @date: 7/1/2019
+ */
+
+#include <stdio.h>
+
+int fib(int num) {
+    if( num <= 2 ){
+        return 1;
+    }
+    return fib(num-1) + fib(num-2);
+}
+
+void main(){
+
+    int num;
+
+    printf("Enter a number = ");
+    scanf("%d", &num);
+
+    printf("%dth element in fibonacci series is %d\n", num, fib(num));
+
+}
+```
+
+### Python Implementation
+
+#### [Solution by @vishalshirke7](./Python/fibonacci.py)
+```python
+"""
+  @author : vishalshirke7
+  @date : 07/01/2019
+"""
+
+
+# Fibonacci Series using Dynamic Programming
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        if fib_series[n - 1] == 0:
+            fib_series[n - 1] = fibonacci(n - 1)
+
+        if fib_series[n - 2] == 0:
+            fib_series[n - 2] = fibonacci(n - 2)
+
+        fib_series[n] = fib_series[n - 2] + fib_series[n - 1]
+    return fib_series[n]
+
+
+n = int(input())
+fib_series = [0, 1]
+while len(fib_series) < n + 1:
+    fib_series.append(0)
+print(fibonacci(n))
+if n == 0:
+    print(0)
+else:
+    print(", ".join(map(str, fib_series)))
+
 ```
