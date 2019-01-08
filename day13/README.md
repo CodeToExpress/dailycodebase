@@ -286,8 +286,6 @@ int main()
 }
 ```
 
-<<<<<<< HEAD
-=======
 ## C Implementation
 
 #### [Solution](./C/fibonacci.c)
