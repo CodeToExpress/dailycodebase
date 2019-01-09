@@ -4,7 +4,7 @@
 
 Today's Problem - Pascal's Triangle
 
-**Question** -- Write a function that takes an integer n as iniput and prints first n lines of Pascal's Triangle
+**Question** -- Write a function that takes an integer n as input and prints first n lines of Pascal's Triangle
 
 **Example**
 
@@ -55,6 +55,7 @@ console.log ('\n/* ===== Pascal\'s Triangle for n = 7\n');
 printPascal (7);
 ```
 
+
 ## [C++ Solution by @profgrammer](./C++/profgrammer_pascal.cpp)
 ```cpp
 /*
@@ -79,4 +80,113 @@ int main() {
     cout<<endl;
   }
 }
+
+## Python Implementation
+
+### [Solution] (./Python/pascal.py)
+
+```ruby
+=begin
+@author:aaditkamat
+@date: 9/1/2019
+=end
+
+def fill_table(num)
+  table = []
+
+  (num).times do
+    table.push([].fill(0, 0, num))
+  end
+
+  num.times do |i|
+    table[i][0] = 1
+  end
+
+  i = 1
+  until i >= num do
+    j = 1
+    until j >= num do
+      table[i][j] = table[i - 1][j] + table[i - 1][j - 1]
+      j += 1
+    end
+    i += 1
+  end
+  table
+end
+
+def print_table(table)
+  i = 0
+
+  until i >= table.length do
+    j = 0
+    until j >= table.length do
+      if table[i][j] != 0
+        print "#{table[i][j]} "
+      end
+      j += 1
+    end
+    print "\n"
+    i += 1
+  end
+end
+
+def main
+  print "Enter a number:"
+  num = gets.chomp!.to_i
+  if num >= 1
+    table = fill_table(num)
+    print_table(table)
+  else
+    puts "Pascal triangle cannot have #{num} rows"
+  end
+end
+
+main
+```
+
+## Ruby Implementation
+
+### [Solution] (./Ruby/pascal.rb)
+
+```ruby
+"""
+@author:aaditkamat
+@date: 9/1/2019
+"""
+
+def fill_table(num):
+  table = []
+
+  for i in range(num):
+        table.append([0] * num)
+
+  for i in range(num):
+    table[i][0] = 1
+
+  for i in range(1, num):
+    for j in range(1, num):
+      table[i][j] = table[i - 1][j] + table[i - 1][j - 1]
+
+  return table
+
+def print_table(table):
+  str = ''
+  for i in range(len(table)):
+    for j in range(len(table)):
+      if table[i][j] != 0:
+        str += f'{table[i][j]} '
+    str += '\n'
+  print(str)
+
+def main():
+  print("Enter a number:")
+  num = int(input())
+  if num >= 1:
+    table = fill_table(num)
+    print_table(table)
+  else:
+    print(f'Pascal triangle cannot have {num} rows')
+
+main()
+
 ```
