@@ -113,7 +113,90 @@ public class Sumrec {
        n=sc.nextInt();
        s=sum(n);
        System.out.println(s);
-   }
+   }   
+}
+```
+
+### C++ Implementation
+
+#### [C++ Solution by @profgrammer](./C++/profgrammer_sumdigits.cpp)
+```cpp
+/*
+  *@author: profgrammer
+  *@date: 08-01-2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int sum_digits(int n){
+  if(n < 10) return n;
+  return n%10 + sum_digits(n/10);
+}
+
+int main() {
+  int n;
+  cin>>n;
+  cout<<num_digits(n)<<endl;
+}
+```
+
+### Ruby Implementation
+
+#### [Solution](./Ruby/sum_of_digits.rb)
+
+```ruby
+=begin
+@author: aaditkamat
+@date: 08/01/2019
+=end
+
+def sum_of_digits(num, sum)
+  if num < 0
+    return -1 * sum_of_digits(abs(num), sum)
+  end
+  if num === 0
+    return sum
+  end
+  sum_of_digits(num / 10, sum + num % 10)
+end
+
+def main
+  print "Enter a number: "
+  num = gets.chomp.to_i
+  puts "Sum of digits of #{num} is: #{sum_of_digits(num, 0)}"
+end
+
+main
+```
+
+### C Implementation
+
+#### [Solution](./C/sum_of_digits.c)
+
+```c
+/*
+ * @author: ashwek
+ * @date: 8/1/2019
+ */
+
+#include <stdio.h>
+
+int sum(int num) {
+    if( num <= 0 ){
+        return 0;
+    }
+    return (num%10) + sum(num/10);
+}
+
+void main(){
+
+    int num;
+
+    printf("Enter a number = ");
+    scanf("%d", &num);
+
+    printf("Sum of digits = %d\n", sum(num));
 }
 ```
 
@@ -234,5 +317,112 @@ public class Recmultiply {
            p=p*-1;
         System.out.println(p);
     }      
+}
+```
+
+### C++ Implementation
+
+#### [C++ Solution by @profgrammer](./C++/profgrammer_product.cpp)
+```cpp
+/*
+  *@author: profgrammer
+  *@date: 08-01-2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int mul(int a, int b){
+  if(b == 0) return 0;
+  // a*b = (a*b/2) + (a*b/2) + (b%2 == 0)? 0:a;
+  int ans = mul(a, b/2);
+  ans = ans + ans;
+  if(b % 2 == 1) ans += a;
+  return ans;
+}
+
+int main() {
+  int a,b;
+  cin>>a>>b;
+  cout<<mul(a,b)<<endl;
+}
+```
+
+### Ruby Implementation
+
+#### [Solution](./Ruby/product_of_two_numbers.rb)
+
+```ruby
+=begin
+@author: aaditkamat
+@date: 08/01/2019
+=end
+
+def product_of_two_numbers(first, second, product)
+  if first < 0 and second < 0
+    return product_of_two_numbers(-first, -second, product)
+  end
+  if first == 0 or second == 0
+    return product
+  end
+  if first < 0 or second < 0
+    new_first = [first, second].min
+    new_second = [first, second].max
+    return product_of_two_numbers(new_first, new_second - 1, product + new_first)
+  end
+  product_of_two_numbers(first, second - 1, product + first)
+end
+
+def main
+  puts "Enter two numbers: "
+  first = gets.chomp.to_i
+  second = gets.chomp.to_i
+  puts "#{first} * #{second} = #{product_of_two_numbers(first, second, 0)}"
+end
+
+main
+```
+
+### C Implementation
+
+#### [Solution](./C/product_of_2_numbers.c)
+
+```c
+/*
+ * @author: ashwek
+ * @date: 8/1/2019
+ */
+
+#include <stdio.h>
+
+int product(int a, int b){
+
+    if( a == 0 || b == 0 )
+        return 0;
+    else if( a == 1 )
+        return b;
+    else if( b == 1 )
+        return a;
+
+    if( a < 0 && b < 0 )
+        return product(-a, -b);
+    else if( a < 0 )
+        return product(b, a);
+    else
+        return b + product(a-1, b);
+
+}
+
+void main(){
+
+    int a, b;
+
+    printf("Enter 1st number = ");
+    scanf("%d", &a);
+    printf("Enter 2nd number = ");
+    scanf("%d", &b);
+
+    printf("%d x %d = %d\n", a, b, product(a, b));
+
 }
 ```
