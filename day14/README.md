@@ -90,6 +90,33 @@ public class SumDigits {
 }
 ```
 
+#### [Solution](./Java/Sumrec.java)
+
+/**
+ * @date 08/01/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class Sumrec {
+    public static int sum(int n)
+    {
+        if(n==0)
+            return 0;
+        else
+            return n%10+sum(n/10);
+    }
+   public static void main(String []args)
+   {
+       int n,s;
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter a number");
+       n=sc.nextInt();
+       s=sum(n);
+       System.out.println(s);
+   }   
+}
+```
+
 ### C++ Implementation
 
 #### [C++ Solution by @profgrammer](./C++/profgrammer_sumdigits.cpp)
@@ -259,6 +286,37 @@ public class Product {
         // Print the result
         System.out.println("Product of numbers " + num1 + " and " + num2 + " is: " + recursiveProd(num1, num2));
     }
+}
+```
+
+#### [Solution](./Java/Recmultiply.java)
+
+```java
+/**
+ * @date 08/01/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class Recmultiply {
+   public static int product(int m,int n)
+   {
+       if (n==0)
+           return 0;
+       else
+           return m+product(m,n-1);
+   }
+    public static void main(String []args)
+    {
+        int m,n,p;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter two numbers ");
+        m=sc.nextInt();
+        n=sc.nextInt();
+        p=product(Math.abs(m),Math.abs(n));
+       if((m<0&&n>0)||(m>0&&n<0))
+           p=p*-1;
+        System.out.println(p);
+    }      
 }
 ```
 
