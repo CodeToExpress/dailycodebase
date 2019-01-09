@@ -90,6 +90,30 @@ public class SumDigits {
 }
 ```
 
+### C++ Implementation
+
+#### [C++ Solution by @profgrammer](./C++/profgrammer_sumdigits.cpp)
+```cpp
+/*
+  *@author: profgrammer
+  *@date: 08-01-2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int sum_digits(int n){
+  if(n < 10) return n;
+  return n%10 + sum_digits(n/10);
+}
+
+int main() {
+  int n;
+  cin>>n;
+  cout<<num_digits(n)<<endl;
+}
+```
+
 ### Ruby Implementation
 
 #### [Solution](./Ruby/sum_of_digits.rb)
@@ -146,7 +170,6 @@ void main(){
     scanf("%d", &num);
 
     printf("Sum of digits = %d\n", sum(num));
-
 }
 ```
 
@@ -236,6 +259,34 @@ public class Product {
         // Print the result
         System.out.println("Product of numbers " + num1 + " and " + num2 + " is: " + recursiveProd(num1, num2));
     }
+}
+```
+
+### C++ Implementation
+
+#### [C++ Solution by @profgrammer](./C++/profgrammer_product.cpp)
+```cpp
+/*
+  *@author: profgrammer
+  *@date: 08-01-2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int mul(int a, int b){
+  if(b == 0) return 0;
+  // a*b = (a*b/2) + (a*b/2) + (b%2 == 0)? 0:a;
+  int ans = mul(a, b/2);
+  ans = ans + ans;
+  if(b % 2 == 1) ans += a;
+  return ans;
+}
+
+int main() {
+  int a,b;
+  cin>>a>>b;
+  cout<<mul(a,b)<<endl;
 }
 ```
 
