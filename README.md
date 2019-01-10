@@ -32,6 +32,7 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 13. [Day 13 -- Factorial and Fibonacci](./day13/) -- [http://codetoexpress.tech/dc/day13/](http://codetoexpress.tech/dc/day13/)
 14. [Day 14 -- Sum of digits and product of numbers](./day14) -- [http://codetoexpress.tech/dc/day14/](http://codetoexpress.tech/dc/day14/)
 15. [Day 15 -- Pascal's Triangle](./day15) -- [http://codetoexpress.tech/dc/day15/](http://codetoexpress.tech/dc/day15/)
+16. [Day 16 -- Tower of Hanoi](./day16) -- [http://codetoexpress.tech/dc/day16/](http://codetoexpress.tech/dc/day16/)
 
 ## Timeline
 
