@@ -31,6 +31,7 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 12. [Day 12 -- Substring Search Algorithms](./day12/) -- [http://codetoexpress.tech/dc/day12/](http://codetoexpress.tech/dc/day12/)
 13. [Day 13 -- Factorial and Fibonacci](./day13/) -- [http://codetoexpress.tech/dc/day13/](http://codetoexpress.tech/dc/day13/)
 14. [Day 14 -- Sum of digits and product of numbers](./day14) -- [http://codetoexpress.tech/dc/day14/](http://codetoexpress.tech/dc/day14/)
+15. [Day 15 -- Pascal's Triangle](./day15) -- [http://codetoexpress.tech/dc/day15/](http://codetoexpress.tech/dc/day15/)
 
 ## Timeline
 
