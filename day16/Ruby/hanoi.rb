@@ -12,7 +12,7 @@ def hanoi(start_rod, aux_rod, end_rod, num)
     return
   end
   if num == 1
-    puts "Move disk from rod #{start_rod} to rod #{end_rod}"
+    puts "Move top most disk from rod #{start_rod} to rod #{end_rod}"
     return
   end
   hanoi(start_rod, end_rod, aux_rod, num - 1)
