@@ -90,8 +90,29 @@ public class SumDigits {
 }
 ```
 
-#### [Solution](./Java/Sumrec.java)
+### Python Implementation
 
+#### [Solution by  @vishalshirke7](./Python/sumdigits.py)
+```python
+
+"""
+  @author : vishalshirke7
+  @date : 08/01/2019
+"""
+
+
+def sum_of_digits(n):
+    if n <= 0:
+        return n
+    else:
+        return (n % 10) + sum_of_digits(n // 10)
+
+
+print(sum_of_digits(int(input())))
+
+
+#### [Solution](./Java/Sumrec.java)
+```
 /**
  * @date 08/01/19
  * @author SPREEHA DUTTA
@@ -138,6 +159,30 @@ int main() {
   int n;
   cin>>n;
   cout<<num_digits(n)<<endl;
+}
+```
+
+#### [C++ Solution by @divyakhetan](./C++/sumOfDigitsDay14.cpp)
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 10/1/2019
+ */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int sum(int n){
+	if(n < 10) return n;
+	else return n % 10 + sum(n /10);
+}
+int main(){
+	int n;
+	cin >> n;
+	cout << "The sum of digits is " << sum(n);
+	return 0;
 }
 ```
 
@@ -345,6 +390,30 @@ int main() {
   int a,b;
   cin>>a>>b;
   cout<<mul(a,b)<<endl;
+}
+```
+
+#### [C++ Solution by @divyakhetan](./C++/productDay14.cpp)
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 10/1/2019
+ */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int sum(int n){
+	if(n < 10) return n;
+	else return n % 10 + sum(n /10);
+}
+int main(){
+	int n;
+	cin >> n;
+	cout << "The sum of digits is " << sum(n);
+	return 0;
 }
 ```
 
