@@ -35,7 +35,7 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 16. [Day 16 -- Tower of Hanoi](./day16) -- [http://codetoexpress.tech/dc/day16/](http://codetoexpress.tech/dc/day16/)
 17. [Day 17 -- N Queens Problem](./day17) -- [http://codetoexpress.tech/dc/day17/](http://codetoexpress.tech/dc/day17/)
 
-## More Problems
+## [More Problems](./BONUS/README.md)
 
 A real coder should not be satisfied by doing only one problem daily, rather he/she should keep coding as much as possible. So, here I ([@MadhavBahlMD](https://github.com/MadhavBahlMD)) am adding some more problems that you can practise 😃
 
@@ -70,24 +70,16 @@ The `README.md` of directory containing the question must contain all the inform
 
 In case you just want to contribute a question and not code, there is no need to do so many things, just open an issue with the topic **Problem Submission** and the problem in the comments. I'll add it myself, and will give you proper credits 😃
 
-### Practise Problems 😁
+## Practise Problems 😁
 
 #### [1. Strings](./BONUS/Strings/README.md)
-
 #### [2. Recursion](./BONUS/Recursion/README.md)
-
 #### [3. Array](./BONUS/Arrays/README.md)
-
 #### [4. Algorithms](./BONUS/Algorithms/README.md)
-
 #### [5. Stacks](./BONUS/Stacks/README.md)
-
 #### [6. Queues](./BONUS/Queues/README.md)
-
 #### [7. Linked Lists](./BONUS/LinkedLists/README.md)
-
 #### [8. Trees](./BONUS/Trees/README.md)
-
 #### [9. Graphs](./BONUS/Graphs/README.md)
 
 ## Timeline
