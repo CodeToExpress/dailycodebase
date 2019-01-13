@@ -55,8 +55,35 @@ console.log ('\n/* ===== Pascal\'s Triangle for n = 7\n');
 printPascal (7);
 ```
 
+## C++ Implementation
+
+### [Solution](./C++/pascalDay15.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 10/1/2019
+ */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int sum(int n){
+	if(n < 10) return n;
+	else return n % 10 + sum(n /10);
+}
+int main(){
+	int n;
+	cin >> n;
+	cout << "The sum of digits is " << sum(n);
+	return 0;
+}
+```
 
 ## [C++ Solution by @profgrammer](./C++/profgrammer_pascal.cpp)
+
 ```cpp
 /*
   *@author: profgrammer
@@ -80,6 +107,7 @@ int main() {
     cout<<endl;
   }
 }
+```
 
 ## Python Implementation
 
