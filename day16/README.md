@@ -46,6 +46,45 @@ console.log ('\n/* ===== for 3 disks ===== */');
 towerOfHanoi (3, 'A', 'C', 'B');
 ```
 
+
+## Java Implementation
+
+### [Solution](./Java/towersOfHanoi.java)
+
+```java
+/**
+ * @date 10/01/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class towersOfHanoi 
+{
+    public static void move(int n,char s,char d,char c)
+    {
+        if(n==1)
+        {
+            System.out.println("Move disk "+n+" from "+s+" to "+d);  
+            return;
+        }
+        else
+        {
+            move(n-1,s,c,d);
+            System.out.println("Move disk "+n+" from "+s+" to "+d);
+            move(n-1,c,d,s);
+        }
+    }
+    public static void main(String []args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n; char start='S';char center='C'; char destination='D';
+        System.out.println("Enter number of disks");
+        n=sc.nextInt();
+        move(n,start,destination,center);
+    }
+    }
+}
+```
+
 ## Ruby Implementation
 
 ### [Solution](./Ruby/hanoi.rb)
@@ -83,3 +122,50 @@ end
 
 main
 ```
+
+## Python Implementation
+
+### [Solution](./Python/tower_hanoi.py)
+```python
+
+"""
+  @author : vishalshirke7
+  @date : 10/01/2019
+"""
+
+
+def towerhanoi(n, from_rod, to_rod, aux_rod):
+    if n = 1:
+        print("Move disk 1 from rod %d to rod %d"%(from_rod, to_rod))
+        return
+    towerhanoi(n - 1, from_rod, aux_rod, to_rod)
+    print("Move disk 1 from rod %d to rod %d"%(from_rod, to_rod))
+    towerhanoi(n - 1, aux_rod, to_rod, from_rod)
+
+
+no_of_disks = int(input())
+towerhanoi(no_of_disks, 'A', 'C', 'B')
+```
+
+### [Solution by @hiteshsubnani0128](./python3/hitesh_toh.py)
+
+```python
+#Implementaed in Python3 by @hiteshsubnani0128
+#reffered geekforgeeks.com
+#@date 10/01/2019
+
+def toh(n,a,b,c):
+    if n == 1:
+        print("Move disk 1 from rod",a,"to rod",c)
+        return
+    toh(n-1, a, b, c)
+    print("Move disk",n,"from rod",a,"to rod",b)
+    toh(n-1, a, b, c)
+
+num = int(input("enter a number"))
+if num == 0:
+    print("Not Possible")
+else:
+    toh(num,'a','b','c')
+```
+
