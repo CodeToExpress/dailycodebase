@@ -72,15 +72,15 @@ In case you just want to contribute a question and not code, there is no need to
 
 ## Practise Problems 😁
 
-#### [1. Strings](./BONUS/Strings/README.md)
-#### [2. Recursion](./BONUS/Recursion/README.md)
-#### [3. Array](./BONUS/Arrays/README.md)
-#### [4. Algorithms](./BONUS/Algorithms/README.md)
-#### [5. Stacks](./BONUS/Stacks/README.md)
-#### [6. Queues](./BONUS/Queues/README.md)
-#### [7. Linked Lists](./BONUS/LinkedLists/README.md)
-#### [8. Trees](./BONUS/Trees/README.md)
-#### [9. Graphs](./BONUS/Graphs/README.md)
+1. [**Strings**](./BONUS/Strings/README.md)
+2. [**Recursion**](./BONUS/Recursion/README.md)
+3. [**Array**](./BONUS/Arrays/README.md)
+4. [**Algorithms**](./BONUS/Algorithms/README.md)
+5. [**Stacks**](./BONUS/Stacks/README.md)
+6. [**6. Queues**](./BONUS/Queues/README.md)
+7. [Linked Lists](./BONUS/LinkedLists/README.md)
+8. [Trees](./BONUS/Trees/README.md)
+9. [Graphs](./BONUS/Graphs/README.md)
 
 ## Timeline
 
