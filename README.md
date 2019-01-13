@@ -77,10 +77,10 @@ In case you just want to contribute a question and not code, there is no need to
 3. [**Array**](./BONUS/Arrays/README.md)
 4. [**Algorithms**](./BONUS/Algorithms/README.md)
 5. [**Stacks**](./BONUS/Stacks/README.md)
-6. [**6. Queues**](./BONUS/Queues/README.md)
-7. [Linked Lists](./BONUS/LinkedLists/README.md)
-8. [Trees](./BONUS/Trees/README.md)
-9. [Graphs](./BONUS/Graphs/README.md)
+6. [**Queues**](./BONUS/Queues/README.md)
+7. [**Linked Lists**](./BONUS/LinkedLists/README.md)
+8. [**Trees**](./BONUS/Trees/README.md)
+9. [**Graphs**](./BONUS/Graphs/README.md)
 
 ## Timeline
 
