@@ -35,6 +35,61 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 16. [Day 16 -- Tower of Hanoi](./day16) -- [http://codetoexpress.tech/dc/day16/](http://codetoexpress.tech/dc/day16/)
 17. [Day 17 -- N Queens Problem](./day17) -- [http://codetoexpress.tech/dc/day17/](http://codetoexpress.tech/dc/day17/)
 
+## More Problems
+
+A real coder should not be satisfied by doing only one problem daily, rather he/she should keep coding as much as possible. So, here I ([@MadhavBahlMD](https://github.com/MadhavBahlMD)) am adding some more problems that you can practise 😃
+
+Also, these problems have been taking form various sources, so ig you think you own any of the given problems, just send me an email at theleanprogrammer@gmail.com and I will be more than happy to give proper credits 😊
+
+#### Want to contribute?
+
+The file structure is as follows
+
+```
+\DAILY CODE BASE
+├───BONUS
+│   ├───Algorithms
+│   ├───Arrays
+│   ├───Graphs
+│   ├───LinkedLists
+│   ├───Queues
+│   ├───Recursion
+│   ├───Stacks
+│   ├───Strings
+│   └───Trees
+```
+
+In this main `README.md`, there are links to the README of `BONUS` directory, and the `README.md` of sub topics
+In the `README.md` of `BONUS` directory, there is the list of all topics and under that there are all questions
+In the `README.md` of any topic directory, say `Arrays` there is a README which contains all questions of that topic along with the link to the `README.md` of the directory containing the question
+The `README.md` of directory containing the question must contain all the information about the question with some examples and the solution, and a little writeup about the algorithm used.
+
+**Before contributing any question, make sure that this structure is followed properly**
+
+#### NOTE
+
+In case you just want to contribute a question and not code, there is no need to do so many things, just open an issue with the topic **Problem Submission** and the problem in the comments. I'll add it myself, and will give you proper credits 😃
+
+### Practise Problems 😁
+
+#### [1. Strings](./BONUS/Strings/README.md)
+
+#### [2. Recursion](./BONUS/Recursion/README.md)
+
+#### [3. Array](./BONUS/Arrays/README.md)
+
+#### [4. Algorithms](./BONUS/Algorithms/README.md)
+
+#### [5. Stacks](./BONUS/Stacks/README.md)
+
+#### [6. Queues](./BONUS/Queues/README.md)
+
+#### [7. Linked Lists](./BONUS/LinkedLists/README.md)
+
+#### [8. Trees](./BONUS/Trees/README.md)
+
+#### [9. Graphs](./BONUS/Graphs/README.md)
+
 ## Timeline
 
 <p align="center">
