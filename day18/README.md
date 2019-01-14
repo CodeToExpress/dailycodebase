@@ -81,6 +81,42 @@ function printFrequency (freqObj) {
 freqCounter ([ 1, 2, 3, 1, 3, 4, 4, 4, 4, 2, 5]);
 ```
 
+### C++ Implementation
+
+#### [Solution by @divyakhetan](./C++/FreqCounterDay18.cpp)
+
+```cpp
+/**
+ * @author divyakhetan
+ * @date 14/1/2019
+ */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	int n;
+	cin >> n;
+	int a[n];
+	map<int, int> m;
+	for(int i = 0; i < n; i++){
+		cin >> a[i];
+		m[a[i]]++;
+	}
+	
+	map<int, int>::iterator it;
+	for (it = m.begin(); it != m.end(); it++)
+	{
+	    std::cout << it->first << " comes " << it->second << " times " << '\n';
+	}
+	
+	
+	return 0;
+}
+```
+
+
+
 ***
 
 ## Question 2 -- Count Uniques
@@ -179,6 +215,48 @@ function countUniques (arr) {
 console.log (`Number of unique elements = ${countUniques([1, 1, 2, 2, 2, 3, 4, 4, 4, 4, 4, 5, 5, 5, 6, 7])}`);
 ```
 
+### C++ Implementation
+
+#### [Solution by @divyakhetan](./C++/UniqueElementsDay18.cpp)
+
+
+
+```cpp
+/**
+ * @author divyakhetan
+ * @date 14/1/2019
+ */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	int n;
+	cin >> n;
+	int a[n];
+	
+	for(int i = 0; i < n; i++){
+		cin >> a[i];
+		
+	}
+	
+	//since sorted
+	
+	int count = 1;
+	int pos = a[0];
+	for(int i = 1; i < n; i++){
+		if(a[i] != pos){
+			count++;
+			pos = a[i];
+			
+		}
+	}
+	
+	cout << count << endl;
+	return 0;
+}
+```
+
 ***
 
 ## Question 3 -- Check Power N
@@ -257,4 +335,53 @@ function checkPowerN (arr1, arr2, num) {
 
 console.log (checkPowerN ([1, 2, 3, 4], [4, 9, 1, 16], 2));
 console.log (checkPowerN ([3, 4, 5, 2], [1, 2, 3], 4));
+```
+
+### C++ Implementation
+
+#### [Solution](./C++/CheckSquareDay18.cpp)
+
+
+```cpp
+/**
+ * @author divyakhetan
+ * @date 14/1/2019
+ */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	int n;
+	cin >> n;
+	int a[n];
+	int b[n];
+	for(int i = 0; i < n; i++){
+		cin >> a[i];
+	
+	}
+	
+	for(int i = 0; i < n; i++){
+		cin >> b[i];
+	
+	}
+	int num;
+	cin >> num;
+	sort(a, a + n);
+	sort(b, b + n);
+	
+
+	bool flag = true;
+	for(int i = 0; i< n; i++){
+		
+		if((int) pow(a[i], num) != b[i]){
+			flag = false;
+			break;
+		}
+	}
+	if(flag)
+	cout << "true" << endl;
+	else cout << "false" << endl;
+	return 0;
+}
 ```
