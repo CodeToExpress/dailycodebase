@@ -122,7 +122,6 @@ permut('123');
 
 ### [Solution1](./Python/permutations.py)
 ```python
-
 '''
 @author: aaditkamat
 @date: 02/01/2019
@@ -130,33 +129,32 @@ permut('123');
 
 def permutations(string):
     if (len(string) <= 1):
-        return [string]
-    lst = []
+        return {string}
+    permutation_set = set()
     for i in range(len(string)):
         substring = ''
         for j in range(len(string)):
             if j != i:
                 substring += string[j]
-        lst.extend(list(set(map(lambda x: string[i] + x, permutations(substring)))))
-    return lst
+        permutation_set |= set(map(lambda x: string[i] + x, permutations(substring)))
+    return permutation_set
 
 
-def printList(string_list):
-    for string in string_list:
+def printSet(string_set):
+    for string in string_set:
         print(string)
 
 def main():
     print('Enter a string: ')
     string = input()
-    print('The permutations of {string} are:')
-    printList(permutations(string))
+    print(f'The permutations of {string} are:')
+    printSet(permutations(string))
 
 main()
 ```
 
 ### [Solution 2 by @vishalshirke7](./Python/permutations1.py)
 ```python
-
 from itertools import permutations
 """
   @author : vishalshirke7
@@ -186,6 +184,7 @@ String = "123"
 
 for each in permutations(String):
 	print(''.join(each))
+
 ```
 
 ## Java Implementation

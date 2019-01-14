@@ -246,6 +246,7 @@ int main(){
 }
 ``` 
 
+
 ### [Solution 4 by @aaditkamat] (./C++/levenshtein_distance.cpp)
 
 ```cpp
@@ -287,7 +288,7 @@ int main() {
     getline(cin, first);
     getline(cin, second);
     cout << "The Levenshtein distance between \"" << first << "\" and \"" << second << "\" is: " << dist(first, second) << endl;
-}
+    }
 ```
 
 ### C Implementation
