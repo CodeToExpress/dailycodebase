@@ -81,6 +81,44 @@ function printFrequency (freqObj) {
 freqCounter ([ 1, 2, 3, 1, 3, 4, 4, 4, 4, 2, 5]);
 ```
 
+### C++ Implementation
+
+#### [Solution 1](./C++/day18a.cpp)
+
+```cpp
+/*
+* @author : dhruv-gupta14
+* @date : 14/01/2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int arr[n];
+	int cnt[n] = {0};
+	for(int i=0;i<n;i++)
+	{
+	    cin >> arr[i];
+	    cnt[arr[i]]++;
+	}
+	
+	for(int j=0;j<n;j++)
+	{
+	    if(cnt[arr[j]] != -1)
+	    {
+	        cout << arr[j] << " is present " << cnt[arr[j]] << " times" << endl;
+	        cnt[arr[j]] = -1;
+	    }
+	}
+	
+	
+	return 0;
+}
+```
+
 ***
 
 ## Question 2 -- Count Uniques
@@ -179,6 +217,38 @@ function countUniques (arr) {
 console.log (`Number of unique elements = ${countUniques([1, 1, 2, 2, 2, 3, 4, 4, 4, 4, 4, 5, 5, 5, 6, 7])}`);
 ```
 
+### C++ Implementation
+
+#### [Solution 1](./C++/day18b.cpp)
+
+```cpp
+/*
+* @author : dhruv-gupta14
+* @date : 14/01/2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int arr[n];
+    
+    for(int i=0;i<n;i++)
+    {
+        cin >> arr[i];
+    }
+    
+    std::set<int> s(arr,arr+n);
+    
+    cout << "Number of unique elements = " << s.size() << endl;
+	
+	
+	return 0;
+}
+```
+
 ***
 
 ## Question 3 -- Check Power N
@@ -257,4 +327,59 @@ function checkPowerN (arr1, arr2, num) {
 
 console.log (checkPowerN ([1, 2, 3, 4], [4, 9, 1, 16], 2));
 console.log (checkPowerN ([3, 4, 5, 2], [1, 2, 3], 4));
+```
+
+### C++ Implementation
+
+#### [Solution 1](./C++/day18c.cpp)
+
+```cpp
+/*
+* @author : dhruv-gupta14
+* @date : 14/01/2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n,m,cnt=0;
+	cin >> n;
+	cin >> m;
+	int arr1[n];
+	int arr2[n];
+    
+    for(int i=0;i<n;i++)
+    {
+        cin >> arr1[i];
+    }
+    
+    for(int j=0;j<n;j++)
+    {
+        cin >> arr2[j];
+    }
+    
+    sort(arr1,arr1 + n);
+    sort(arr2,arr2 + n);
+    
+    for(int k =0 ;k<n; k++)
+    {
+
+        if(arr2[k] == pow(arr1[k],m))
+        {
+            cnt++;
+        } else
+        {
+            cout << "false";
+            break;
+        }
+    }
+	
+	if (cnt == n)
+	{
+	    cout << "true";
+	}
+	
+	return 0;
+}
 ```
