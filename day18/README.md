@@ -109,6 +109,40 @@ int main(){
 	{
 	    std::cout << it->first << " comes " << it->second << " times " << '\n';
 	}
+	return 0;
+}
+```
+
+### [Solution by @dhruv-gupta14](./C++/day18a.cpp)
+
+```cpp
+/*
+* @author : dhruv-gupta14
+* @date : 14/01/2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int arr[n];
+	int cnt[n] = {0};
+	for(int i=0;i<n;i++)
+	{
+	    cin >> arr[i];
+	    cnt[arr[i]]++;
+	}
+	
+	for(int j=0;j<n;j++)
+	{
+	    if(cnt[arr[j]] != -1)
+	    {
+	        cout << arr[j] << " is present " << cnt[arr[j]] << " times" << endl;
+	        cnt[arr[j]] = -1;
+	    }
+	}
 	
 	
 	return 0;
@@ -180,6 +214,38 @@ for each in num:
 
 for v,c in count.items():
 	print("\'" + str(v) + "\' is present " + str(c) + " time(s)")
+```
+
+### [Solution 2](./Python/frequency_counter.py)
+
+```python
+
+"""
+author: @aaditkamat
+date: 15/01/2019
+"""
+def count_frequencies(lst):
+  frequency_dictionary = {}
+  
+  for num in lst:
+    if num not in frequency_dictionary:
+      frequency_dictionary[num] = 1
+    else:
+      frequency_dictionary[num] += 1
+
+  for key in frequency_dictionary:
+    print(f'\'{key}\' is present {frequency_dictionary[key]} time(s)')
+
+def convert_input_array_to_list(input_array):
+  return list(map(lambda x: int(x), input_array.strip('[').strip(']').split(',')))
+
+def main():
+  print('Enter an input array: ', end='')
+  input_array = input()
+  lst = convert_input_array_to_list(input_array)
+  count_frequencies(lst)
+
+main()
 ```
 
 ***
@@ -284,8 +350,6 @@ console.log (`Number of unique elements = ${countUniques([1, 1, 2, 2, 2, 3, 4, 4
 
 #### [Solution by @divyakhetan](./C++/UniqueElementsDay18.cpp)
 
-
-
 ```cpp
 /**
  * @author divyakhetan
@@ -318,6 +382,33 @@ int main(){
 	}
 	
 	cout << count << endl;
+	return 0;
+}
+```
+
+### [Solution by @dhruv-gupta14](./C++/day18b.cpp)
+
+```cpp
+/*
+* @author : dhruv-gupta14
+* @date : 14/01/2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int arr[n];
+    
+    for(int i=0;i<n;i++)
+    {
+        cin >> arr[i];
+    }
+    
+    std::set<int> s(arr,arr+n);
+    cout << "Number of unique elements = " << s.size() << endl;
 	return 0;
 }
 ```
@@ -373,6 +464,26 @@ def countUniques(data):
 
 data = [1, 1, 2, 2, 2, 3, 4, 4, 4, 4, 4, 5, 5, 5, 6, 7]
 print("Number of unique elements =", countUniques(data))
+```
+
+#### [Solution 2](./Python/count_uniques.py)
+
+```python
+'''
+@author: aaditkamat
+@date: 15/01/2019
+'''
+from frequency_counter import handle_input, count_frequencies
+
+def count_uniques(frequency_dictionary):
+  print(f'Number of unique elements = {len(frequency_dictionary)}')
+
+def main():
+  lst = handle_input('an')
+  frequency_dictionary = count_frequencies(lst)
+  count_uniques(frequency_dictionary)
+  
+main()
 ```
 
 ***
@@ -457,7 +568,60 @@ console.log (checkPowerN ([3, 4, 5, 2], [1, 2, 3], 4));
 
 ### C++ Implementation
 
-#### [Solution](./C++/CheckSquareDay18.cpp)
+#### [Solution by @dhruv-gupta14](./C++/day18c.cpp)
+
+```cpp
+/*
+* @author : dhruv-gupta14
+* @date : 14/01/2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n,m,cnt=0;
+	cin >> n;
+	cin >> m;
+	int arr1[n];
+	int arr2[n];
+    
+    for(int i=0;i<n;i++)
+    {
+        cin >> arr1[i];
+    }
+    
+    for(int j=0;j<n;j++)
+    {
+        cin >> arr2[j];
+    }
+    
+    sort(arr1,arr1 + n);
+    sort(arr2,arr2 + n);
+    
+    for(int k =0 ;k<n; k++)
+    {
+
+        if(arr2[k] == pow(arr1[k],m))
+        {
+            cnt++;
+        } else
+        {
+            cout << "false";
+            break;
+        }
+    }
+	
+	if (cnt == n)
+	{
+	    cout << "true";
+	}
+	
+	return 0;
+}
+```
+
+#### [Solution by @divyakhetan](./C++/CheckSquareDay18.cpp)
 
 
 ```cpp
@@ -581,4 +745,36 @@ arr2 = [1, 2, 3]
 n = 4
 print("arr1 =", arr1, "arr2 =", arr2, "n =", n)
 print("output = ", checkPowerN(arr1, arr2, n))
+```
+
+### Python Implementation
+
+#### [Solution 2](./Python/check_power_n.py)
+```python
+'''
+@author:aaditkamat
+@date: 15/01/2019
+'''
+from frequency_counter import handle_input
+
+"""
+I wrote a one liner for the check_power_n function thanks to python's generators which is quite messy ;-) 
+print(len(list(filter(lambda x: x == 1, map(lambda x: len([num for num in first if x == num ** N]), second)))) == len(second))
+"""
+def check_power_n(first, second, N):
+  count = 0
+  for num in first:
+    for x in second:
+      if x == num ** N:
+        count += 1
+  print(count == len(second))
+
+def main():
+  first = handle_input('first')
+  second = handle_input('second')
+  print('Enter a number: ', end='')
+  N = int(input())
+  check_power_n(first, second, N)
+
+main()
 ```
