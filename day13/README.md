@@ -115,6 +115,37 @@ int main()
 }
 ```
 
+#### [Solution](./C++/factorialDay13.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 10/1/2019
+ */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int fact(int n){
+	if(n == 1) return 1;
+	else return n * fact(n - 1);
+}
+
+
+int main(){
+	
+	int n;
+	cin >> n;
+	
+	cout << "The factorial is " << fact(n);
+	
+	
+	return 0;
+}
+```
+
+
 ### C Implementation
 
 #### [Solution](./C/factorial.c)
@@ -422,6 +453,42 @@ int main()
     return 0;
 }
 ```
+
+#### [Solution](./C++/fibonacciDay13.cpp)
+
+```cpp
+/**
+ * @author:divyakhetan
+ * @date: 10/1/2019
+ */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int fibo(int n){
+	if(n <= 2) return 1;
+	else return fibo(n - 1) + fibo(n - 2);
+}
+int main(){
+	
+	int n;
+	cin >> n;
+	
+	cout << "The " << n << "th fibonacci number is " << fibo(n) << endl;
+	
+	for(int i = 1; i <= n; i++){
+		if(i == n){
+			cout << fibo(i);
+		}
+		else{
+			cout << fibo(i) << " , ";
+		}
+	}
+	return 0;
+}
+
+
 
 ### C Implementation
 
