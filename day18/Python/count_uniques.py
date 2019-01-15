@@ -11,3 +11,5 @@ def main():
   lst = handle_input('an')
   frequency_dictionary = count_frequencies(lst)
   count_uniques(frequency_dictionary)
+  
+main()
