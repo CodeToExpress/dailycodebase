@@ -125,6 +125,29 @@ public class Freq {
 }
 ```
 
+### Python Implementation
+
+#### [Solution](./Python/A_Frequency_Counter.py)
+
+```python
+"""
+  @author : ashwek
+  @date : 15/1/2019
+"""
+
+num = list(map(int, input("Enter numbers (space separated) = ").split()))
+
+count = {}
+for each in num:
+	if count.get(each) == None :
+		count[each] = 1
+	else:
+		count[each] += 1
+
+for v,c in count.items():
+	print("\'" + str(v) + "\' is present " + str(c) + " time(s)")
+```
+
 ***
 
 ## Question 2 -- Count Uniques
@@ -259,6 +282,23 @@ public class Unique {
 }
 ```
 
+### Python Implementation
+
+#### [Solution](./Python/B_Count_Uniques.py)
+
+```python
+"""
+  @author : ashwek
+  @date : 15/1/2019
+"""
+
+def countUniques(data):
+	return len(set(data))
+
+data = [1, 1, 2, 2, 2, 3, 4, 4, 4, 4, 4, 5, 5, 5, 6, 7]
+print("Number of unique elements =", countUniques(data))
+```
+
 ***
 
 ## Question 3 -- Check Power N
@@ -378,4 +418,42 @@ public class Power {
             System.out.println("false");
     }
 }
+```
+
+### Python Implementation
+
+#### [Solution](./Python/C_Check_Power_N.py)
+
+```python
+"""
+  @author : ashwek
+  @date : 15/1/2019
+"""
+
+def checkPowerN(arr1, arr2, pow):
+
+	arr1 = sorted(set(arr1))
+	arr2 = sorted(set(arr2))
+
+	if len(arr1) != len(arr2) :
+		return False
+
+	for i in range(len(arr1)):
+		if arr1[i]**pow != arr2[i] :
+			return False
+
+	return True
+
+
+arr1 = [1, 2, 3, 4]
+arr2 = [4, 9, 1, 16]
+n = 2
+print("arr1 =", arr1, "arr2 =", arr2, "n =", n)
+print("output = ", checkPowerN(arr1, arr2, n))
+
+arr1 = [3, 4, 5, 2]
+arr2 = [1, 2, 3]
+n = 4
+print("arr1 =", arr1, "arr2 =", arr2, "n =", n)
+print("output = ", checkPowerN(arr1, arr2, n))
 ```
