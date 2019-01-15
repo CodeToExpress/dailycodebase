@@ -102,7 +102,7 @@ console.log (cartesian ([1, 2, 3, 4], ['a', 'b', 'c']));
 
 ### JavaScript Implementation
 
-#### [Solution](./JavaScript/fisherYates_madhav.js)
+#### [Solution (using recursion)](./JavaScript/fisherYates_madhav.js)
 
 ```js
 /**
