@@ -109,6 +109,40 @@ int main(){
 	{
 	    std::cout << it->first << " comes " << it->second << " times " << '\n';
 	}
+	return 0;
+}
+```
+
+### [Solution by @dhruv-gupta14](./C++/day18a.cpp)
+
+```cpp
+/*
+* @author : dhruv-gupta14
+* @date : 14/01/2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int arr[n];
+	int cnt[n] = {0};
+	for(int i=0;i<n;i++)
+	{
+	    cin >> arr[i];
+	    cnt[arr[i]]++;
+	}
+	
+	for(int j=0;j<n;j++)
+	{
+	    if(cnt[arr[j]] != -1)
+	    {
+	        cout << arr[j] << " is present " << cnt[arr[j]] << " times" << endl;
+	        cnt[arr[j]] = -1;
+	    }
+	}
 	
 	
 	return 0;
@@ -284,8 +318,6 @@ console.log (`Number of unique elements = ${countUniques([1, 1, 2, 2, 2, 3, 4, 4
 
 #### [Solution by @divyakhetan](./C++/UniqueElementsDay18.cpp)
 
-
-
 ```cpp
 /**
  * @author divyakhetan
@@ -318,6 +350,33 @@ int main(){
 	}
 	
 	cout << count << endl;
+	return 0;
+}
+```
+
+### [Solution by @dhruv-gupta14](./C++/day18b.cpp)
+
+```cpp
+/*
+* @author : dhruv-gupta14
+* @date : 14/01/2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int arr[n];
+    
+    for(int i=0;i<n;i++)
+    {
+        cin >> arr[i];
+    }
+    
+    std::set<int> s(arr,arr+n);
+    cout << "Number of unique elements = " << s.size() << endl;
 	return 0;
 }
 ```
@@ -457,7 +516,60 @@ console.log (checkPowerN ([3, 4, 5, 2], [1, 2, 3], 4));
 
 ### C++ Implementation
 
-#### [Solution](./C++/CheckSquareDay18.cpp)
+#### [Solution by @dhruv-gupta14](./C++/day18c.cpp)
+
+```cpp
+/*
+* @author : dhruv-gupta14
+* @date : 14/01/2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n,m,cnt=0;
+	cin >> n;
+	cin >> m;
+	int arr1[n];
+	int arr2[n];
+    
+    for(int i=0;i<n;i++)
+    {
+        cin >> arr1[i];
+    }
+    
+    for(int j=0;j<n;j++)
+    {
+        cin >> arr2[j];
+    }
+    
+    sort(arr1,arr1 + n);
+    sort(arr2,arr2 + n);
+    
+    for(int k =0 ;k<n; k++)
+    {
+
+        if(arr2[k] == pow(arr1[k],m))
+        {
+            cnt++;
+        } else
+        {
+            cout << "false";
+            break;
+        }
+    }
+	
+	if (cnt == n)
+	{
+	    cout << "true";
+	}
+	
+	return 0;
+}
+```
+
+#### [Solution by @divyakhetan](./C++/CheckSquareDay18.cpp)
 
 
 ```cpp
