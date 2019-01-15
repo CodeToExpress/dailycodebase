@@ -22,5 +22,3 @@ def main():
   print('Enter a number: ', end='')
   N = int(input())
   check_power_n(first, second, N)
-  
- main()

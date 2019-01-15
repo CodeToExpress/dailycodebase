@@ -14,13 +14,18 @@ def count_frequencies(lst):
   for key in frequency_dictionary:
     print(f'\'{key}\' is present {frequency_dictionary[key]} time(s)')
 
+def get_input(word):
+  print(f'Enter {word} input array: ', end='')
+  input_array = input()
+  return input_array
+
+def handle_input(word):
+  input_array = get_input(word)
+  return convert_input_array_to_list(input_array)
+
 def convert_input_array_to_list(input_array):
   return list(map(lambda x: int(x), input_array.strip('[').strip(']').split(',')))
 
 def main():
-  print('Enter an input array: ', end='')
-  input_array = input()
-  lst = convert_input_array_to_list(input_array)
+  lst = handle_input('an')
   count_frequencies(lst)
-
-main()
