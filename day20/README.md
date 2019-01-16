@@ -6,8 +6,15 @@ Write a program to divide the given array into sub arrays where each sub array i
 
 ## Example
 
-partition([1,2,3,4,5,6,7,8], 2) --> [[1, 2], [3, 4], [5, 6], [7, 8]]
-partition([1,2,3,4,5,6,7], 2) --> [[1, 2], [3, 4], [5, 6], [7]]
+```
+	input: partition([1,2,3,4,5,6,7,8], 2)
+    output: [[1, 2], [3, 4], [5, 6], [7, 8]]
+    
+    input: partition([1,2,3,4,5,6,7], 2)
+    output: [[1, 2], [3, 4], [5, 6], [7]]
+```
+
+![ques](./ques.png)
 
 ## JavaScript Solution(s)
 
