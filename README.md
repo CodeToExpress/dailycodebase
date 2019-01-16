@@ -1,18 +1,18 @@
 <h1 align="center">
   Daily Codes
 </h1>
-<br />
-<a href="http://codetoexpress.tech/joindc/"><img src="./whatsapp.png" alt="Whatsapp: https://codetoexpress.tech/joindc/"></a>
-<a href="https://t.me/codetoexpress"><img src="./telegram.png" alt="Telegram: https://t.me/codetoexpress"></a>
-<a href="https://codetoexpress.tech/invite/"><img src="./slack.png" alt="Slack: https://codetoexpress.tech/invite/"></a>
-
-***
 
 <p align="center">
   Coding is Fun! Do it everyday 💯💯
   <br />
   Code Daily, add your solutions to the given problem, submit a PR (and don't forget to add your name in the contributors list)
 </p>
+
+<a style="margin: 0" href="https://t.me/codetoexpress"><img src="./telegram.png" alt="Telegram: https://t.me/codetoexpress"></a>
+<a style="margin: 0" href="http://codetoexpress.tech/joindc/"><img src="./whatsapp.png" alt="Whatsapp: https://codetoexpress.tech/joindc/"></a>
+<a style="margin: 0" href="https://codetoexpress.tech/invite/"><img src="./slack.png" alt="Slack: https://codetoexpress.tech/invite/"></a>
+
+***
 
 [![HitCount](http://hits.dwyl.io/CodeToExpress/dailycodebase.svg)](http://hits.dwyl.io/CodeToExpress/dailycodebase) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/CodeToExpress/dailycodebase/commit-activity) [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://codetoexpress.tech/dailycodebase) [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](http://madhavbahl.tech/contact/) [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org) [![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](http://ansicolortags.readthedocs.io/?badge=latest) ![GitHub license](https://img.shields.io/github/license/CodeToExpress/dailycodebase.svg)
 
