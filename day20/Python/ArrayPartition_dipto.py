@@ -1,6 +1,6 @@
-Name:DiptoChakrabarty
-Date:16/01/2019
-Day20
+# Name:DiptoChakrabarty
+# Date:16/01/2019
+# Day20
 
 l=list(map(int,input().split()))
 t=[]
