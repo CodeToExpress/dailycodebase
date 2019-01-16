@@ -36,6 +36,7 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 17. [Day 17 -- N Queens Problem](./day17) -- [http://codetoexpress.tech/dc/day17/](http://codetoexpress.tech/dc/day17/)
 18. [Day 18 -- Frequency Count and Check Power N](./day18) -- [http://codetoexpress.tech/dc/day18/](http://codetoexpress.tech/dc/day18/)
 19. [Day 19 -- Cartesian Product and Shuffle Algorithm](./day19) -- [http://codetoexpress.tech/dc/day19/](http://codetoexpress.tech/dc/day19/)
+20. [Day 20 -- Array Partition](./day20) -- [http://codetoexpress.tech/dc/day20/](http://codetoexpress.tech/dc/day20/)
 
 ## [More Problems](./BONUS/README.md)
 
