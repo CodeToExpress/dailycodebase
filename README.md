@@ -1,6 +1,13 @@
 <h1 align="center">
   Daily Codes
 </h1>
+<br />
+<a href="http://codetoexpress.tech/joindc/"><img src="./whatsapp.png" alt="Whatsapp: https://codetoexpress.tech/joindc/"></a>
+<a href="https://t.me/codetoexpress"><img src="./telegram.png" alt="Telegram: https://t.me/codetoexpress"></a>
+<a href="https://codetoexpress.tech/invite/"><img src="./slack.png" alt="Slack: https://codetoexpress.tech/invite/"></a>
+
+***
+
 <p align="center">
   Coding is Fun! Do it everyday 💯💯
   <br />
