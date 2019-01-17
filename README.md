@@ -44,6 +44,7 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 18. [Day 18 -- Frequency Count and Check Power N](./day18) -- [http://codetoexpress.tech/dc/day18/](http://codetoexpress.tech/dc/day18/)
 19. [Day 19 -- Cartesian Product and Shuffle Algorithm](./day19) -- [http://codetoexpress.tech/dc/day19/](http://codetoexpress.tech/dc/day19/)
 20. [Day 20 -- Array Partition](./day20) -- [http://codetoexpress.tech/dc/day20/](http://codetoexpress.tech/dc/day20/)
+21. [Day 21 -- Pair Sum N and Max Subarray Sum](./day21) -- [http://codetoexpress.tech/dc/day21/](http://codetoexpress.tech/dc/day20/)
 
 ## [More Problems](./BONUS/README.md)
 
