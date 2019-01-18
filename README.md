@@ -45,6 +45,7 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 19. [Day 19 -- Cartesian Product and Shuffle Algorithm](./day19) -- [http://codetoexpress.tech/dc/day19/](http://codetoexpress.tech/dc/day19/)
 20. [Day 20 -- Array Partition](./day20) -- [http://codetoexpress.tech/dc/day20/](http://codetoexpress.tech/dc/day20/)
 21. [Day 21 -- Pair Sum N and Max Subarray Sum](./day21) -- [http://codetoexpress.tech/dc/day21/](http://codetoexpress.tech/dc/day21/)
+22. [Day 22 -- Common Elements Search](./day22) -- [http://codetoexpress.tech/dc/day22/](http://codetoexpress.tech/dc/day22/)
 
 ## [More Problems](./BONUS/README.md)
 
