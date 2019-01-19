@@ -1,7 +1,9 @@
+'''
 Name:Dipto Chakrabarty
 Date:17/01/2019
 Day 21
 Question:Pair Sum N
+'''
 
 def pairSumN(l,n):
     t=[]
