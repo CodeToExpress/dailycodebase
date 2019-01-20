@@ -99,3 +99,7 @@ In case you just want to contribute a question and not code, there is no need to
 <p align="center">
   <img src="./timeline.png" alt="timeline">
 </p>
+
+## Disclaimer
+
+I do not own the rights to the questions I will discuss in this Daily Codes initiative. The questions have been collected from various sources and I do not know who created all those questions. If you think you are the owner of any question or any code, send me an email at codetoexpress@gmail.com, I will be more than happy to give the appropriate credits.
