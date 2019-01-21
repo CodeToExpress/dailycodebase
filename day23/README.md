@@ -2,7 +2,7 @@
 
 # Day 23 - Array Series Part 6: Combination Sum
 
-**Question Source -- [Geeks4Geeks](https://www.geeksforgeeks.org/combinational-sum/)**
+**Question Credits -- [Geeks4Geeks](https://www.geeksforgeeks.org/combinational-sum/)**
 
 **Question** -- Given a set of integers, and a number, find all unique combinations in the integer array whose sum equals the given number.
 
