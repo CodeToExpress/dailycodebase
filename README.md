@@ -46,6 +46,7 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 20. [Day 20 -- Array Partition](./day20) -- [http://codetoexpress.tech/dc/day20/](http://codetoexpress.tech/dc/day20/)
 21. [Day 21 -- Pair Sum N and Max Subarray Sum](./day21) -- [http://codetoexpress.tech/dc/day21/](http://codetoexpress.tech/dc/day21/)
 22. [Day 22 -- Common Elements Search](./day22) -- [http://codetoexpress.tech/dc/day22/](http://codetoexpress.tech/dc/day22/)
+23. [Day 23 -- Combination Sum](./day23) -- [http://codetoexpress.tech/dc/day23/](http://codetoexpress.tech/dc/day23/)
 
 ## [More Problems](./BONUS/README.md)
 
@@ -93,6 +94,15 @@ In case you just want to contribute a question and not code, there is no need to
 7. [**Linked Lists**](./BONUS/LinkedLists/README.md)
 8. [**Trees**](./BONUS/Trees/README.md)
 9. [**Graphs**](./BONUS/Graphs/README.md)
+10. [**Misc Questions**](./BONUS/Misc/README.md)
+
+## EXTRA - Past Interview Questions
+
+Here are some of the questions asked previously in major companies like Google, Amazon, Facebook, Microsoft etc.
+
+```
+To Be Added
+```
 
 ## Timeline
 
