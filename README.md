@@ -45,6 +45,9 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 19. [Day 19 -- Cartesian Product and Shuffle Algorithm](./day19) -- [http://codetoexpress.tech/dc/day19/](http://codetoexpress.tech/dc/day19/)
 20. [Day 20 -- Array Partition](./day20) -- [http://codetoexpress.tech/dc/day20/](http://codetoexpress.tech/dc/day20/)
 21. [Day 21 -- Pair Sum N and Max Subarray Sum](./day21) -- [http://codetoexpress.tech/dc/day21/](http://codetoexpress.tech/dc/day21/)
+22. [Day 22 -- Common Elements Search](./day22) -- [http://codetoexpress.tech/dc/day22/](http://codetoexpress.tech/dc/day22/)
+23. [Day 23 -- Combination Sum](./day23) -- [http://codetoexpress.tech/dc/day23/](http://codetoexpress.tech/dc/day23/)
+24. [Day 24 -- Array Circular Rotation](./day24) -- [http://codetoexpress.tech/dc/day24/](http://codetoexpress.tech/dc/day24/)
 
 ## [More Problems](./BONUS/README.md)
 
@@ -92,9 +95,22 @@ In case you just want to contribute a question and not code, there is no need to
 7. [**Linked Lists**](./BONUS/LinkedLists/README.md)
 8. [**Trees**](./BONUS/Trees/README.md)
 9. [**Graphs**](./BONUS/Graphs/README.md)
+10. [**Misc Questions**](./BONUS/Misc/README.md)
+
+## EXTRA - Past Interview Questions
+
+Here are some of the questions asked previously in major companies like Google, Amazon, Facebook, Microsoft etc.
+
+```
+To Be Added
+```
 
 ## Timeline
 
 <p align="center">
   <img src="./timeline.png" alt="timeline">
 </p>
+
+## Disclaimer
+
+I do not own the rights to the questions I will discuss in this Daily Codes initiative. The questions have been collected from various sources and I do not know who created all those questions. If you think you are the owner of any question or any code, send me an email at codetoexpress@gmail.com, I will be more than happy to give the appropriate credits.
