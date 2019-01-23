@@ -48,9 +48,15 @@ In case you just want to contribute a question and not code, there is no need to
 
 - To be added
 
-### [2. Recursion](./Recursion/README.md)
+### [2. Recursion](./Recursion/)
 
-- To be added
+1. [WAP to calculate `a` raised to the power `n` using recursion](./Recursion/Power/)
+2. [WAP to calculate the factorial of a given number usinig recursion](./Recursion/Factorial/)
+3. [WAP to calculate the product of elements in the given array using recursion](./Recursion/ArrayProduct/)
+4. [WAP to calculate the sum of elements in a given integer array using recursion](./Recursion/ArraySum/)
+5. [WAP to find the nth number in Fibonacci Series using recursion](./Recursion/Fibonacci/)
+6. [WAP to reverse a string using recursion](./Recursion/ReverseString/)
+7. [WAP to reverse an integer array using recursion](./Recursion/ReverseArray/)
 
 ### [3. Array](./Arrays/README.md)
 

@@ -94,6 +94,37 @@ console.log (cartesian ([1, 2], []));
 console.log (cartesian ([1, 2, 3, 4], ['a', 'b', 'c']));
 ```
 
+### Python Implementation
+
+### [Solution](./Python/cartesian_product.py)
+```python
+'''
+@author: aaditkamat
+@date: 15/1/2019
+'''
+import sys
+sys.path.append('../../day18/Python')
+
+from frequency_counter import convert_input_array_to_list
+
+def get_input(word):
+    print (f'Enter set {word}: ', end='')
+    input_array = input()
+    lst = convert_input_array_to_list(input_array)
+    return set(lst)
+
+def calculate_cartesian_product(first_set, second_set):
+    result = []
+    for num in first_set:
+        for other in second_set:
+            result.append([num, other])
+    print(result)
+
+def main():
+    set_A = get_input('A')
+    set_B = get_input('B')
+    calculate_cartesian_product(set_A, set_B)
+```
 ***
 
 ### Python Implementation
@@ -177,4 +208,30 @@ function fisherYates (arr) {
 }
 
 fisherYates ([1, 2, 3, 4, 5, 6]);
+```
+
+### Python implementation
+
+#### [Solution](./Python/fisher_yates.py)
+
+```python
+import sys
+sys.path.append('../../day18/Python')
+
+from frequency_counter import convert_input_array_to_list, handle_input
+from random import randint
+
+def fisher_yates(lst):
+    for i in range(len(lst) - 1, 0, -1):
+        swap_index = randint(0, i)
+        temp = lst[swap_index]
+        lst[swap_index] = lst[i]
+        lst[i] = temp
+    print(lst)
+
+def main():
+    lst = handle_input('an')
+    fisher_yates(lst)
+
+main()
 ```
