@@ -59,3 +59,49 @@ console.log (isRotation ([1, 2, 3, 4, 5, 6, 7], [4, 5, 6, 7, 1, 2, 3]));  // tru
 console.log (isRotation ([1, 2, 3, 4, 5, 6, 7], [7, 1, 2, 3]));  // false
 console.log (isRotation ([1, 2, 3, 4, 5, 6], [6, 5, 4, 3, 2, 1]));  // false 
 ```
+
+## Ruby Implementation
+
+### [Solution](./Ruby/circular_rotation.rb)
+
+```ruby
+=begin
+@author: aaditkamat
+@date: 22/01/2019
+=end
+
+def check_rotation(first, second)
+  if first.length != second.length
+    return false
+  end
+  i = 0
+  curr = second.index(first[0])
+  if curr == nil
+    return false
+  end
+  i += 1
+  curr = (curr + 1) % (first.length)
+  until i >= second.length
+      if first[i] != second[curr]
+        return false
+      end
+      i += 1
+      curr = (curr + 1) % (first.length)
+  end
+  true
+end
+
+def parse_input_array()
+  gets.chomp!.gsub(/\]|\[/, '').split(',').map{|s| s.to_i}
+end
+
+def main
+  print "Enter the first array: "
+  first = parse_input_array()
+  print "Enter the second array: "
+  second = parse_input_array()
+  puts check_rotation(first, second)
+end
+
+main
+```
