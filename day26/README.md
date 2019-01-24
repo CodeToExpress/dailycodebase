@@ -40,7 +40,7 @@ input:  inputMatrix  = [ [1,    2,   3,  4,    5],
 output: [1, 2, 3, 4, 5, 10, 15, 20, 19, 18, 17, 16, 11, 6, 7, 8, 9, 14, 13, 12]
 ```
 
-![ques](./ques.js)
+![ques](./ques.png)
 
 ## Solution to problem 1 - Spiral Matrix Generation
 
