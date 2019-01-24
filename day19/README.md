@@ -93,6 +93,41 @@ console.log (cartesian ([1, 2], [3, 4]));
 console.log (cartesian ([1, 2], []));
 console.log (cartesian ([1, 2, 3, 4], ['a', 'b', 'c']));
 ```
+## Java Implementation
+
+### [Solution](./Java/cartesianProd.java)
+
+```java
+/**
+ * @date 15/01/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class cartesianProd {
+    public static void prod(int n,int arr2[])
+    {
+        for(int i=0;i<arr2.length;i++)
+            System.out.println("{"+n+","+arr2[i]+"}");
+    }
+    public static void main(String []args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter size of the 2 sets");
+        int m=sc.nextInt();
+        int n=sc.nextInt();
+        int arr1[]=new int[m];
+        int arr2[]=new int[n];
+        System.out.println("Enter elements for first set");
+        for(int i=0;i<m;i++)
+            arr1[i]=sc.nextInt();
+        System.out.println("Enter elements for second set");
+        for(int i=0;i<n;i++)
+            arr2[i]=sc.nextInt();
+        for(int i=0;i<m;i++)
+            prod(arr1[i],arr2);
+    }
+}
+```
 
 ### C++ Implementation
 
@@ -208,6 +243,40 @@ function fisherYates (arr) {
 }
 
 fisherYates ([1, 2, 3, 4, 5, 6]);
+```
+
+## Java Implementation
+
+### [Solution](./Java/FisheYates.java)
+
+```java
+/**
+ * @date 15/01/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class FisheYates {
+    public static void main(String []args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n,i,rd,t;
+        n=sc.nextInt();
+        int arr[]=new int[n];
+        for(i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        for(i=n-1;i>=0;i--)
+        {
+                Random r = new Random();
+                rd=r.nextInt(n);
+                t=arr[rd];
+                arr[rd]=arr[i];
+                arr[i]=t;
+        }
+        System.out.print("Shuffled array is :");
+        for(i=0;i<n;i++)
+            System.out.print(arr[i]+" ");
+    }
+}
 ```
 
 ### C++ Implementation
