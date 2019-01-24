@@ -48,7 +48,8 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 22. [Day 22 -- Common Elements Search](./day22) -- [http://codetoexpress.tech/dc/day22/](http://codetoexpress.tech/dc/day22/)
 23. [Day 23 -- Combination Sum](./day23) -- [http://codetoexpress.tech/dc/day23/](http://codetoexpress.tech/dc/day23/)
 24. [Day 24 -- Array Circular Rotation](./day24) -- [http://codetoexpress.tech/dc/day24/](http://codetoexpress.tech/dc/day24/)
-24. [Day 25 -- Rotate Square Tile](./day24) -- [http://codetoexpress.tech/dc/day25/](http://codetoexpress.tech/dc/day25/)
+25. [Day 25 -- Rotate Square Tile](./day25) -- [http://codetoexpress.tech/dc/day25/](http://codetoexpress.tech/dc/day25/)
+26. [Day 26 -- Spiral Generation and Copy](./day26) -- [http://codetoexpress.tech/dc/day26/](http://codetoexpress.tech/dc/day26/)
 
 ## [More Problems](./BONUS/README.md)
 
