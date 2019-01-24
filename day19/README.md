@@ -1,4 +1,4 @@
-![cover](./cover.png)
+﻿![cover](./cover.png)
 
 # Day 19 - Array Series Part 2
 
@@ -129,6 +129,75 @@ public class cartesianProd {
 }
 ```
 
+### C++ Implementation
+
+#### [Solution by @divyakhetan](./C++/CartesianProductDay19.cpp)
+
+```cpp
+/**
+ * @author divyakhetan
+ * @date 16/1/2019
+ */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	cout << "Enter length of 1st and 2nd array";
+	int n1, n2;	
+	cin >> n1 >> n2;
+	int a[n1];
+	int b[n2];
+	for(int i = 0; i < n1; i++){
+		cin >> a[i];
+		
+	}
+	
+	for(int i = 0; i < n2; i++){
+		cin >> b[i];
+	}
+	
+	for(int i = 0; i < n1; i++){
+		for(int j = 0; j < n2; j++){
+			cout << "[ " << a[i]  << " " << b[j] << " ] " << endl;
+		}
+	}
+	return 0;
+}
+```
+
+### Python Implementation
+
+### [Solution](./Python/cartesian_product.py)
+```python
+'''
+@author: aaditkamat
+@date: 15/1/2019
+'''
+import sys
+sys.path.append('../../day18/Python')
+
+from frequency_counter import convert_input_array_to_list
+
+def get_input(word):
+    print (f'Enter set {word}: ', end='')
+    input_array = input()
+    lst = convert_input_array_to_list(input_array)
+    return set(lst)
+
+def calculate_cartesian_product(first_set, second_set):
+    result = []
+    for num in first_set:
+        for other in second_set:
+            result.append([num, other])
+    print(result)
+
+def main():
+    set_A = get_input('A')
+    set_B = get_input('B')
+    calculate_cartesian_product(set_A, set_B)
+```
+
 ***
 
 ## Ques B
@@ -208,4 +277,67 @@ public class FisheYates {
             System.out.print(arr[i]+" ");
     }
 }
+```
+
+### C++ Implementation
+
+#### [Solution ](./C++/FisherYateShuffleDay19.cpp)
+
+```cpp
+/**
+ * @author divyakhetan
+ * @date 16/1/2019
+ */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	cout << "Enter length of 1st and 2nd array";
+	int n1, n2;	
+	cin >> n1 >> n2;
+	int a[n1];
+	int b[n2];
+	for(int i = 0; i < n1; i++){
+		cin >> a[i];
+		
+	}
+	
+	for(int i = 0; i < n2; i++){
+		cin >> b[i];
+	}
+	
+	for(int i = 0; i < n1; i++){
+		for(int j = 0; j < n2; j++){
+			cout << "[ " << a[i]  << " " << b[j] << " ] " << endl;
+		}
+	}
+	return 0;
+}
+```
+
+### Python implementation
+
+#### [Solution](./Python/fisher_yates.py)
+
+```python
+import sys
+sys.path.append('../../day18/Python')
+
+from frequency_counter import convert_input_array_to_list, handle_input
+from random import randint
+
+def fisher_yates(lst):
+    for i in range(len(lst) - 1, 0, -1):
+        swap_index = randint(0, i)
+        temp = lst[swap_index]
+        lst[swap_index] = lst[i]
+        lst[i] = temp
+    print(lst)
+
+def main():
+    lst = handle_input('an')
+    fisher_yates(lst)
+
+main()
 ```
