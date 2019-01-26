@@ -101,6 +101,8 @@ In case you just want to contribute a question and not code, there is no need to
 10. [**Misc Questions**](./BONUS/Misc/README.md)
 11. [**Object Oriented Programming**](./BONUS/OOPS/README.md)
 
+## Problems on Time and Space Complexity
+
 ## EXTRA - Past Interview Questions
 
 Here are some of the questions asked previously in major companies like Google, Amazon, Facebook, Microsoft etc.
