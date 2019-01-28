@@ -31,6 +31,7 @@ main()
 {
    string s="1234";
    string r="";
+   permute("1234");
    permute(s,s.size(),r);
    
 }
