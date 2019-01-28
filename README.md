@@ -51,6 +51,7 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 25. [Day 25 -- Rotate Square Tile](./day25) -- [http://codetoexpress.tech/dc/day25/](http://codetoexpress.tech/dc/day25/)
 26. [Day 26 -- Spiral Generation and Copy](./day26) -- [http://codetoexpress.tech/dc/day26/](http://codetoexpress.tech/dc/day26/)
 27. [Day 27 -- The Minesweeper Problem](./day27) -- [http://codetoexpress.tech/dc/day27/](http://codetoexpress.tech/dc/day27/)
+28. [Day 28 -- Linear Search](./day28) -- [http://codetoexpress.tech/dc/day28/](http://codetoexpress.tech/dc/day28/)
 
 ## [More Problems](./BONUS/README.md)
 
