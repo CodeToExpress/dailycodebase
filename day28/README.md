@@ -38,3 +38,39 @@ function linearSearch (arr, n) {
 console.log (linearSearch ([1, 2, 3, 4, 5], 2));
 console.log (linearSearch ([1, 2, 3, 4, 5], 7));
 ```
+
+## Java Implementation
+
+### [Solution](./Java/linearSearch1.java)
+
+```java
+/**
+ * @date 28/01/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class linearSearch1 {
+    public static void main(String []args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n;int i;int p,c=-1;
+        System.out.println("Enter size and array elements");
+        n=sc.nextInt();   
+        int arr[]=new int[n];
+        for(i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        System.out.println("Enter element to be found");
+        p=sc.nextInt();
+        for(i=0;i<n;i++)
+           if(arr[i]==p) 
+           {
+               c=i;
+               break;
+           }
+        if(c!=-1)
+            System.out.println(c);
+        else
+            System.out.println("undefined");
+    }
+}
+```
