@@ -1,5 +1,15 @@
 #include<iostream>
 
+/**
+ * @author: aaditkamat
+ * @date: 28/1/2019
+ */
+
+/*
+ * The input is assumed to be of the following form:
+ * The first line contains the number to be searched
+ * The second line contains the numbers to be searched seperated by spaces.
+ */
 int main() {
     int num;
     std::cin >> num;
