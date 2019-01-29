@@ -1,7 +1,9 @@
+CMakeLists.txt
 node_modules/
 playground/
 youtube/
 Instagram/
 a.out
 .vscode/
+test/
 *.o

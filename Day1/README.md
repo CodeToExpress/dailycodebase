@@ -1,3 +1,5 @@
+![Fizz Buzz](./cover.png)
+
 # Day 1 -- The Fizz Buzz Challenge
 
 **Brief History** - Fizz Buzz is a group word game for children to teach them about division. Players take turns to count incrementally, replacing any number divisible by three with the word "fizz", and any number divisible by five with the word "buzz" and any number divisible by both three and five is replaced with the word "fizzbuzz"
@@ -7,7 +9,7 @@
 
 **Question**- Write a program that prints the numbers from 1 to n and for multiples of '3' print "Fizz" instead of the number, for the multiples of '5' print "Buzz", and for the numbers which are divisible by both 3 and 5, print FizzBuzz.
 
-![Fizz Buzz](./cover.png)
+![ques for Day 1](./questionDay1.png)
 
 ## JavaScript Implementation
 
@@ -172,6 +174,51 @@ for i in range(1, n):
     print(i)
 ```
 
+### [fizzbuzz2.py](./Python3/fizzbuzz2.py)
+
+```python
+'''
+ * @author: ashwek
+ * @date: 20/12/2018
+'''
+
+n = int(input("Enter limit : "))
+
+for i in range(1, n+1):
+    
+    output = ""
+    if i%3 == 0 :
+        output = "Fizz"
+    if i%5 == 0:
+        output += "Buzz"
+
+    if output :
+        print(output)
+    else:
+        print(i)
+
+```
+
+### [profgrammer_fizzbuzz.py](./Python3/profgrammer_fizzbuzz.py)
+```python
+'''
+  @author: profgrammer 
+  @date: 30-12-2018
+'''
+
+n = int(input())
+
+for i in range(1, n+1):
+  if(i % 15 == 0):
+    print("Fizz Buzz")
+  elif(i % 5 == 0):
+    print("Buzz")
+  elif(i % 3 == 0):
+    print("Fizz")
+  else:
+    print(i)
+```
+
 ## C++ Implementation
 
 ### [FizzBuzz.cpp](./C++/FizzBuzz.cpp)
@@ -244,3 +291,123 @@ public class FizzBuzz{
 }
 
 ```
+
+## Go Implementation
+
+### [FizzBuzz.go](./Go/FizzBuzz.go)
+
+```go
+/* 
+  * @author: Ramanpreet Singh <ramanpreet6262@gmail.com> 
+  * @github: https://github.com/Ramanpreet6262
+  * @date: 20/12/2018
+*/
+
+
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Enter a number upto which you want to find Fizzbuzz numbers: ")
+    var n int
+    _, err := fmt.Scanf("%d", &n)
+    
+    if err != nil {
+            fmt.Println(err)
+         }
+
+    
+    for i := 1; i <= n; i++ {
+        if i % 3 == 0 && i % 5 == 0 {
+            fmt.Println("FizzBuzz")
+        } else if i % 5 == 0 {
+            fmt.Println("Buzz")
+        } else if i % 3 == 0 {
+            fmt.Println("Fizz")
+        } else {
+            fmt.Println(i)
+        }
+    }
+}
+```
+## Ruby Implementation 
+
+### [Fizzbuzz.rb](./Ruby/fizzbuzz.rb)
+
+```ruby
+=begin
+ @author: aaditkamat
+ @date: 21/12/2018
+=end
+
+def get_result(num)
+  result = ''
+  if num % 3 != 0 and num % 5 != 0
+    result += num.to_s
+  end
+  if num % 3 == 0
+    result += 'Fizz'
+  end
+  if num % 5 == 0
+    result += 'Buzz'
+  end
+  result
+end
+
+def solution(n)
+  n.times do |num|
+  p get_result(num + 1)
+  end
+end
+```
+## Python Implementation
+
+## ShashankFizz.py (./python/ShashankFizz.py)
+``` python
+"""
+        * @author: Shashankjain12
+        * @date: 21/12/18
+"""
+print("Fizz Buzz")
+n=int(input("Enter the number?"));
+for i in range(1,n+1):
+    if((i%3)==0 and (i%5)==0):
+        print("Fizzbuzz ")
+    elif((i%3)==0):
+        print("fizz ")
+    elif ((i%5)==0):
+        print("buzz ")
+    else:
+        print(i)
+```
+
+## PHP Implementation
+
+## fizzbuzz.php (./php/fizzbuzz.php)
+```php
+
+/*
+ * @author willianwt
+ * @date 16/01/2018
+ */
+
+$num = n; #any number will work
+for ($i=1; $i <= $num; $i++) { 
+  if ($i % 3 == 0 && $i % 5 == 0) {
+    echo "FizzBuzz\n";
+  } else if ($i % 3 == 0) {
+   echo "Fizz\n";
+  }else if ($i % 5 == 0) {
+   echo "Buzz\n";
+  }else{
+    echo $i . "\n";
+  }
+  
+}
+```
+### Have Another solution?
+
+The beauty of programming lies in the fact that there is never a single solution to any problem.
+
+In case you have an alternative way to solve this problem, do contribute to this repository (https://github.com/CodeToExpress/dailycodebase) :)

@@ -7,7 +7,7 @@ Please note we have a code of conduct, please follow it in all your interactions
 ## Pull Request Process and Contribution Guidelines
 
 1. Inside each "Day" Create a folder with the name of language you are contributing in.
-2. Ensure you have tested the code you are condtributing atleast 3 times before submitting the pull request.
+2. Ensure you have tested the code you are contributing atleast 3 times before submitting the pull request.
 3. The code you contribute must have this at top -
 ```cpp  
       /**
@@ -28,7 +28,7 @@ We aim to give proper credit to whoever contributes to this repository, hence no
    
 **Recommended**: Take a look at https://github.com/jfmengels/all-contributors-cli
 
-Looking forward for your contributions 😄
+Looking forward to your contributions 😄
 
 ## Code of Conduct
 
