@@ -30,7 +30,7 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 | ---------- | ----- | ------------ | ---------: |
 | [Day 1](./Day1) | [The Fizz Buzz Problem](./Day1/) | [http://codetoexpress.tech/dc/day1](http://codetoexpress.tech/dc/day1/) | **Beginner** |
 | [Day 2](./Day2) | [String Reversal + Palindrome](./Day2/) | [http://codetoexpress.tech/dc/day2/](http://codetoexpress.tech/dc/day2/) | **Beginner** |
-| [Day 3](./Day3) | [The Hamming Distance Problem](./Day3/) | [http://codetoexpress.tech/dc/day3/](http://codetoexpress.tech/dc/day3/) | Beginner |
+| [Day 3](./Day3) | [The Hamming Distance Problem](./Day3/) | [http://codetoexpress.tech/dc/day3/](http://codetoexpress.tech/dc/day3/) | **Beginner** |
 | [Day 4](./day4) | [Num Vowels + Max Chars](./day4/) | [http://codetoexpress.tech/dc/day4/](http://codetoexpress.tech/dc/day4/) | **Intermediate** |
 | [Day 5](./day5) | [Pattern Printing Problems](./day5/) | [http://codetoexpress.tech/dc/day5/](http://codetoexpress.tech/dc/day5/) | **Intermediate** |
 | [Day 6](./day6) | [Sentence Cap + Word Reversal + Anagram](./day6/) | [http://codetoexpress.tech/dc/day6/](http://codetoexpress.tech/dc/day6/) | **Intermediate** |
