@@ -1,11 +1,18 @@
 <h1 align="center">
   Daily Codes
 </h1>
+
 <p align="center">
   Coding is Fun! Do it everyday 💯💯
   <br />
   Code Daily, add your solutions to the given problem, submit a PR (and don't forget to add your name in the contributors list)
 </p>
+
+<a style="margin: 0" href="https://t.me/codetoexpress"><img src="./telegram.png" alt="Telegram: https://t.me/codetoexpress"></a>
+<a style="margin: 0" href="http://codetoexpress.tech/joindc/"><img src="./whatsapp.png" alt="Whatsapp: https://codetoexpress.tech/joindc/"></a>
+<a style="margin: 0" href="https://codetoexpress.tech/invite/"><img src="./slack.png" alt="Slack: https://codetoexpress.tech/invite/"></a>
+
+***
 
 [![HitCount](http://hits.dwyl.io/CodeToExpress/dailycodebase.svg)](http://hits.dwyl.io/CodeToExpress/dailycodebase) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/CodeToExpress/dailycodebase/commit-activity) [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://codetoexpress.tech/dailycodebase) [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](http://madhavbahl.tech/contact/) [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org) [![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](http://ansicolortags.readthedocs.io/?badge=latest) ![GitHub license](https://img.shields.io/github/license/CodeToExpress/dailycodebase.svg)
 
@@ -35,6 +42,16 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 16. [Day 16 -- Tower of Hanoi](./day16) -- [http://codetoexpress.tech/dc/day16/](http://codetoexpress.tech/dc/day16/)
 17. [Day 17 -- N Queens Problem](./day17) -- [http://codetoexpress.tech/dc/day17/](http://codetoexpress.tech/dc/day17/)
 18. [Day 18 -- Frequency Count and Check Power N](./day18) -- [http://codetoexpress.tech/dc/day18/](http://codetoexpress.tech/dc/day18/)
+19. [Day 19 -- Cartesian Product and Shuffle Algorithm](./day19) -- [http://codetoexpress.tech/dc/day19/](http://codetoexpress.tech/dc/day19/)
+20. [Day 20 -- Array Partition](./day20) -- [http://codetoexpress.tech/dc/day20/](http://codetoexpress.tech/dc/day20/)
+21. [Day 21 -- Pair Sum N and Max Subarray Sum](./day21) -- [http://codetoexpress.tech/dc/day21/](http://codetoexpress.tech/dc/day21/)
+22. [Day 22 -- Common Elements Search](./day22) -- [http://codetoexpress.tech/dc/day22/](http://codetoexpress.tech/dc/day22/)
+23. [Day 23 -- Combination Sum](./day23) -- [http://codetoexpress.tech/dc/day23/](http://codetoexpress.tech/dc/day23/)
+24. [Day 24 -- Array Circular Rotation](./day24) -- [http://codetoexpress.tech/dc/day24/](http://codetoexpress.tech/dc/day24/)
+25. [Day 25 -- Rotate Square Tile](./day25) -- [http://codetoexpress.tech/dc/day25/](http://codetoexpress.tech/dc/day25/)
+26. [Day 26 -- Spiral Generation and Copy](./day26) -- [http://codetoexpress.tech/dc/day26/](http://codetoexpress.tech/dc/day26/)
+27. [Day 27 -- The Minesweeper Problem](./day27) -- [http://codetoexpress.tech/dc/day27/](http://codetoexpress.tech/dc/day27/)
+28. [Day 28 -- Linear Search](./day28) -- [http://codetoexpress.tech/dc/day28/](http://codetoexpress.tech/dc/day28/)
 
 ## [More Problems](./BONUS/README.md)
 
@@ -82,9 +99,25 @@ In case you just want to contribute a question and not code, there is no need to
 7. [**Linked Lists**](./BONUS/LinkedLists/README.md)
 8. [**Trees**](./BONUS/Trees/README.md)
 9. [**Graphs**](./BONUS/Graphs/README.md)
+10. [**Misc Questions**](./BONUS/Misc/README.md)
+11. [**Object Oriented Programming**](./BONUS/OOPS/README.md)
+
+## Problems on Time and Space Complexity
+
+## EXTRA - Past Interview Questions
+
+Here are some of the questions asked previously in major companies like Google, Amazon, Facebook, Microsoft etc.
+
+```
+To Be Added
+```
 
 ## Timeline
 
 <p align="center">
   <img src="./timeline.png" alt="timeline">
 </p>
+
+## Disclaimer
+
+I do not own the rights to the questions I will discuss in this Daily Codes initiative. The questions have been collected from various sources and I do not know who created all those questions. If you think you are the owner of any question or any code, send me an email at codetoexpress@gmail.com, I will be more than happy to give the appropriate credits.

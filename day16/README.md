@@ -46,7 +46,6 @@ console.log ('\n/* ===== for 3 disks ===== */');
 towerOfHanoi (3, 'A', 'C', 'B');
 ```
 
-
 ## Java Implementation
 
 ### [Solution](./Java/towersOfHanoi.java)
@@ -135,7 +134,7 @@ main
 
 
 def towerhanoi(n, from_rod, to_rod, aux_rod):
-    if n = 1:
+    if n == 1:
         print("Move disk 1 from rod %d to rod %d"%(from_rod, to_rod))
         return
     towerhanoi(n - 1, from_rod, aux_rod, to_rod)
@@ -145,6 +144,7 @@ def towerhanoi(n, from_rod, to_rod, aux_rod):
 
 no_of_disks = int(input())
 towerhanoi(no_of_disks, 'A', 'C', 'B')
+
 ```
 
 ### [Solution by @hiteshsubnani0128](./python3/hitesh_toh.py)

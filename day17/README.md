@@ -209,3 +209,160 @@ int main() {
    checkSolution();
 }
 ```
+
+## Python Implemetation
+
+### [Solution](./Python/n_queens.py)
+
+```python
+"""
+@author:aaditkamat
+@date: 13/01/2019
+"""
+def print_chessboard(chessboard):
+    for i in range(len(chessboard)):
+        print(chessboard[i])
+
+def fill_chessboard(i, j,chessboard):
+    chessboard[i][j] = 1
+
+    for x in range(len(chessboard)):
+        if x != i:
+            chessboard[x][j] = 0
+
+    for y in range(len(chessboard)):
+        if y != j:
+            chessboard[i][y] = 0
+
+    x, y = (i + 1, j + 1)
+    while x < len(chessboard) and y < len(chessboard):
+        chessboard[x][y] = 0
+        x += 1
+        y += 1
+
+    x, y = (i - 1, j - 1)
+    while x >= 0 and y >= 0:
+        chessboard[x][y] = 0
+        x -= 1
+        y -= 1
+
+    x, y = (i + 1, j - 1)
+    while x < len(chessboard) and y >= 0:
+        chessboard[x][y] = 0
+        x += 1
+        y -= 1
+
+    x, y = (i - 1, j + 1)
+    while x >= 0 and y < len(chessboard):
+        chessboard[x][y] = 0
+        x -= 1
+        y += 1
+
+def try_position(i, chessboard):
+    fill_chessboard(0, i, chessboard)
+
+    for i in range(1, len(chessboard)):
+        for j in range(len(chessboard)):
+            if chessboard[i][j] == -1:
+                fill_chessboard(i, j, chessboard)
+
+def reset_chessboard(chessboard):
+    for i in range(len(chessboard)):
+        for j in range(len(chessboard)):
+            chessboard[i][j] = -1
+
+def is_correct(chessboard):
+    for i in range(len(chessboard)):
+        if chessboard[i].count(1) == 0:
+            return False
+    return True
+
+def n_queens(num):
+    chessboard = []
+    for i in range(num):
+        chessboard.append([-1] * num)
+
+    for i in range(num):
+        try_position(i, chessboard)
+        if (is_correct(chessboard)):
+            print_chessboard(chessboard)
+            return
+        reset_chessboard(chessboard)
+
+def main():
+    print("Enter number of queens: ", end="")
+    num = int(input())
+    n_queens(num)
+
+main()
+```
+
+## Java Implementation
+
+### [Solution](./Java/nQueen.java)
+
+```java
+/**
+ * @date 14/01/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class nQueen {
+    static int n;
+    public static void print(int arr[][])
+    {
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+                System.out.print(arr[i][j]);
+            System.out.println();
+        }
+    }
+    
+    public static boolean safe(int arr[][],int r,int c)
+    {
+        int i,j;
+        for(i=0;i<c;i++)
+            if(arr[r][i]==1)
+                return false;
+        for(i=r, j=c; i>=0 && j>=0; i--,j--)
+            if(arr[i][j]==1)
+                return false;
+        for(i=r, j=c; i<n && j>=0; i++,j--)
+            if(arr[i][j]==1)
+                return false;
+        return true;
+    }
+    
+    public static boolean placeQueen(int arr[][],int c)
+    {
+        int i;
+        if(c>=n)
+            return true;
+        for(i=0;i<n;i++)
+        {
+            if(safe(arr,i,c))
+            {
+                arr[i][c]=1;
+                if(placeQueen(arr,c+1)==true)
+                    return true;
+                arr[i][c]=0;
+            }
+        }
+        return false;
+    }
+    
+    public static void main(String []args)
+    {
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        int arr[][]=new int[n][n];
+        if(placeQueen(arr,0)==false)
+        {
+            System.out.println("All the queens cannot be placed");
+        }
+        else
+            print(arr);
+    }
+}
+```
