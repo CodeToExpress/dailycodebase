@@ -1,6 +1,6 @@
 ![cover](./cover.png)
 
-# Day 28 - Search and Sort Algorithms Part B: The Binary Search
+# Day 29 - Search and Sort Algorithms Part B: The Binary Search
 
 Binary Search is searching technique which works on Divide and Conquer approach. Indeed an efficient searching algorithm with a runtime of `O(log(n))`, but it works only on sorted arrays.
 
