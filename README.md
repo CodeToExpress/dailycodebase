@@ -52,6 +52,7 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 26. [Day 26 -- Spiral Generation and Copy](./day26) -- [http://codetoexpress.tech/dc/day26/](http://codetoexpress.tech/dc/day26/)
 27. [Day 27 -- The Minesweeper Problem](./day27) -- [http://codetoexpress.tech/dc/day27/](http://codetoexpress.tech/dc/day27/)
 28. [Day 28 -- Linear Search](./day28) -- [http://codetoexpress.tech/dc/day28/](http://codetoexpress.tech/dc/day28/)
+29. [Day 29 -- Linear Search](./day29) -- [http://codetoexpress.tech/dc/day29/](http://codetoexpress.tech/dc/day29/)
 
 ## [More Problems](./BONUS/README.md)
 
