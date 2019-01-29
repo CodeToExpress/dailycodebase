@@ -615,7 +615,7 @@ public class Palindrome2 {
 
 ```java
 /**
- *@date 29th jan 2019
+ * @date 29th jan 2019
  * @author nehabindal
  */
 import java.util.*;
