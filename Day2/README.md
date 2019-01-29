@@ -611,7 +611,7 @@ public class Palindrome2 {
     }
 }
 ```
-### [Solution 3](./Java/day22.java)
+### [Solution 3](./Java/day2_neha.java)
 
 ```java
 /**
