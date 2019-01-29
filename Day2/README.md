@@ -289,7 +289,7 @@ int main() {
   reverse(s1.begin(), s1.end());
   cout<<"The reversed string is: "<<s1<<endl;
 
-  // to check if the string is a palindrome, we need to check if it is equal to its reverse. 
+  // to check if the string is a palindrome, we need to check if it is equal to its reverse.
 
   if(s.compare(s1) == 0) cout<<"The string is a palindrome"<<endl;
   else cout<<"The string is not a palindrome\n";
@@ -609,6 +609,41 @@ public class Palindrome2 {
             System.out.println ("The given string \"" + str + "\" is not a Palindrome");
         }
     }
+}
+```
+### [Solution 3](./Java/day22.java)
+
+```java
+/**
+ *@date 29th jan 2019
+ * @author nehabindal
+ */
+import java.util.*;
+public class day22 {
+    public static void main(String[] args)
+    {
+        System.out.println("Input a string to check it it's a pallindrome or not");
+        Scanner sc = new Scanner(System.in);
+        String st = sc.nextLine();
+        int l = st.length();
+        int flag=0;
+        for(int i=0;i<l/2;i++)
+        {
+            if(st.charAt(i)!=st.charAt(l-1-i))
+            {
+                flag=1;
+            }
+        }
+        if(flag==1)
+        {
+            System.out.println("Not a pallindrome");
+        }
+        else{
+            System.out.println("Yay a pallindorme");
+        }
+
+    }
+
 }
 ```
 
