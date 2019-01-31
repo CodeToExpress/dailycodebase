@@ -58,6 +58,7 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 | [Day 28](./day28) | [Linear Search](./day28) | [http://codetoexpress.tech/dc/day28/](http://codetoexpress.tech/dc/day28/) | **Beginner** |
 | [Day 29](./day29) | [Binary Search](./day29) | [http://codetoexpress.tech/dc/day29/](http://codetoexpress.tech/dc/day29/) | **Intermediate** |
 | [Day 30](./day30) | [Naive Search](./day30) | [http://codetoexpress.tech/dc/day30/](http://codetoexpress.tech/dc/day30/) | **Intermediate** |
+| [Day 31](./day31) | [Bubble Sort](./day31) | [http://codetoexpress.tech/dc/day31/](http://codetoexpress.tech/dc/day31/) | **Beginner** |
 
 ## [More Problems](./BONUS/README.md)
 
