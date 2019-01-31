@@ -1,6 +1,6 @@
 ![cover](./cover.png)
 
-# Day 29 - Search and Sort Algorithms Part C: Naive Pattern Search
+# Day 30 - Search and Sort Algorithms Part C: Naive Pattern Search
 
 So this week is for searching and sorting algorithms, and we did linear search and binary search yesterday, and today's algorithm would be the Naive Search.
 
