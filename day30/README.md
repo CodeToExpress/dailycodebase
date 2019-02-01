@@ -22,7 +22,7 @@ output: 6 (start index of the found pattern)
 
 ## Solution
 
-### [JavaScript Implementation](./JavaScript/binary.js)
+### [JavaScript Implementation](./JavaScript/naive.js)
 
 ```js
 to be added
