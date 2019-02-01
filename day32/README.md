@@ -1,6 +1,6 @@
 ![cover](./cover.png)
 
-# Day 31 - Search and Sort Algorithms Part E: Selection Sort
+# Day 32 - Search and Sort Algorithms Part E: Selection Sort
 
 **Source: [GeeksForGeeks](https://www.geeksforgeeks.org/selection-sort/)**
 
