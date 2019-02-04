@@ -27,24 +27,19 @@ output: undefined
 ### [JavaScript Implementation](./JavaScript/binary.js)
 
 ```js
-function binarySearch(arr, elem) {
-    var start = 0;
-    var end = arr.length - 1;
-    var middle = Math.floor((start + end) / 2);
-    while(arr[middle] !== elem && start <= end) {
-        if(elem < arr[middle]){
-            end = middle - 1;
-        } else {
-            start = middle + 1;
-        }
-        middle = Math.floor((start + end) / 2);
+function binary (arr, n) {
+    let left = 0,
+        right = arr.length - 1, mid;
+
+    while (left <= right) {
+        mid = Math.floor((left + right)/2);
+        if (arr[mid] === n)  return mid;
+        else if (arr[mid] < n)  left = mid+1;
+        else right = mid-1;
     }
-    if(arr[middle] === elem){
-        return middle;
-    }
-    return undefined;
+
+    return -1;
 }
 
-console.log (binarySearch ([1, 2, 3, 4, 5, 8, 9], 8));
-console.log (binarySearch ([1, 2, 3, 4, 5, 8, 9], 7));
+console.log (binary ([1, 2, 3, 4, 5, 6, 7, 8, 9], 5)); // 4
 ```
