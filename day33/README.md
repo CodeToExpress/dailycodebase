@@ -1,6 +1,6 @@
 ![cover](./cover.png)
 
-# Day 32 - Search and Sort Algorithms Part F: Insertion Sort
+# Day 33 - Search and Sort Algorithms Part F: Insertion Sort
 
 ## Question
 
