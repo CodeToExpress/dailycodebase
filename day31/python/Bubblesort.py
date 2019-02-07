@@ -1,6 +1,8 @@
+```
 Name:Dipto Chakrabarty
 Topic:Bubble Sort
 Date:1/02/2019
+```
 
 #taking the array and storing in a list
 l=list(map(int,input().split()))
