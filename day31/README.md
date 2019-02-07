@@ -21,7 +21,7 @@ output: [1, 2, 3, 4, 5, 8, 9]
 
 ## Solution
 
-### [JavaScript Implementation](./JavaScript/binary.js)
+### [JavaScript Implementation](./JavaScript/bubble.js)
 
 ```js
 to be added
