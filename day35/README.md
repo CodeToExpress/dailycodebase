@@ -39,7 +39,7 @@ output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 ## Solution
 
-### [JavaScript Implementation](./JavaScript/mergeSort.js)
+### [JavaScript Implementation](./JavaScript/quickSort.js)
 
 ```js
 to be added
@@ -148,3 +148,4 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
