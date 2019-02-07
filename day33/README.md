@@ -34,3 +34,40 @@ function insertionSort(arr){
 
 console.log ( insertionSort ([1, 5, 2, 7, 3, 4, 8, 9, 6]));
 ```
+
+## Java Implementation
+
+### [Solution](./Java/insertionSort.java)
+
+```java
+/**
+ * @date 04/02/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class insertionSort {
+    public static void sort(int arr[])
+    {
+        int i,j,t;
+        for(i=0;i<arr.length;i++)
+        {
+            t=arr[i];
+            j=i-1;
+            while(j>=0 && arr[j]>t) 
+            { 
+                arr[j+1]=arr[j]; 
+                j=j-1; 
+            } 
+            arr[j+1]=t; 
+        }
+        System.out.println("Sorted array is ");
+        for(i=0;i<arr.length;i++)
+            System.out.print(arr[i]+" ");
+    }
+    public static void main(String []args)
+    {
+        int a[]={4,2,7,5,1,6,8};
+        sort(a);
+    }
+}
+```
