@@ -48,3 +48,41 @@ function selectionSort(arr){
 
 console.log ( selectionSort ([1, 5, 2, 7, 3, 4, 8, 9, 6]));
 ```
+
+## Java Implementation
+
+### [Solution](./Java/selectionSort.java)
+
+```java
+/**
+ * @date 01/02/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class selectionSort {
+    public static void main(String []args)
+    {
+        int n,i,j,t,min=0;
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        int arr[]=new int[n];
+        for(i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        for(i=0;i<n;i++)
+        {
+            min=i;
+            for(j=i;j<n;j++)
+            {
+                if(arr[min]>arr[j])
+                    min=j;
+            }
+            t=arr[i];
+            arr[i]=arr[min];
+            arr[min]=t;
+        }
+        System.out.println("The sorted array is: ");
+        for(i=0;i<n;i++)
+            System.out.print(arr[i]+" ");
+    }
+}
+```
