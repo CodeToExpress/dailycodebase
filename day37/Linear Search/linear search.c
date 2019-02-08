@@ -1,6 +1,7 @@
 #include<stdio.h>
 int main()
 {
+	/* @author Rutuja Rajesh */
 	int a[20],i,x,n;
 	printf("Enter the valu of n");
 	scanf("%d",&n);
