@@ -57,6 +57,13 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 | [Day 27](./day27) | [The Minesweeper Problem](./day27) | [http://codetoexpress.tech/dc/day27/](http://codetoexpress.tech/dc/day27/) | **Advanced** |
 | [Day 28](./day28) | [Linear Search](./day28) | [http://codetoexpress.tech/dc/day28/](http://codetoexpress.tech/dc/day28/) | **Beginner** |
 | [Day 29](./day29) | [Binary Search](./day29) | [http://codetoexpress.tech/dc/day29/](http://codetoexpress.tech/dc/day29/) | **Intermediate** |
+| [Day 30](./day30) | [Naive Search](./day30) | [http://codetoexpress.tech/dc/day30/](http://codetoexpress.tech/dc/day30/) | **Intermediate** |
+| [Day 31](./day31) | [Bubble Sort](./day31) | [http://codetoexpress.tech/dc/day31/](http://codetoexpress.tech/dc/day31/) | **Beginner** |
+| [Day 32](./day32) | [Selection Sort](./day32) | [http://codetoexpress.tech/dc/day32/](http://codetoexpress.tech/dc/day32/) | **Intermediate** |
+| [Day 33](./day32) | [Insertion Sort](./day33) | [http://codetoexpress.tech/dc/day33/](http://codetoexpress.tech/dc/day33/) | **Beginner** |
+| [Day 34](./day34) | [Merge Sort](./day34) | [http://codetoexpress.tech/dc/day34/](http://codetoexpress.tech/dc/day34/) | **Intermediate** |
+| [Day 35](./day35) | [Quick Sort](./day35) | [http://codetoexpress.tech/dc/day35/](http://codetoexpress.tech/dc/day35/) | **Intermediate** |
+| [Day 36](./day35) | [Radix Sort](./day36) | [http://codetoexpress.tech/dc/day36/](http://codetoexpress.tech/dc/day36/) | **Intermediate** |
 
 ## [More Problems](./BONUS/README.md)
 
