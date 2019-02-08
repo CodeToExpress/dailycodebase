@@ -1,0 +1,31 @@
+#include <iostream>
+#include<string>
+using namespace std;
+int hammingDistance(string str1,string str2)
+{
+    int c;
+    c=0;
+    if(str1.size() !=str2.size())
+    {
+        return -1;
+    }
+    else
+    {
+        for(int i=0;i<str1.size();i++)
+        {
+            if(str1[i]!=str2[i])
+            {
+                c++;
+            }
+        }
+    }
+    return c;
+    
+}
+int main() {
+	string str1,str2;
+	cin>>str1;
+	cin>>str2;
+    cout<<"Hamming Distance = "<<hammingDistance(str1,str2);
+	return 0;
+}

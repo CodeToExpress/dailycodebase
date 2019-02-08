@@ -1,4 +1,4 @@
-![cover](./cover.png)
+﻿![cover](./cover.png)
 
 # Day 19 - Array Series Part 2
 
@@ -93,6 +93,7 @@ console.log (cartesian ([1, 2], [3, 4]));
 console.log (cartesian ([1, 2], []));
 console.log (cartesian ([1, 2, 3, 4], ['a', 'b', 'c']));
 ```
+## Java Implementation
 
 ### C++ Implementation
 
@@ -125,12 +126,187 @@ int main() {
 	    {
 	        cout << arr1[l] << "," << arr2[k] << endl;
 	    }
+  }
+	return 0;
+}
+```
+
+### [Solution](./Java/cartesianProd.java)
+
+```java
+/**
+ * @date 15/01/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class cartesianProd {
+    public static void prod(int n,int arr2[])
+    {
+        for(int i=0;i<arr2.length;i++)
+            System.out.println("{"+n+","+arr2[i]+"}");
+    }
+    public static void main(String []args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter size of the 2 sets");
+        int m=sc.nextInt();
+        int n=sc.nextInt();
+        int arr1[]=new int[m];
+        int arr2[]=new int[n];
+        System.out.println("Enter elements for first set");
+        for(int i=0;i<m;i++)
+            arr1[i]=sc.nextInt();
+        System.out.println("Enter elements for second set");
+        for(int i=0;i<n;i++)
+            arr2[i]=sc.nextInt();
+        for(int i=0;i<m;i++)
+            prod(arr1[i],arr2);
+    }
+}
+```
+
+### C++ Implementation
+
+#### [Solution by @divyakhetan](./C++/CartesianProductDay19.cpp)
+
+```cpp
+/**
+ * @author divyakhetan
+ * @date 16/1/2019
+ */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	cout << "Enter length of 1st and 2nd array";
+	int n1, n2;	
+	cin >> n1 >> n2;
+	int a[n1];
+	int b[n2];
+	for(int i = 0; i < n1; i++){
+		cin >> a[i];
+		
+	}
+	
+	for(int i = 0; i < n2; i++){
+		cin >> b[i];
+	}
+	
+	for(int i = 0; i < n1; i++){
+		for(int j = 0; j < n2; j++){
+			cout << "[ " << a[i]  << " " << b[j] << " ] " << endl;
+		}
 	}
 	return 0;
 }
 ```
 
+### Python Implementation
+
+### [Solution](./Python/cartesian_product.py)
+
+```python
+'''
+@author: aaditkamat
+@date: 15/1/2019
+'''
+import sys
+sys.path.append('../../day18/Python')
+
+from frequency_counter import convert_input_array_to_list
+
+def get_input(word):
+    print (f'Enter set {word}: ', end='')
+    input_array = input()
+    lst = convert_input_array_to_list(input_array)
+    return set(lst)
+
+def calculate_cartesian_product(first_set, second_set):
+    result = []
+    for num in first_set:
+        for other in second_set:
+            result.append([num, other])
+    print(result)
+
+def main():
+    set_A = get_input('A')
+    set_B = get_input('B')
+    calculate_cartesian_product(set_A, set_B)
+```
+
+### Python Implementation
+
+### [Solution](./Python/cartesian_product.py)
+
+```python
+'''
+@author: aaditkamat
+@date: 15/1/2019
+'''
+import sys
+sys.path.append('../../day18/Python')
+
+from frequency_counter import convert_input_array_to_list
+
+def get_input(word):
+    print (f'Enter set {word}: ', end='')
+    input_array = input()
+    lst = convert_input_array_to_list(input_array)
+    return set(lst)
+
+def calculate_cartesian_product(first_set, second_set):
+    result = []
+    for num in first_set:
+        for other in second_set:
+            result.append([num, other])
+    print(result)
+
+def main():
+    set_A = get_input('A')
+    set_B = get_input('B')
+    calculate_cartesian_product(set_A, set_B)
+```
+
 ***
+
+### Python Implementation
+
+#### [Solution by @vishalshirke7](./Python/Cartesian.py)
+
+```python
+"""
+  @author : vishalshirke7
+  @date : 15/01/2019
+"""
+
+import itertools
+
+
+def cartesian1(*iplists):   # method 1 using product function
+    for element in itertools.product(*iplists):
+        print(element)
+
+
+def cartesian2(ip1, ip2):   # method 2 using iteration
+    if not ip1 or not ip2:
+        return None
+    cartesian_product = []
+    for i in ip1:
+        for j in ip2:
+            cartesian_product.append((i, j))
+
+    return cartesian_product
+
+
+ip1 = list(map(int, input().split()))
+ip2 = list(map(int, input().split()))
+cartesian1(ip1, ip2)
+cartesian = cartesian2(ip1, ip2)
+for i in cartesian:
+    print(i)
+```
+
 
 ## Ques B
 
@@ -215,4 +391,105 @@ int main() {
 
 	return 0;
 }
+```
+
+## Java Implementation
+
+### [Solution](./Java/FisheYates.java)
+
+```java
+/**
+ * @date 15/01/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class FisheYates {
+    public static void main(String []args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n,i,rd,t;
+        n=sc.nextInt();
+        int arr[]=new int[n];
+        for(i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        for(i=n-1;i>=0;i--)
+        {
+                Random r = new Random();
+                rd=r.nextInt(n);
+                t=arr[rd];
+                arr[rd]=arr[i];
+                arr[i]=t;
+        }
+        System.out.print("Shuffled array is :");
+        for(i=0;i<n;i++)
+            System.out.print(arr[i]+" ");
+    }
+}
+```
+
+### C++ Implementation
+
+#### [Solution ](./C++/FisherYateShuffleDay19.cpp)
+
+```cpp
+/**
+ * @author divyakhetan
+ * @date 16/1/2019
+ */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	cout << "Enter length of 1st and 2nd array";
+	int n1, n2;	
+	cin >> n1 >> n2;
+	int a[n1];
+	int b[n2];
+	for(int i = 0; i < n1; i++){
+		cin >> a[i];
+		
+	}
+	
+	for(int i = 0; i < n2; i++){
+		cin >> b[i];
+	}
+	
+	for(int i = 0; i < n1; i++){
+		for(int j = 0; j < n2; j++){
+			cout << "[ " << a[i]  << " " << b[j] << " ] " << endl;
+		}
+	}
+	return 0;
+}
+```
+
+### Python implementation
+
+#### [Solution](./Python/fisher_yates.py)
+
+```python
+'''
+@author: aaditkamat
+@date: 15/1/2019
+'''
+import sys
+sys.path.append('../../day18/Python')
+
+from frequency_counter import convert_input_array_to_list, handle_input
+from random import randint
+
+def fisher_yates(lst):
+    for i in range(len(lst) - 1, 0, -1):
+        swap_index = randint(0, i)
+        temp = lst[swap_index]
+        lst[swap_index] = lst[i]
+        lst[i] = temp
+    print(lst)
+
+def main():
+    lst = handle_input('an')
+    fisher_yates(lst)
+
+main()
 ```
