@@ -24,27 +24,47 @@ Read [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
 
 ## Code Today!
 
-1. [Day 1 -- The Fizz Buzz Problem](./Day1/) -- [http://codetoexpress.tech/dc/day1](http://codetoexpress.tech/dc/day1)
-2. [Day 2 -- String Reversal + Palindrome](./Day2/) -- [http://codetoexpress.tech/dc/day2/](http://codetoexpress.tech/dc/day2)
-3. [Day 3 -- The Hamming Distance Problem](./Day3/) -- [http://codetoexpress.tech/dc/day3/](http://codetoexpress.tech/dc/day3/)
-4. [Day 4 -- Num Vowels + Max Chars](./day4/) -- [http://codetoexpress.tech/dc/day4/](http://codetoexpress.tech/dc/day4/)
-5. [Day 5 -- Pattern Printing Problems](./day5/) -- [http://codetoexpress.tech/dc/day5/](http://codetoexpress.tech/dc/day5/)
-6. [Day 6 -- Sentence Cap + Word Reversal + Anagram](./day6/) -- [http://codetoexpress.tech/dc/day6/](http://codetoexpress.tech/dc/day6/)
-7. [Day 7 -- One Edit Away](./day7/) -- [http://codetoexpress.tech/dc/day7/](http://codetoexpress.tech/dc/day7/)
-8. [Day 8 -- Minimum Edit Distance](./day8/) -- [http://codetoexpress.tech/dc/day8/](http://codetoexpress.tech/dc/day8/)
-9. [Day 9 -- Smallest Substring Problem](./day9/) -- [http://codetoexpress.tech/dc/day9/](http://codetoexpress.tech/dc/day9/)
-10. [Day 10 -- String Permutation Problem](./day10/) -- [http://codetoexpress.tech/dc/day10/](http://codetoexpress.tech/dc/day10/)
-11. [Day 11 -- Longest Common Substring](./day11/) -- [http://codetoexpress.tech/dc/day11/](http://codetoexpress.tech/dc/day11/)
-12. [Day 12 -- Substring Search Algorithms](./day12/) -- [http://codetoexpress.tech/dc/day12/](http://codetoexpress.tech/dc/day12/)
-13. [Day 13 -- Factorial and Fibonacci](./day13/) -- [http://codetoexpress.tech/dc/day13/](http://codetoexpress.tech/dc/day13/)
-14. [Day 14 -- Sum of digits and product of numbers](./day14) -- [http://codetoexpress.tech/dc/day14/](http://codetoexpress.tech/dc/day14/)
-15. [Day 15 -- Pascal's Triangle](./day15) -- [http://codetoexpress.tech/dc/day15/](http://codetoexpress.tech/dc/day15/)
-16. [Day 16 -- Tower of Hanoi](./day16) -- [http://codetoexpress.tech/dc/day16/](http://codetoexpress.tech/dc/day16/)
-17. [Day 17 -- N Queens Problem](./day17) -- [http://codetoexpress.tech/dc/day17/](http://codetoexpress.tech/dc/day17/)
-18. [Day 18 -- Frequency Count and Check Power N](./day18) -- [http://codetoexpress.tech/dc/day18/](http://codetoexpress.tech/dc/day18/)
-19. [Day 19 -- Cartesian Product and Shuffle Algorithm](./day19) -- [http://codetoexpress.tech/dc/day19/](http://codetoexpress.tech/dc/day19/)
-20. [Day 20 -- Array Partition](./day20) -- [http://codetoexpress.tech/dc/day20/](http://codetoexpress.tech/dc/day20/)
-21. [Day 21 -- Pair Sum N and Max Subarray Sum](./day21) -- [http://codetoexpress.tech/dc/day21/](http://codetoexpress.tech/dc/day21/)
+Motivate yourself to code daily till 60 days, and see the magic! Coding will become your habit, and your skills will increase.
+
+| Day Number | Topic | Website Link | Difficulty |
+| ---------- | ----- | ------------ | ---------: |
+| [Day 1](./Day1) | [The Fizz Buzz Problem](./Day1/) | [http://codetoexpress.tech/dc/day1](http://codetoexpress.tech/dc/day1/) | **Beginner** |
+| [Day 2](./Day2) | [String Reversal + Palindrome](./Day2/) | [http://codetoexpress.tech/dc/day2/](http://codetoexpress.tech/dc/day2/) | **Beginner** |
+| [Day 3](./Day3) | [The Hamming Distance Problem](./Day3/) | [http://codetoexpress.tech/dc/day3/](http://codetoexpress.tech/dc/day3/) | **Beginner** |
+| [Day 4](./day4) | [Num Vowels + Max Chars](./day4/) | [http://codetoexpress.tech/dc/day4/](http://codetoexpress.tech/dc/day4/) | **Intermediate** |
+| [Day 5](./day5) | [Pattern Printing Problems](./day5/) | [http://codetoexpress.tech/dc/day5/](http://codetoexpress.tech/dc/day5/) | **Intermediate** |
+| [Day 6](./day6) | [Sentence Cap + Word Reversal + Anagram](./day6/) | [http://codetoexpress.tech/dc/day6/](http://codetoexpress.tech/dc/day6/) | **Intermediate** |
+| [Day 7](./day7) |[One Edit Away](./day7/) | [http://codetoexpress.tech/dc/day7/](http://codetoexpress.tech/dc/day7/) | **Advanced** |
+| [Day 8](./day8) | [Minimum Edit Distance](./day8/) | [http://codetoexpress.tech/dc/day8/](http://codetoexpress.tech/dc/day8/) | **Intermediate** |
+| [Day 9](./day9) | [Smallest Substring Problem](./day9/) | [http://codetoexpress.tech/dc/day9/](http://codetoexpress.tech/dc/day9/) | **Advanced** |
+| [Day 10](./day10) |  [String Permutation Problem](./day10/) | [http://codetoexpress.tech/dc/day10/](http://codetoexpress.tech/dc/day10/) | **Advanced** |
+| [Day 11](./day11) | [Longest Common Substring](./day11/) | [http://codetoexpress.tech/dc/day11/](http://codetoexpress.tech/dc/day11/) | **Advanced** |
+| [Day 12](./day12) | [Substring Search Algorithms](./day12/) | [http://codetoexpress.tech/dc/day12/](http://codetoexpress.tech/dc/day12/) | **Advanced** |
+| [Day 13](./day13) | [Factorial and Fibonacci](./day13/) | [http://codetoexpress.tech/dc/day13/](http://codetoexpress.tech/dc/day13/) | **Beginner** |
+| [Day 14](./day14) | [Sum of digits and product of numbers](./day14) | [http://codetoexpress.tech/dc/day14/](http://codetoexpress.tech/dc/day14/) | **Beginner** |
+| [Day 15](./day15) | [Pascal's Triangle](./day15) | [http://codetoexpress.tech/dc/day15/](http://codetoexpress.tech/dc/day15/) | **Intermediate** |
+| [Day 16](./day16) | [Tower of Hanoi](./day16) | [http://codetoexpress.tech/dc/day16/](http://codetoexpress.tech/dc/day16/) | **Intermediate** |
+| [Day 17](./day17) | [N Queens Problem](./day17) | [http://codetoexpress.tech/dc/day17/](http://codetoexpress.tech/dc/day17/) | **Advanced** |
+| [Day 18](./day18) | [Frequency Count and Check Power N](./day18) | [http://codetoexpress.tech/dc/day18/](http://codetoexpress.tech/dc/day18/) | **Beginner** |
+| [Day 19](./day19) | [Cartesian Product and Shuffle Algorithm](./day19) | [http://codetoexpress.tech/dc/day19/](http://codetoexpress.tech/dc/day19/) | **Intermediate** |
+| [Day 20](./day20) | [Array Partition](./day20) | [http://codetoexpress.tech/dc/day20/](http://codetoexpress.tech/dc/day20/) | **Intermediate** |
+| [Day 21](./day21) | [Pair Sum N and Max Subarray Sum](./day21) | [http://codetoexpress.tech/dc/day21/](http://codetoexpress.tech/dc/day21/) | **Intermediate** |
+| [Day 22](./day22) | [Common Elements Search](./day22) | [http://codetoexpress.tech/dc/day22/](http://codetoexpress.tech/dc/day22/) | **Intermediate** |
+| [Day 23](./day23) | [Combination Sum](./day23) | [http://codetoexpress.tech/dc/day23/](http://codetoexpress.tech/dc/day23/) | **Advanced** |
+| [Day 24](./day24) | [Array Circular Rotation](./day24) | [http://codetoexpress.tech/dc/day24/](http://codetoexpress.tech/dc/day24/) | **Intermediate** |
+| [Day 25](./day25) | [Rotate Square Tile](./day25) | [http://codetoexpress.tech/dc/day25/](http://codetoexpress.tech/dc/day25/) | **Intermediate** |
+| [Day 26](./day26) | [Spiral Generation and Copy](./day26) | [http://codetoexpress.tech/dc/day26/](http://codetoexpress.tech/dc/day26/) | **Advanced** |
+| [Day 27](./day27) | [The Minesweeper Problem](./day27) | [http://codetoexpress.tech/dc/day27/](http://codetoexpress.tech/dc/day27/) | **Advanced** |
+| [Day 28](./day28) | [Linear Search](./day28) | [http://codetoexpress.tech/dc/day28/](http://codetoexpress.tech/dc/day28/) | **Beginner** |
+| [Day 29](./day29) | [Binary Search](./day29) | [http://codetoexpress.tech/dc/day29/](http://codetoexpress.tech/dc/day29/) | **Intermediate** |
+| [Day 30](./day30) | [Naive Search](./day30) | [http://codetoexpress.tech/dc/day30/](http://codetoexpress.tech/dc/day30/) | **Intermediate** |
+| [Day 31](./day31) | [Bubble Sort](./day31) | [http://codetoexpress.tech/dc/day31/](http://codetoexpress.tech/dc/day31/) | **Beginner** |
+| [Day 32](./day32) | [Selection Sort](./day32) | [http://codetoexpress.tech/dc/day32/](http://codetoexpress.tech/dc/day32/) | **Intermediate** |
+| [Day 33](./day32) | [Insertion Sort](./day33) | [http://codetoexpress.tech/dc/day33/](http://codetoexpress.tech/dc/day33/) | **Beginner** |
+| [Day 34](./day34) | [Merge Sort](./day34) | [http://codetoexpress.tech/dc/day34/](http://codetoexpress.tech/dc/day34/) | **Intermediate** |
+| [Day 35](./day35) | [Quick Sort](./day35) | [http://codetoexpress.tech/dc/day35/](http://codetoexpress.tech/dc/day35/) | **Intermediate** |
+| [Day 36](./day36) | [Radix Sort](./day36) | [http://codetoexpress.tech/dc/day36/](http://codetoexpress.tech/dc/day36/) | **Intermediate** |
+| [Day 37](./day37) | [Search and Sort Applications](./day37) | [http://codetoexpress.tech/dc/day37/](http://codetoexpress.tech/dc/day37/) | **Misc** |
 
 ## [More Problems](./BONUS/README.md)
 
@@ -92,9 +112,25 @@ In case you just want to contribute a question and not code, there is no need to
 7. [**Linked Lists**](./BONUS/LinkedLists/README.md)
 8. [**Trees**](./BONUS/Trees/README.md)
 9. [**Graphs**](./BONUS/Graphs/README.md)
+10. [**Misc Questions**](./BONUS/Misc/README.md)
+11. [**Object Oriented Programming**](./BONUS/OOPS/README.md)
+
+## Problems on Time and Space Complexity
+
+## EXTRA - Past Interview Questions
+
+Here are some of the questions asked previously in major companies like Google, Amazon, Facebook, Microsoft etc.
+
+```
+To Be Added
+```
 
 ## Timeline
 
 <p align="center">
   <img src="./timeline.png" alt="timeline">
 </p>
+
+## Disclaimer
+
+I do not own the rights to the questions I will discuss in this Daily Codes initiative. The questions have been collected from various sources and I do not know who created all those questions. If you think you are the owner of any question or any code, send me an email at codetoexpress@gmail.com, I will be more than happy to give the appropriate credits.

@@ -95,6 +95,44 @@ console.log (pairSumN ([-1, 4, 5, 5, 6, 7, 8], 10));
 console.log (pairSumN ([1, 2, 3, 4, 5, 6], 20));
 ```
 
+## Ruby Implementation
+
+### [Solution](./Ruby/pair_sum_n.rb)
+
+```ruby
+=begin
+@author: aaditkamat
+@date: 17/01/2019
+=end
+def pair_sum(arr, num)
+  map = {}
+  arr.size.times do |i|
+    map[arr[i]] = num - arr[i]
+  end
+  map.size.times do |i|
+    if map.has_key?(map[arr[i]])
+      puts [arr[i], map[arr[i]]]
+      return
+    end
+  end
+  puts []
+end
+
+def handle_input
+  print "Enter an array: "
+  arr = gets.chomp!.gsub(/\]|\[/, '').split(',').map!{|ele| ele.to_i}
+  print "Enter a number: "
+  num = gets.chomp!.to_i
+  [arr, num]
+end
+
+def main
+  puts "** Pair Sum N problem **"
+  arr, num = handle_input
+  pair_sum(arr, num)
+end
+```
+
 ***
 
 ## Question 2 - Max Subarray Sum
@@ -162,4 +200,59 @@ function maxSubarraySum (arr, n) {
 }
 
 console.log (maxSubarraySum ([1, 3, 2, 4, 7, 5, 4], 3)); // 16
+```
+
+## JavaScript Implementation
+
+### [Solution 1 by @MadhavBahlMD](./JavaScript/pairSumN1.js)
+
+```js
+/**
+ * @author MadhavBahlMD
+ * @date 17/01/2019
+ * Method used -- bruteforce search (Iteration using nested loops)
+ */
+
+function pairSumN (arr, num) {
+    let pairArray = [];
+
+    for (let i=0; i<arr.length-1; i++)
+        for (let j=i+1; j<arr.length; j++) {
+            if (arr[i] + arr[j] === num) {
+                pairArray.push (arr[i], arr[j]);
+                return pairArray;
+            }
+        }
+    
+    return pairArray;
+}
+
+console.log (pairSumN ([-3, -2, -1, 0, 1, 2, 3], 0));
+console.log (pairSumN ([-1, 4, 5, 5, 6, 7, 8], 10));
+console.log (pairSumN ([1, 2, 3, 4, 5, 6], 20));
+```
+
+## Ruby Implementation
+
+### [Solution](./Ruby/max_subarray_sum.rb)
+
+```ruby
+=begin
+@author: aaditkamat
+@date: 17/01/2019
+=end
+require_relative 'pair_sum_n'
+
+def max_subarray_sum(arr, num)
+  #sort array in descending order
+  arr.sort!{|x, y| y <=> x}
+  print arr.take(num).sum
+end
+def main
+  puts "** Max Subarray problem **"
+  arr, num = handle_input
+ max_subarray_sum(arr, num)
+end
+
+main
 ```
