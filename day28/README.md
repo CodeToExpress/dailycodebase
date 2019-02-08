@@ -28,7 +28,7 @@ output: undefined
 
 ```js
 function linearSearch (arr, n) {
-    for (let i=0; i<arr.length; i++) 
+    for (let i=0; i<arr.length; i++)
         if (arr[i] === n)
             return i;
 
@@ -55,14 +55,14 @@ public class linearSearch1 {
         Scanner sc=new Scanner(System.in);
         int n;int i;int p,c=-1;
         System.out.println("Enter size and array elements");
-        n=sc.nextInt();   
+        n=sc.nextInt();
         int arr[]=new int[n];
         for(i=0;i<n;i++)
             arr[i]=sc.nextInt();
         System.out.println("Enter element to be found");
         p=sc.nextInt();
         for(i=0;i<n;i++)
-           if(arr[i]==p) 
+           if(arr[i]==p)
            {
                c=i;
                break;
@@ -75,8 +75,44 @@ public class linearSearch1 {
 }
 ```
 
-## C Implementation
+## C++ Implementation
 
+### [Solution](./C++/linearSearch.cpp)
+
+```cpp
+
+/*
+* @author : imkaka
+* @date   : 29/1/2019
+*/
+
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+int linearSearch(vector<int> arr, int val){
+
+    int size = arr.size();
+    for(int i = 0; i < size; ++i){
+        if(arr[i] == val)
+          return i;
+     return -1;
+     }
+        
+ int main(){
+
+    vector<int> arr = {1, 2, 5, 10, 6, 100};
+    vector<int> arr2 = {500, 22, 101, 10, 6, 0};
+    int val = 10;
+    int val2 = 1;
+
+    cout << linearSearch(arr, val) << endl;
+    cout << linearSearch(arr2, val2) << endl;
+    return 0;
+}
+```
+## C Implementation
 ### [Solution](./C/Linear_Search.c)
 
 ```c
