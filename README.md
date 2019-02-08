@@ -63,7 +63,8 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 | [Day 33](./day32) | [Insertion Sort](./day33) | [http://codetoexpress.tech/dc/day33/](http://codetoexpress.tech/dc/day33/) | **Beginner** |
 | [Day 34](./day34) | [Merge Sort](./day34) | [http://codetoexpress.tech/dc/day34/](http://codetoexpress.tech/dc/day34/) | **Intermediate** |
 | [Day 35](./day35) | [Quick Sort](./day35) | [http://codetoexpress.tech/dc/day35/](http://codetoexpress.tech/dc/day35/) | **Intermediate** |
-| [Day 36](./day35) | [Radix Sort](./day36) | [http://codetoexpress.tech/dc/day36/](http://codetoexpress.tech/dc/day36/) | **Intermediate** |
+| [Day 36](./day36) | [Radix Sort](./day36) | [http://codetoexpress.tech/dc/day36/](http://codetoexpress.tech/dc/day36/) | **Intermediate** |
+| [Day 37](./day37) | [Radix Sort](./day37) | [http://codetoexpress.tech/dc/day37/](http://codetoexpress.tech/dc/day37/) | **Misc** |
 
 ## [More Problems](./BONUS/README.md)
 
