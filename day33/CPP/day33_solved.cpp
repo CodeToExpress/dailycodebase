@@ -1,3 +1,8 @@
+/*
+  Author: Shubhendra Singh
+  Github: shubhendra-20
+*/
+
 #include<iostream>
 using namespace std;
  
