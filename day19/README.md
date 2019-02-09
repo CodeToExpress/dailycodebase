@@ -95,6 +95,42 @@ console.log (cartesian ([1, 2, 3, 4], ['a', 'b', 'c']));
 ```
 ## Java Implementation
 
+### C++ Implementation
+
+#### [Solution 1](./C++/day19a.cpp)
+
+```cpp
+/*
+* @author : dhruv-gupta14
+* @date : 15/01/2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n,m;
+	cin >> n >> m;
+	int arr1[n];
+	int arr2[m];
+	
+	for(int i=0;i<n;i++)
+	    cin >> arr1[i];
+	    
+	for(int j=0;j<m;j++)
+	    cin >> arr2[j];
+	    
+	for(int l=0;l<n;l++)
+	{
+	    for(int k=0;k<m;k++)
+	    {
+	        cout << arr1[l] << "," << arr2[k] << endl;
+	    }
+  }
+	return 0;
+}
+```
+
 ### [Solution](./Java/cartesianProd.java)
 
 ```java
@@ -169,6 +205,7 @@ int main(){
 ### Python Implementation
 
 ### [Solution](./Python/cartesian_product.py)
+
 ```python
 '''
 @author: aaditkamat
@@ -201,6 +238,7 @@ def main():
 ### Python Implementation
 
 ### [Solution](./Python/cartesian_product.py)
+
 ```python
 '''
 @author: aaditkamat
@@ -229,6 +267,7 @@ def main():
     set_B = get_input('B')
     calculate_cartesian_product(set_A, set_B)
 ```
+
 ***
 
 ### Python Implementation
@@ -312,6 +351,46 @@ function fisherYates (arr) {
 }
 
 fisherYates ([1, 2, 3, 4, 5, 6]);
+```
+
+### C++ Implementation
+
+#### [Solution 1](./C++/day19b.cpp)
+
+```cpp
+/*
+* @author : dhruv-gupta14
+* @date : 15/01/2019
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int arr1[n];
+	
+	for(int i=0;i<n;i++)
+	    cin >> arr1[i];
+	    
+    int temp=0;
+    int random_index = 0;
+    
+    for(int j=0;j<n;j++)
+    {
+        random_index = rand() % n;
+        temp = arr1[j];
+        arr1[j] = arr1[random_index];
+        arr1[random_index] = temp;
+    }
+    
+    for(int k=0;k<n;k++)
+        cout << arr1[k] << " ";
+	    
+
+	return 0;
+}
 ```
 
 ## Java Implementation

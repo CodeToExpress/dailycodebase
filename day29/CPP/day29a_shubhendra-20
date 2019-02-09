@@ -1,0 +1,44 @@
+/*
+   Author: Shubhendra Singh
+   Github: shubhendra-20
+*/
+
+#include <iostream>
+using namespace std;
+
+int binarySearch(int arr[], int l, int r, int x) 
+{ 
+    while (l <= r) { 
+        int mid = l + (r - l) / 2; 
+        if (arr[mid] == x) 
+            return mid; 
+
+        if (arr[mid] < x) 
+            l = mid + 1; 
+        else
+            r = mid - 1; 
+    } 
+  
+    return -1; 
+} 
+int main()
+{
+    int n,i,x;
+    cin>>n;
+    int a[n];
+     for(i=0;i<n;i++)
+     {
+         cin>>a[i];
+     }
+     cin>>x;
+     int k= binarySearch(a,0,n-1,x);
+     if(k==-1)
+     {
+         cout<<"element not found";
+     }
+     else
+     {
+         cout<<"element found at index "<<k+1;
+     }
+  return 0;
+}

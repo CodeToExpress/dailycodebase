@@ -186,6 +186,68 @@ int main()
     return 0;
 }
 ```
+
+## Java Implementation
+
+### [Solution](./Java/Common2.java)
+
+```java
+/**
+ * @date 30/01/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class Common2 {
+    public static void findcommon(int a[],int b[])
+    {
+        int i=0,j=0;
+        while(true)
+        {
+            if(a[i]>b[j])
+                j++;
+            else if(a[i]<b[j])
+                i++;
+            else
+            {
+                if(i==0||j==0)
+                    System.out.print(a[i]+" ");
+                if(i!=0 && a[i]!=a[i-1] && j!=0 && b[j]!=b[j-1])
+                {
+                    System.out.print(a[i]+" ");
+                    i++;
+                    j++;
+                }
+                else
+                {
+                    i++; j++;
+                }
+            }
+            if(i==a.length || j==b.length)
+                break;
+        }
+    }
+    public static void main(String []args)
+    {
+        int n,m,i;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter size of first array ");
+        n=sc.nextInt();
+        int a[]=new int[n];
+        for(i=0;i<n;i++)
+            a[i]=sc.nextInt();
+        System.out.println("Enter size of second array ");
+        m=sc.nextInt();
+        int b[]=new int[m];
+        for(i=0;i<m;i++)
+            b[i]=sc.nextInt();
+        System.out.println("Common elements are ");
+        Arrays.sort(a);
+        Arrays.sort(b);
+        findcommon(a,b);
+    }
+}
+```
+
 ## Question 2
 
 ## JavaScript Implementation
@@ -282,4 +344,57 @@ function searchCommonElements (arr1, arr2, arr3) {
 }
 
 console.log (searchCommonElements ([1, 2, 4, 6, 7, 9, 11, 14, 15], [2, 3, 4, 5, 6, 7, 8, 9], [2, 4, 6, 8])); // [2, 4, 6]
+```
+
+## Java Implementation
+
+### [Solution](./Java/Common3.java)
+
+```java
+/**
+ * @date 30/01/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class Common3 {
+    public static void findcommon(int a[],int b[],int c[])
+    {
+        int i=0,j=0,k=0;
+        while(true)
+        {
+            if(a[i]==b[j] && b[j]==c[k])
+                System.out.print(a[i]+" ");
+            if(a[i]<b[j])
+                i++;
+            else if(b[j]<c[k])
+                j++;
+            else
+                k++;
+            if(i==a.length || j==b.length || k==c.length)
+                break;
+        }
+    }
+    public static void main(String []args)
+    {
+        int n,m,k,i;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter size of first array ");
+        n=sc.nextInt();
+        int a[]=new int[n];
+        for(i=0;i<n;i++)
+            a[i]=sc.nextInt();
+        System.out.println("Enter size of second array ");
+        m=sc.nextInt();
+        int b[]=new int[m];
+        for(i=0;i<m;i++)
+            b[i]=sc.nextInt();
+        System.out.println("Enter size of third array ");
+        k=sc.nextInt();
+        int c[]=new int[k];
+        for(i=0;i<k;i++)
+            c[i]=sc.nextInt();
+        System.out.println("Common elements are ");
+        findcommon(a,b,c);
+    }
+}
 ```
