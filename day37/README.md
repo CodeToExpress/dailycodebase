@@ -85,7 +85,7 @@ int main()
 ```
 ## Question
 
-Linear Search
+Binary Search
 
 **Example**
 ```
