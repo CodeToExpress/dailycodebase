@@ -2,4 +2,6 @@
 
 Some more problems on Strings!
 
-To Be Added...
+## Questions
+
+1. [WAP to find the number of times a given word occurs in the sentence](./CountWordFrequency/)

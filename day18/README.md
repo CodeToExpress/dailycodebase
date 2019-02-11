@@ -216,6 +216,42 @@ for v,c in count.items():
 	print("\'" + str(v) + "\' is present " + str(c) + " time(s)")
 ```
 
+### [Solution 2](./Python/frequency_counter.py)
+
+```python
+"""
+author: @aaditkamat
+date: 15/01/2019
+"""
+def count_frequencies(lst):
+  frequency_dictionary = {}
+  
+  for num in lst:
+    if num not in frequency_dictionary:
+      frequency_dictionary[num] = 1
+    else:
+      frequency_dictionary[num] += 1
+
+  for key in frequency_dictionary:
+    print(f'\'{key}\' is present {frequency_dictionary[key]} time(s)')
+
+def get_input(word):
+  print(f'Enter {word} input array: ', end='')
+  input_array = input()
+  return input_array
+
+def handle_input(word):
+  input_array = get_input(word)
+  return convert_input_array_to_list(input_array)
+
+def convert_input_array_to_list(input_array):
+  return list(map(lambda x: int(x), input_array.strip('[').strip(']').split(',')))
+
+def main():
+  lst = handle_input('an')
+  count_frequencies(lst)
+```
+
 ***
 
 ## Question 2 -- Count Uniques
@@ -432,6 +468,26 @@ def countUniques(data):
 
 data = [1, 1, 2, 2, 2, 3, 4, 4, 4, 4, 4, 5, 5, 5, 6, 7]
 print("Number of unique elements =", countUniques(data))
+```
+
+#### [Solution 2](./Python/count_uniques.py)
+
+```python
+'''
+@author: aaditkamat
+@date: 15/01/2019
+'''
+from frequency_counter import handle_input, count_frequencies
+
+def count_uniques(frequency_dictionary):
+  print(f'Number of unique elements = {len(frequency_dictionary)}')
+
+def main():
+  lst = handle_input('an')
+  frequency_dictionary = count_frequencies(lst)
+  count_uniques(frequency_dictionary)
+  
+main()
 ```
 
 ***
@@ -693,4 +749,36 @@ arr2 = [1, 2, 3]
 n = 4
 print("arr1 =", arr1, "arr2 =", arr2, "n =", n)
 print("output = ", checkPowerN(arr1, arr2, n))
+```
+
+### Python Implementation
+
+#### [Solution 2](./Python/check_power_n.py)
+```python
+'''
+@author:aaditkamat
+@date: 15/01/2019
+'''
+from frequency_counter import handle_input
+
+"""
+I wrote a one liner for the check_power_n function thanks to python's generators which is quite messy ;-) 
+print(len(list(filter(lambda x: x == 1, map(lambda x: len([num for num in first if x == num ** N]), second)))) == len(second))
+"""
+def check_power_n(first, second, N):
+  count = 0
+  for num in first:
+    for x in second:
+      if x == num ** N:
+        count += 1
+  print(count == len(second))
+
+def main():
+  first = handle_input('first')
+  second = handle_input('second')
+  print('Enter a number: ', end='')
+  N = int(input())
+  check_power_n(first, second, N)
+
+main()
 ```

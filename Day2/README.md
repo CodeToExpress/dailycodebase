@@ -222,6 +222,39 @@ public class Reverse {
 }
 ```
 
+### [Solution by @nomitpahuja] (./Java/ReverseString.java)
+
+```java
+/*
+ * @author Nomit Pahuja
+ * date: 29/01/2018
+ */
+
+import java.util.Scanner;
+
+ public class ReverseString {
+    
+    public static String reverseString(String word, int length){
+        String reverseWord = "";
+        for(int i=length-1; i>=0; i--){
+            reverseWord += word.charAt(i);
+        }
+        return reverseWord;
+    }
+    
+    public static void main(String[] args){
+         Scanner input = new Scanner(System.in);
+         System.out.print("Enter the String: ");
+         String word = input.next();
+         int length = word.length();
+         String reverse = reverseString(word, length);
+         System.out.println("The reversed string is: " + reverse);
+         input.close();
+     }
+ }
+```
+
+
 ## C++ Implementation
 
 ### [Solution by @imkaka](./C++/reverseString.cpp)
@@ -289,7 +322,7 @@ int main() {
   reverse(s1.begin(), s1.end());
   cout<<"The reversed string is: "<<s1<<endl;
 
-  // to check if the string is a palindrome, we need to check if it is equal to its reverse. 
+  // to check if the string is a palindrome, we need to check if it is equal to its reverse.
 
   if(s.compare(s1) == 0) cout<<"The string is a palindrome"<<endl;
   else cout<<"The string is not a palindrome\n";
@@ -611,6 +644,79 @@ public class Palindrome2 {
     }
 }
 ```
+### [Solution 3](./Java/day2_neha.java)
+
+```java
+/**
+ * @date 29th jan 2019
+ * @author nehabindal
+ */
+import java.util.*;
+public class day22 {
+    public static void main(String[] args)
+    {
+        System.out.println("Input a string to check it it's a pallindrome or not");
+        Scanner sc = new Scanner(System.in);
+        String st = sc.nextLine();
+        int l = st.length();
+        int flag=0;
+        for(int i=0;i<l/2;i++)
+        {
+            if(st.charAt(i)!=st.charAt(l-1-i))
+            {
+                flag=1;
+            }
+        }
+        if(flag==1)
+        {
+            System.out.println("Not a pallindrome");
+        }
+        else{
+            System.out.println("Yay a pallindorme");
+        }
+
+    }
+
+}
+```
+
+### [Solution by @nomitpahuja](./Java/Palindrome_nomit.java)
+
+```java 
+/*
+ * @author Nomit Pahuja
+ * date: 29/01/2019
+ */
+
+ import java.util.Scanner;
+
+ public class Palindrome {
+     public static void main(String[] args){
+         Scanner input = new Scanner(System.in);
+         System.out.print("Enter the String: ");
+         String word = input.next();
+         word = word.toLowerCase();
+         int size = word.length();
+         int flag = 1;
+
+         //checking if string is palindrome or not
+         for(int i = 0, j = size-1; i<size/2; i++, j--){
+             if(word.charAt(i) != word.charAt(j)){
+                 flag = 0;
+             }
+         }
+
+         //print if string is palindrome or not
+         if(flag == 0){
+             System.out.println("The given string is not a palindrome.");
+         } else {
+             System.out.println("The given string is a palindrome.");
+         }
+
+         input.close();
+     }
+ }
+ ```
 
 ## C++ Implementation
 
