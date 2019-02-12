@@ -64,7 +64,8 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 | [Day 34](./day34) | [Merge Sort](./day34) | [http://codetoexpress.tech/dc/day34/](http://codetoexpress.tech/dc/day34/) | **Intermediate** |
 | [Day 35](./day35) | [Quick Sort](./day35) | [http://codetoexpress.tech/dc/day35/](http://codetoexpress.tech/dc/day35/) | **Intermediate** |
 | [Day 36](./day36) | [Radix Sort](./day36) | [http://codetoexpress.tech/dc/day36/](http://codetoexpress.tech/dc/day36/) | **Intermediate** |
-| [Day 37](./day37) | [Search and Sort Applications](./day37) | [http://codetoexpress.tech/dc/day37/](http://codetoexpress.tech/dc/day37/) | **Misc** |
+| [Day 37](./day37) | [Radix Sort](./day37) | [http://codetoexpress.tech/dc/day37/](http://codetoexpress.tech/dc/day37/) | **Misc** |
+| [Day 38](./day38) | [Implement Stack Data Structure](./day38) | [http://codetoexpress.tech/dc/day38/](http://codetoexpress.tech/dc/day38/) | **Beginner** |
 
 ## [More Problems](./BONUS/README.md)
 
