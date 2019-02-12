@@ -66,6 +66,7 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 | [Day 36](./day36) | [Radix Sort](./day36) | [http://codetoexpress.tech/dc/day36/](http://codetoexpress.tech/dc/day36/) | **Intermediate** |
 | [Day 37](./day37) | [Radix Sort](./day37) | [http://codetoexpress.tech/dc/day37/](http://codetoexpress.tech/dc/day37/) | **Misc** |
 | [Day 38](./day38) | [Implement Stack Data Structure](./day38) | [http://codetoexpress.tech/dc/day38/](http://codetoexpress.tech/dc/day38/) | **Beginner** |
+| [Day 39](./day39) | [Maximum Element and Reverse Stack](./day39) | [http://codetoexpress.tech/dc/day39/](http://codetoexpress.tech/dc/day39/) | **Intermediate** |
 
 ## [More Problems](./BONUS/README.md)
 
