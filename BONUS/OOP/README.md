@@ -1,4 +1,4 @@
-# Bonus Problems -- Miscellaneous
+# Bonus Problems -- Object Oriented Programming 
 
 Some Miscellaneous Problems to practise! Keep Coding :)
 

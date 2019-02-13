@@ -64,7 +64,7 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 | [Day 34](./day34) | [Merge Sort](./day34) | [http://codetoexpress.tech/dc/day34/](http://codetoexpress.tech/dc/day34/) | **Intermediate** |
 | [Day 35](./day35) | [Quick Sort](./day35) | [http://codetoexpress.tech/dc/day35/](http://codetoexpress.tech/dc/day35/) | **Intermediate** |
 | [Day 36](./day36) | [Radix Sort](./day36) | [http://codetoexpress.tech/dc/day36/](http://codetoexpress.tech/dc/day36/) | **Intermediate** |
-| [Day 37](./day37) | [Radix Sort](./day37) | [http://codetoexpress.tech/dc/day37/](http://codetoexpress.tech/dc/day37/) | **Misc** |
+| [Day 37](./day37) | [Sorting Applications](./day37) | [http://codetoexpress.tech/dc/day37/](http://codetoexpress.tech/dc/day37/) | **Misc** |
 | [Day 38](./day38) | [Implement Stack Data Structure](./day38) | [http://codetoexpress.tech/dc/day38/](http://codetoexpress.tech/dc/day38/) | **Beginner** |
 | [Day 39](./day39) | [Maximum Element and Reverse Stack](./day39) | [http://codetoexpress.tech/dc/day39/](http://codetoexpress.tech/dc/day39/) | **Intermediate** |
 
@@ -72,7 +72,7 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 
 A real coder should not be satisfied by doing only one problem daily, rather he/she should keep coding as much as possible. So, here I ([@MadhavBahlMD](https://github.com/MadhavBahlMD)) am adding some more problems that you can practise 😃
 
-Also, these problems have been taking form various sources, so ig you think you own any of the given problems, just send me an email at theleanprogrammer@gmail.com and I will be more than happy to give proper credits 😊
+Also, these problems have been taking form various sources, so if you think you own any of the given problems, just send me an email at theleanprogrammer@gmail.com and I will be more than happy to give proper credits 😊
 
 #### Want to contribute?
 
@@ -115,7 +115,7 @@ In case you just want to contribute a question and not code, there is no need to
 8. [**Trees**](./BONUS/Trees/README.md)
 9. [**Graphs**](./BONUS/Graphs/README.md)
 10. [**Misc Questions**](./BONUS/Misc/README.md)
-11. [**Object Oriented Programming**](./BONUS/OOPS/README.md)
+11. [**Object Oriented Programming**](./BONUS/OOP/README.md)
 
 ## Problems on Time and Space Complexity
 
