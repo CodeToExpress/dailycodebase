@@ -109,4 +109,4 @@ combine (firstQ, secondQ);
 
 #### Output
 
-![output](./output.png)
+![output](./output.PNG)
