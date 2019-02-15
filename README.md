@@ -69,6 +69,7 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 | [Day 39](./day39) | [Maximum Element and Reverse Stack](./day39) | [http://codetoexpress.tech/dc/day39/](http://codetoexpress.tech/dc/day39/) | **Intermediate** |
 | [Day 40](./day40) | [Prefix, Infix, Postfix Conversion](./day40) | [http://codetoexpress.tech/dc/day40/](http://codetoexpress.tech/dc/day40/) | **Intermediate** |
 | [Day 41](./day41) | [Implement Queue Data Structure](./day41) | [http://codetoexpress.tech/dc/day41/](http://codetoexpress.tech/dc/day41/) | **Beginner** |
+| [Day 42](./day42) | [Alternate Queue Combination](./day42) | [http://codetoexpress.tech/dc/day42/](http://codetoexpress.tech/dc/day42/) | **intermediate** |
 
 ## [More Problems](./BONUS/README.md)
 
