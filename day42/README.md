@@ -14,7 +14,7 @@ If the lengths of queues are not equal, stop after all elements of the smaller q
 q1  -> 4 -> 3 -> 2 -> 1 ->
 q2  -> 8 -> 7 -> 6 -> 5 ->
 
-combined queue: 
+combined queue:
 -> 8 -> 4 -> 7 -> 3 -> 6 -> 2 -> 5 -> 1 ->
 ```
 
@@ -105,6 +105,41 @@ console.log ("\n/* ===== Displaying Queue 2 ===== */");
 secondQ.displayQueue();
 
 combine (firstQ, secondQ);
+```
+
+## C++ Implementation
+
+### [Solution](./C++/alternate_queue.cpp)
+
+```c++
+/**
+ * @author: aaditkamat
+ * @date: 17/02/2019
+ */
+#include<iostream>
+#include<queue>
+#define SIZE 4
+int main() {
+  std::queue<int> first, second, result;
+  int firstElements[SIZE] = {4, 3, 2, 1};
+  int secondElements[SIZE] = {8, 7, 6, 5};
+  for (int i = 0; i < SIZE; i++) {
+    first.push(firstElements[i]);
+    second.push(secondElements[i]);
+  }
+  while(!first.empty() && !second.empty()) {
+    result.push(second.front());
+    second.pop();
+    result.push(first.front());
+    first.pop();
+  }
+  while (!result.empty()) {
+    std::cout << result.front() << " ";
+    result.pop();
+  }
+  std::cout << "\n";
+  return 0;
+}
 ```
 
 #### Output
