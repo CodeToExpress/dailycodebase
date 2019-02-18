@@ -86,3 +86,115 @@ function partition (array, size) {
     return partitionedArray;
 }
 ```
+
+## Ruby Solution(s)
+
+### [Solution](./Ruby/array_partition.rb)
+
+```ruby
+=begin
+@author: aaditkamat
+@date: 16/01/2019
+=end
+def partition(arr, n)
+    result = []
+    ctr = 0
+    until ctr == arr.size do
+      temp = []
+        n.times do |i|
+            temp += [arr[ctr]]
+            ctr += 1
+            if ctr == arr.size
+                break
+            end
+      end
+        result += [temp]
+  end
+    puts "The partitioned array is: #{result}"
+end
+
+def main
+  print "Enter an array: "
+    arr = gets.chomp!.gsub(/\[|\]/, '').split(',').map!{|x| x.to_i}
+    print "Enter number of partitions: "
+    n = gets.chomp!.to_i
+    partition(arr, n)
+end
+
+main
+=======
+## Java Implementation
+
+### [Solution](./Java/Partitions.java)
+
+```java
+/**
+ * @date 16/01/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class Partitions {
+    public static void main(String []args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n,p,i,j;int k=0;
+        System.out.println("Enter size of original array");
+        n=sc.nextInt();
+        int arr[]=new int[n];
+        for(i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        System.out.println("Enter size of partition");
+        p=sc.nextInt();
+        for(i=0;i<arr.length;i=i+p)
+        {
+            int part[]=Arrays.copyOfRange(arr,i,i+p);
+            k++;
+            if(arr.length%2!=0 && k==(arr.length/p+1))
+                p=arr.length%p;
+            System.out.print("{ ");
+            for(j=0;j<p;j++)
+                System.out.print(part[j]+" ");
+            System.out.print("}\n");
+        }
+    }
+}
+```
+
+## C++ Solution
+
+### [Solution @divyakhetan](./C++/PartitionDay20.cpp)
+
+
+
+```cpp
+/**
+ * @author divyakhetan
+ * @date 16/1/2019
+ */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	cout << "Enter length of 1st and 2nd array";
+	int n1, n2;	
+	cin >> n1 >> n2;
+	int a[n1];
+	int b[n2];
+	for(int i = 0; i < n1; i++){
+		cin >> a[i];
+		
+	}
+	
+	for(int i = 0; i < n2; i++){
+		cin >> b[i];
+	}
+	
+	for(int i = 0; i < n1; i++){
+		for(int j = 0; j < n2; j++){
+			cout << "[ " << a[i]  << " " << b[j] << " ] " << endl;
+		}
+	}
+	return 0;
+}
+```
