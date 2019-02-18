@@ -21,7 +21,7 @@ class Queue {
     }
 
     rear () {
-        return data[this.rearIndex];
+        return data[this.rearIndex - 1];
     }
 
     enqueue (element) {
@@ -76,7 +76,6 @@ class Stack {
     // push method to add a record to the stack
     push (record) {
         if (!this.isFull()) {
-            console.log (`Pushing ${record} to the stack!`);
             this.myStack.push (record);
         } else {
             console.log ('Sorry! The Stack is full!');
@@ -86,7 +85,6 @@ class Stack {
     // pop method to remove an element from the stack
     pop () {
         if (!this.isEmpty()) {
-            console.log (`Popped element is: ${this.myStack[this.myStack.length-1]}`);
             return this.myStack.pop ();
         } else {
             console.log ('Sorry! The Stack is empty');
@@ -100,7 +98,18 @@ class Stack {
 }
 
 const reverse = (myQueue) => {
+    const stack = new Stack (10);
+    let len = myQueue.rearIndex;
 
+    for (let i=len; i>0; i--) {
+        let currentElement = myQueue.dequeue();
+        stack.push (currentElement);
+    }
+
+    for (let i=0; i<len; i++) {
+        let currentElement = stack.pop();
+        myQueue.enqueue(currentElement);
+    }
 };
 
 const myQueue = new Queue (4);
@@ -113,6 +122,7 @@ myQueue.enqueue (4);
 console.log ("\n/* ===== Displaying Initial Queue ===== */");
 myQueue.displayQueue();
 
+reverse (myQueue);
 
 console.log ("\n/* ===== Displaying Final Queue ===== */");
 myQueue.displayQueue();

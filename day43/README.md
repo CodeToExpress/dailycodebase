@@ -27,5 +27,20 @@ Output:
 ### [Solution](./JavaScript/queueReversal.js)
 
 ```js
-To Be Added
+const reverse = (myQueue) => {
+    const stack = new Stack (10);
+    let len = myQueue.rearIndex;
+
+    for (let i=len; i>0; i--) {
+        let currentElement = myQueue.dequeue();
+        stack.push (currentElement);
+    }
+
+    for (let i=0; i<len; i++) {
+        let currentElement = stack.pop();
+        myQueue.enqueue(currentElement);
+    }
+};
 ```
+
+[Click Here](./JavaScript/queueReversal.js) for complete solution
