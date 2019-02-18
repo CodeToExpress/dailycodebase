@@ -24,7 +24,7 @@ combined queue:
 
 ## JavaScript Implementation
 
-### [Solution](./JavaScript/queue.js)
+### [Solution](./JavaScript/alternateQueue.js)
 
 ```js
 class Queue {
