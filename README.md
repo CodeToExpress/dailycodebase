@@ -72,6 +72,7 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 | [Day 42](./day42) | [Alternate Queue Combination](./day42) | [http://codetoexpress.tech/dc/day42/](http://codetoexpress.tech/dc/day42/) | **intermediate** |
 | [Day 43](./day43) | [Queue Reversal](./day43) | [http://codetoexpress.tech/dc/day43/](http://codetoexpress.tech/dc/day43/) | **intermediate** |
 | [Day 44](./day44) | [Queue from Stacks](./day44) | [http://codetoexpress.tech/dc/day44/](http://codetoexpress.tech/dc/day44/) | **intermediate** |
+| [Day 45](./day45) | [Priority Queue](./day45) | [http://codetoexpress.tech/dc/day45/](http://codetoexpress.tech/dc/day45/) | **intermediate** |
 
 ## [More Problems](./BONUS/README.md)
 
