@@ -2,7 +2,7 @@
 
 # Day 41 - Implement a Queue
 
-Just like a stack, queue is also a linear data structure which follows a particular order in which the operations are performed. The order is called FIFO (First In First Out) which means the first element to enter the queue will be the last one to exit
+Just like a stack, queue is also a linear data structure which follows a particular order in which the operations are performed. The order is called FIFO (First In First Out) which means the first element to enter the queue will be the first one to exit
 
 There are many real-life examples of a queue, and the most common one of them is the real queue. It can be a queue of people waiting at billing counter, or a queue of people waiting at a ticket counter etc.
 
