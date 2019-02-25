@@ -75,6 +75,7 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 | [Day 45](./day45) | [Priority Queue](./day45) | [http://codetoexpress.tech/dc/day45/](http://codetoexpress.tech/dc/day45/) | **Advanced** |
 | [Day 46](./day46) | [Double Ended Queue](./day46) | [http://codetoexpress.tech/dc/day46/](http://codetoexpress.tech/dc/day46/) | **Advanced** |
 | [Day 47](./day47) | [Singly Linked List](./day47) | [http://codetoexpress.tech/dc/day47/](http://codetoexpress.tech/dc/day47/) | **Intermediate** |
+| [Day 48](./day48) | [Doubly Linked List](./day48) | [http://codetoexpress.tech/dc/day48/](http://codetoexpress.tech/dc/day48/) | **Intermediate** |
 
 ## [More Problems](./BONUS/README.md)
 

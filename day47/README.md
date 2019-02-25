@@ -22,7 +22,7 @@ A linked list is a linear data structure, in which the elements are not stored a
 
 [Read More (Geeks4Geeks)](https://www.geeksforgeeks.org/linked-list-set-1-introduction/)
 
-Try to implement a singly linked list 
+Try to implement a singly linked list.
 
 ## Solution
 
