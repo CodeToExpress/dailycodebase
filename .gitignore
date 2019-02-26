@@ -7,3 +7,7 @@ a.out
 .vscode/
 test/
 *.o
+*.xml
+*.iml
+/.idea
+/cmake-build-debug
