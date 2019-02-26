@@ -1,6 +1,6 @@
 ![cover](./cover.png)
 
-# Day 47 - Implement a doubly doubly linked list
+# Day 48 - Implement a doubly linked list
 
 Write a program to implement a doubly linked list
 
