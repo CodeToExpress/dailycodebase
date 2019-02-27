@@ -29,6 +29,8 @@ In singly linked list, to delete a node, pointer to the previous node is needed.
 
 Try to implement a doubly linked list.
 
+[ques](./ques.png)
+
 ## Solution
 
 ## JavaScript Implementation

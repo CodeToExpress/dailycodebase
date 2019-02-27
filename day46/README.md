@@ -26,6 +26,8 @@ In addition to above operations, following operations are also supported
 
 [Read More (Geeks4Geeks)](https://www.geeksforgeeks.org/deque-set-1-introduction-applications/)
 
+[ques](./ques.png)
+
 ## Solution
 
 ## JavaScript Implementation

@@ -24,6 +24,8 @@ A linked list is a linear data structure, in which the elements are not stored a
 
 Try to implement a singly linked list.
 
+[ques](./ques.png)
+
 ## Solution
 
 ## JavaScript Implementation
