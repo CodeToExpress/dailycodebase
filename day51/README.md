@@ -16,7 +16,7 @@ Basically, there is no NULL at the end, rather the "last" element points again t
 
 ## JavaScript Implementation
 
-### [Solution](./JavaScript/nthFromEnd.js)
+### [Solution](./JavaScript/circular.js)
 
 ```js
 // To Be Added
