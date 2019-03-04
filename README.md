@@ -80,6 +80,7 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 | [Day 50](./day49) | [Nth From Last](./day50) | [http://codetoexpress.tech/dc/day50/](http://codetoexpress.tech/dc/day50/) | **Intermediate** |
 | [Day 51](./day51) | [Circular List](./day51) | [http://codetoexpress.tech/dc/day51/](http://codetoexpress.tech/dc/day51/) | **Intermediate** |
 | [Day 52](./day52) | [Sort and Reverse](./day52) | [http://codetoexpress.tech/dc/day52/](http://codetoexpress.tech/dc/day52/) | **Intermediate** |
+| [Day 53](./day53) | [Implement a Tree](./day53) | [http://codetoexpress.tech/dc/day53/](http://codetoexpress.tech/dc/day53/) | **Intermediate** |
 
 ## [More Problems](./BONUS/README.md)
 
