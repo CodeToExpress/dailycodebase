@@ -11,3 +11,5 @@ Some more problems on Recursion!
 5. [WAP to find the nth number in Fibonacci Series using recursion](./Fibonacci/)
 6. [WAP to reverse a string using recursion](./ReverseString/)
 7. [WAP to reverse an integer array using recursion](./ReverseArray/)
+8. [WAP to print the Sum of `n` Natural Numbers](./NaturalSum/)
+9. [WAP to print the Sum of Squares of N natural numbers](./SumSquares/)

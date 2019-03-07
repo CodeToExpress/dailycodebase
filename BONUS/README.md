@@ -85,3 +85,9 @@ In case you just want to contribute a question and not code, there is no need to
 ### [9. Graphs](./Graphs/README.md)
 
 - To be added
+
+### [10. Miscellaneous](./Misc/README.md)
+
+1. 
+
+### [11. Object Oriented Programming](./OOPS/README.md)

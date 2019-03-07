@@ -46,7 +46,6 @@ console.log ('\n/* ===== for 3 disks ===== */');
 towerOfHanoi (3, 'A', 'C', 'B');
 ```
 
-
 ## Java Implementation
 
 ### [Solution](./Java/towersOfHanoi.java)
@@ -57,7 +56,7 @@ towerOfHanoi (3, 'A', 'C', 'B');
  * @author SPREEHA DUTTA
  */
 import java.util.*;
-public class towersOfHanoi 
+public class towersOfHanoi
 {
     public static void move(int n,char s,char d,char c)
     {
@@ -135,7 +134,7 @@ main
 
 
 def towerhanoi(n, from_rod, to_rod, aux_rod):
-    if n = 1:
+    if n == 1:
         print("Move disk 1 from rod %d to rod %d"%(from_rod, to_rod))
         return
     towerhanoi(n - 1, from_rod, aux_rod, to_rod)
@@ -145,6 +144,7 @@ def towerhanoi(n, from_rod, to_rod, aux_rod):
 
 no_of_disks = int(input())
 towerhanoi(no_of_disks, 'A', 'C', 'B')
+
 ```
 
 ### [Solution by @hiteshsubnani0128](./python3/hitesh_toh.py)
@@ -169,3 +169,36 @@ else:
     toh(num,'a','b','c')
 ```
 
+
+###C Implementation
+
+### [Solution](./C/towersofhanoi.C)
+```C
+/**
+     @author: rajashree23
+     @date: 13/02/2019
+   **/
+
+#include<stdio.h>
+
+void TowerOfHanoi(int n, char source,char aux, char dest)
+{
+    if(n==1)
+    {
+      printf("Move disk 1 from rod %c to rod %c\n", source,dest);
+      return;
+    }
+    TowerOfHanoi(n-1,source,dest,aux);
+    printf("Move disk %d from rod %c to rod %c\n",n,source,dest);
+    TowerOfHanoi(n-1,aux,source,dest);
+
+}
+int main()
+{
+    int n;
+    char source,auxilliary,destination;
+    printf("Enter number of disks\n");
+    scanf("%d",&n);
+    TowerOfHanoi(n,'A','c','B');
+    return 0;
+}
