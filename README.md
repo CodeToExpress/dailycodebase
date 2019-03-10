@@ -84,6 +84,7 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 | [Day 54](./day54) | [Breadth First Search](./day54) | [http://codetoexpress.tech/dc/day54/](http://codetoexpress.tech/dc/day54/) | **Advanced** |
 | [Day 55](./day55) | [Depth First Search](./day55) | [http://codetoexpress.tech/dc/day55/](http://codetoexpress.tech/dc/day55/) | **Advanced** |
 | [Day 56](./day56) | [Memoization](./day56) | [http://codetoexpress.tech/dc/day56/](http://codetoexpress.tech/dc/day56/) | **Advanced** |
+| [Day 57](./day57) | [Cuckoo Hashing](./day57) | [http://codetoexpress.tech/dc/day57/](http://codetoexpress.tech/dc/day57/) | **Intermediate** |
 
 ## [More Problems](./BONUS/README.md)
 
