@@ -86,6 +86,8 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 | [Day 56](./day56) | [Memoization](./day56) | [http://codetoexpress.tech/dc/day56/](http://codetoexpress.tech/dc/day56/) | **Advanced** |
 | [Day 57](./day57) | [Cuckoo Hashing](./day57) | [http://codetoexpress.tech/dc/day57/](http://codetoexpress.tech/dc/day57/) | **Intermediate** |
 | [Day 58](./day58) | [Binary Heap](./day58) | [http://codetoexpress.tech/dc/day58/](http://codetoexpress.tech/dc/day58/) | **Intermediate** |
+| [Day 59](./day59) | [Graphs: Implementation and Traversal](./day59) | [http://codetoexpress.tech/dc/day59/](http://codetoexpress.tech/dc/day59/) | **Intermediate** |
+
 ## [More Problems](./BONUS/README.md)
 
 A real coder should not be satisfied by doing only one problem daily, rather he/she should keep coding as much as possible. So, here I ([@MadhavBahlMD](https://github.com/MadhavBahlMD)) am adding some more problems that you can practise 😃
