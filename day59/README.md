@@ -10,7 +10,7 @@ Reference: [Geeks4Geeks](https://www.geeksforgeeks.org/graph-data-structure-and-
 
 ## JavaScript Implementation
 
-### [Solution](./JavaScript/binaryHeap.js)
+### [Solution](./JavaScript/graph.js)
 
 ```js
 // To Be Added
