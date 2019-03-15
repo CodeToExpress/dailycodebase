@@ -85,6 +85,9 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 | [Day 55](./day55) | [Depth First Search](./day55) | [http://codetoexpress.tech/dc/day55/](http://codetoexpress.tech/dc/day55/) | **Advanced** |
 | [Day 56](./day56) | [Memoization](./day56) | [http://codetoexpress.tech/dc/day56/](http://codetoexpress.tech/dc/day56/) | **Advanced** |
 | [Day 57](./day57) | [Cuckoo Hashing](./day57) | [http://codetoexpress.tech/dc/day57/](http://codetoexpress.tech/dc/day57/) | **Intermediate** |
+| [Day 58](./day58) | [Binary Heap](./day58) | [http://codetoexpress.tech/dc/day58/](http://codetoexpress.tech/dc/day58/) | **Advanced** |
+| [Day 59](./day59) | [Graphs: Implementation and Traversal](./day59) | [http://codetoexpress.tech/dc/day59/](http://codetoexpress.tech/dc/day59/) | **Advanced** |
+| [Day 60](./day60) | [Shortest Path Problem](./day60) | [http://codetoexpress.tech/dc/day60/](http://codetoexpress.tech/dc/day60/) | **Advanced** |
 
 ## [More Problems](./BONUS/README.md)
 
