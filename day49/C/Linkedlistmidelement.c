@@ -1,3 +1,6 @@
+// Name :Dipto Chakrabarty
+// Date : 26/03/2019
+
 #include<stdio.h>
 #include<stdlib.h>
 struct node{
