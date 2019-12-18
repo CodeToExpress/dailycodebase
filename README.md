@@ -8,9 +8,7 @@
   Code Daily, add your solutions to the given problem, submit a PR (and don't forget to add your name in the contributors list)
 </p>
 
-<a style="margin: 0" href="https://t.me/codetoexpress"><img src="./telegram.png" alt="Telegram: https://t.me/codetoexpress"></a>
-<a style="margin: 0" href="http://codetoexpress.tech/joindc/"><img src="./whatsapp.png" alt="Whatsapp: https://codetoexpress.tech/joindc/"></a>
-<a style="margin: 0" href="https://codetoexpress.tech/invite/"><img src="./slack.png" alt="Slack: https://codetoexpress.tech/invite/"></a>
+<a style="margin: 0" href="http://madhavbahl.tech/discord-c2e"><img src="./discord.png" alt="Telegram: http://madhavbahl.tech/discord-c2e"></a>
 
 ***
 
