@@ -662,10 +662,10 @@ main()
 #### [Solution by @sagunjaiswal](./C#/factorial.cs)
 
 ```cs
-=begin
-@author: sagunjaiswal
-@date: 20/09/2020
-=end
+/**
+ * @author : sagunJaiswal
+ * @date 20/12/2020
+ */
 
 using System;
 
