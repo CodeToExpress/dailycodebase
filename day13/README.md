@@ -113,6 +113,41 @@ int main()
 }
 ```
 
+### C# Implementation
+
+#### [Solution by @sagunjaiswal](./C#/factorial.cs)
+
+```cs
+/**
+ * @author : sagunJaiswal
+ * @date 20/12/2020
+ */
+
+using System;
+
+class day13 {
+
+    static int factorial(int n)
+    {
+        if (n == 0)
+            return 1;
+
+        return n * factorial(n - 1);
+    }
+
+
+    public static void Main()
+    {
+        String val;
+        Console.WriteLine("Input : ");
+        val = Console.ReadLine();
+
+        int num = Convert.ToInt32(val);
+        Console.WriteLine("Output:" + factorial(num));
+    }
+}
+```
+
 #### [Solution](./C++/factorialDay13.cpp)
 
 ```cpp
@@ -655,41 +690,6 @@ def main():
   fibonacci_iterative_sequence(num)
 
 main()
-```
-
-### C# Implementation
-
-#### [Solution by @sagunjaiswal](./C#/factorial.cs)
-
-```cs
-/**
- * @author : sagunJaiswal
- * @date 20/12/2020
- */
-
-using System;
-
-class day13 {
-
-    static int factorial(int n)
-    {
-        if (n == 0)
-            return 1;
-
-        return n * factorial(n - 1);
-    }
-
-
-    public static void Main()
-    {
-        String val;
-        Console.WriteLine("Input : ");
-        val = Console.ReadLine();
-
-        int num = Convert.ToInt32(val);
-        Console.WriteLine("Output:" + factorial(num));
-    }
-}
 ```
 
 ### Ruby Implementation
