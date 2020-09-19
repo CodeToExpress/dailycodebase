@@ -45,11 +45,9 @@ The sequence is: 1, 1, 2, 3, 5, 8, 13
  * @date 07/01/2018
  */
 
-function factorial (num) {
-    if (num <= 1)
-        return 1;
-    else
-        return num * factorial (num-1);
+function factorial(num) {
+  if (num <= 1) return 1;
+  else return num * factorial(num - 1);
 }
 
 console.log(`Factorial of 4 is: ${factorial(4)}`);
@@ -134,17 +132,16 @@ int fact(int n){
 
 
 int main(){
-	
+
 	int n;
 	cin >> n;
-	
+
 	cout << "The factorial is " << fact(n);
-	
-	
+
+
 	return 0;
 }
 ```
-
 
 ### C Implementation
 
@@ -180,6 +177,7 @@ void main(){
 ### Python Implementation
 
 #### [Solution by @vishalshirke7](./Python/factorial.py)
+
 ```python
 """
   @author : vishalshirke7
@@ -200,6 +198,7 @@ print("factorial of %d is %d" % (n, factorial(n)))
 ```
 
 #### [Solution ](./Python/fact.py)
+
 ```python
 '''
 @author spreeha
@@ -216,6 +215,7 @@ print(f)
 ```
 
 #### [Solution by @aaditkamat](./Python/factorial_aadit.py)
+
 ```python
 """
 @author: aaditkamat
@@ -298,6 +298,7 @@ main()
 ### Ruby Implementation
 
 #### [Solution by @aaditkamat](./Ruby/factorial.rb)
+
 ```ruby
 =begin
 @author: aaditkamat
@@ -337,9 +338,9 @@ end
 main
 ```
 
-***
+---
 
-***
+---
 
 ## Part B - Fibonacci Series
 
@@ -353,28 +354,26 @@ main
  * @date 07/01/2018
  */
 
-function nthElement (n) {
-    if (n <= 2) 
-        return 1
-    else
-        return nthElement(n-1) + nthElement(n-2);
+function nthElement(n) {
+  if (n <= 2) return 1;
+  else return nthElement(n - 1) + nthElement(n - 2);
 }
 
-function fibonacci (num) {
-    // Print F(n)
-    console.log (`The ${num}th element in fibonacci series is: ${nthElement(num)}`);
+function fibonacci(num) {
+  // Print F(n)
+  console.log(
+    `The ${num}th element in fibonacci series is: ${nthElement(num)}`
+  );
 
-    // Print the sequence
-    let seq = '';
-    for (let  i=1; i<=num; i++) 
-        if (i<num)
-            seq += nthElement(i) + ', ';
-        else
-            seq += nthElement(i);
-    console.log(`The sequence is: ${seq}`);
+  // Print the sequence
+  let seq = "";
+  for (let i = 1; i <= num; i++)
+    if (i < num) seq += nthElement(i) + ", ";
+    else seq += nthElement(i);
+  console.log(`The sequence is: ${seq}`);
 }
 
-fibonacci (7);
+fibonacci(7);
 ```
 
 ### Java Implementation
@@ -417,6 +416,7 @@ public class Fibonacci {
     }
 }
 ```
+
 ### C++ Implementation
 
 #### [Solution](./C++/fibonacci.cpp)
@@ -456,7 +456,7 @@ int main()
 
 #### [Solution](./C++/fibonacciDay13.cpp)
 
-```cpp
+````cpp
 /**
  * @author:divyakhetan
  * @date: 10/1/2019
@@ -471,12 +471,12 @@ int fibo(int n){
 	else return fibo(n - 1) + fibo(n - 2);
 }
 int main(){
-	
+
 	int n;
 	cin >> n;
-	
+
 	cout << "The " << n << "th fibonacci number is " << fibo(n) << endl;
-	
+
 	for(int i = 1; i <= n; i++){
 		if(i == n){
 			cout << fibo(i);
@@ -519,11 +519,12 @@ void main(){
     printf("%dth element in fibonacci series is %d\n", num, fib(num));
 
 }
-```
+````
 
 ### Python Implementation
 
 #### [Solution by @vishalshirke7](./Python/fibonacci.py)
+
 ```python
 """
   @author : vishalshirke7
@@ -558,6 +559,7 @@ else:
 ```
 
 #### [Solution by @spreeha](./Python/fibo.py)
+
 ```python
 '''
 @author spreeha
@@ -576,6 +578,7 @@ print(fibonacci(n))
 ```
 
 #### [Solution by @aaditkamat](./Python/fibonacci_aadit.py)
+
 ```python
 """
 @author: aaditkamat
@@ -654,9 +657,45 @@ def main():
 main()
 ```
 
+### C# Implementation
+
+#### [Solution by @sagunjaiswal](./C#/factorial.cs)
+
+```cs
+=begin
+@author: sagunjaiswal
+@date: 20/09/2020
+=end
+
+using System;
+
+class day13 {
+
+    static int factorial(int n)
+    {
+        if (n == 0)
+            return 1;
+
+        return n * factorial(n - 1);
+    }
+
+
+    public static void Main()
+    {
+        String val;
+        Console.WriteLine("Input : ");
+        val = Console.ReadLine();
+
+        int num = Convert.ToInt32(val);
+        Console.WriteLine("Output:" + factorial(num));
+    }
+}
+```
+
 ### Ruby Implementation
 
 #### [Solution by @aaditkamat](./Ruby/fibonacci.rb)
+
 ```ruby
 =begin
 @author: aaditkamat
@@ -751,4 +790,44 @@ def main
 end
 
 main
+```
+
+### C# Implementation
+
+#### [Solution by @sagunjaiswal](./C#/fibonacci.cs)
+
+```cs
+/**
+ * @author: sagunjaiswal
+ * @date: 20/09/2020
+ */
+using System;
+namespace FibonacciSeries
+{
+      class Program
+      {
+            public static int FibonacciSeries(int n)
+            {
+                  if (n == 0)
+                    return 1;
+                  if (n == 1)
+                    return 1;
+                  return FibonacciSeries(n - 1) + FibonacciSeries(n - 2);
+            }
+            public static void Main(string[] args)
+            {
+                  Console.Write("input : ");
+                  int length = Convert.ToInt32(Console.ReadLine());
+                  Console.Write("output : \n");
+                  Console.Write("The {0}th term of fibonacci series is : {1} \n",length,FibonacciSeries(length-1));
+                  Console.Write("The sequence is : ");
+                  for (int i = 0; i < length; i++)
+                  {
+                        Console.Write("{0} ", FibonacciSeries(i));
+                  }
+
+                  Console.ReadKey();
+            }
+      }
+}
 ```
