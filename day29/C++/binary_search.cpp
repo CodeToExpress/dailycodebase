@@ -1,55 +1,59 @@
-/*
-* @author : imkaka
-* @date   : 31/1/2019
-*/
+/**
+ * @author: Karthick < karthikn2099@gmail.com >
+ * @github: https://github.com/karthikn2098
+ * @date: 31/01/2018
+ */
 
-#include<iostream>
-#include<cstdio>
-
+#include <iostream>
 using namespace std;
 
-int binary_search_itr(int arr[], int size, int val){
-    int l = 0, r = size-1;
-    int mid = (l + r) / 2;
+/** @desc: splits the array into two sections at each step, then checks the element in the desired one.
+  * @param: array , key (to be found), size of the array.
+  * @return: index of key if present , -1 otherwise.
+  * @TimeComplexity: O( logn )   < n = size of the array >
+  */
+int Binary_search(int arr[] , int key, int N) {
 
-    while(arr[mid] != val && l <= r){
-        if(val < arr[mid]){
-            r = mid - 1;
+    int low = 0 , high = N-1 , mid;
+
+    while(low <= high) {
+
+        mid = low + (high - low) / 2;   //like (low + high)/2 but efficient.
+
+        if(key == arr[mid]) {
+            return mid;
         }
-        else{
-            l = mid +1;
+        else if( key > arr[mid] ) {
+            low = mid + 1;
         }
-
-        mid = (l + r) / 2;
-    }
-
-    if(arr[mid] == val)
-        return mid;
-
-    return -1;
-}
-
-int binary_search_rec(int arr[], int left, int right, int val){
-    if(right >= left){
-
-        int mid = left + (right - left) / 2;
-
-        if(arr[mid] == val) return mid;
-
-        if(arr[mid] > val)
-            return binary_search_rec(arr, left, mid-1, val);
-        return binary_search_rec(arr, mid+1, right, val);
+        else {
+            high = mid - 1;
+        }
     }
 
     return -1;
 }
 
-int main(){
+int main(void) {
 
-    int arr[] = {1, 2, 3, 6, 9, 15, 16, 14};
-    int val = 9;
-    int size = sizeof(arr)/sizeof(arr[0]);
-    cout << "Iterative: " << binary_search_itr(arr, size, val) << endl;
-    cout << "Recursive: " << binary_search_rec(arr, 0, size-1, val) << endl;
+    int arr[] = { 1, 3, 5, 7, 8, 9, 100, 234, 788, 899 };
+
+    int sizeOfArray = sizeof(arr) / sizeof(arr[0]);
+
+    cout << "\nBinary_search(arr , 100) = " << Binary_search(arr, 100, sizeOfArray ) << endl;
+
+    cout << "\nBinary_search(arr , 1000) = " << Binary_search(arr, 1000, sizeOfArray ) << endl;
+
     return 0;
 }
+
+/*
+---------------
+ Sample Output
+---------------
+
+Binary_search(arr , 100) = 6
+
+Binary_search(arr , 1000) = -1
+
+*/
