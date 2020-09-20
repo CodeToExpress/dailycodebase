@@ -5,4 +5,4 @@ Please make sure you have done the following:
 - [ ] Tested your codes
 - [ ] Added credits (author and date) at the top of the code
 - [ ] Updated README.md
-- [ ] Added yourself as a contributor using `all-conributors-cli`
+- [ ] Added yourself as a contributor using `all-contributors-cli`
