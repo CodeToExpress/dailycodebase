@@ -1,44 +1,3 @@
-![cover](./cover.png)
-
-# Day 56 - Memoized Fibonacci
-
-Ques) Write a program to find the Nth term in fibonacci series using recursion, and then optimize your solution using memoizaion.
-
-## Solution
-
-## JavaScript Implementation
-
-### [Solution](./JavaScript/memoizedFibonacci.js)
-
-```js
-function memoize (func) {
-    const cache = {}
-    return function (...args) {
-        if (cache [args]) {
-            return cache [args];
-        }
-
-        const result = func.apply (this, args);
-        cache [args] = result;
-
-        return result;
-    }
-}
-
-function slowFib (n) {
-    if (n<2)
-        return n;
-    return slowFib (n-1) + slowFib (n-2);
-}
-
-const fib = memoize (slowFib);
-```
-
-## Python Implementation
-
-### [Solution](./Python/memoized_fibonacci.py)
-
-```python
 ##
 ## @author 
 ## @date 20/09/2020
@@ -64,4 +23,3 @@ if __name__ == '__main__':
     assert fibonacci(50) == 12586269025
     assert fibonacci(0) == 0
     assert fibonacci(7) == 13
-```
