@@ -8,9 +8,7 @@
   Code Daily, add your solutions to the given problem, submit a PR (and don't forget to add your name in the contributors list)
 </p>
 
-<a style="margin: 0" href="https://t.me/codetoexpress"><img src="./telegram.png" alt="Telegram: https://t.me/codetoexpress"></a>
-<a style="margin: 0" href="http://codetoexpress.tech/joindc/"><img src="./whatsapp.png" alt="Whatsapp: https://codetoexpress.tech/joindc/"></a>
-<a style="margin: 0" href="https://codetoexpress.tech/invite/"><img src="./slack.png" alt="Slack: https://codetoexpress.tech/invite/"></a>
+<a style="margin: 0" href="http://madhavbahl.tech/discord-c2e"><img src="./discord.png" alt="Telegram: http://madhavbahl.tech/discord-c2e"></a>
 
 ***
 
@@ -64,16 +62,30 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 | [Day 34](./day34) | [Merge Sort](./day34) | [http://codetoexpress.tech/dc/day34/](http://codetoexpress.tech/dc/day34/) | **Intermediate** |
 | [Day 35](./day35) | [Quick Sort](./day35) | [http://codetoexpress.tech/dc/day35/](http://codetoexpress.tech/dc/day35/) | **Intermediate** |
 | [Day 36](./day36) | [Radix Sort](./day36) | [http://codetoexpress.tech/dc/day36/](http://codetoexpress.tech/dc/day36/) | **Intermediate** |
-| [Day 37](./day37) | [Radix Sort](./day37) | [http://codetoexpress.tech/dc/day37/](http://codetoexpress.tech/dc/day37/) | **Misc** |
+| [Day 37](./day37) | [Applications of Searching and Sorting Algorithms](./day37) | [http://codetoexpress.tech/dc/day37/](http://codetoexpress.tech/dc/day37/) | **Misc** |
 | [Day 38](./day38) | [Implement Stack Data Structure](./day38) | [http://codetoexpress.tech/dc/day38/](http://codetoexpress.tech/dc/day38/) | **Beginner** |
 | [Day 39](./day39) | [Maximum Element and Reverse Stack](./day39) | [http://codetoexpress.tech/dc/day39/](http://codetoexpress.tech/dc/day39/) | **Intermediate** |
 | [Day 40](./day40) | [Prefix, Infix, Postfix Conversion](./day40) | [http://codetoexpress.tech/dc/day40/](http://codetoexpress.tech/dc/day40/) | **Intermediate** |
 | [Day 41](./day41) | [Implement Queue Data Structure](./day41) | [http://codetoexpress.tech/dc/day41/](http://codetoexpress.tech/dc/day41/) | **Beginner** |
 | [Day 42](./day42) | [Alternate Queue Combination](./day42) | [http://codetoexpress.tech/dc/day42/](http://codetoexpress.tech/dc/day42/) | **Intermediate** |
 | [Day 43](./day43) | [Queue Reversal](./day43) | [http://codetoexpress.tech/dc/day43/](http://codetoexpress.tech/dc/day43/) | **Intermediate** |
-| [Day 44](./day44) | [Queue from Stacks](./day44) | [http://codetoexpress.tech/dc/day44/](http://codetoexpress.tech/dc/day44/) | **intermediate** |
+| [Day 44](./day44) | [Queue from Stacks](./day44) | [http://codetoexpress.tech/dc/day44/](http://codetoexpress.tech/dc/day44/) | **Intermediate** |
 | [Day 45](./day45) | [Priority Queue](./day45) | [http://codetoexpress.tech/dc/day45/](http://codetoexpress.tech/dc/day45/) | **Advanced** |
 | [Day 46](./day46) | [Double Ended Queue](./day46) | [http://codetoexpress.tech/dc/day46/](http://codetoexpress.tech/dc/day46/) | **Advanced** |
+| [Day 47](./day47) | [Singly Linked List](./day47) | [http://codetoexpress.tech/dc/day47/](http://codetoexpress.tech/dc/day47/) | **Intermediate** |
+| [Day 48](./day48) | [Doubly Linked List](./day48) | [http://codetoexpress.tech/dc/day48/](http://codetoexpress.tech/dc/day48/) | **Intermediate** |
+| [Day 49](./day49) | [MiddleMost Node Search](./day49) | [http://codetoexpress.tech/dc/day49/](http://codetoexpress.tech/dc/day49/) | **Intermediate** |
+| [Day 50](./day49) | [Nth From Last](./day50) | [http://codetoexpress.tech/dc/day50/](http://codetoexpress.tech/dc/day50/) | **Intermediate** |
+| [Day 51](./day51) | [Circular List](./day51) | [http://codetoexpress.tech/dc/day51/](http://codetoexpress.tech/dc/day51/) | **Intermediate** |
+| [Day 52](./day52) | [Sort and Reverse](./day52) | [http://codetoexpress.tech/dc/day52/](http://codetoexpress.tech/dc/day52/) | **Intermediate** |
+| [Day 53](./day53) | [Implement a Tree](./day53) | [http://codetoexpress.tech/dc/day53/](http://codetoexpress.tech/dc/day53/) | **Advanced** |
+| [Day 54](./day54) | [Breadth First Search](./day54) | [http://codetoexpress.tech/dc/day54/](http://codetoexpress.tech/dc/day54/) | **Advanced** |
+| [Day 55](./day55) | [Depth First Search](./day55) | [http://codetoexpress.tech/dc/day55/](http://codetoexpress.tech/dc/day55/) | **Advanced** |
+| [Day 56](./day56) | [Memoization](./day56) | [http://codetoexpress.tech/dc/day56/](http://codetoexpress.tech/dc/day56/) | **Advanced** |
+| [Day 57](./day57) | [Cuckoo Hashing](./day57) | [http://codetoexpress.tech/dc/day57/](http://codetoexpress.tech/dc/day57/) | **Intermediate** |
+| [Day 58](./day58) | [Binary Heap](./day58) | [http://codetoexpress.tech/dc/day58/](http://codetoexpress.tech/dc/day58/) | **Advanced** |
+| [Day 59](./day59) | [Graphs: Implementation and Traversal](./day59) | [http://codetoexpress.tech/dc/day59/](http://codetoexpress.tech/dc/day59/) | **Advanced** |
+| [Day 60](./day60) | [Shortest Path Problem](./day60) | [http://codetoexpress.tech/dc/day60/](http://codetoexpress.tech/dc/day60/) | **Advanced** |
 
 ## [More Problems](./BONUS/README.md)
 
