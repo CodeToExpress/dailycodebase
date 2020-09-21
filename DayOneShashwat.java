@@ -1,4 +1,7 @@
 import java.util.Scanner;
+/* @date 22/09/2020
+ * @author Shashwat Gupta 
+ */
 public class OneDay {
 
 	public static void main(String args[]) {
