@@ -157,7 +157,7 @@ public class binarySearch {
 
 ## C++ Implementation
 
-### [Solution by @imkaka](./C++/binary_search.cpp)
+### [Solution by @imkaka](./C++/imkaka_binary_search.cpp)
 
 ```cpp
 

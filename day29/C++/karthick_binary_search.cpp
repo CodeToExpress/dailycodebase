@@ -51,9 +51,6 @@ int main(void) {
 ---------------
  Sample Output
 ---------------
-
 Binary_search(arr , 100) = 6
-
 Binary_search(arr , 1000) = -1
-
 */
