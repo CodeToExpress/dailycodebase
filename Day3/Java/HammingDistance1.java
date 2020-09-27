@@ -17,7 +17,7 @@ public class HammingDistance {
 			for (i=0 ; i<l1; i++)   // for loop for extraction of characters from both of the strings
 			{ 
 				if (s1.charAt(i)!= s2.charAt(i))  // checking same character of both strings
-					k+ = 1;                       // if same character is found no change in counter variable k 
+					k+ = 1;                       // if same character is not found change in counter variable k by 1
 				
 			}
 		}
