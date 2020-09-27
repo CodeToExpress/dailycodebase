@@ -373,10 +373,9 @@ public class HammingDistance {
 		{
 			for (i=0 ; i<l1; i++)   // for loop for extraction of characters from both of the strings
 			{ 
-				if (s1.charAt(i)== s2.charAt(i))  // checking same character of both strings
-					k = k;                       // if same character is found no change in counter variable k 
-				else
-					k =k+1;                        // for different character variable k will be increased by 1
+				if (s1.charAt(i)!= s2.charAt(i))  // checking same character of both strings
+					k+ = 1;                       // if same character is not found change in variable by by 1
+				
 			}
 		}
 		System.out.println("Hamming Distance is " + k);   // printing the hamming distance
