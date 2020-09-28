@@ -8,7 +8,7 @@
   Code Daily, add your solutions to the given problem, submit a PR (and don't forget to add your name in the contributors list)
 </p>
 
-<a style="margin: 0" href="http://madhavbahl.tech/discord-c2e"><img src="./discord.png" alt="Telegram: http://madhavbahl.tech/discord-c2e"></a>
+<!-- <a style="margin: 0" href="http://madhavbahl.tech/discord-c2e"><img src="./discord.png" alt="Telegram: http://madhavbahl.tech/discord-c2e"></a> -->
 
 ***
 
