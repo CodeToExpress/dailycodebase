@@ -20,8 +20,13 @@ public class HammingDistance {
 					k+ = 1;                       // if same character is not found change in counter variable k by 1
 				
 			}
-		}
+		
 		System.out.println("Hamming Distance is " + k);   // printing the hamming distance
+		}
+		else
+		{
+		System.out.println("Hamming Distance is 1"); // if both strings are unequal then hamming distance is eaqual to 1
+		}
 	}
 
 }
