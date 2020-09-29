@@ -382,7 +382,7 @@ public class HammingDistance {
 		}
 		else
 		{
-		System.out.println("Hamming Distance is 1"); // if both strings are unequal then hamming distance is eaqual to 1
+		System.err.println("Hamming Distance is undefined"); // if both strings are unequal then hamming distance is undefined
 		}
 	}
 
