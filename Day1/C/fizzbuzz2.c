@@ -1,3 +1,9 @@
+/*
+        * @author: shashanknenar
+        * @date: 01/10/2020
+*/
+
+
 #include <stdio.h> 
   
 int main(void) 
@@ -16,7 +22,7 @@ int main(void)
             printf("Buzz\t");                  
       
         else            
-            printf("%d\t", i);                  
+            printf("%d\t", i); //print                 
     } 
   
     return 0; 
