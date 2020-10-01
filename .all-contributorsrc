@@ -269,6 +269,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "malhotra1432",
+      "name": "Prabhat Malhotra",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/26011598?v=4",
+      "profile": "https://github.com/malhotra1432",
+      "contributions": [
+        "code"
+      ]
     }
-  ]
+  ],
+  "commitConvention": "none"
 }
