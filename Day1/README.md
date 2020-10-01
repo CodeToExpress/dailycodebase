@@ -122,68 +122,22 @@ public class Fizzbuzz {
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-    int n;
-    printf("Enter a number upto which you want to find Fizzbuzz numbers ");
-    scanf("%d", &n);
-    for (int i = 1; i <= n; i++)
+    int i;
+    for(i=1; i<=100; i++)
     {
-        if (i % 5 == 0 && i % 3 == 0)
-        {
-            printf("FizzBuzz\n");
-        }
-        else if (i % 5 == 0)
-        {
-            printf("Buzz\n");
-        }
-        else if (i % 3 == 0)
-        {
-            printf("Fizz\n");
-        }
+        if(((i%3)||(i%5))== 0)
+            printf("number= %d FizzBuzz\n", i);
+        else if((i%3)==0)
+            printf("number= %d Fizz\n", i);
+        else if((i%5)==0)
+            printf("number= %d Buzz\n", i);
         else
-        {
-            printf("%d\n", i);
-        }
+            printf("number= %d\n",i);
+
     }
-    return 0;
-}
-```
-### [fizzbuzzy.c](./C/fizzbuzzy.c)
 
-```c
-/**
- * @author: Sarveswara Rao Kanduri<eshwarkanduri@gmail.com>
- * @github: https://github.com/anonymousksr
- * @date: 01/10/2020
-**/
-
-#include <stdio.h>
-
-int main()
-{
-    int n;
-    printf("Enter a number upto which you want to find Fizzbuzz numbers ");
-    scanf("%d", &n);
-    for (int i = 1; i <= n; i++)
-    {
-        if (i % 5 == 0 && i % 3 == 0)
-        {
-            printf("FizzBuzz\n");
-        }
-        else if (i % 5 == 0)
-        {
-            printf("Buzz\n");
-        }
-        else if (i % 3 == 0)
-        {
-            printf("Fizz\n");
-        }
-        else
-        {
-            printf("%d\n", i);
-        }
-    }
     return 0;
 }
 ```
