@@ -149,10 +149,12 @@ int main()
     return 0;
 }
 ```
+### [fizzbuzz2.c](./C/fizzbuzz2.c)
 
 ```c
 /*
         * @author: shashanknenar
+	* @github: https://github.com/shashanknenar
         * @date: 01/10/2020
 */
 
