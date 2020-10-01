@@ -149,6 +149,8 @@ int main()
     return 0;
 }
 ```
+
+```c
 /*
         * @author: shashanknenar
         * @date: 01/10/2020
@@ -177,6 +179,8 @@ int main(void)
   
     return 0; 
 } 
+```
+
 
 ## Python(3) Implementation
 
