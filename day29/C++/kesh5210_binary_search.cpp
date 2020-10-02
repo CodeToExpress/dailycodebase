@@ -52,8 +52,8 @@ int main(){
 	//Number to search for
 	int key = 32;
 
-	//In case Array is not sorted as Binary Search works only with Sorted Arrays
-	sort(arr.begin(),arr.end());
+	//Ensure the Array is sorted as Binary Search works only with Sorted Arrays
+
 	cout<<"For the given array: ";
 	for(int i=0;i<arr.size();i++)
 		cout<<arr[i]<<" ";
