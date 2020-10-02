@@ -109,6 +109,47 @@ public class Fizzbuzz {
     }
 }
 ```
+### [Solution 2](./Java/FizzBuzzPrabhat.java)
+
+```java
+/* @date 02/10/2020
+ * @author Prabhat Malhotra
+ */
+
+import org.junit.jupiter.api.Test;
+
+/*
+ * Solution
+ */
+public class FizzBuzzPrabhat {
+
+  public void fizzBuzz(int n) {
+    for (int i = 1; i <= n; i++) {
+      if (i % 3 == 0 && i % 5 == 0) {
+        System.out.print("FizzBuzz,");
+      } else if (i % 3 == 0) {
+        System.out.print("Fizz,");
+      } else if (i % 5 == 0) {
+        System.out.print("Buzz,");
+      } else {
+        System.out.print(i + ",");
+      }
+    }
+  }
+}
+
+/*
+ * Test
+ */
+class FizzBuzzPrabhatTest {
+  @Test
+  public void shouldPrintFizzBuzz() {
+    FizzBuzzPrabhat fizzBuzzPrabhat = new FizzBuzzPrabhat();
+    fizzBuzzPrabhat.fizzBuzz(20);
+  }
+}
+```
+
 ## C Implementation
 
 ### [Fizzbuzz.c](./C/fizzbuzz.c)
@@ -481,50 +522,48 @@ export class FizzBuzz {
 // driver code
 const obj = new FizzBuzz();
 obj.solveFizzBuzzProblem(17);
-
 ```
 
-## Java solution with Test
-```
-/* @date 02/10/2020
- * @author Prabhat Malhotra
- */
+## C++ Implementation
 
-import org.junit.jupiter.api.Test;
+### [FizzBuzz.cpp](./C++/FizzBuzz.cpp)
 
-/*
- * Solution
- */
-public class FizzBuzzPrabhat {
-
-  public void fizzBuzz(int n) {
-    for (int i = 1; i <= n; i++) {
-      if (i % 3 == 0 && i % 5 == 0) {
-        System.out.print("FizzBuzz,");
-      } else if (i % 3 == 0) {
-        System.out.print("Fizz,");
-      } else if (i % 5 == 0) {
-        System.out.print("Buzz,");
-      } else {
-        System.out.print(i + ",");
-      }
+```c
+'''
+ * @author: Gaurav Kumar <gk956842@gmail.com> 
+ * @github: https://github.com/gaurav01k3
+ * @date: 01/11/2020
+'''
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, i;
+    cout << "Enter the no : ";
+    cin >> n;
+    // cout<<"\n";
+    for (i = 1; i <= n; i++)
+    {
+        if ((i % 5 == 0) && (i % 3 == 0))
+        {
+            cout << "FizzBuzz\n";
+        }
+        else if (i % 3 == 0)
+        {
+            cout << "Fizz\n";
+        }
+        else if (i % 5 == 0)
+        {
+            cout << "Buzz\n";
+        }
+        else
+        {
+            cout << i << "\n";
+        }
     }
-  }
+    return 0;
 }
-
-/*
- * Test
- */
-class FizzBuzzPrabhatTest {
-  @Test
-  public void shouldPrintFizzBuzz() {
-    FizzBuzzPrabhat fizzBuzzPrabhat = new FizzBuzzPrabhat();
-    fizzBuzzPrabhat.fizzBuzz(20);
-  }
-}
-
 ```
-
 
 ### Have Another solution?
 
