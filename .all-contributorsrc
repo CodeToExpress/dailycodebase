@@ -271,13 +271,43 @@
       ]
     },
     {
+      "login": "abhishek0405",
+      "name": "Abhishek Anantharam",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/55596147?v=4",
+      "profile": "https://github.com/abhishek0405",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "malhotra1432",
+      "name": "Prabhat Malhotra",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/26011598?v=4",
+      "profile": "https://github.com/malhotra1432",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "Hrishikesh-Thakkar",
+      "name": "Hrishikesh K Thakkar",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/25359325?v=4",
+      "profile": "https://github.com/Hrishikesh-Thakkar",
+      "contributions": [
+        "code"
+      ]
+    }, 
+    {
       "login": "gaurav01k3",
       "name": "GAURAV KUMAR",
       "avatar_url": "https://avatars0.githubusercontent.com/u/67451786?v=4",
       "profile": "https://github.com/gaurav01k3",
       "contributions": [
-        "doc"
-      ]
-    }
+        "doc",
+        "code"
+       ]
+     }
   ]
 }
