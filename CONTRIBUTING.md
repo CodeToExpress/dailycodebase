@@ -5,10 +5,10 @@ When contributing to this repository, please first discuss the change you wish t
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
 ## Pull Request Process and Contribution Guidelines
-
-1. Inside each "Day" Create a folder with the name of language you are contributing in.
-2. Ensure you have tested the code you are contributing atleast 3 times before submitting the pull request.
-3. The code you contribute must have this at top -
+1. Fork this repository and [**checkout a new branch from the fork's master**](https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt--bltnewbranchgt) before creating a pull request.
+2. Inside each "Day" Create a folder with the name of language you are contributing in.
+3. Ensure you have tested the code you are contributing atleast 3 times before submitting the pull request.
+4. The code you contribute must have this at top -
 ```cpp  
       /**
         * @author: <GitHub Username>
