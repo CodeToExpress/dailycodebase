@@ -97,6 +97,52 @@ public class HammingDistance {
 }
 ```
 
+### [Solution by @malhotra1432](./Java/HammingDistanceSolution.java)
+
+```java
+/* @date 03/10/2020
+ * @author Prabhat Malhotra
+ */
+
+import org.junit.jupiter.api.Test;
+
+/*
+ * Solution
+ */
+public class HammingDistanceSolution {
+
+    public String calculateHammingDistance(String firstString, String secondString) {
+        int totalHammingDistance = 0;
+        byte[] aByteArray = firstString.getBytes();
+        byte[] bByteArray = secondString.getBytes();
+        if (firstString.length() == secondString.length()) {
+            for (int i = 0; i < aByteArray.length; i++) {
+                if (aByteArray[i] != bByteArray[i]) {
+                    totalHammingDistance += 1;
+                }
+            }
+            return "Hamming distance between " + firstString + " " + firstString + " is " + totalHammingDistance;
+        }
+        return "Strings are not equal in length";
+    }
+
+}
+
+/*
+ * Test
+ */
+class HammingDistanceSolutionTest {
+    @Test
+    public void shouldCalculateHammingDistance() {
+        String firstString = "karolin";
+        String secondString = "kathrin";
+        HammingDistanceSolution hammingDistanceSolution = new HammingDistanceSolution();
+        System.out.println(hammingDistanceSolution.calculateHammingDistance(firstString, secondString));
+    }
+}
+
+```
+
 ## C++ Implementation
 
 ### [hamming.cpp](./C++/hamming.cpp)
@@ -387,50 +433,6 @@ public class HammingDistance {
 	}
 
 }
-
-## Solution with test
-```
-/* @date 03/10/2020
- * @author Prabhat Malhotra
- */
-
-import org.junit.jupiter.api.Test;
-
-/*
- * Solution
- */
-public class HammingDistancePrabhat {
-
-    public int calculateHammingDistance(String firstString, String secondString){
-        int totalChange = 0;
-        byte[] aByteArray = firstString.getBytes();
-        byte[] bByteArray = secondString.getBytes();
-
-        for(int i = 0; i < aByteArray.length; i++){
-            if(aByteArray[i] != bByteArray[i]){
-                totalChange += 1;
-            }
-        }
-        return totalChange;
-    }
-
-}
-
-/*
- * Test
- */
-class HammingDistancePrabhatTest {
-
-   @Test
-    public  void shouldCalculateHammingDistance(){
-        String firstString = "karolin";
-        String secondString = "kathrin";
-        HammingDistancePrabhat hammingDistancePrabhat = new HammingDistancePrabhat();
-       System.out.println("Hamming distance between " +firstString+ " and " +secondString+ " is "+ hammingDistancePrabhat.calculateHammingDistance(firstString,secondString));
-    }
-}
-
-```
 
 
 ## Why Hamming Distance?
