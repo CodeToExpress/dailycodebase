@@ -27,8 +27,10 @@ class StringReversalTest {
     @Test
     public void reverseString() {
         String randomString = "prabhat";
+        String expectedString = "tahbarp";
         StringReversal stringReversal = new StringReversal();
         System.out.println("The reverse of string " + randomString + " is " + stringReversal.stringReversal(randomString));
+        assertEquals(expectedString,stringReversal.stringReversal(randomString));
     }
 }
 
