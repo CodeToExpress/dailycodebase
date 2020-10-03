@@ -19,7 +19,7 @@ public class HammingDistanceSolution {
                     totalHammingDistance += 1;
                 }
             }
-            return "Hamming distance between " + firstString + " " + firstString + " is " + totalHammingDistance;
+            return "Hamming distance between " + firstString + " and " + secondString + " is " + totalHammingDistance;
         }
         return "Strings are not equal in length";
     }
