@@ -1,4 +1,4 @@
-Before submitting a PR, please ensure the following:
+Before submitting a PR, please ensure the following :
 
 - [ ] Create a folder with the name of the language you code, inside the directory of the day you're contributing to.
 - [ ] Add your code.
