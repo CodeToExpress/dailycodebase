@@ -1,8 +1,8 @@
-Please make sure you have done the following:
+Before submitting a PR, please ensure the following :
 
-- [ ] Created a folder with the name of language you code inside `/Day<n>/` directory (Where n is for nth day)
-- [ ] Added your Codes
-- [ ] Tested your codes
-- [ ] Added credits (author and date) at the top of the code
-- [ ] Updated README.md
-- [ ] Added yourself as a contributor using `all-contributors-cli`
+- [ ] Create a folder with the name of the language you code, inside the directory of the day you're contributing to.
+- [ ] Add your code.
+- [ ] Test your code.
+- [ ] Add credits (author and date) at the top of the code.
+- [ ] Update README.md of the day you are contributing to.
+- [ ] Add yourself as a contributor using `all-contributors-cli`.
