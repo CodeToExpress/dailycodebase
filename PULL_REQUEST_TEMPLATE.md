@@ -4,5 +4,5 @@
 - [ ] Added your codes
 - [ ] Tested your codes
 - [ ] Added credits (author and date) at the top of the code
-- [ ] Updated README.md of the day you are contributing to
+- [ ] Updated README.md for `/Day <n>/`
 - [ ] Added yourself as a contributor using `all-contributors-cli`
