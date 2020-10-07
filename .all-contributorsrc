@@ -298,7 +298,7 @@
       "contributions": [
         "code"
       ]
-    }, 
+    },
     {
       "login": "gaurav01k3",
       "name": "GAURAV KUMAR",
@@ -307,7 +307,17 @@
       "contributions": [
         "doc",
         "code"
-       ]
-     }
+      ]
+    },
+    {
+      "login": "wboccard",
+      "name": "wboccard",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/72316984?v=4",
+      "profile": "https://github.com/wboccard",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    }
   ]
 }
