@@ -298,7 +298,7 @@
       "contributions": [
         "code"
       ]
-    }, 
+    },
     {
       "login": "gaurav01k3",
       "name": "GAURAV KUMAR",
@@ -308,6 +308,16 @@
         "doc",
         "code"
        ]
-     }
+     },
+     {
+       "login": "diogenesdauster",
+       "name": "Diógenes Dauster",
+       "avatar_url": "https://avatars2.githubusercontent.com/u/16214631?s=460&u=c397c372c3332d4c5a16a79f4cb5e1141c88bc8e&v=4",
+       "profile": "https://github.com/diogenesdauster",
+       "contributions": [
+         "doc",
+         "code"
+        ]
+      }
   ]
 }

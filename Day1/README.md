@@ -565,6 +565,21 @@ int main()
 }
 ```
 
+## Outsystems Implementation
+
+### [Service Action FizzBuzz](./Outsystems/fizzbuzz-outsystems.png)
+
+```c
+ * @author: Dauster <diogenes.dauster@gmail.com> 
+ * @github: https://github.com/diogenesdauster
+ * @date: 09 Oct 2020
+```
+
+![ques for Day 1](./Outsystems/fizzbuzz-outsystems.png)
+
+
+
+
 ### Have Another solution?
 
 The beauty of programming lies in the fact that there is never a single solution to any problem.
