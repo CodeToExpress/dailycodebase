@@ -318,6 +318,17 @@
         "doc",
         "code"
       ]
+    },
+    {
+      "login": "d-l-mcbride",
+      "name": "d-l-mcbride",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/46550732?v=4",
+      "profile": "https://github.com/d-l-mcbride",
+      "contributions": [
+        "doc",
+        "code"
+      ]
     }
-  ]
+  ],
+  "commitConvention": "none"
 }
