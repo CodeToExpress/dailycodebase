@@ -2158,7 +2158,152 @@ int main() {
  return 0;
 }
 ```
+/* @date 25/09/2020
+ * @author Shashwat Gupta (shashwatxdevelop)
+ */
+import java.util.Scanner;
 
+public class Pattern__1 {
+
+	public static void main(String[] args) {
+		int i,j,n;
+		Scanner sc = new Scanner (System.in);
+				n= sc.nextInt();
+		for(i=1; i<=n; i++)
+		{
+			for (j=1; j<=i;j++)
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+
+	}
+
+}
+```
+/* @date 25/09/2020
+ * @author Shashwat Gupta (shashwatxdevelop)
+ */
+import java.util.Scanner;
+public class Pattern__2 {
+
+	public static void main(String[] args) {
+		int i,j,n, s=0;
+		Scanner sc = new Scanner (System.in);
+		n= sc.nextInt();
+		for (i=1; i<=n; i++)
+		{
+			for (j=1; j<=i; j++)
+			{
+				s=s+1;
+				System.out.print(s+" ");
+			}
+			System.out.println();
+		}
+
+	}
+
+}
+```
+/* @date 25/09/2020
+ * @author Shashwat Gupta (shashwatxdevelop)
+ */
+import java.util.Scanner;
+public class Pattern__3 {
+
+	public static void main(String[] args) {
+		int i,j,n,a,b;
+		Scanner sc = new Scanner (System.in);
+		n= sc.nextInt();
+		for(i=1; i<=n; i++)
+		{
+			for(j=1; j<=i; j++)
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+		
+		
+		for (i=n-1; i>=1; i--)
+		{
+			for (j=1; j<=i; j++ )
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+
+	}
+
+}
+
+```
+/* @date 25/09/2020
+ * @author Shashwat Gupta (shashwatxdevelop)
+ */
+import java.util.Scanner;
+public class Pattern__4 {
+
+	public static void main(String[] args) {
+		int i,j,n;
+		Scanner sc =new Scanner (System.in);
+		n= sc.nextInt();
+		
+       
+        	for (i=1; i<=n; i++)
+        	{
+        		for (j=n; j>i; j--)
+        		{
+        			System.out.print(" ");
+        		}
+        	
+        	for (j=i; j<=(2*i-1); j++)
+        	{
+        		System.out.print(j+" ");
+        	}
+        	for (j=(2*i-1) - 1; j>=i; j--)
+        	{
+        		System.out.print(j+" ");
+        	}
+        	System.out.println(" ");
+        }
+	}
+}
+
+
+```
+/* @date 25/09/2020
+ * @author Shashwat Gupta (shashwatxdevelop)
+ */
+import java.util.Scanner;
+public class Pattern__5 {
+
+	public static void main(String[] args) {
+		int i,j,k,n, p=1;
+		Scanner sc = new Scanner (System.in);
+		n= sc.nextInt();
+		for(i=1; i<=n;i++)
+		{
+			for (j=1; j<i; j++)
+			{
+				System.out.print(" ");
+			}
+			for (j=1; j<= (2*n-(2*i-1)); j++)
+			{
+				System.out.print("*");
+			}
+			System.out.println("");
+			
+		
+
+	}
+
+}
+}
+
+```
 ### Have Another solution?
 
 The beauty of programming lies in the fact that there is never a single solution to any problem.
