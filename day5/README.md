@@ -2158,7 +2158,7 @@ int main() {
  return 0;
 }
 ```
-/* @date 25/09/2020
+/* @date 14/10/2020
  * @author Shashwat Gupta (shashwatxdevelop)
  */
 import java.util.Scanner;
@@ -2182,7 +2182,7 @@ public class Pattern__1 {
 
 }
 ```
-/* @date 25/09/2020
+/* @date 14/10/2020
  * @author Shashwat Gupta (shashwatxdevelop)
  */
 import java.util.Scanner;
@@ -2206,7 +2206,7 @@ public class Pattern__2 {
 
 }
 ```
-/* @date 25/09/2020
+/* @date 14/10/2020
  * @author Shashwat Gupta (shashwatxdevelop)
  */
 import java.util.Scanner;
@@ -2240,7 +2240,7 @@ public class Pattern__3 {
 }
 
 ```
-/* @date 25/09/2020
+/* @date 14/10/2020
  * @author Shashwat Gupta (shashwatxdevelop)
  */
 import java.util.Scanner;
@@ -2274,7 +2274,7 @@ public class Pattern__4 {
 
 
 ```
-/* @date 25/09/2020
+/* @date 14/10/2020
  * @author Shashwat Gupta (shashwatxdevelop)
  */
 import java.util.Scanner;
@@ -2304,6 +2304,7 @@ public class Pattern__5 {
 }
 
 ```
+
 ### Have Another solution?
 
 The beauty of programming lies in the fact that there is never a single solution to any problem.
