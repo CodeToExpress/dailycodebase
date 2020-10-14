@@ -888,7 +888,7 @@ str = gets
 str.chomp!
 puts "The most frequent character in #{str} is : #{most_frequent_character(str)}"
 ```
-/* @date 25/09/2020
+/* @date 13/10/2020
  * @author Shashwat Gupta (shashwatxdevelop)
  */
 import java.util.Scanner;
