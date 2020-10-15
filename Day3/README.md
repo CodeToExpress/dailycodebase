@@ -472,6 +472,7 @@ val BADEC = "badec"
 val DIFF_ONE ="ab"
 val DIFF_TWO ="abcd"
 
+
 println("Hamming Distance of ${DOG} and ${LOG} = ${hammingDistance(DOG,LOG)}")
 println("Hamming Distance of ${LOG} and ${LOG} = ${hammingDistance(LOG,LOG)}")
 println("Hamming Distance of ${LARRY} and ${LASSI} = ${hammingDistance(LARRY,LASSI)}")

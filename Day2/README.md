@@ -982,6 +982,7 @@ public class StringReverseAndPalin {
 ```
 
 ## Kotlin Implementation
+
 ### [ReverseAndPalindrome.kts](./Kotlin/ReverseAndPalindrome.kts)
 
 ##### To run this script `kotlinc -script ReverseAndPalindrome.kts`
