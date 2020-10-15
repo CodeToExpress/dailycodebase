@@ -595,6 +595,36 @@ int main()
 }
 ```
 
+## Kotlin Implementation
+
+### [FizzBuzz.kts](./Kotlin/FizzBuzz.kts)
+
+##### To run this script `kotlinc -script FizzBuzz.kts`
+ _*Prereq: Kotlin must be installed._
+```
+/**
+ * @author: d-l-mcbride
+ * @date: 10/11/2020
+ **/
+
+fun fizzBuzz (fizzList: List<Int>) {
+
+    var output: String
+
+    fizzList.forEach {
+        output = when {
+            it % 15 == 0 -> "FizzBuzz"
+            it % 5 == 0 -> "Buzz"
+            it % 3 == 0 -> "Fizz"
+            else -> "${it}"
+        }
+        println(output)
+    }
+}
+
+fizzBuzz((1..15).toList())
+```
+
 ### Have Another solution?
 
 The beauty of programming lies in the fact that there is never a single solution to any problem.
