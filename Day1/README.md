@@ -565,17 +565,40 @@ int main()
 }
 ```
 
-## Outsystems Implementation
+## Advpl Implementation
 
-### [Service Action FizzBuzz](./Outsystems/fizzbuzz-outsystems.png)
+### [fizzbuzz.prw](./Advpl/fizzbuzz.prw)
 
-```c
- * @author: Dauster <diogenes.dauster@gmail.com> 
- * @github: https://github.com/diogenesdauster
- * @date: 09 Oct 2020
+```advpl
+
+/*
+The Fizz Buzz Challenge 
+Autor: Diógenes Dauster <diogenes.dauster@gmail.com> 
+GitHub: https://github.com/diogenesdauster
+Date: 17/11/2020
+*/
+
+User function fizzbuzz(num)
+Local result := ""
+Local i := 1
+
+  For i := 1 To num
+
+    If i % 3 = 0 .and. i % 5 = 0
+        result += "FizzBuzz "
+    Elseif i % 5 = 0
+        result += "Buzz "
+    Elseif  i % 3 = 0
+        result += "Fizz "
+    EndIf
+
+  Next
+
+  alert(result)
+
+return result
 ```
 
-![ques for Day 1](./Outsystems/fizzbuzz-outsystems.png)
 
 
 
