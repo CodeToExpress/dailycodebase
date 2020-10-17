@@ -149,6 +149,36 @@ class FizzBuzzPrabhatTest {
   }
 }
 ```
+### [Solution 3]: (./Java/FizzBuzz_wb.java)
+```java
+/*
+* @author wboccard
+* @date October 7, 2020
+*/
+
+public class FizzBuzz_wb {
+
+  public static void main(String[] args){
+    int repetitions = 50;
+    for (int index = 1; index <= repetitions; index++){
+      if (index % 3 == 0 && index % 5 == 0){
+        System.out.print("FizzBuzz");
+      } else if (index % 3 == 0){
+        System.out.print("Fizz");
+      } else if (index % 5 == 0){
+        System.out.print("Buzz");
+      } else {
+        System.out.printf("%d", index);
+      }
+      if (index != repetitions){
+        System.out.print(", ");
+      } else {
+        System.out.println();
+      }
+    }  
+   }
+}
+```
 
 ## C Implementation
 
@@ -565,6 +595,35 @@ int main()
 }
 ```
 
+## Kotlin Implementation
+
+### [FizzBuzz.kts](./Kotlin/FizzBuzz.kts)
+
+##### To run this script `kotlinc -script FizzBuzz.kts`
+ _*Prereq: Kotlin must be installed._
+```
+/**
+ * @author: d-l-mcbride
+ * @date: 10/11/2020
+ **/
+
+fun fizzBuzz (fizzList: List<Int>) {
+
+    var output: String
+
+    fizzList.forEach {
+        output = when {
+            it % 15 == 0 -> "FizzBuzz"
+            it % 5 == 0 -> "Buzz"
+            it % 3 == 0 -> "Fizz"
+            else -> "${it}"
+        }
+        println(output)
+    }
+}
+
+fizzBuzz((1..15).toList())
+```
 ## Advpl Implementation
 
 ### [fizzbuzz.prw](./Advpl/fizzbuzz.prw)
@@ -598,10 +657,6 @@ Local i := 1
 
 return result
 ```
-
-
-
-
 
 ### Have Another solution?
 
