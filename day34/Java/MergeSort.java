@@ -1,3 +1,8 @@
+/**
+ * @author Lucas Freire(ldrf)
+ * @date 16/10/2020
+ */
+
 import java.util.Arrays;
 
 public class MergeSort {
