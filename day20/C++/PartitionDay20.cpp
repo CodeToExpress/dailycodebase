@@ -11,15 +11,17 @@ using namespace std;
 
 int main(){
 	int n;
+	cout<<"Enter the number of values you want to have."<<endl;
 	cin >> n;
 	int a[n];
 	for(int i = 0; i < n; i++){
+		cout<<"Enter the "<<i+1<<" number"<<endl;
 		cin >> a[i];
 	}
 	
 	int num;
+
 	cin >> num;
-	
 	int count = 0;
 	vector<int> part;
 	vector<vector <int> > ans;
