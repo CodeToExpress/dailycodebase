@@ -499,8 +499,10 @@ void main(){
 
 #### [Solution](./python/Product.py)
 ```python
+"""
 @author:NormalVad
 @date:25/10/2020 
+"""
 def product(a,b):
     if(a==0 or b==0):
         return 0
