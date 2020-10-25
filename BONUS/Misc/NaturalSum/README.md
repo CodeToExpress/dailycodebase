@@ -9,7 +9,7 @@ WAP to sum first `n` natural numbers
 ```java
 /**
  * Natural Sum using recursion
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 26/01/2019
  */
 

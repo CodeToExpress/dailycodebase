@@ -1,6 +1,6 @@
 /**
  * Factorial usinig recursion
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  */
 

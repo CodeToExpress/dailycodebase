@@ -135,7 +135,7 @@ I would be more than happy if you send your feedback or suggestions, or if you a
 > You can contact me in case if you need any assistance:
 > Email: theleanprogrammer@gmail.com
 > Web: [http://madhavbahl.tech/](http://madhavbahl.ml/)
-> GitHub: [https://github.com/MadhavBahlMD](https://github.com/MadhavBahlMD)
+> GitHub: [https://github.com/MadhavBahl](https://github.com/MadhavBahl)
 > LinkedIn: [https://www.linkedin.com/in/madhavba_hl/_](https://www.linkedin.com/in/madhavbahl/)
 
 * * *

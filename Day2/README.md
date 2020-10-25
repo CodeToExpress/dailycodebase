@@ -14,7 +14,7 @@
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 21/12/2018
  */
 
@@ -49,7 +49,7 @@ console.log(strRev('Hello!'));
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 21/12/2018
  */
 
@@ -89,7 +89,7 @@ console.log(strRev('Hello!'));
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 21/12/2018
  */
 
@@ -117,7 +117,7 @@ console.log(strRev('Hello!'));
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 21/12/2018
  */
 
@@ -146,7 +146,7 @@ console.log(strRev('Hello!'));
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 21/12/2018
  */
 
@@ -174,7 +174,7 @@ console.log(strRev('Hello!'));
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 21/12/2018
  */
 
@@ -199,7 +199,7 @@ console.log(strRev('Hello!'));
 
 ```java
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 21/12/2018
  */
 
@@ -567,7 +567,7 @@ end
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 21/12/2018
  */
 
@@ -605,7 +605,7 @@ isPalindrome("level");
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 21/12/2018
  */
 
@@ -629,7 +629,7 @@ isPalindrome('level');
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 21/12/2018
  */
 
@@ -648,7 +648,7 @@ isPalindrome('level');
 
 ```java
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 21/12/2018
  */
 
@@ -687,7 +687,7 @@ public class Palindrome {
 
 ```java
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 21/12/2018
  */
 

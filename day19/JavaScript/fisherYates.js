@@ -1,6 +1,6 @@
 /**
  * Fisher Yates Shuffle Algorithm
- * Implemented in JavaScript by @MadhavBahlMD
+ * Implemented in JavaScript by @MadhavBahl
  * Algorithm
  *   Step 1: Write down the numbers from 1 through N.
  *   Step 2: Pick a random number k between one and the number of unstruck numbers remaining (inclusive).

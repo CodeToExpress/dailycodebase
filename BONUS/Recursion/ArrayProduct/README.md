@@ -16,7 +16,7 @@ output: 120
 ```js
 /**
  * Find Product of array elements
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  */
 
@@ -34,7 +34,7 @@ console.log ('Product of elements of [2, 3, 4, 5] is: ', findProduct (arr, arr.l
 ```java
 /**
  * Product of array elements using recursion 
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  */
 

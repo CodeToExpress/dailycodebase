@@ -38,7 +38,7 @@ Vicinity includes direct horizontal/vertical/diagonal neighboring position
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 25/01/2019
  * Method - First Assign then place values
  * Complexity - O(row*col)   // row and col are the number of rows and number of columns
@@ -90,7 +90,7 @@ makeMineField ([[0, 0], [0, 1]], 4, 4);
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 25/01/2019
  * Method - First Assign then place values
  * Complexity - O(num_bombs)   // num_bombs = number of bombs

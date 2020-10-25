@@ -1,6 +1,6 @@
 /**
  * Reverse the stack
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 12/02/2019
  */
 

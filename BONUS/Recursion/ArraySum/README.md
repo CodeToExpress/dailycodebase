@@ -15,7 +15,7 @@ output: 15
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  * Array Elements Sum using Recursion
  */
@@ -36,7 +36,7 @@ import java.util.Scanner;
 
 /**
  * Recursive Array Sum
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  */
 

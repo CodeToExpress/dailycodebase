@@ -1,6 +1,6 @@
 /**
  * Spiral Matrix Generation
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 24/01/2019
  */
 

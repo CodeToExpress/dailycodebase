@@ -1,5 +1,5 @@
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 17/01/2019
  * Method - Sliding Wndow -- Solvable in O(m) time, m = array length
  */

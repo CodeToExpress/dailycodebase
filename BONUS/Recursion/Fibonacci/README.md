@@ -19,7 +19,7 @@ output: 13
 ```js
 /**
  * Fibonacci Series Using Recursion
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  */
 
@@ -38,7 +38,7 @@ import java.util.Scanner;
 
 /**
  * Nth element of fibonacci series using recursion
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  */
 

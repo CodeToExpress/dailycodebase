@@ -20,12 +20,12 @@ The Tower of Hanoi puzzle was invented by the French mathematician Edouard Lucas
 
 ## JavaScript Implementation
 
-### [Solution](./JavaScript/hanoi_MadhavBahlMD.js)
+### [Solution](./JavaScript/hanoi_MadhavBahl.js)
 
 ```js
 /**
  * @source Geeks4Geeks: https://www.geeksforgeeks.org/c-program-for-tower-of-hanoi/
- * Implementaed in JavaScript by @MadhavBahlMD
+ * Implementaed in JavaScript by @MadhavBahl
  * @date 10/01/2019
  */
 

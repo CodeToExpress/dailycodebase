@@ -17,7 +17,7 @@ output: [4, 3, 2, 1]
 /** 
  * Reverse an array using recursion
  * Method 1
- * Implemented by MadhavBahlMD
+ * Implemented by MadhavBahl
  * @date 18/01/2019
  */
 
@@ -35,7 +35,7 @@ console.log (reverseArray([1, 2, 3, 4]));
 /** 
  * Reverse an array using recursion
  * Method 1
- * Implemented by MadhavBahlMD
+ * Implemented by MadhavBahl
  * @date 18/01/2019
  */
 
@@ -62,7 +62,7 @@ import java.util.Scanner;
 
 /**
  * Reverse an array using recursion
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  */
 

@@ -1,6 +1,6 @@
 /**
  * Reverse a string using recursion
- * Implemented by - MadhavBahlMD
+ * Implemented by - MadhavBahl
  * @date 18/01/2019
  */
 

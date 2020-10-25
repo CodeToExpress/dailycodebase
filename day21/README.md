@@ -36,11 +36,11 @@ output: 16 (7 + 5 + 4)
 
 ## JavaScript Implementation
 
-### [Solution 1 by @MadhavBahlMD](./JavaScript/pairSumN1.js)
+### [Solution 1 by @MadhavBahl](./JavaScript/pairSumN1.js)
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 17/01/2019
  * Method used -- bruteforce search (Iteration using nested loops)
  */
@@ -64,11 +64,11 @@ console.log (pairSumN ([-1, 4, 5, 5, 6, 7, 8], 10));
 console.log (pairSumN ([1, 2, 3, 4, 5, 6], 20));
 ```
 
-### [Solution 2 by @MadhavBahlMD](./JavaScript/pairSum2.js)
+### [Solution 2 by @MadhavBahl](./JavaScript/pairSum2.js)
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 16/01/2019
  * Method -- Multiple Pointers, solution in O(n)
  */
@@ -139,13 +139,13 @@ end
 
 ## JavaScript Implementation
 
-### [Solution 1 by @MadhavBahlMD](./JavaScript/maxSubarray_madhav.js)
+### [Solution 1 by @MadhavBahl](./JavaScript/maxSubarray_madhav.js)
 
 Method - Bruteforce Search -- Worst Case Complexity = O(m.n), where m = array length and n is input number
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 17/01/2019
  * Method - Bruteforce Search
  */
@@ -169,13 +169,13 @@ function maxSubarraySum (arr, n) {
 console.log (maxSubarraySum ([1, 3, 2, 4, 7, 5, 4], 3)); // 16
 ```
 
-### [Solution 2 by @MadhavBahlMD](./JavaScript/maxSubarray_madhav2.js)
+### [Solution 2 by @MadhavBahl](./JavaScript/maxSubarray_madhav2.js)
 
 Method - Sliding Wndow -- Solvable in O(m) time, m = array length
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 17/01/2019
  * Method - Sliding Wndow -- Solvable in O(m) time, m = array length
  */
@@ -204,11 +204,11 @@ console.log (maxSubarraySum ([1, 3, 2, 4, 7, 5, 4], 3)); // 16
 
 ## JavaScript Implementation
 
-### [Solution 1 by @MadhavBahlMD](./JavaScript/pairSumN1.js)
+### [Solution 1 by @MadhavBahl](./JavaScript/pairSumN1.js)
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 17/01/2019
  * Method used -- bruteforce search (Iteration using nested loops)
  */

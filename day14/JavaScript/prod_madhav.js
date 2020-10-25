@@ -1,5 +1,5 @@
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 08/01/2018
  * METHOD - We keep thte second argument (num2) positive and add the first arguement num2(second arg) times
  */

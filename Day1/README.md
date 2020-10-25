@@ -17,7 +17,7 @@
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 20/12/2018
  */
 
@@ -48,7 +48,7 @@ fizzbuzz (17);
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 20/12/2018
  */
 
@@ -81,7 +81,7 @@ fizzbuzz (17);
 
 ```java
 /**
- * @author: MadhavBahlMD
+ * @author: MadhavBahl
  * @date: 20/12/2018
  */
 
