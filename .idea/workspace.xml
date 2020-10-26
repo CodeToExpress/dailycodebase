@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="abe637df-6275-4e74-a05b-7393d14aa993" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Day1/Java/dailycodebase/fizzBuzz.java" beforeDir="false" afterPath="$PROJECT_DIR$/Day1/Java/dailycodebase/fizzBuzz.java" afterDir="false" />
+    <list default="true" id="abe637df-6275-4e74-a05b-7393d14aa993" name="Default Changelist" comment="added fizzBuzz algorithim in java">
+      <change afterPath="$PROJECT_DIR$/Day2/Java/StringReversalAndPalindrome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +48,30 @@
       <option name="presentableId" value="Default" />
       <updated>1603740017757</updated>
     </task>
+    <task id="LOCAL-00001" summary="added fizzBuzz algorithim in java">
+      <created>1603741377446</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603741377446</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added fizzBuzz algorithim in java" />
+    <option name="LAST_COMMIT_MESSAGE" value="added fizzBuzz algorithim in java" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603740126545">
@@ -40,5 +82,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603740882382" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1603741390539">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603741390539" />
   </component>
 </project>
