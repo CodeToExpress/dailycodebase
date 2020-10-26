@@ -328,6 +328,16 @@
         "doc",
         "code"
       ]
+    },
+    {
+      "login": "NormalVad",
+      "name": "NormalVad",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/73097046?v=4",
+      "profile": "https://github.com/NormalVad",
+      "contributions": [
+        "doc",
+        "code"
+      ]
     }
   ],
   "commitConvention": "none"
