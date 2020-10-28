@@ -1,3 +1,8 @@
+/**
+  * @author: RrennM
+  * @date: Oct 28, 2020
+**/
+
 let bubbleSort = (arr) => {
   for(i = 0; i < arr.length; i++) {
       for(j = 0; j < arr.length; j++) {

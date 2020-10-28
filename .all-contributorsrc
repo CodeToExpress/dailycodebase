@@ -330,5 +330,16 @@
       ]
     }
   ],
+    {
+      "login": "RrennM",
+      "name": "RrennM",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/27599411?s=400&u=773dbb8a4f877cf06770cbd39e4ddeeafeedcbdd&v=4",
+      "profile": "https://github.com/RrennM",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    }
+  ],
   "commitConvention": "none"
 }
