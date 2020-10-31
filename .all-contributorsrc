@@ -328,6 +328,15 @@
         "doc",
         "code"
       ]
+    },
+    {
+      "login": "thefluffyoshi",
+      "name": "Katie",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/54290315?v=4",
+      "profile": "https://github.com/thefluffyoshi",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "commitConvention": "none"
