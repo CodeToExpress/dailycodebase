@@ -9,7 +9,7 @@ WAP to find the number of times a given word occurs in the sentence
 ```java
 /**
  * count frequency of a given word in the array
- * @author MadhavbahlMD
+ * @author MadhavBahl
  * @dadte 26/01/2019
  */
 

@@ -1,6 +1,6 @@
 /**
  * Alternate Queue Combination
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 15/02/2019
  */
 

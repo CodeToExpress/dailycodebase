@@ -37,11 +37,11 @@ The sequence is: 1, 1, 2, 3, 5, 8, 13
 
 ### JavaScript Implementation
 
-#### [Solution by @MadhavBahlMD](./JavaScript/fact_madhav.js)
+#### [Solution by @MadhavBahl](./JavaScript/fact_madhav.js)
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 07/01/2018
  */
 
@@ -381,11 +381,11 @@ main
 
 ### JavaScript Implementation
 
-#### [Solution by @MadhavBahlMD](./JavaScript/fibo_madhav.js)
+#### [Solution by @MadhavBahl](./JavaScript/fibo_madhav.js)
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 07/01/2018
  */
 

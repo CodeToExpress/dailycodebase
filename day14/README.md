@@ -44,7 +44,7 @@ output: -32
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 08/01/2018
  */
 
@@ -66,7 +66,7 @@ console.log(`Sum of digits of ${num2} is ${sumDigits(num2)}`);
 
 ```java
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 08/01//2018
  */
 
@@ -255,7 +255,7 @@ void main(){
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 08/01/2018
  * METHOD - We keep thte second argument (num2) positive and add the first arguement num2(second arg) times
  */
@@ -294,7 +294,7 @@ console.log (`${n7} x ${n8} = ${recursiveProd(n7, n8)}`);
 
 ```java
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 08/01//2018
  */
  

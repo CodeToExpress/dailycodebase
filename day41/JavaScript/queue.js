@@ -1,6 +1,6 @@
 /**
  * Implementation of queue usinig JS
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 14/02/2019
  */
 

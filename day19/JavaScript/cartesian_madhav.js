@@ -1,5 +1,5 @@
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 15/01/2018
  * Method: Use nested loop to generate the 2D matrix
  */

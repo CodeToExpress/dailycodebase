@@ -19,7 +19,7 @@ output: 120
 ```java
 /**
  * Factorial using recursion
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  */
 
@@ -50,7 +50,7 @@ public class Factorial {
 ```js
 /**
  * Factorial usinig recursion
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  */
 

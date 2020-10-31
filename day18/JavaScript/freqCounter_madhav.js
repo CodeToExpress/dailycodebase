@@ -1,5 +1,5 @@
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 01/14/2018
  * Frequency Ccounter using object
  */

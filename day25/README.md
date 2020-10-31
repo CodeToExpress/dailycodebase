@@ -43,7 +43,7 @@ for (let i=0; i<n; i++) {
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 23/01/2019
  * Method -- Creating a new matrix to represent the rotated tile
  */

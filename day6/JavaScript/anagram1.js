@@ -1,5 +1,5 @@
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 27/12/2018
  * METHOD -- Check the lengths of both strings, sort them and then check whether they are same
  */

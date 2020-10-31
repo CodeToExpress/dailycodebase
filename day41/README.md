@@ -26,7 +26,7 @@ Read more about queues here: https://www.geeksforgeeks.org/queue-set-1introducti
 ```js
 /**
  * Implementation of queue usinig JS
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 14/02/2019
  */
 

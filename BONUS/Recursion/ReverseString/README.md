@@ -16,7 +16,7 @@ output: dcba
 ```js
 /**
  * Reverse a string using recursion
- * Implemented by - MadhavBahlMD
+ * Implemented by - MadhavBahl
  * @date 18/01/2019
  */
 
@@ -33,7 +33,7 @@ console.log (reverseString ('abcd'));
 ```java
 /**
  * String Reversal using recursion
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  */
 

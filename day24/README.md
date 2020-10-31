@@ -25,7 +25,7 @@ output: false
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 22/01/2019
  * Method - Circular Search -- Time = O(n)
  */

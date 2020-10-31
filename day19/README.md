@@ -66,11 +66,11 @@ source: [wikipedia (https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)]
 
 ### JavaScript Implementation
 
-#### [Solution by @MadhavBahlMD](./JavaScript/cartesian_madhav.js)
+#### [Solution by @MadhavBahl](./JavaScript/cartesian_madhav.js)
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 15/01/2018
  * Method: Use nested loop to generate the 2D matrix
  */
@@ -319,7 +319,7 @@ for i in cartesian:
 ```js
 /**
  * Fisher Yates Shuffle Algorithm
- * Implemented in JavaScript by @MadhavBahlMD
+ * Implemented in JavaScript by @MadhavBahl
  * Algorithm
  *   Step 1: Write down the numbers from 1 through N.
  *   Step 2: Pick a random number k between one and the number of unstruck numbers remaining (inclusive).

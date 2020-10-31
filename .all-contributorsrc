@@ -10,7 +10,7 @@
   "commit": true,
   "contributors": [
     {
-      "login": "MadhavBahlMD",
+      "login": "MadhavBahl",
       "name": "MADHAV BAHL",
       "avatar_url": "https://avatars2.githubusercontent.com/u/26179770?v=4",
       "profile": "http://madhavbahl.tech/",
@@ -327,6 +327,15 @@
       "contributions": [
         "doc",
         "code"
+      ]
+    },
+    {
+      "login": "mihirg008",
+      "name": "Mihir Gupta",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/32246337?s=460&u=26abf142607d487660a12fcc8b508407b0896c8c&v=4",
+      "profile": "https://github.com/mihirg008",
+      "contributions": [
+        "doc"
       ]
     }
   ],

@@ -52,7 +52,7 @@ Output: no
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 28/12/2018
  * METHOD - Consider the 3 cases separately,
  *   1) If difference in lengths is more than 1 then print no and exit

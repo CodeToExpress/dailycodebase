@@ -1,5 +1,5 @@
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 25/01/2019
  * Method - First Assign then place values
  * Complexity - O(num_bombs)   // num_bombs = number of bombs

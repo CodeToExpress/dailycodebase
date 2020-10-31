@@ -1,5 +1,5 @@
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 01/01/2019
  * METHOD (Using Array)
  * - Initalize an empty array `strArr` that will store all the substrings that contains all the array elements

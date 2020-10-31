@@ -1,7 +1,7 @@
 /** 
  * Reverse an array using recursion
  * Method 1
- * Implemented by MadhavBahlMD
+ * Implemented by MadhavBahl
  * @date 18/01/2019
  */
 

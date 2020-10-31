@@ -48,7 +48,7 @@ Read more at [Wikipedia](https://en.wikipedia.org/wiki/Levenshtein_distance)
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 31/12/2018
  */
 

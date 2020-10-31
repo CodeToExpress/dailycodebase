@@ -1,5 +1,5 @@
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  * Method - Bruteforce Search - Time complexity = O(m.n.p) // m, n, and p are the lengths of 3 input arrays
  */

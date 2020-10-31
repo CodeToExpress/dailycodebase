@@ -10,7 +10,7 @@ Give a number, write a program to check whether it is odd or even
 import java.util.Scanner;
 
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 25/01/2019
  */
 

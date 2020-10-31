@@ -1,5 +1,5 @@
 /** FOR SORTED ARRAYS
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  * Method - Multiple Pointers 
  * NOTE - For this method, We are assuming that the arrays are sorted. 

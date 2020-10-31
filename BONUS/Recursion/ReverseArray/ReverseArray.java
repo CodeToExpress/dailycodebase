@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * Reverse an array using recursion
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  */
 

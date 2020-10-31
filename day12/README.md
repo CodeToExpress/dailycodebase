@@ -40,7 +40,7 @@ In this case, the worst case Time Complexity will be O(m.n), m and n are the len
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 04/01/2018
  * In this case, the worst case Time Complexity will be O(m.n), 
  * m and n are the lengths of string and pattern respectively.
@@ -81,7 +81,7 @@ substringSearch ("abcrxyzgf", "xyz");
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 05/01/2018
  * METHOD - Using String.indexOf() method
  */
@@ -98,7 +98,7 @@ console.log (substringSearch ("abcrxyzgf", "xyz"));
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 05/01/2018
  * METHOD - Using String.search() method
  */
@@ -180,7 +180,7 @@ import java.util.Scanner;
 
 /**
  * Daily Codes Day 12 -- Substring Search (Brute Force Search)
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 05/01/2018
  */
 
