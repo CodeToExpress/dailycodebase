@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/ArrayProduct" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ArraySum" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Fibonacci" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/NaturalSum" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Power" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Recursion" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ReverseArray" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ReverseString" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SumSquares" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
