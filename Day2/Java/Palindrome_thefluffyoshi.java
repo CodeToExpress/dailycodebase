@@ -12,7 +12,7 @@ public class Palindrome_thefluffyoshi
         //Instantiating variables
         String str_reverse = "";
 
-        //Inputted word
+        //Input word
         System.out.print("Please input the word you want to check: ");
         Scanner input = new Scanner(System.in);
         String str = input.next();
@@ -23,7 +23,7 @@ public class Palindrome_thefluffyoshi
             str_reverse = str_reverse + str.charAt(i);
         }//end for loop reversal
 
-        //Checking if inputted word is a Palindrome
+        //Checking if inputted word is equal/the same as the reverse
         if (str_reverse.equals(str))
         {
             System.out.println("true");
@@ -34,4 +34,4 @@ public class Palindrome_thefluffyoshi
         }
 
     }//end main
-}//end public class
+}//end Palindrome class
