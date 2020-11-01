@@ -9,6 +9,7 @@ public class bubbleSort_thefluffyoshi
 {
     public static void main (String[] args)
     {
+        //Vars
         int arr_size, i, j, swapNum;
 
         //Enter how big the array is
@@ -18,12 +19,12 @@ public class bubbleSort_thefluffyoshi
 
         int array[] = new int[arr_size];
 
-        //The array numbers
+        //Input the array numbers/elements
         for (i = 0; i < arr_size; i++)
         {
             System.out.print("Enter the elements inside the array: ");
             array[i] = arr_scan.nextInt();
-        }//end for loop
+        }//end for loop to input elements
 
         //Bubble sort
         for (i = 0; i < arr_size-1; i++)
@@ -35,15 +36,15 @@ public class bubbleSort_thefluffyoshi
                     swapNum = array[j];
                     array[j] = array[j+1];
                     array[j+1] = swapNum;
-                }
-            }
-        }
+                }//end if to swap
+            }//end nested for loop
+        }//end for loop to sort
 
         //End sort
         System.out.print("Sorted array: ");
         for (i = 0; i < arr_size; i++)
         {
             System.out.print(array[i] + " ");
-        }
+        }//end for loop to print out the sorted array
     }//end main
 }//end class
