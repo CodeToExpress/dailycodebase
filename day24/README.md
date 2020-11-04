@@ -30,34 +30,34 @@ output: false
  * Method - Circular Search -- Time = O(n)
  */
 
-function isRotation (arr1, arr2) {
-    let len1 = arr1.length,
-        len2 = arr2.length;
+function isRotation(arr1, arr2) {
+  let len1 = arr1.length,
+    len2 = arr2.length;
 
-    // return false if lengths are different
-    if (len1 !== len2)  return false;
+  // return false if lengths are different
+  if (len1 !== len2) return false;
 
-    // find position of first element of array2 in array 2
-    let isRotated = true,
-        pos = arr1.indexOf (arr2[0]);
+  // find position of first element of array2 in array 2
+  let isRotated = true,
+    pos = arr1.indexOf(arr2[0]);
 
-    // Return false if element not found
-    if (pos < 0)  return false;
-    
-    // Check all the other numbers
-    for (let i=0; i<len1; i++) {
-        if (arr1[(pos+i)%len1] !== arr2[i]) {
-            isRotated = false;
-            break;
-        }
+  // Return false if element not found
+  if (pos < 0) return false;
+
+  // Check all the other numbers
+  for (let i = 0; i < len1; i++) {
+    if (arr1[(pos + i) % len1] !== arr2[i]) {
+      isRotated = false;
+      break;
     }
+  }
 
-    return isRotated;
+  return isRotated;
 }
 
-console.log (isRotation ([1, 2, 3, 4, 5, 6, 7], [4, 5, 6, 7, 1, 2, 3]));  // true
-console.log (isRotation ([1, 2, 3, 4, 5, 6, 7], [7, 1, 2, 3]));  // false
-console.log (isRotation ([1, 2, 3, 4, 5, 6], [6, 5, 4, 3, 2, 1]));  // false 
+console.log(isRotation([1, 2, 3, 4, 5, 6, 7], [4, 5, 6, 7, 1, 2, 3])); // true
+console.log(isRotation([1, 2, 3, 4, 5, 6, 7], [7, 1, 2, 3])); // false
+console.log(isRotation([1, 2, 3, 4, 5, 6], [6, 5, 4, 3, 2, 1])); // false
 ```
 
 ## Ruby Implementation
@@ -124,7 +124,7 @@ public class circularRotation {
             return false;
         else
         {
-           p=a2.indexOf(a1.get(0)); 
+           p=a2.indexOf(a1.get(0));
            if(p!=-1)
            {
                for(i=p;i<a2.size();i++)
@@ -152,7 +152,7 @@ public class circularRotation {
                else
                    return false;
         }
-            
+
     }
    public static void main(String []args)
    {
@@ -163,7 +163,7 @@ public class circularRotation {
        System.out.println("Enter size and insert elements into first array ");
        m=sc.nextInt();
        for(i=0;i<m;i++)
-          a.add(sc.nextInt()); 
+          a.add(sc.nextInt());
        System.out.println("Enter size and insert elements into second array ");
        n=sc.nextInt();
        for(i=0;i<n;i++)
@@ -171,5 +171,60 @@ public class circularRotation {
        boolean res = circular(a,a2);
        System.out.println(res);
    }
+}
+```
+
+## C++ Implementation
+
+### [Solution](./C++/isRotation_parth.cpp)
+
+```C++
+/**
+ * @author Parth Patel
+ * @date 22/09/2020
+ * Method - Circular Search -- Time = O(n)
+ */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isRotation(int arr1[], int n1, int arr2[], int n2) {
+     // return false if lengths are different
+    if (n1 != n2)return false;
+    int ind = -1;
+    int n = n1;
+
+     // find position of first element of array2 in array 1
+    for (int i = 0; i < n; i++) {
+        if (arr2[0] == arr1[i]) {
+            ind = i;
+            break;
+        }
+    }
+    // Return false if element not found
+    if(ind==-1)return false;
+
+     // Check all the other numbers
+    for (int i = 0; i < n; i++) {
+        int j = (i + ind) % n;
+        if (arr2[i] != arr1[j])return false;
+    }
+    return true;
+}
+int main() {
+    int n1, n2, arr1[n1], arr2[n2];
+    // Size of array 1 is n1
+    cin >> n1;
+    for (int i = 0; i < n1; i++) {
+        cin >> arr1[i];
+    }
+    // Size of array 2 is n2
+    cin >> n2;
+    for (int i = 0; i < n2; i++) {
+        cin >> arr2[i];
+    }
+    bool ans = isRotation(arr1, n1, arr2, n2);
+    cout << ans << endl;
+    return 0;
 }
 ```
