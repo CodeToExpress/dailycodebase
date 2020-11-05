@@ -136,7 +136,7 @@ input n=5
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 26/12/2018
  */
 
@@ -163,7 +163,7 @@ pattern1(5);
 
 ```java
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 26/12/2018
  */
 
@@ -561,7 +561,7 @@ input = 4
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 26/12/2018
  */
 
@@ -953,7 +953,7 @@ input = 5
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 26/12/2018
  */
 
@@ -990,7 +990,7 @@ pattern4 (5);
 
 ```java
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 26/12/2018
  */
 
@@ -1168,7 +1168,7 @@ input = 5
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 26/12/2018
  */
 
@@ -1202,7 +1202,7 @@ pattern5 (5);
 
 ```java
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 26/12/2018
  */
 
@@ -1365,7 +1365,7 @@ input = 5
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 26/12/2018
  */
 
@@ -1416,7 +1416,7 @@ pattern6 (5);
 
 ```java
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 26/12/2018
  */
 
@@ -1625,7 +1625,7 @@ input = 4
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 26/12/2018
  */
 
@@ -1685,7 +1685,7 @@ pattern7 (5);
 
 ```java
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 26/12/2018
  */
 
@@ -1914,7 +1914,7 @@ input = 5
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 26/12/2018
  */
 
@@ -1961,7 +1961,7 @@ pattern8 (5);
 
 ```java
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 26/12/2018
  */
 

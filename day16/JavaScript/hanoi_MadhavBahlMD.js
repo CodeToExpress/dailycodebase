@@ -1,6 +1,6 @@
 /**
  * @source Geeks4Geeks: https://www.geeksforgeeks.org/c-program-for-tower-of-hanoi/
- * Implementaed in JavaScript by @MadhavBahlMD
+ * Implementaed in JavaScript by @MadhavBahl
  * @date 10/01/2019
  */
 

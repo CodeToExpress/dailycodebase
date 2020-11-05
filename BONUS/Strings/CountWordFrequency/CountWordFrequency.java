@@ -1,6 +1,6 @@
 /**
  * count frequency of a given word in the array
- * @author MadhavbahlMD
+ * @author MadhavBahl
  * @dadte 26/01/2019
  */
 

@@ -30,7 +30,7 @@ Welcome back to the Day 6 of Daily Codes, as you might have noticed we are slowl
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 27/12/2018
  */
 
@@ -71,7 +71,7 @@ console.log(capitalize ('hello world'));
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 27/12/2018
  */
 
@@ -93,7 +93,7 @@ function capitalize (str) {
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 27/12/2018
  */
 
@@ -118,7 +118,7 @@ function capitalize (str) {
 
 ```java
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 27/12/2018
  */
 
@@ -147,7 +147,7 @@ public class SentenceCap1 {
 
 ```java
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 27/12/2018
  */
 
@@ -379,7 +379,7 @@ puts "String \" #{string} \" with first letter of each word capitalized: #{capit
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 27/12/2018
  */
 
@@ -403,7 +403,7 @@ console.log (wordRev("hello world Greetings"));
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 27/12/2018
  */
 
@@ -424,7 +424,7 @@ console.log (wordRev("  hello  wow   world Greetings"));
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 27/12/2018
  */
 
@@ -480,7 +480,7 @@ console.log(wordRev ('hello world greetings'));
 
 ```java
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 27/12/2018
  */
 
@@ -732,7 +732,7 @@ print"Reverse of string #{string}:  #{reverse_words(string)}"
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 27/12/2018
  * METHOD -- Check the lengths of both strings, sort them and then check whether they are same
  */
@@ -768,7 +768,7 @@ anagram ('LISTEN', 'SILENT');
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 27/12/2018
  * METHOD -- Prepare 2 objects which stores frequency of every character in both strings, compare those 2 objects  (dictionaries in python)
  */
@@ -815,7 +815,7 @@ anagram ('LISTEN', 'MILENT');
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 27/12/2018
  * A simple method which first compares the lengths of strings and then iterates through the characters of any string and check whether it exists in the other one as well and does same for the other string
  * Please note that this is not at all an efficient method. Do not use this.

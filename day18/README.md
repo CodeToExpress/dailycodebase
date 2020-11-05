@@ -52,11 +52,11 @@ output: false
 
 ### JavaScript Implementation
 
-#### [Solution by @MadhavBahlMD](./JavaScript/freqCounter_madhav.js)
+#### [Solution by @MadhavBahl](./JavaScript/freqCounter_madhav.js)
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 01/14/2018
  * Frequency Ccounter using object
  */
@@ -264,7 +264,7 @@ Using Multiple Pointer
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 14/01/2019
  * Count uniques using multiple pointers (since the input array is sorted)
  */
@@ -294,7 +294,7 @@ Using Frequency Object
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 14/01/2019
  * Count Uniques using frequency object
  */
@@ -323,7 +323,7 @@ Using Brute Force Search
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 14/01/2019
  * Count Uniques using brute force search
  */
@@ -502,7 +502,7 @@ Using Frequency Count
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 14/01/2019
  * Using frequency counter
  */
@@ -544,7 +544,7 @@ Using Brute Force search
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 14/01/2019
  * Using Brute Force Search
  */

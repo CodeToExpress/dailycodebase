@@ -1,5 +1,5 @@
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 17/01/2019
  * Method - Bruteforce Search -- Worst Case Complexity = O(m.n)
  */

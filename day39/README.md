@@ -22,7 +22,7 @@ Reverse the given stack
 ```js
 /**
  * Find maximum element in the stack
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 12/02/2019
  */
 
@@ -98,7 +98,7 @@ console.log (stk.findMax());
 ```js
 /**
  * Reverse the stack
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 12/02/2019
  */
 

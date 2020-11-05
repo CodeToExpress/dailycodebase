@@ -55,7 +55,7 @@ console.log (stringPermutations('123'));
 /**
  * METHOD -- Backtracking
  * Algorithm taken from GeeksForGeeks (https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/)
- * Implemented in JS by @MadhavBahlMD
+ * Implemented in JS by @MadhavBahl
  * @date 02/01/2019
  */
 

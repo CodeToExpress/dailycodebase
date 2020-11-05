@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * Daily Codes Day 12 -- Substring Search (Brute Force Search)
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 05/01/2018
  */
 

@@ -46,7 +46,7 @@ Method Used -- Bruteforce Search
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  * Method - Brute force Search
  */
@@ -71,7 +71,7 @@ console.log (searchCommonElements ([0, 12, 41, 20], [9, 3, 1, 5]));
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @dete 18/01/2019
  * Method - Using JavaScript's `indexOf()` method
  */
@@ -94,7 +94,7 @@ console.log (searchCommonElements ([0, 12, 41, 20], [9, 3, 1, 5]));
 
 ```js
 /** FOR SORTED ARRAY
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  * Method - Multiple Pointers 
  * NOTE - For this method, We are assuming that the arrays are sorted. 
@@ -127,7 +127,7 @@ console.log (searchCommonElements ([1, 2, 3, 5, 7, 9, 12], [3, 4, 5, 6, 7]));
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  * Method - Frequency Count
  */
@@ -256,7 +256,7 @@ public class Common2 {
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  * Method - Bruteforce Search - Time complexity = O(m.n.p) // m, n, and p are the lengths of 3 input arrays
  */
@@ -280,7 +280,7 @@ console.log (searchCommonElements ([1, 2, 4, 6, 7, 9, 11, 14, 15], [2, 3, 4, 5, 
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  * Method - Frequency Count (object)
  */
@@ -317,7 +317,7 @@ console.log (searchCommonElements ([1, 2, 4, 6, 7, 9, 11, 14, 15], [2, 3, 4, 5, 
 
 ```js
 /** FOR SORTED ARRAYS
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  * Method - Multiple Pointers 
  * NOTE - For this method, We are assuming that the arrays are sorted. 

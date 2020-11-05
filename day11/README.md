@@ -36,7 +36,7 @@ The longest common substring of the strings "ABABC", "BABCA" and "ABCBA" is stri
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 03/01/2018
  * Referance: https://en.wikipedia.org/wiki/Longest_common_substring_problem
  */

@@ -1,6 +1,6 @@
 /**
  * Queue reversal 
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 15/02/2019
  * Method 
  *  - Dequeue the elements from queue and keep pushing them in stack

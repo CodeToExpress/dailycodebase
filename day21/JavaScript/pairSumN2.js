@@ -1,5 +1,5 @@
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 16/01/2019
  * Method -- Multiple Pointers, solution in O(n)
  */

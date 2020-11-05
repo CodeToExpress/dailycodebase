@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * Recursive Array Sum
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 18/01/2019
  */
 

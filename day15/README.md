@@ -22,11 +22,11 @@ output:
 
 ## JavaScript Implementation
 
-### [Solution](./JavaScript/pascal_MadhavBahlMD)
+### [Solution](./JavaScript/pascal_MadhavBahl)
 
 ```js
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 09/01/2018
  */
 

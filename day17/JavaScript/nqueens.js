@@ -1,7 +1,7 @@
 /**
  * @date 11/01/2018
  * Method (Backtracking) taken from -- https://www.youtube.com/watch?v=0DeznFqrgAI
- * Implemented in JavaScript by @MadhavBahlMD
+ * Implemented in JavaScript by @MadhavBahl
  */
 
 function nqueens (num) {

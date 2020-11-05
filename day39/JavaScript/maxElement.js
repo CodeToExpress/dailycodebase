@@ -1,6 +1,6 @@
 /**
  * Find maximum element in the stack
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 12/02/2019
  */
 

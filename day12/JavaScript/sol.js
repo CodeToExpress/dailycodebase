@@ -1,5 +1,5 @@
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 04/01/2018
  * In this case, the worst case Time Complexity will be O(m.n), 
  * m and n are the lengths of string and pattern respectively.

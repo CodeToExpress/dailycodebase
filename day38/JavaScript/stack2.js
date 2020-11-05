@@ -1,6 +1,6 @@
 /**
  * Implemntation of Stack Data  Structure in JavaScript
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 11/02/2019
  * Method 2 - Stack implementation from scratch (without push() and pop() methods)
  */

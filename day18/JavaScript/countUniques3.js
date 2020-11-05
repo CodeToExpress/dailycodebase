@@ -1,5 +1,5 @@
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 14/01/2019
  * Count Uniques using brute force search
  */

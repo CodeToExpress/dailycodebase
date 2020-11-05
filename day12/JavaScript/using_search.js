@@ -1,5 +1,5 @@
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 05/01/2018
  * METHOD - Using String.search() method
  */

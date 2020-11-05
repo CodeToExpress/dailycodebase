@@ -8,7 +8,7 @@ WAP to check whether the given year is a leap year or not
 
 ```java
 /**
- * @author MadhavBahlMD
+ * @author MadhavBahl
  * @date 26/01/2019
  */
 

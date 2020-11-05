@@ -89,7 +89,7 @@ Motivate yourself to code daily till 60 days, and see the magic! Coding will bec
 
 ## [More Problems](./BONUS/README.md)
 
-A real coder should not be satisfied by doing only one problem daily, rather he/she should keep coding as much as possible. So, here I ([@MadhavBahlMD](https://github.com/MadhavBahlMD)) am adding some more problems that you can practise 😃
+A real coder should not be satisfied by doing only one problem daily, rather he/she should keep coding as much as possible. So, here I ([@MadhavBahl](https://github.com/MadhavBahl)) am adding some more problems that you can practise 😃
 
 Also, these problems have been taking form various sources, so ig you think you own any of the given problems, just send me an email at theleanprogrammer@gmail.com and I will be more than happy to give proper credits 😊
 

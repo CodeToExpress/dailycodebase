@@ -1,5 +1,5 @@
-/**
- * @author MadhavBahlMD
+s/**
+ * @author MadhavBahl
  * @dete 18/01/2019
  * Method - Using JavaScript's `indexOf()` method
  */
