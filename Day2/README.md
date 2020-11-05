@@ -515,7 +515,7 @@ void main(){
 
 ### [reverse.rb](./Ruby/reverse.rb)
 
-```ruby
+```c#
 =begin
  @author: aaditkamat
  @date: 22/12/2018
@@ -554,6 +554,47 @@ def long_solution_recursive(str)
   return long_solution(str[1..-2])
 end
 ```
+
+
+
+## C# Implementation
+
+### [StringReverse.cs](./C#/StringReverse.cs)
+
+```c#
+/**
+ * 
+ * @author: Senbagaraman Manoharan
+ * @date: 19th October 2020
+ * 
+ * Given a string, write a program to return a new string with reversed order of characters
+ * 
+ * */
+using System;
+using System.Collections.Generic;
+using System.Reflection;
+
+public class Program
+{
+
+    public static void Main()
+    {
+        string enteredString, rvrString = "";
+        int stringLength;
+        Console.Write("The string to be reversed: ");
+        enteredString = Console.ReadLine();
+        stringLength = enteredString.Length - 1;
+        while (stringLength >= 0)
+        {
+            rvrString = rvrString + enteredString[Length];
+            stringLength--;
+        }
+        Console.WriteLine("The reversed string is {0}", rvrString);
+        Console.ReadLine();
+    }
+}	
+```
+
 
 <hr />
 
@@ -978,6 +1019,53 @@ public class StringReverseAndPalin {
         		  System.out.println("String is not Palindrome");
 	}
 
+}
+```
+
+## C# implementation
+
+### [palindrome.cs](./C#/palindrome.cs)
+```C#
+/**
+ * 
+ * @author: Senbagaraman Manoharan
+ * @date: 19th October 2020
+ * 
+ * Given a string, write a funcation which prints whether the given string is palindrome or nor 
+ * 
+ * */
+using System;
+using System.Collections.Generic;
+using System.Reflection;
+
+public class Program
+{
+
+    public static void Main()
+    {
+        string enteredString, rvrString = "";
+        int stringLength;
+        Console.Write("The string to be checked: ");
+        enteredString = Console.ReadLine();
+        stringLength = enteredString.Length - 1;
+        while (stringLength >= 0)
+        {
+            rvrString = rvrString + enteredString[Length];
+            stringLength--;
+        }
+        Console.WriteLine("The reversed string is {0}", rvrString);
+
+        if(enteredString.Equals(rvrString))
+        {
+            Console.WriteLine("The given string is palindrome");
+        }
+        else
+        {
+            Console.WriteLine("The given string is not palindrome");
+        }
+
+        Console.ReadLine();
+    }
 }
 ```
 
