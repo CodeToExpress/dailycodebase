@@ -40,3 +40,98 @@ Question Link: https://www.hackerearth.com/practice/algorithms/sorting/heap-sort
 
 5. Add your code to README
 6. Add the file containing the code in the same directory.
+
+## Question
+
+Linear Search
+
+**Example**
+```
+Enter the value of n 4
+Enter array elements:
+6 8 9 1
+
+Enter element to search:9
+Element found at index 2
+```
+
+### [C Solution](./Linear Search.c)
+
+```c
+/**
+ * @author Rutuja Rajesh
+ * @date 8/2/19
+ */
+ #include<stdio.h>
+int main()
+{
+	int a[20],i,x,n;
+	printf("Enter the valu of n");
+	scanf("%d",&n);
+	printf("Enter array elements:\n");
+	for(i=0;i<n;++i)
+		scanf("%d",&a[i]);
+	printf("\nEnter element to search:");
+	scanf("%d",&x);
+	for(i=0;i<n;++i)
+		if(a[i]==x)
+			break;	
+	if(i<n)
+		printf("Element found at index %d",i);
+	else
+		printf("Element not found");
+	return 0;
+  }
+```
+## Question
+
+Binary Search
+
+**Example**
+```
+Enter number of elements: 4
+3
+5
+54
+8
+Enter value to find:5
+5 found at location 2
+```
+
+### [C Solution](./Binary Search.c)
+```c
+/**
+ * @author Rutuja Rajesh
+ * @date 9/2/19
+ */
+#include <stdio.h>
+int main()
+{
+   /* @author Rutuja Rajesh */
+   int i, first, last, middle, n, search, array[100];
+   printf("Enter number of elements\n");
+   scanf("%d",&n);
+   printf("Enter %d integers\n", n); 
+   for (i = 0; i < n; i++)
+      scanf("%d",&array[i]);
+   printf("Enter value to find\n");
+   scanf("%d", &search); 
+   first = 0;
+   last = n - 1;
+   middle = (first+last)/2;
+   while (first <= last) {
+      if (array[middle] < search)
+         first = middle + 1;    
+      else if (array[middle] == search) {
+         printf("%d found at location %d.\n", search, middle+1);
+         break;
+      }
+      else
+         last = middle - 1; 
+      middle = (first + last)/2;
+   }
+   if (first > last)
+      printf("Not found! %d isn't present in the list.\n", search); 
+   return 0;  
+}
+```
