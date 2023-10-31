@@ -1,0 +1,79 @@
+public class SearchList {
+    // Represent a node of the doubly linked list
+    static class Node {
+        int data;
+        Node previous;
+        Node next;
+
+        public Node(int data) {
+            this.data = data;
+        }
+    }
+
+    // Represent the head and tail of the doubly linked list
+    Node head, tail = null;
+
+    // Add a node to the list
+    public void addNode(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = tail = newNode;
+            head.previous = null;
+            tail.next = null;
+        } else {
+            tail.next = newNode;
+            newNode.previous = tail;
+            tail = newNode;
+            tail.next = null;
+        }
+    }
+
+    // Search for a node in the list and return its position (1-based index)
+    public int searchNode(int value) {
+        int position = 1;
+        Node current = head;
+
+        if (head == null) {
+            System.out.println("List is empty");
+            return -1;
+        }
+
+        while (current != null) {
+            if (current.data == value) {
+                return position;
+            }
+            current = current.next;
+            position++;
+        }
+
+        return -1; // Node not found
+    }
+
+    public static void main(String[] args) {
+        SearchList dList = new SearchList();
+        dList.addNode(1);
+        dList.addNode(5);
+        dList.addNode(4);
+        dList.addNode(2);
+        dList.addNode(3);
+
+        int searchValue = 4;
+        int position = dList.searchNode(searchValue);
+
+        if (position != -1) {
+            System.out.println("Node " + searchValue + " is present in the list at position: " + position);
+        } else {
+            System.out.println("Node " + searchValue + " is not present in the list");
+        }
+        
+        searchValue = 9;
+        position = dList.searchNode(searchValue);
+        
+        if (position != -1) {
+            System.out.println("Node " + searchValue + " is present in the list at position: " + position);
+        } else {
+            System.out.println("Node " + searchValue + " is not present in the list");
+        }
+    }
+}
