@@ -1,7 +1,7 @@
 /**
- * @author: Rajdeep Roy Chowdhury<rrajdeeproychowdhury@gmail.com> 
- * @github: https://github.com/razdeep
- * @date: 20/12/2018
+ * @author: K Sarveswara Rao<sarveswara1114@gmail.com> 
+ * @github: https://github.com/sarveswar1
+ * @date: 16/10/2020
 **/
 
 #include <stdio.h>
