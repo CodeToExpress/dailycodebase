@@ -133,6 +133,54 @@ def main
 end
 ```
 
+## Java Implementation
+
+### [Solution](./Java/pairSum.java)
+
+```java
+/**
+ * @date 29/01/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class pairSum {
+    public static int[] pairSum(int arr[],int s)
+    {
+        HashSet<Integer> h=new HashSet<Integer>();
+        int a[]=new int[2];int t;
+        int i;
+        for(i=0;i<arr.length;i++)
+        {
+            t=s-arr[i];
+            if(t>=0 && h.contains(t))
+            {
+                a[0]=t;
+                a[1]=arr[i];
+                break;
+            }
+            h.add(arr[i]);
+        }
+        return a;
+    }
+    public static void main(String []args)
+    {
+        int n,i;int sum;
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        int arr[]=new int[n];
+        for(i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        System.out.println("Enter pair sum");
+        sum=sc.nextInt();
+        int a[]=pairSum(arr,sum);
+        if(a[1]==0 && a[0]==0)
+            System.out.println("[]");
+        else
+            System.out.println("["+a[0]+","+a[1]+"]");
+    }
+}
+```
+
 ***
 
 ## Question 2 - Max Subarray Sum
@@ -255,4 +303,51 @@ def main
 end
 
 main
+```
+
+## Java Implementation
+
+### [Solution](./Java/maxSubarray.java)
+
+```java
+/**
+ * @date 29/01/19
+ * @author SPREEHA DUTTA
+ */
+import java.util.*;
+public class maxSubarray {
+    public static int findmax(int []arr,int n)
+    {
+        int max=0;int i;int s=0;
+        for(i=0;i<=arr.length-1;i++)
+        {
+            if(i<n)
+            {
+                s=s+arr[i];
+                max=s;
+            }
+            else
+            {
+                s=s-arr[i-n];
+                s=s+arr[i];
+                if(max<s)
+                    max=s;
+            }
+        }
+        return max;
+    }
+    public static void main(String []args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n,i,p;int max;
+        n=sc.nextInt();
+        int arr[]=new int[n];
+        for(i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        System.out.println("Enter number of consecutive elements");
+        p=sc.nextInt();
+        max=findmax(arr,p);
+        System.out.println("Maximum consecutive sum of "+p+" consecutive elements are "+max);
+    }
+}
 ```
