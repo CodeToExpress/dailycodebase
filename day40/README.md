@@ -2,7 +2,7 @@
 
 # Day 40 - Prerfix, Infix, Postfix Conversion
 
-**Infix Expression**: The expression of the form a op b. When an operator is in-between every pair of operands.
+[**Infix Expression**](https://www.scaler.com/topics/infix-to-postfix-conversion/): The expression of the form a op b. When an operator is in-between every pair of operands.
 
 **Example**: ( (A * B) + (C / D) )	
 
